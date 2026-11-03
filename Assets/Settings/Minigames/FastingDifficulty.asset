@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d45d836f21b8c4d89697aa3653bacf, type: 3}
+  m_Name: FastingDifficulty
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingSettings
+  stages:
+  - label: "1~5\uC77C"
+    seconds: 18
+    windSpeed: 4
+    waveInterval: 5.2
+    dangerousLanes: 1
+    warningSeconds: 1.5
+    exposureSeconds: 14
+  - label: "6~10\uC77C"
+    seconds: 20
+    windSpeed: 4.65
+    waveInterval: 4.85
+    dangerousLanes: 1
+    warningSeconds: 1.44
+    exposureSeconds: 13.4
+  - label: "11~15\uC77C"
+    seconds: 22
+    windSpeed: 5.3
+    waveInterval: 4.5
+    dangerousLanes: 1
+    warningSeconds: 1.38
+    exposureSeconds: 12.8
+  - label: "16~20\uC77C"
+    seconds: 24
+    windSpeed: 5.95
+    waveInterval: 4.1499996
+    dangerousLanes: 2
+    warningSeconds: 1.32
+    exposureSeconds: 12.2
+  - label: "21~25\uC77C"
+    seconds: 26
+    windSpeed: 6.6
+    waveInterval: 3.7999997
+    dangerousLanes: 2
+    warningSeconds: 1.26
+    exposureSeconds: 11.6
+  - label: "26~30\uC77C"
+    seconds: 28
+    windSpeed: 7.25
+    waveInterval: 3.4499998
+    dangerousLanes: 2
+    warningSeconds: 1.2
+    exposureSeconds: 11
+  - label: "31~35\uC77C"
+    seconds: 30
+    windSpeed: 7.8999996
+    waveInterval: 3.1
+    dangerousLanes: 2
+    warningSeconds: 1.14
+    exposureSeconds: 10.4
+  - label: "36~40\uC77C"
+    seconds: 32
+    windSpeed: 8.55
+    waveInterval: 2.7499998
+    dangerousLanes: 2
+    warningSeconds: 1.08
+    exposureSeconds: 9.8
+  ground:
+    serializedVersion: 2
+    x: -13.5
+    y: -7.2
+    width: 85
+    height: 2.2
+  lanes:
+  - -5
+  - -6.1
+  - -7.2
+  stepWidth: 1.5
+  stepSeconds: 0.23
+  stageLength: 9
+  maximumStamina: 5
+  hitGraceSeconds: 1.2
+  restartDelay: 1.8
