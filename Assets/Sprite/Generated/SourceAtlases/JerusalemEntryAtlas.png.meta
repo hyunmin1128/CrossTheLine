@@ -1,0 +1,626 @@
+fileFormatVersion: 2
+guid: 6dd6c195d5a85334d8ff03ffc45a4d7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3697192413487396788
+    second: JerusalemEntryAtlas_0
+  - first:
+      213: -6957949954820597732
+    second: JerusalemEntryAtlas_1
+  - first:
+      213: 7931758555303973758
+    second: JerusalemEntryAtlas_2
+  - first:
+      213: -6353642640386162493
+    second: JerusalemEntryAtlas_3
+  - first:
+      213: -6036221404453559880
+    second: JerusalemEntryAtlas_4
+  - first:
+      213: 4906511068261566373
+    second: JerusalemEntryAtlas_5
+  - first:
+      213: -5327163091722184100
+    second: JerusalemEntryAtlas_6
+  - first:
+      213: -8627186213035751543
+    second: JerusalemEntryAtlas_7
+  - first:
+      213: 5792831748826984324
+    second: JerusalemEntryAtlas_8
+  - first:
+      213: -9158263176311492016
+    second: JerusalemEntryAtlas_9
+  - first:
+      213: -4429917550359912810
+    second: JerusalemEntryAtlas_10
+  - first:
+      213: -8109771577216486409
+    second: JerusalemEntryAtlas_11
+  - first:
+      213: 2430344735296903386
+    second: JerusalemEntryAtlas_12
+  - first:
+      213: 2165494599085539462
+    second: JerusalemEntryAtlas_13
+  - first:
+      213: 4880128263666037559
+    second: JerusalemEntryAtlas_14
+  - first:
+      213: 3371151410976496582
+    second: JerusalemEntryAtlas_15
+  - first:
+      213: 9087764913248623705
+    second: JerusalemEntryAtlas_16
+  - first:
+      213: 7116636115074822854
+    second: JerusalemEntryAtlas_17
+  - first:
+      213: -8801262559403909987
+    second: JerusalemEntryAtlas_18
+  - first:
+      213: -3978047870165386474
+    second: JerusalemEntryAtlas_19
+  - first:
+      213: -5700595604075363095
+    second: JerusalemEntryAtlas_20
+  - first:
+      213: -908808390180873931
+    second: JerusalemEntryAtlas_21
+  - first:
+      213: -1038388566763903466
+    second: JerusalemEntryAtlas_22
+  - first:
+      213: -3192207139470051410
+    second: JerusalemEntryAtlas_23
+  - first:
+      213: -921612783076437926
+    second: JerusalemEntryAtlas_24
+  - first:
+      213: 7463892627764198977
+    second: JerusalemEntryAtlas_25
+  - first:
+      213: 3049221858952956050
+    second: JerusalemEntryAtlas_26
+  - first:
+      213: 4543124058538045461
+    second: JerusalemEntryAtlas_27
+  - first:
+      213: 4632806252502197743
+    second: JerusalemEntryAtlas_28
+  - first:
+      213: -2152186005875395892
+    second: JerusalemEntryAtlas_29
+  - first:
+      213: -4552140287722573992
+    second: JerusalemEntryAtlas_30
+  - first:
+      213: 3472180793703484876
+    second: JerusalemEntryAtlas_31
+  - first:
+      213: 1119691479883782462
+    second: JerusalemEntryAtlas_32
+  - first:
+      213: 963157330171412497
+    second: JerusalemEntryAtlas_33
+  - first:
+      213: 4044464910344301345
+    second: JerusalemEntryAtlas_34
+  - first:
+      213: 133422420258486148
+    second: JerusalemEntryAtlas_35
+  - first:
+      213: -6843877370866172551
+    second: JerusalemEntryAtlas_36
+  - first:
+      213: -1318264799064272753
+    second: JerusalemEntryAtlas_37
+  - first:
+      213: 2349049130364338338
+    second: JerusalemEntryAtlas_38
+  - first:
+      213: -5345300242984919582
+    second: JerusalemEntryAtlas_39
+  - first:
+      213: -1961038982411156937
+    second: JerusalemEntryAtlas_40
+  - first:
+      213: -1145616224944989597
+    second: JerusalemEntryAtlas_41
+  - first:
+      213: 6945346419022273566
+    second: JerusalemEntryAtlas_42
+  - first:
+      213: -2788555748100177473
+    second: JerusalemEntryAtlas_43
+  - first:
+      213: -1818608849191493049
+    second: JerusalemEntryAtlas_44
+  - first:
+      213: -1025069712767102770
+    second: JerusalemEntryAtlas_45
+  - first:
+      213: 5669264329457470782
+    second: JerusalemEntryAtlas_46
+  - first:
+      213: 2818159680829463028
+    second: JerusalemEntryAtlas_47
+  - first:
+      213: 8711818508389973253
+    second: JerusalemEntryAtlas_48
+  - first:
+      213: 5748288198145802037
+    second: JerusalemEntryAtlas_49
+  - first:
+      213: 1963582264395980848
+    second: JerusalemEntryAtlas_50
+  - first:
+      213: -7800958911114059110
+    second: JerusalemEntryAtlas_51
+  - first:
+      213: -7789143246349648458
+    second: JerusalemEntryAtlas_52
+  - first:
+      213: -4407730960279925823
+    second: JerusalemEntryAtlas_53
+  - first:
+      213: 6445371770727355411
+    second: JerusalemEntryAtlas_54
+  - first:
+      213: -5025302327187019421
+    second: JerusalemEntryAtlas_55
+  - first:
+      213: -7197800118622264436
+    second: JerusalemEntryAtlas_56
+  - first:
+      213: -7545222490392670477
+    second: JerusalemEntryAtlas_57
+  - first:
+      213: 3905150182658820925
+    second: JerusalemEntryAtlas_58
+  - first:
+      213: 7855937932561340675
+    second: JerusalemEntryAtlas_59
+  - first:
+      213: 4581100355741445042
+    second: JerusalemEntryAtlas_60
+  - first:
+      213: 6321831172172449161
+    second: JerusalemEntryAtlas_61
+  - first:
+      213: -1750165149221004021
+    second: JerusalemEntryAtlas_62
+  - first:
+      213: -3947426788201976391
+    second: JerusalemEntryAtlas_63
+  - first:
+      213: -7366479504079996471
+    second: JerusalemEntryAtlas_64
+  - first:
+      213: -2965465365029037861
+    second: JerusalemEntryAtlas_65
+  - first:
+      213: -3802124676236960265
+    second: JerusalemEntryAtlas_66
+  - first:
+      213: 8870489661238189177
+    second: JerusalemEntryAtlas_67
+  - first:
+      213: -20912247847474371
+    second: JerusalemEntryAtlas_68
+  - first:
+      213: -7265766318393886382
+    second: JerusalemEntryAtlas_69
+  - first:
+      213: -4498896738716779782
+    second: JerusalemEntryAtlas_70
+  - first:
+      213: -1865438427514375437
+    second: JerusalemEntryAtlas_71
+  - first:
+      213: 1229264615926688610
+    second: JerusalemEntryAtlas_72
+  - first:
+      213: -7654139563618918016
+    second: JerusalemEntryAtlas_73
+  - first:
+      213: -8227570949614883505
+    second: JerusalemEntryAtlas_74
+  - first:
+      213: -7400954392301336262
+    second: JerusalemEntryAtlas_75
+  - first:
+      213: 5039827276445345470
+    second: JerusalemEntryAtlas_76
+  - first:
+      213: -3907667986342510175
+    second: JerusalemEntryAtlas_77
+  - first:
+      213: -844984254461048460
+    second: JerusalemEntryAtlas_78
+  - first:
+      213: -5315664219699599727
+    second: JerusalemEntryAtlas_79
+  - first:
+      213: 5499681029739702386
+    second: JerusalemEntryAtlas_80
+  - first:
+      213: -3394953279778286206
+    second: JerusalemEntryAtlas_81
+  - first:
+      213: -7509858777247184008
+    second: JerusalemEntryAtlas_82
+  - first:
+      213: 2902612833397551304
+    second: JerusalemEntryAtlas_83
+  - first:
+      213: -2481660947563159847
+    second: JerusalemEntryAtlas_84
+  - first:
+      213: 3422248040501833044
+    second: JerusalemEntryAtlas_85
+  - first:
+      213: 7039264984159807057
+    second: JerusalemEntryAtlas_86
+  - first:
+      213: -4607256726227627972
+    second: JerusalemEntryAtlas_87
+  - first:
+      213: 7160440183835607327
+    second: JerusalemEntryAtlas_88
+  - first:
+      213: 728581139160720028
+    second: JerusalemEntryAtlas_89
+  - first:
+      213: 8025139449639913632
+    second: JerusalemEntryAtlas_90
+  - first:
+      213: 7936769095950762291
+    second: JerusalemEntryAtlas_91
+  - first:
+      213: 358941441814143900
+    second: JerusalemEntryAtlas_92
+  - first:
+      213: 4615007330075394007
+    second: JerusalemEntryAtlas_93
+  - first:
+      213: 3709138773992323724
+    second: JerusalemEntryAtlas_94
+  - first:
+      213: 5967609878848720781
+    second: JerusalemEntryAtlas_95
+  - first:
+      213: 4866629604284288960
+    second: JerusalemEntryAtlas_96
+  - first:
+      213: 3929484236690671497
+    second: JerusalemEntryAtlas_97
+  - first:
+      213: -9101618606498221645
+    second: JerusalemEntryAtlas_98
+  - first:
+      213: -5118823147863461539
+    second: JerusalemEntryAtlas_99
+  - first:
+      213: 4229384381049986984
+    second: JerusalemEntryAtlas_100
+  - first:
+      213: -8863317947928478047
+    second: JerusalemEntryAtlas_101
+  - first:
+      213: -8358097470138771162
+    second: JerusalemEntryAtlas_102
+  - first:
+      213: -3286348968404079756
+    second: JerusalemEntryAtlas_103
+  - first:
+      213: -2338114734491614798
+    second: JerusalemEntryAtlas_104
+  - first:
+      213: 6867293206680721417
+    second: JerusalemEntryAtlas_105
+  - first:
+      213: -4339820561143497527
+    second: JerusalemEntryAtlas_106
+  - first:
+      213: 6337141343222762315
+    second: JerusalemEntryAtlas_107
+  - first:
+      213: -8698011428482377876
+    second: JerusalemEntryAtlas_108
+  - first:
+      213: -4817767389355198836
+    second: JerusalemEntryAtlas_109
+  - first:
+      213: 9107874836766448072
+    second: JerusalemEntryAtlas_110
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DonkeyBare
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 156
+        width: 326
+        height: 316
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09449a7469462d44d9da3eb2c0a7aab5
+      internalID: -734109445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonkeyClothed
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 156
+        width: 352
+        height: 317
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3d97fb5ebc2f74e9214c39c9a61b72
+      internalID: -2137258166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountedJesus0
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 151
+        width: 338
+        height: 401
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8523816a46a8bef4682279cdfc3cf7b6
+      internalID: -456362963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountedJesus1
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 155
+        width: 355
+        height: 402
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd087649f742694c9c8b45691d9818b
+      internalID: -1173276848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmFrond
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 156
+        width: 214
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f75ee54e52baa4f87baf07809e6c16
+      internalID: 2111948794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuterCloak
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 151
+        width: 269
+        height: 131
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6febfd0fc29b92b429b055592cb50aaa
+      internalID: 541652122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JesusPointing
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 156
+        width: 225
+        height: 330
+      alignment: 9
+      pivot: {x: 0.36444443, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dcbdbe8cbca7049a6d00c7b29c83fb
+      internalID: 1084910904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: db35a0ae936a9f540bfa61216008a167
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DonkeyBare: -734109445
+      DonkeyClothed: -2137258166
+      JesusPointing: 1084910904
+      MountedJesus0: -456362963
+      MountedJesus1: -1173276848
+      OuterCloak: 541652122
+      PalmFrond: 2111948794
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

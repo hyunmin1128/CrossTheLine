@@ -1,0 +1,4 @@
+using System.IO;using System.Linq;using System.Collections.Generic;using UnityEngine;using UnityEditor;
+public static class AssetUsageAudit{
+ public static string Run(){var all=AssetDatabase.GetAllAssetPaths().Where(p=>p.StartsWith("Assets/")&&!AssetDatabase.IsValidFolder(p)).ToArray();var inbound=all.ToDictionary(p=>p,p=>new List<string>());foreach(var p in all)foreach(var dep in AssetDatabase.GetDependencies(p,false))if(dep!=p&&inbound.ContainsKey(dep))inbound[dep].Add(p);Directory.CreateDirectory("Docs/QA/WholeGame");File.WriteAllLines("Docs/QA/WholeGame/AssetReferences.tsv",new[]{"path\tinboundCount\treferencedBy"}.Concat(all.Select(p=>p+"\t"+inbound[p].Count+"\t"+string.Join(";",inbound[p]))));var rp=UnityEngine.Rendering.GraphicsSettings.currentRenderPipeline;return "Assets "+all.Length+"; pipeline "+(rp?rp.GetType().FullName:"Built-in")+"; build scenes "+EditorBuildSettings.scenes.Length;}
+}

@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: e008471ff65bdb249839c95b089f048c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1776329020414678847
+    second: SeaWaveAtlas_0
+  - first:
+      213: -5353049314018664799
+    second: SeaWaveAtlas_1
+  - first:
+      213: -3208789905225507481
+    second: SeaWaveAtlas_2
+  - first:
+      213: 5446139130042652392
+    second: SeaWaveAtlas_3
+  - first:
+      213: 9069485426931990937
+    second: SeaWaveAtlas_4
+  - first:
+      213: -9217152768209747956
+    second: SeaWaveAtlas_5
+  - first:
+      213: -8718222827403593426
+    second: SeaWaveAtlas_6
+  - first:
+      213: -9051247344765456384
+    second: SeaWaveAtlas_7
+  - first:
+      213: -7159873450419679061
+    second: SeaWaveAtlas_8
+  - first:
+      213: -7895546160335880818
+    second: SeaWaveAtlas_9
+  - first:
+      213: 3090585137484702889
+    second: SeaWaveAtlas_10
+  - first:
+      213: 7305035726814255742
+    second: SeaWaveAtlas_11
+  - first:
+      213: 4415030824456200601
+    second: SeaWaveAtlas_12
+  - first:
+      213: -8468210356374471985
+    second: SeaWaveAtlas_13
+  - first:
+      213: -6758947702683007620
+    second: SeaWaveAtlas_14
+  - first:
+      213: 3392445833121923197
+    second: SeaWaveAtlas_15
+  - first:
+      213: -4421871067844366760
+    second: SeaWaveAtlas_16
+  - first:
+      213: -6183765974680303368
+    second: SeaWaveAtlas_17
+  - first:
+      213: -2766428962161419309
+    second: SeaWaveAtlas_18
+  - first:
+      213: 4071565176317552925
+    second: SeaWaveAtlas_19
+  - first:
+      213: 6745101537520398637
+    second: SeaWaveAtlas_20
+  - first:
+      213: -5208921868267220871
+    second: SeaWaveAtlas_21
+  - first:
+      213: -4717501078544486155
+    second: SeaWaveAtlas_22
+  - first:
+      213: 787383672459636255
+    second: SeaWaveAtlas_23
+  - first:
+      213: 2297969085249686519
+    second: SeaWaveAtlas_24
+  - first:
+      213: 1236182754867179816
+    second: SeaWaveAtlas_25
+  - first:
+      213: 3870814164325013225
+    second: SeaWaveAtlas_26
+  - first:
+      213: -5039057837386467396
+    second: SeaWaveAtlas_27
+  - first:
+      213: -4134508314448506265
+    second: SeaWaveAtlas_28
+  - first:
+      213: 5126046268041851777
+    second: SeaWaveAtlas_29
+  - first:
+      213: -2471512610226529375
+    second: SeaWaveAtlas_30
+  - first:
+      213: -8595642096800288843
+    second: SeaWaveAtlas_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeaWave_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 135
+        width: 688
+        height: 218
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce707dc55c117846b1a47d7996b2ab1
+      internalID: -1034679832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWave_1
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 127
+        width: 652
+        height: 368
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d3b9823279a05438926426ace5a55d
+      internalID: 827837630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeaWave_2
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 115
+        width: 678
+        height: 501
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2002aff30d3d3ac4d81aa18b7764658f
+      internalID: -1149063308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e6fdcd462986d0f4e8cae476377cc8bb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SeaWave_0: -1034679832
+      SeaWave_1: 827837630
+      SeaWave_2: -1149063308
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

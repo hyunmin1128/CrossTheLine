@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: 0a0e39a654e4c44418b133efa51f4b88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1302941655363570112
+    second: DisciplesReferenceAtlas-v1_0
+  - first:
+      213: -3091054905513657011
+    second: DisciplesReferenceAtlas-v1_1
+  - first:
+      213: -5075198954213609385
+    second: DisciplesReferenceAtlas-v1_2
+  - first:
+      213: -7919509304540008779
+    second: DisciplesReferenceAtlas-v1_3
+  - first:
+      213: 2253491450663310228
+    second: DisciplesReferenceAtlas-v1_4
+  - first:
+      213: 3691174898989223991
+    second: DisciplesReferenceAtlas-v1_5
+  - first:
+      213: -5914587233439779261
+    second: DisciplesReferenceAtlas-v1_6
+  - first:
+      213: -3803666461701519915
+    second: DisciplesReferenceAtlas-v1_7
+  - first:
+      213: 3389130553029782786
+    second: DisciplesReferenceAtlas-v1_8
+  - first:
+      213: -1659923938661609546
+    second: DisciplesReferenceAtlas-v1_9
+  - first:
+      213: -3546964244142505809
+    second: DisciplesReferenceAtlas-v1_10
+  - first:
+      213: -6027806804362543255
+    second: DisciplesReferenceAtlas-v1_11
+  - first:
+      213: -4872479276723185783
+    second: DisciplesReferenceAtlas-v1_12
+  - first:
+      213: -1957014788691636475
+    second: DisciplesReferenceAtlas-v1_13
+  - first:
+      213: -3961986409177148654
+    second: DisciplesReferenceAtlas-v1_14
+  - first:
+      213: 2199436933703471636
+    second: DisciplesReferenceAtlas-v1_15
+  - first:
+      213: 5436515928336621906
+    second: DisciplesReferenceAtlas-v1_16
+  - first:
+      213: -4817810268295077217
+    second: DisciplesReferenceAtlas-v1_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1186
+        width: 79
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046befcb7750bede0800000000000000
+      internalID: -1302941655363570112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 944
+        width: 88
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d31a7c0fd5a15d0800000000000000
+      internalID: -3091054905513657011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 109
+        height: 1426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750f9a1d0754199b0800000000000000
+      internalID: -5075198954213609385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_3
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 944
+        width: 94
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5beed733f30481290800000000000000
+      internalID: -7919509304540008779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_4
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1187
+        width: 81
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4939a2de882064f10800000000000000
+      internalID: 2253491450663310228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_5
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1185
+        width: 84
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73057129300b93330800000000000000
+      internalID: 3691174898989223991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_6
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 0
+        width: 95
+        height: 1430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346f2cd7f3a2beda0800000000000000
+      internalID: -5914587233439779261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_7
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1187
+        width: 79
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5c63a7189a63bc0800000000000000
+      internalID: -3803666461701519915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_8
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1300
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d63c6184c980f20800000000000000
+      internalID: 3389130553029782786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_9
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1187
+        width: 82
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf48e1f8f3c6f8e0800000000000000
+      internalID: -1659923938661609546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 106
+        height: 1187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0cfd400d6a6cec0800000000000000
+      internalID: -3546964244142505809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 944
+        width: 84
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fb94be5ade85ca0800000000000000
+      internalID: -6027806804362543255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_12
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 94
+        height: 1182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987567fc9e9716cb0800000000000000
+      internalID: -4872479276723185783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_13
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 0
+        width: 102
+        height: 1182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f49db1b6947d4e0800000000000000
+      internalID: -1957014788691636475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_14
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 0
+        width: 100
+        height: 1184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21312143a523409c0800000000000000
+      internalID: -3961986409177148654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_15
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 90
+        height: 940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4121543fc38f58e10800000000000000
+      internalID: 2199436933703471636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_16
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 122
+        height: 940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251e144de62627b40800000000000000
+      internalID: 5436515928336621906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DisciplesReferenceAtlas-v1_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 91
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92ea0b3613b32db0800000000000000
+      internalID: -4817810268295077217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DisciplesReferenceAtlas-v1_0: -1302941655363570112
+      DisciplesReferenceAtlas-v1_1: -3091054905513657011
+      DisciplesReferenceAtlas-v1_10: -3546964244142505809
+      DisciplesReferenceAtlas-v1_11: -6027806804362543255
+      DisciplesReferenceAtlas-v1_12: -4872479276723185783
+      DisciplesReferenceAtlas-v1_13: -1957014788691636475
+      DisciplesReferenceAtlas-v1_14: -3961986409177148654
+      DisciplesReferenceAtlas-v1_15: 2199436933703471636
+      DisciplesReferenceAtlas-v1_16: 5436515928336621906
+      DisciplesReferenceAtlas-v1_17: -4817810268295077217
+      DisciplesReferenceAtlas-v1_2: -5075198954213609385
+      DisciplesReferenceAtlas-v1_3: -7919509304540008779
+      DisciplesReferenceAtlas-v1_4: 2253491450663310228
+      DisciplesReferenceAtlas-v1_5: 3691174898989223991
+      DisciplesReferenceAtlas-v1_6: -5914587233439779261
+      DisciplesReferenceAtlas-v1_7: -3803666461701519915
+      DisciplesReferenceAtlas-v1_8: 3389130553029782786
+      DisciplesReferenceAtlas-v1_9: -1659923938661609546
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

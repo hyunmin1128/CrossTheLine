@@ -1,0 +1,4805 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5055c0127fab54c45bb45d5c53a30e68, type: 3}
+  m_Name: JourneySpriteCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.JourneySpriteCatalog
+  items:
+  - original: {fileID: 21300000, guid: 0ba538eae1f8c4e44bfb27d15fff2b13, type: 3}
+    resource: CrossTheLine/CaesareaConfessionLandscape
+    pixel: {fileID: 21300000, guid: c6ad53cde7847a644a679f1ff66359c4, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: -940013339, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    resource: CrossTheLine/ChildrenBlessingAtlas
+    pixel: {fileID: 21300000, guid: 28c5f9908e9097640a08d5234fb2cbe1, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: 69501130, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    resource: CrossTheLine/ChildrenBlessingAtlas
+    pixel: {fileID: 21300000, guid: 6cbc593337bd87b4daf4314785df63ed, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.40625
+      y: -0.9375
+      width: 0.78125
+      height: 1.3125
+  - original: {fileID: 1771387610, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    resource: CrossTheLine/ChildrenBlessingAtlas
+    pixel: {fileID: 21300000, guid: fec7009a59419a54c9771c930a6d5a7c, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: 2028577466, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    resource: CrossTheLine/ChildrenBlessingAtlas
+    pixel: {fileID: 21300000, guid: 0712e531d77536740920d1246f715478, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 1551834997, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    resource: CrossTheLine/ChildrenBlessingAtlas
+    pixel: {fileID: 21300000, guid: 277cb450f9dc7eb4a87920b377f48fcd, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.734375
+      y: -0.921875
+      width: 1.46875
+      height: 1.8125
+  - original: {fileID: 745553784, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    resource: CrossTheLine/ChildrenBlessingAtlas
+    pixel: {fileID: 21300000, guid: e30564187344d2a43af17b06749f7358, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 85881fe5ab80e084da105f69d2d272a3, type: 3}
+    resource: CrossTheLine/ChildrenJesusMad
+    pixel: {fileID: 21300000, guid: 28e85fe8f915b9d46ac3c3caceabb361, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.921875
+      y: -0.921875
+      width: 1.84375
+      height: 1.84375
+  - original: {fileID: 21300000, guid: 30c683573c8a37b4db937c8658b5c8f6, type: 3}
+    resource: CrossTheLine/ChildrenRoadLandscape
+    pixel: {fileID: 21300000, guid: 412dcc498c1659d428e776b7eb8e7203, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: 21300000, guid: d1d2667556829784493f0be78f0349dc, type: 3}
+    resource: CrossTheLine/ConfessionJesusLaugh
+    pixel: {fileID: 21300000, guid: 82e7c48d8a9340a4991f7b35c3effc63, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.921875
+      y: -0.921875
+      width: 1.84375
+      height: 1.84375
+  - original: {fileID: 21300000, guid: cde01ede1472a414fbc97da28a89c865, type: 3}
+    resource: CrossTheLine/ConfessionJesusNormal
+    pixel: {fileID: 21300000, guid: e879bc4309a823a4bab57b2588a49434, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.921875
+      y: -0.921875
+      width: 1.84375
+      height: 1.84375
+  - original: {fileID: -1739762440, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1048710050, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -821939179, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 2036571024, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1298711514, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1858444086, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -697828550, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -1943102967, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 982645273, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 1957197708, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 151540182, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 495885452, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 1155925409, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 1052007237, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -1588777995, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -1834188582, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 543895827, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -1476012041, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -1814559463, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 852644210, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1872262525, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -2030964414, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 995752010, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1995057391, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -2028349654, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 183712196, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1576546096, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 737350118, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1585793269, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 463037391, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 415462908, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 749182897, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1040816045, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -706841946, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -902456105, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 686914355, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 105525715, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 524784103, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 870856472, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -715587134, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 2011868182, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 1575772806, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 1864720553, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 1027725642, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -1235830141, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 343128012, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -234350316, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -475756595, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -327536744, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -899397430, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1117399907, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -2070768669, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1444662158, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -467665694, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -817409057, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1071119968, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 650779577, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -25781314, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1100886925, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 645235821, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1398322503, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1432989322, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1572117620, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1941903733, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1321324227, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -886108424, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 848804037, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -1122911518, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -587807477, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1149452213, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1523303380, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1931595170, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -1142761969, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -219134993, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -436365447, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 326288532, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -1628431385, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 2043782472, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1370206885, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 35604502, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -847657129, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -2011309658, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1774878459, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -278032535, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -2018464643, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -269463319, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1388044478, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 70139656, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -1178474016, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1749560599, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 383779177, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1012314062, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1987483283, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 32391460, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -112739169, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 594654446, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    resource: CrossTheLine/DiscipleWalkAtlas
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1403619338, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -1407200448, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1761779683, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1436308303, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 2132476106, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -2026320104, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1147987451, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -1403156241, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 1488585750, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 71256663, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -507517629, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -1730493347, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 1120914859, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -507147590, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 517247997, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -73540757, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -436411691, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -838308415, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -30637479, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1402619472, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1519772816, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -1369758537, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1522920866, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -1560567107, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -634002050, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -460547454, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: -183957374, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 813354835, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 49524041, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 1769351121, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 66363366, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 429193978, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion0
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 2058018716, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -380567261, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1335118355, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -856949022, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -2092338150, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 2063689028, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1658899683, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 806200959, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -853364792, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 275135072, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -1764408549, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -853797271, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -475798939, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 1383232276, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 1001637037, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 1769087113, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: -178545974, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1277606439, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -180091188, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1543620203, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 20238742, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -861557807, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1469723976, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1868323956, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 1898425385, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -528183233, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 48663300, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1810285422, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 296588862, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 800338485, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -1826239159, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -476211432, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion1
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1192168194, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 359371712, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -1427336962, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 1942351773, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -11969942, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -1419742086, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -142572246, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: -1551631020, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 438069608, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1291524542, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -507068738, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -1710689837, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 474741598, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -1986848987, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -737049365, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -788151150, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1903679725, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1708929007, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 658336352, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -898619428, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: -1235358284, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 665034139, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 1399112204, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 587957863, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 886116547, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -10847738, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 863740238, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 793613410, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 360294176, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1800962275, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1019218322, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: -1192944433, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    resource: CrossTheLine/DiscipleWalkMotion2
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 5f82d109a38896e4b82743b1d27b1271, type: 3}
+    resource: CrossTheLine/EntryCityLandscape
+    pixel: {fileID: 21300000, guid: d66af727c45fc0a46819fb545fa2b331, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: 21300000, guid: 59209b8e739e44141ab847b8a7992d24, type: 3}
+    resource: CrossTheLine/EntryGateLandscape
+    pixel: {fileID: 21300000, guid: f2342a2574d06eb4292874f6f609b8e5, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: 797837049, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+    resource: CrossTheLine/EntryGriefAtlas
+    pixel: {fileID: 21300000, guid: 1a5bc4a988cd481488170eb9e953a32d, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.9375
+      y: -0.921875
+      width: 1.875
+      height: 1.84375
+  - original: {fileID: -441819281, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+    resource: CrossTheLine/EntryGriefAtlas
+    pixel: {fileID: 21300000, guid: 2de42eecfd6ce3942b7e5b8b240d083f, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.953125
+      y: -0.921875
+      width: 1.90625
+      height: 1.84375
+  - original: {fileID: -1900561668, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+    resource: CrossTheLine/EntryGriefAtlas
+    pixel: {fileID: 21300000, guid: 78b4e1f7fb221b04fad8ff8065f0a2e6, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.953125
+      y: -0.921875
+      width: 1.90625
+      height: 1.8125
+  - original: {fileID: 21300000, guid: b4dc32e7de689a34eae65af7abfa9bbe, type: 3}
+    resource: CrossTheLine/EntryJesusSad
+    pixel: {fileID: 21300000, guid: 88088d8351f8b7a42bb4c3725bf26886, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.921875
+      y: -0.921875
+      width: 1.84375
+      height: 1.84375
+  - original: {fileID: 21300000, guid: 75f8fd612f7bdb1469880c17d96266ad, type: 3}
+    resource: CrossTheLine/EntryPalmFrond
+    pixel: {fileID: 21300000, guid: f656f8741d70e67439e75c73cc02077e, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.34375
+      y: -0.71875
+      width: 0.78125
+      height: 1.40625
+  - original: {fileID: 21300000, guid: c7775b829ac3a0240ba38869c13753fb, type: 3}
+    resource: CrossTheLine/EntryTownCityLandscape
+    pixel: {fileID: 21300000, guid: d3dd221e402509041bb98f147ccf38c1, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: 21300000, guid: 9beb0f5675761634aa6b39efb92c5665, type: 3}
+    resource: CrossTheLine/EntryTownGateLandscape
+    pixel: {fileID: 21300000, guid: d202bfc00803491489f9587c8edd3643, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: 21300000, guid: 8ec721f24df594241b6e28fa07c38413, type: 3}
+    resource: CrossTheLine/EntryVillageLandscape
+    pixel: {fileID: 21300000, guid: ceccf89adf99382499bb63e7f60639c1, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: -604448264, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    resource: CrossTheLine/EntryVillagersCheer
+    pixel: {fileID: 21300000, guid: 0d588e17d2b71364aacb40af1fee070d, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.71875
+      y: -0.9375
+      width: 1.15625
+      height: 1.8125
+  - original: {fileID: 494060564, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    resource: CrossTheLine/EntryVillagersCheer
+    pixel: {fileID: 21300000, guid: 2c2ad270595534147a3d5869f3680ab6, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 1.09375
+      height: 1.8125
+  - original: {fileID: 1237490878, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    resource: CrossTheLine/EntryVillagersCheer
+    pixel: {fileID: 21300000, guid: 5414a7c3abb069e4d966a0ae3f5e01e7, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: -2123244437, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    resource: CrossTheLine/EntryVillagersCheer
+    pixel: {fileID: 21300000, guid: 507b92680a86a344bbe959a096efead5, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: 91636815, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    resource: CrossTheLine/EntryVillagersCheer
+    pixel: {fileID: 21300000, guid: fffa60525da559d49acdb77e4d8e2907, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 1.0625
+      height: 1.8125
+  - original: {fileID: 529751028, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    resource: CrossTheLine/EntryVillagersCheer
+    pixel: {fileID: 21300000, guid: 3178d8e501c8ad747ac4eaba9e67cfe8, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: 1877219829, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    resource: CrossTheLine/EntryVillagersWalk
+    pixel: {fileID: 21300000, guid: 6f2bf28549659484f8e6cc676570e4ad, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 946011755, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    resource: CrossTheLine/EntryVillagersWalk
+    pixel: {fileID: 21300000, guid: 503d78e8d68d83040b630ca4d0c02bc6, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 838190139, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    resource: CrossTheLine/EntryVillagersWalk
+    pixel: {fileID: 21300000, guid: a0ced5d7a06102b469f851bfb99ede89, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 1654341013, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    resource: CrossTheLine/EntryVillagersWalk
+    pixel: {fileID: 21300000, guid: 820300b7702f1e04fab45c5a7b51a90b, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -1439498912, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    resource: CrossTheLine/EntryVillagersWalk
+    pixel: {fileID: 21300000, guid: 4acf90482f5db30428f1282f3636c55d, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 1303524811, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    resource: CrossTheLine/EntryVillagersWalk
+    pixel: {fileID: 21300000, guid: 18dea38608654774f86c8c5b3e814c02, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.6875
+      height: 1.3125
+  - original: {fileID: 590186678, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    resource: CrossTheLine/EntryVillagersWork
+    pixel: {fileID: 21300000, guid: 15f5d4e9b3baa8c4d9a2266ed04771b8, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: -471164839, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    resource: CrossTheLine/EntryVillagersWork
+    pixel: {fileID: 21300000, guid: c86c338f9cc5ad644bf74d6fccb6250c, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -2143871488, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    resource: CrossTheLine/EntryVillagersWork
+    pixel: {fileID: 21300000, guid: 08830965b6d7cbb47b5542acc4743248, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 1578191993, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    resource: CrossTheLine/EntryVillagersWork
+    pixel: {fileID: 21300000, guid: 971995b9d9cc9b04cb44a1fe1a4437a2, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: 1651846108, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    resource: CrossTheLine/EntryVillagersWork
+    pixel: {fileID: 21300000, guid: 405eff28394c0fb45b7d30c722c510ff, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 1
+      height: 1.8125
+  - original: {fileID: -1833668822, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    resource: CrossTheLine/EntryVillagersWork
+    pixel: {fileID: 21300000, guid: 066a9455c5cf96b499c7000d2f03f28e, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: 314510542, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+    resource: CrossTheLine/FeedingJesusActions
+    pixel: {fileID: 21300000, guid: a348ef23a65a44b4b8782f9b7aa2e156, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.609375
+      y: -0.921875
+      width: 1.21875
+      height: 1.84375
+  - original: {fileID: -872478689, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+    resource: CrossTheLine/FeedingJesusActions
+    pixel: {fileID: 21300000, guid: 2f4225ddf1ee61a43aa34f863bc91ff8, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.71875
+      y: -0.921875
+      width: 1.4375
+      height: 1.84375
+  - original: {fileID: -222982973, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+    resource: CrossTheLine/FeedingJesusActions
+    pixel: {fileID: 21300000, guid: 5393e04ab3cbea14b982005bc191ef7c, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.5
+      y: -0.921875
+      width: 1
+      height: 1.84375
+  - original: {fileID: 889255412, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+    resource: CrossTheLine/FeedingProps
+    pixel: {fileID: 21300000, guid: ef17318be79284e4783b320f93dabbab, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.96875
+      y: -0.75
+      width: 1.9375
+      height: 1.5
+  - original: {fileID: -1294559411, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+    resource: CrossTheLine/FeedingProps
+    pixel: {fileID: 21300000, guid: 92988b1711bce394e8333f55590dc708, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.375
+      y: -0.75
+      width: 2.75
+      height: 1.5
+  - original: {fileID: -505175932, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+    resource: CrossTheLine/FeedingProps
+    pixel: {fileID: 21300000, guid: 99567c0d95db99e498cd6b710244032f, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.8125
+      y: -0.75
+      width: 3.625
+      height: 1.5
+  - original: {fileID: 274425285, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    resource: CrossTheLine/FeedingSeatedCrowd
+    pixel: {fileID: 21300000, guid: d1e19371d65b7674ebe0ca2cd7f5c5eb, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.5625
+  - original: {fileID: -992343654, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    resource: CrossTheLine/FeedingSeatedCrowd
+    pixel: {fileID: 21300000, guid: f42466eef12e3204583cb01e74ed9bc7, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.5625
+  - original: {fileID: -586899708, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    resource: CrossTheLine/FeedingSeatedCrowd
+    pixel: {fileID: 21300000, guid: e377076f229dc1042a02000e4e39440f, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.5625
+  - original: {fileID: 2134651066, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    resource: CrossTheLine/FeedingSeatedCrowd
+    pixel: {fileID: 21300000, guid: 94da3000f9b484240b40c935284d265f, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.5625
+  - original: {fileID: 717158670, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    resource: CrossTheLine/FisherActions
+    pixel: {fileID: 21300000, guid: 17bfde328d428b54fbc69bec53a755ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 73862098, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    resource: CrossTheLine/FisherActions
+    pixel: {fileID: 21300000, guid: 4ea2751d7b7b49241a7dd08262918228, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: -274571025, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    resource: CrossTheLine/FisherActions
+    pixel: {fileID: 21300000, guid: b152fb37294505e43b28daa73ac00111, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 819983644, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    resource: CrossTheLine/FisherActions
+    pixel: {fileID: 21300000, guid: 16cd4a304b785b34b8ce852a7407b237, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -517112860, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    resource: CrossTheLine/FisherActions
+    pixel: {fileID: 21300000, guid: 1ae091bb735818a48b53b1e7ab718ed9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: -195134252, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    resource: CrossTheLine/FisherActions
+    pixel: {fileID: 21300000, guid: ffae100cbe013c148aca3a1038a873fa, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 1647277188, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    resource: CrossTheLine/FishingNet
+    pixel: {fileID: 21300000, guid: cf7d399a4a4f625429a02c7843c8cd03, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.609375
+      y: -0.7492316
+      width: 1.21875
+      height: 1.4984632
+  - original: {fileID: -1793859549, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    resource: CrossTheLine/FishingNet
+    pixel: {fileID: 21300000, guid: e1a7871e55a11e243bdf352272545254, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.609375
+      y: -0.7492316
+      width: 1.21875
+      height: 1.4984632
+  - original: {fileID: -337271547, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    resource: CrossTheLine/FishingNet
+    pixel: {fileID: 21300000, guid: 181722fb1ebb07345997eb2e4e2d535e, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.53125
+      y: -0.7489754
+      width: 1.0625
+      height: 1.4979508
+  - original: {fileID: 44924307, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    resource: CrossTheLine/FishingNet
+    pixel: {fileID: 21300000, guid: 5967f9f1a7d39374c938a73091637f84, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.5625
+      y: -0.7515369
+      width: 1.125
+      height: 1.5030738
+  - original: {fileID: 1267319172, guid: 68a92d36a1bbf374baf6c0a7b165ce84, type: 3}
+    resource: CrossTheLine/GalileeBoatHull
+    pixel: {fileID: 21300000, guid: fabccc5a726011044858cce454313729, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -3.078125
+      y: -0.74671495
+      width: 6.15625
+      height: 1.4934299
+  - original: {fileID: -734109445, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: 1745b52dfaadb3e4c92c003995128d65, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.78125
+      y: -0.75
+      width: 1.5625
+      height: 1.5
+  - original: {fileID: -2137258166, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: 8c2a500ef1a117843a7ca233f4cdbef3, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.828125
+      y: -0.75
+      width: 1.65625
+      height: 1.5
+  - original: {fileID: 1084910904, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: f13d738078d5e444fbeddae99241ba2b, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.515625
+      y: -0.75
+      width: 1.03125
+      height: 1.5
+  - original: {fileID: -456362963, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: c62e610af9aa66d479ed3ab0f05da219, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.625
+      y: -0.75
+      width: 1.25
+      height: 1.5
+  - original: {fileID: -1173276848, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: 0f1c02c0b0edb404997ec864f6354b54, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.65625
+      y: -0.75
+      width: 1.3125
+      height: 1.5
+  - original: {fileID: 541652122, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: 07c35d9d8ddc2f8498d4dccbaf377225, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.546875
+      y: -0.75
+      width: 3.09375
+      height: 1.5
+  - original: {fileID: 2111948794, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    resource: CrossTheLine/JerusalemEntryAtlas
+    pixel: {fileID: 21300000, guid: 139fb0eed83e65543832b23f79769e46, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.453125
+      y: -0.75
+      width: 0.90625
+      height: 1.5
+  - original: {fileID: 21300000, guid: 2c1b3e6fe42c7814fb2c76e33f75aec3, type: 3}
+    resource: CrossTheLine/OlivesPrayerLandscape
+    pixel: {fileID: 21300000, guid: 66a1ee8cb6ee1814185b40a6fae402ea, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: -292134455134019799, guid: 10a61a6549ff16b44a300b97a2867636, type: 3}
+    resource: CrossTheLine/OriginalJesusPixels
+    pixel: {fileID: 21300000, guid: 2153d58b76910544a949bf3091c99688, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.890625
+      width: 0.875
+      height: 1.78125
+  - original: {fileID: -1034679832, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+    resource: CrossTheLine/SeaWaveAtlas
+    pixel: {fileID: 21300000, guid: 6726bfe630272a546b4d280801f4782f, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -2.359375
+      y: -0.7467746
+      width: 4.71875
+      height: 1.4935492
+  - original: {fileID: 827837630, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+    resource: CrossTheLine/SeaWaveAtlas
+    pixel: {fileID: 21300000, guid: 1ce0a8e4e02fa28488eee3aa6bea9500, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.328125
+      y: -0.74935496
+      width: 2.65625
+      height: 1.4987099
+  - original: {fileID: -1149063308, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+    resource: CrossTheLine/SeaWaveAtlas
+    pixel: {fileID: 21300000, guid: 54cbf842d586f534e97eeff0b6724cca, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.015625
+      y: -0.7500717
+      width: 2.03125
+      height: 1.5001434
+  - original: {fileID: 453375636, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    resource: CrossTheLine/SecondTempleChildren
+    pixel: {fileID: 21300000, guid: 049e955591f26a24dbc9f8702ff5a072, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.6875
+      height: 1.3125
+  - original: {fileID: -1894594778, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    resource: CrossTheLine/SecondTempleChildren
+    pixel: {fileID: 21300000, guid: 53bd515e9c811b8408a63f49c592f621, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: -482242436, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    resource: CrossTheLine/SecondTempleChildren
+    pixel: {fileID: 21300000, guid: c129b7a63443a9340a20305bbe99e401, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.40625
+      y: -0.9375
+      width: 0.78125
+      height: 1.3125
+  - original: {fileID: -2119299870, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    resource: CrossTheLine/SecondTempleChildren
+    pixel: {fileID: 21300000, guid: ab8d688ddca7e7f4395bece1b234a242, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.40625
+      y: -0.9375
+      width: 0.78125
+      height: 1.3125
+  - original: {fileID: 1805099261, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    resource: CrossTheLine/SecondTempleChildren
+    pixel: {fileID: 21300000, guid: 9e9ec011727d2c84084231d65b8ee7a5, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.6875
+      height: 1.3125
+  - original: {fileID: 197666275, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    resource: CrossTheLine/SecondTempleChildren
+    pixel: {fileID: 21300000, guid: 67ea993c8fbeeca46b46d749846e8151, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: 21300000, guid: 9aaecde5083870a4bb224d21b58dca26, type: 3}
+    resource: CrossTheLine/SecondTempleCourtyard
+    pixel: {fileID: 21300000, guid: 92b627f7787e7764883e3a9ca631d832, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -14.578125
+      y: -8.203125
+      width: 29.15625
+      height: 16.40625
+  - original: {fileID: 21300000, guid: 09220c052e7d0f34e90df8a1203e1df7, type: 3}
+    resource: CrossTheLine/SecondTempleCourtyardV2
+    pixel: {fileID: 21300000, guid: 64bee06391e1db741a7251fe143f68c2, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -14.578125
+      y: -8.203125
+      width: 29.15625
+      height: 16.40625
+  - original: {fileID: 21300000, guid: 4bf5dee739287664cb8b24720096d253, type: 3}
+    resource: CrossTheLine/SecondTempleExterior
+    pixel: {fileID: 21300000, guid: fb21459d20fa44e48a8e82c9415c95c6, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -12
+      y: -6.75
+      width: 24
+      height: 13.5
+  - original: {fileID: 1336160576, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    resource: CrossTheLine/SecondTempleJesus
+    pixel: {fileID: 21300000, guid: af4d15e1a01ba03479d47ff09d5f39ac, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.65625
+      y: -0.921875
+      width: 1.3125
+      height: 1.84375
+  - original: {fileID: 1534867239, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    resource: CrossTheLine/SecondTempleJesus
+    pixel: {fileID: 21300000, guid: 801d128e8bf975048a3eae28a321aa83, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.875
+      y: -0.921875
+      width: 1.75
+      height: 1.84375
+  - original: {fileID: 1504861650, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    resource: CrossTheLine/SecondTempleJesus
+    pixel: {fileID: 21300000, guid: a47ea6091446b994083db3ca69181927, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.953125
+      y: -0.921875
+      width: 1.90625
+      height: 1.84375
+  - original: {fileID: -268076262, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    resource: CrossTheLine/SecondTempleJesus
+    pixel: {fileID: 21300000, guid: 191ed66aa0052e6418158a13a19d176c, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.59375
+      y: -0.921875
+      width: 1.1875
+      height: 1.84375
+  - original: {fileID: -224761369, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    resource: CrossTheLine/SecondTempleLeaders
+    pixel: {fileID: 21300000, guid: 16554eeb01ccdf94a9048ba6b0490b2d, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: 804906989, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    resource: CrossTheLine/SecondTempleLeaders
+    pixel: {fileID: 21300000, guid: ab3ce87a44b95834ba7915a40d9ec8ce, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -1945990328, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    resource: CrossTheLine/SecondTempleLeaders
+    pixel: {fileID: 21300000, guid: bf1bcb5661709f84fb22f5dd90f1c98f, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: 1393235231, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    resource: CrossTheLine/SecondTempleLeaders
+    pixel: {fileID: 21300000, guid: cd8e6205559493d40a1d2cef7ff08eb9, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -1212455386, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 3112a08ec2ebc8e4fafbcca36820abcc, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 983826159, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 2896dbe2deaa9534bbbe07e552b0cf76, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 1497191184, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 96d390844d33d1546ac5f61f19f4b7cf, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -1254928540, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 8102df2ad52d4a542b185d74cf2358e2, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -1738497191, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 98047a73cd8f8204cb7b3965fa1c8c4e, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.8125
+  - original: {fileID: 301014207, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 01758b899549c9246b64003de15352ac, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 581012612, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: f3720d727a4793442a420165e3947fae, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.8125
+  - original: {fileID: 1676131116, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsA
+    pixel: {fileID: 21300000, guid: 4029f336018a6764cb6b1d5368a89766, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 770821473, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: 78c169cde7582054ab8a3a609cd2a402, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.5
+      y: -0.9375
+      width: 0.96875
+      height: 1.8125
+  - original: {fileID: -1813681053, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: fb6a5e83eda0092438b866dee477717b, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.5
+      y: -0.9375
+      width: 0.96875
+      height: 1.8125
+  - original: {fileID: -900505213, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: d10afa35fdca4e1438d2d7697aa5e146, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 342048134, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: 83d8d79997c5ce24da132f41765e55fb, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 608989103, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: 9fe11df8dd22f9b498dc709a6f12d57f, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: -238805853, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: 2401e973e2518e046a63835349167653, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 1369574914, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: 45f617a5143284949935437b6f9f0f6e, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -500213166, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    resource: CrossTheLine/SecondTempleMerchantsB
+    pixel: {fileID: 21300000, guid: 5b425936df3616e46a2ccc98985cd755, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: -495467709, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 6b6a60d718362ea49a6963c6fd29e529, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.5
+      y: -0.75
+      width: 1
+      height: 1.5
+  - original: {fileID: -1284426379, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 37b56bf490239ec42b2cf39e50445f24, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.65625
+      y: -0.75
+      width: 1.3125
+      height: 1.5
+  - original: {fileID: 1864251769, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 2182851b6d309e4448eb7896cc3bfbf7, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.734375
+      y: -0.75
+      width: 1.46875
+      height: 1.5
+  - original: {fileID: 1384183219, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 410feb595c1005f44b514f9f67b5fae3, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.921875
+      y: -0.75
+      width: 1.84375
+      height: 1.5
+  - original: {fileID: -1215849485, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 643488af4d5cdd74d8a2d3681e7e9bd1, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.453125
+      y: -0.75
+      width: 0.90625
+      height: 1.5
+  - original: {fileID: 574398100, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 895880a1330966d499ac525ec14cb3bc, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.203125
+      y: -0.75
+      width: 2.40625
+      height: 1.5
+  - original: {fileID: -143183672, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: bd2d6bc8c4fc7bc4fbd9e2979ecb262b, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.65625
+      y: -0.75
+      width: 1.3125
+      height: 1.5
+  - original: {fileID: 98630884, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 54abd07a0e50ba9428f39b0d6cd6de99, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.6875
+      y: -0.75
+      width: 1.375
+      height: 1.5
+  - original: {fileID: 674227677, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    resource: CrossTheLine/SecondTempleProps
+    pixel: {fileID: 21300000, guid: 6d4c312d988e7b443b5e5c3ffa4ac7bd, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1.09375
+      y: -0.75
+      width: 2.1875
+      height: 1.5
+  - original: {fileID: -2869017941244362777, guid: dc09a57fd2f290246af8a003bcbcf6d9, type: 3}
+    resource: CrossTheLine/SleepingJesus
+    pixel: {fileID: 21300000, guid: cda9770b818873646a7c788f9510db38, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -2.453125
+      y: -0.921875
+      width: 4.90625
+      height: 1.75
+  - original: {fileID: -1864084615, guid: 54f44cc4326fd91499ab28729116aed1, type: 3}
+    resource: CrossTheLine/WaterRescueActions
+    pixel: {fileID: 21300000, guid: f943d278d62894842abe67db9b5038f7, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.828125
+      y: -0.921875
+      width: 1.65625
+      height: 1.84375
+  - original: {fileID: -1020897876, guid: 54f44cc4326fd91499ab28729116aed1, type: 3}
+    resource: CrossTheLine/WaterRescueActions
+    pixel: {fileID: 21300000, guid: 5f44976898ac31c49aa5a311af512102, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 9ce54463fa9af1245ac19480e9654567, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: 9ce54463fa9af1245ac19480e9654567, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.890625
+      width: 0.875
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 9eb2a5c0ceaa7aa44b946383d29f92c7, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: 9eb2a5c0ceaa7aa44b946383d29f92c7, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.421875
+      y: -0.890625
+      width: 0.84375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: bc538f4706540c84ab9cf673f2ed41ac, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: bc538f4706540c84ab9cf673f2ed41ac, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.453125
+      y: -0.890625
+      width: 0.90625
+      height: 1.78125
+  - original: {fileID: 21300000, guid: f825c062fa5399746a53bd7685431dba, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: f825c062fa5399746a53bd7685431dba, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.421875
+      y: -0.890625
+      width: 0.84375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: d036720bd45f536429996b17831ded87, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: d036720bd45f536429996b17831ded87, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.890625
+      width: 0.875
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 90128b08ae2b959499965186508f82a2, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: 90128b08ae2b959499965186508f82a2, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.484375
+      y: -0.890625
+      width: 0.96875
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 63754bb7c26b826418790153c8456b8d, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: 63754bb7c26b826418790153c8456b8d, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.546875
+      y: -0.890625
+      width: 1.09375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: bf51acf26b2cbe549a4d0094a12daa7e, type: 3}
+    resource: Original/e8047ba333c79a54691f6f627eaf6d82
+    pixel: {fileID: 21300000, guid: bf51acf26b2cbe549a4d0094a12daa7e, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.484375
+      y: -0.890625
+      width: 0.96875
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    resource: Original/9343590d7a0b98647932172e24ba410f
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: dbbadbc37c5296742aec9cf750bfbf89, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: dbbadbc37c5296742aec9cf750bfbf89, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 42ef457bc9e92054da0c1cde1e787d16, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: 42ef457bc9e92054da0c1cde1e787d16, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.40625
+      y: -0.921875
+      width: 0.8125
+      height: 1.84375
+  - original: {fileID: 21300000, guid: 106cec9833950b1458b14c63c6744e2f, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: 106cec9833950b1458b14c63c6744e2f, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.9375
+      width: 0.875
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 77595ed046db1104aae150979f3b6b01, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: 77595ed046db1104aae150979f3b6b01, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.3125
+      y: -0.9375
+      width: 0.625
+      height: 1.3125
+  - original: {fileID: 21300000, guid: f287f8618318c5d4b89d409d0abda94c, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: f287f8618318c5d4b89d409d0abda94c, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.40625
+      y: -0.9375
+      width: 0.78125
+      height: 1.3125
+  - original: {fileID: 21300000, guid: 1c1043d44c9b3cc418e40d768d7945b9, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: 1c1043d44c9b3cc418e40d768d7945b9, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.90625
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 573381bf517b7a7489d67dce05837fd8, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: 573381bf517b7a7489d67dce05837fd8, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.46875
+      y: -0.9375
+      width: 0.9375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: bca6074397ce60241bb1ac86373bc031, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: bca6074397ce60241bb1ac86373bc031, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.921875
+      width: 0.875
+      height: 1.84375
+  - original: {fileID: 21300000, guid: b22d3d40de17bcd49bcf011fc6c453e8, type: 3}
+    resource: Original/0749d7dfbdf84a147a8410a9b09e7d83
+    pixel: {fileID: 21300000, guid: b22d3d40de17bcd49bcf011fc6c453e8, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.6875
+      y: -0.9375
+      width: 1.375
+      height: 1.78125
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Basket
+    pixel: {fileID: 21300000, guid: 1516bf7e25dd3104d92bfc8bc5d91fe6, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.8125
+      y: -0.96875
+      width: 1.65625
+      height: 1.84375
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Coin
+    pixel: {fileID: 21300000, guid: 818fb62250c7c14489ae7a7efded91a5, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.90625
+      y: -0.875
+      width: 1.84375
+      height: 1.78125
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Cup
+    pixel: {fileID: 21300000, guid: e6b10df256951e7479570319ef271a39, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.71875
+      y: -0.84375
+      width: 1.46875
+      height: 1.84375
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Door
+    pixel: {fileID: 21300000, guid: 7c8b24a3b64186d46b46bad4edd625b6, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Fish
+    pixel: {fileID: 21300000, guid: 0da06c4f9c13a134fb5501ba89e6aab5, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.96875
+      y: -0.40625
+      width: 1.75
+      height: 1.125
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Hull
+    pixel: {fileID: 21300000, guid: d4c2867fc1bad7e46a2827e0c893c257, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Jar
+    pixel: {fileID: 21300000, guid: e4fe43043862faa4c913ced7a2639295, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.875
+      y: -0.90625
+      width: 1.78125
+      height: 1.90625
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Leaves
+    pixel: {fileID: 21300000, guid: b0eafc4a145239149b86b0e466b883d5, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.96875
+      y: -0.875
+      width: 1.96875
+      height: 1.78125
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Path
+    pixel: {fileID: 21300000, guid: 2b5ecdc82735991469219612b969369c, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Plate
+    pixel: {fileID: 21300000, guid: d544cf006be236a4dac52d3a7eebf49d, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.96875
+      y: -0.84375
+      width: 1.96875
+      height: 1.625
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Sail
+    pixel: {fileID: 21300000, guid: 89a5c60f45edd1f458d3679c4604f95a, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.90625
+      y: -1
+      width: 1.90625
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneDesert
+    pixel: {fileID: 21300000, guid: 54448294d2d228848839f94d8513cdce, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -20
+      y: -10
+      width: 40
+      height: 20
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneField
+    pixel: {fileID: 21300000, guid: e0a6a1065780f0e4db0b7e6f0913c8ee, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -17
+      y: -10
+      width: 34
+      height: 20
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneHome
+    pixel: {fileID: 21300000, guid: 2009be9c77b10214e8d2cdda94e1cd97, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -15
+      y: -9
+      width: 30
+      height: 18
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneLake
+    pixel: {fileID: 21300000, guid: 9938fd410a1dd06428a1597246a949fc, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -17.5
+      y: -10
+      width: 35
+      height: 20
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneMountain
+    pixel: {fileID: 21300000, guid: de1a7050011e4a3448f3843a837cb43c, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -20
+      y: -10
+      width: 40
+      height: 20
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneRiver
+    pixel: {fileID: 21300000, guid: b78a71e1375dc9048b64e59ddb672686, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -24
+      y: -10
+      width: 48
+      height: 20
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneRooftop
+    pixel: {fileID: 21300000, guid: 5d6259113630e874096de3d42df19041, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -20
+      y: -10
+      width: 40
+      height: 20
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneSea
+    pixel: {fileID: 21300000, guid: 1de6be0b2859fbb48b222ff1b41a1faa, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -20
+      y: -7.5
+      width: 40
+      height: 15
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneSky
+    pixel: {fileID: 21300000, guid: be201c80dccfe554280d34e774fd5902, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -20
+      y: -2.5
+      width: 40
+      height: 5
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneSynagogue
+    pixel: {fileID: 21300000, guid: 6c8c568cd22606b41a233650e7998fa4, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -15
+      y: -9
+      width: 30
+      height: 18
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneTemple
+    pixel: {fileID: 21300000, guid: 5dc5aca8b54838e46a3733d420d3897d, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -15
+      y: -9
+      width: 30
+      height: 18
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneVillage
+    pixel: {fileID: 21300000, guid: 51f9fa1a501f9d642befb4711f6066e3, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -15
+      y: -9
+      width: 30
+      height: 18
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/SceneWedding
+    pixel: {fileID: 21300000, guid: 27ad7c3f93a53d0479702a64e34dd752, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -15
+      y: -9
+      width: 30
+      height: 18
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Scroll
+    pixel: {fileID: 21300000, guid: acb02af9ee4fbdb49a190ec7ba352633, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.875
+      y: -0.84375
+      width: 1.75
+      height: 1.6875
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Stone
+    pixel: {fileID: 21300000, guid: 9806f248deaedde4cbf531621d6e1150, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Table
+    pixel: {fileID: 21300000, guid: c44d267226e80f54c9c03214a1ca319b, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 1.9375
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Trunk
+    pixel: {fileID: 21300000, guid: aa00ec28d60b3b2409ff9fd7808cf636, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.625
+      y: -1
+      width: 1.25
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Window
+    pixel: {fileID: 21300000, guid: 5e1c85b64ad0ed047a98165a51e42fb0, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 2
+  - original: {fileID: 0}
+    resource: CrossTheLine/PixelScenery/Wood
+    pixel: {fileID: 21300000, guid: 2be6ec2b6e30e76449a4254c5e7be55e, type: 3}
+    character: 0
+    visibleBounds:
+      serializedVersion: 2
+      x: -1
+      y: -1
+      width: 2
+      height: 2
+  - original: {fileID: 21300000, guid: 41179091dd7ce1947a51bcd7431f04bf, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: b78acd6eff806fd47adc319d6e6fe6d1, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 009f882981c0c87468a20d3d00cb9562, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 36231e6eb73dab6459bfec7c499d0bcd, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: a8b83316b92ca9a42bbce40366887aef, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: b3296e489d462124aa145f9746ba3ad5, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: b87c982c2f24bd5468d25b805c5715fb, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 580cecf886b5ab640b606e3d4964a0ed, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 777bfeb6cdd29a34abce709fb23bb699, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8e0dcd8a25c0b93498edc5baee39ff70, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.6875
+  - original: {fileID: 21300000, guid: 18eca7077b14e8d4fa05b8eb1ba8cba0, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: a81b09a1b84caf947bf2b03b1bcb22d8, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 9c95ace5db11d3f4bb369e0826b3970a, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: d28c07acb019ae046a7041d64d061c95, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 3a6f06e10431888459e01dbd1a8bdb43, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 0856ebea6725a84418cb981c29472fd3, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 8b7993345e13d0349b47873735973e20, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: 464e064f01e7ad24d993e73737d88c46, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: d612189bc2ff2bd459961a6deef1585b, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 8a25565feb0aba54bb69cebdbe1b2606, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: e89a53deb827498458ec3e3965ad8c5e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: cebc4c82c946a1147af516ad72551596, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 44120cc6ea80bf54ba68f4c1d079504d, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: a209b967bab5aec4c905f93ac161175e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: fe28abf1fa4ab794fbcb66da95cade88, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 75475a2b47fb857408106b7bf7086da1, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: dda97118134eba645a45f33527506f12, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 240746459edbd3d4fbb2bdb7dacfa73f, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 45771782f36a9e244b12b903819a55be, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 0dc079e0eba9b9b44b12ee26b6e5b445, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 578b3db28007a6a448627f1f824a51a5, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 4c2dec886d63aea43812f43e10eae058, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 50d859d4beb0836458a041d895df14ea, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 04816d9a4dcf1114eadfa05e60aced43, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: a6d5bbe63a6edcd4a9ac0592979f94b3, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: deb39783c4dd5d542a59e8a936859ffd, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: d5fefe7934a3a7a42a7c780a983cbdca, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: 4716523b805da674486e9aae98aaeb3c, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: a8e22ef32d6173646a52b2a6f61762a4, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 917c2ab70d9bd694dbf7c073097e8dcc, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.625
+  - original: {fileID: 21300000, guid: d28e0c1556d26eb4b9707af0eaa47d27, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 3cbeadd170ce4ef46a9bd32698cc75b5, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 3ce0b5c29c27fab479cfae953dc6c7a2, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 8088fac784a830e418087c0f75ddd43b, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 713e17cce34aad84daf3e4fa84d4f93b, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 21d05f49e1a1ca14d8aa1602060bfdce, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 8ed2a61865550e54998f8cdde6d863fa, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: c53e2d05bcde81c4eb9e1527e4bf240f, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: e95383395cc033249a5ed70a45cf2074, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 840e16ea7d0f14647a47e9bcc780868e, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 8f7b58557042f884d8047591534c1554, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: ff700a0f93ddc4645912188c73521507, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 80b81a35cb9f90a44934914fb19f0fa5, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 7415bbc7b6618744b8073438a4683f29, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 0812ac589edbeef45ab63f56a745fc5e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: e1d45945a3441184083e09191652ddce, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: e1893c1fa45c55a40ada388869d33d7b, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 54d6c40c11fb840429f3a46a1ea66144, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 1bc8cc4ae1e60f641a92516ed354cfc5, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: ae21f0331f305f141ab2abe52e26b11f, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.65625
+  - original: {fileID: 21300000, guid: 2c6c599074782b949803cbc9b29c3b06, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 86ac09ae9a2fb5a4eb6b874156f55ff3, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 7a01f52f44af94b45af994e8473dde6f, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: bba73719d005ce9408aa5e3c6f39f690, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: a681c90f56ab41444a0b71bd16c0c3d9, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 1ae09fc0a3fe88d4d9635c1ebb753392, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 5dbf57244ac104641ae30c9d82ecbe83, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 1ffaf790d4902f244a71fe51bd8b0de8, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 1af3c13d063e057478dcc0671456b58e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 10c8e9a3bd1be9d4683e3d280e13830c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: d7cb91f57224ecd46b4cfda6af4c1691, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 077270920babd2940a1881c02fc75328, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 4cee0d92bf396eb4797cbd32f94a46f8, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: c915e5a5ce853244b9555a1165d3f139, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 101bdeeb909d8af44be1e3580fc20c10, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 30e18c584de8a8e4ba19878d7d402c1a, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 5f6ae6e93a862644eaebdf3ef5944b8b, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 72ceb03cd5b9dff4f8da1981ecb77ee9, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: ab2e044f013f02843bfbf1f2dfba2d26, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 162e8e24a8a8ed54991a39d9ad824513, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 9ac4437e4f5fcc9499de34daf2c1f489, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: a5c297b4aa8c2c146a1de17888a0328d, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 1e65505b7211d5d49b23052bac7b0578, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: b13957a273d9ac443aa2a030c150334e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 3a8b26993c111ec4491d3dd8a042d705, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: b2700ed1c5675c7468aae4f443031b17, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: f0e2976f3d931c84b9bc5caa6918160c, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: eedbd26cb0aa4c94b9b92fc25a1aca73, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 35e4d94b596504d4d8bfa45350896ce4, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 63a3163393521714283ebac0bdebdec9, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.59375
+  - original: {fileID: 21300000, guid: 1764a1414ee19a846ac0df844752f750, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: f858b8d106da4c3449fe0753ee553a9f, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: d602c0395b6673b478ebf7b8f4675881, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 130de8edf785f0f4ebdf45328639712b, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: e67451cd3f2917a4baa7868645a83531, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 187bb5048bac2a944a091bb211d8d24e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: bb05453f5ab5f7d4d854d2b0d5596c7d, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 87e151be97508e04982d618c606c3d83, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: b91abef3850d0434e86472c592c4ca54, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: c5754e48c429b3e4096e4fa2f575fce4, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 7e909aed569c7044d8f6fa55f428e77a, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 3b2bd6243c13f424eb28ec81c537a733, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 6152cf1bc0dadf34194a9d6bbd2e5d62, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 9c77b286bef032549874370f8dcff47d, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: bae1a9549ec1bf94aaacfbf664ae54ff, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 045f7bf08c8e77745873e70a5deb877d, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 6e4dd38e8d7fa174f8bd755db4aefdb4, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: f1b51d2bbd3f63648a0f798e0606d93a, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 81c341c743ed0724b80e62d757d7ccbd, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: e55f77a9b91d07a4595c4e6bb74122ea, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -0.875
+      width: 0.8125
+      height: 1.5625
+  - original: {fileID: 21300000, guid: 802e48606f5222a4f96b505049286654, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: ffd21ea24028b6a4692102a40508ee67, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 38b3cf0cb91113949865b7336459c7d9, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: e486c5c17d8bb7b4591a3e1ebb6a57c3, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 05f41ac4d54d55947ac0df9a79afe541, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 48c79b03ae0b9314fbd385c9303a6d37, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 8ea68c0b70cd8ec40b33a7386b5d8404, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 8bf25ec656c60a34dba50256a93a186a, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: 69bec774cfc3c234aabdc86b5305480e, type: 3}
+    resource: CrossTheLine/NativeDiscipleMigration
+    pixel: {fileID: 21300000, guid: 681232ca78bdecb4f830305b2c13344c, type: 2}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.4375
+      y: -1
+      width: 1.4375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: edce7e7e6909e3b43bf15bb61691fefb, type: 3}
+    resource: CrossTheLine/RedrawAngels
+    pixel: {fileID: 21300000, guid: edce7e7e6909e3b43bf15bb61691fefb, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.6875
+      y: -0.9375
+      width: 1.375
+      height: 1.78125
+  - original: {fileID: 21300000, guid: a213f7cd5e0bcc24e8bb428bf8669094, type: 3}
+    resource: CrossTheLine/RedrawAngels
+    pixel: {fileID: 21300000, guid: a213f7cd5e0bcc24e8bb428bf8669094, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.6875
+      y: -0.9375
+      width: 1.375
+      height: 1.8125
+  - original: {fileID: 21300000, guid: cda04492bc1981a4c91efc39947a44c1, type: 3}
+    resource: CrossTheLine/RedrawAngels
+    pixel: {fileID: 21300000, guid: cda04492bc1981a4c91efc39947a44c1, type: 3}
+    character: 1
+    visibleBounds:
+      serializedVersion: 2
+      x: -0.6875
+      y: -0.9375
+      width: 1.34375
+      height: 1.8125

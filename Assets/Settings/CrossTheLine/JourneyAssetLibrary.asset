@@ -1,0 +1,553 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae523d8a9a98ba4a8d62b7e2136c175, type: 3}
+  m_Name: JourneyAssetLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.JourneyAssetLibrary
+  entries:
+  - key: CrossTheLine/CaesareaConfessionLandscape
+    assets:
+    - {fileID: 2800000, guid: 0ba538eae1f8c4e44bfb27d15fff2b13, type: 3}
+    - {fileID: 21300000, guid: 0ba538eae1f8c4e44bfb27d15fff2b13, type: 3}
+  - key: CrossTheLine/Characters/Disciple00
+    assets:
+    - {fileID: 4899338438057904107, guid: b7dddc457d48f24408c8c8c4d145d6a7, type: 3}
+  - key: CrossTheLine/Characters/Disciple01
+    assets:
+    - {fileID: 1177920296213444285, guid: 29021261a196f314395fa661f088b257, type: 3}
+  - key: CrossTheLine/Characters/Disciple02
+    assets:
+    - {fileID: 7990151578310117641, guid: 38aefb8ad06c5294ea9db0e3428d4532, type: 3}
+  - key: CrossTheLine/Characters/Disciple03
+    assets:
+    - {fileID: 8963196640462209454, guid: cff4fb0fdb1822f4c8374a0d7a568d65, type: 3}
+  - key: CrossTheLine/Characters/Disciple04
+    assets:
+    - {fileID: 7650440044929757865, guid: 4b7c27f7b57d8db45b636082b0fda4b9, type: 3}
+  - key: CrossTheLine/Characters/Disciple05
+    assets:
+    - {fileID: 5272837068821112578, guid: 4aa85e74272198d4695f5a75ad852c56, type: 3}
+  - key: CrossTheLine/Characters/Disciple06
+    assets:
+    - {fileID: 4703181814046215970, guid: 171667ca9cad0534c965776ee685044a, type: 3}
+  - key: CrossTheLine/Characters/Disciple07
+    assets:
+    - {fileID: 864496626896070407, guid: 172f8eeef5debb34dbd0a38b42122ce0, type: 3}
+  - key: CrossTheLine/Characters/Disciple08
+    assets:
+    - {fileID: 1279540981271868225, guid: 4c23b28d87a06e9488c66be58cf6cf85, type: 3}
+  - key: CrossTheLine/Characters/Disciple09
+    assets:
+    - {fileID: 1894179661370617648, guid: aabd1d3de57606143b50ab8f2ea0ec86, type: 3}
+  - key: CrossTheLine/Characters/Disciple10
+    assets:
+    - {fileID: 3674354538057839359, guid: dcee3aa48c30ca949bda86bfcab4e2b1, type: 3}
+  - key: CrossTheLine/Characters/Disciple11
+    assets:
+    - {fileID: 7521841587517525063, guid: c5fa61429977cd64d9a1710fe75f9bbe, type: 3}
+  - key: CrossTheLine/Characters/Jesus
+    assets:
+    - {fileID: 2481541777242408485, guid: f057920895825c04598588e9ee616f47, type: 3}
+  - key: CrossTheLine/ChildrenBlessingAtlas
+    assets:
+    - {fileID: 2800000, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    - {fileID: -940013339, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    - {fileID: 69501130, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    - {fileID: 1771387610, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    - {fileID: 2028577466, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    - {fileID: 1551834997, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+    - {fileID: 745553784, guid: 687f724c9f551e24e8f48343fe0248c6, type: 3}
+  - key: CrossTheLine/ChildrenJesusMad
+    assets:
+    - {fileID: 2800000, guid: 85881fe5ab80e084da105f69d2d272a3, type: 3}
+    - {fileID: 21300000, guid: 85881fe5ab80e084da105f69d2d272a3, type: 3}
+  - key: CrossTheLine/ChildrenRoadLandscape
+    assets:
+    - {fileID: 2800000, guid: 30c683573c8a37b4db937c8658b5c8f6, type: 3}
+    - {fileID: 21300000, guid: 30c683573c8a37b4db937c8658b5c8f6, type: 3}
+  - key: CrossTheLine/ConfessionJesusLaugh
+    assets:
+    - {fileID: 2800000, guid: d1d2667556829784493f0be78f0349dc, type: 3}
+    - {fileID: 21300000, guid: d1d2667556829784493f0be78f0349dc, type: 3}
+  - key: CrossTheLine/ConfessionJesusNormal
+    assets:
+    - {fileID: 2800000, guid: cde01ede1472a414fbc97da28a89c865, type: 3}
+    - {fileID: 21300000, guid: cde01ede1472a414fbc97da28a89c865, type: 3}
+  - key: CrossTheLine/DiscipleWalkAtlas
+    assets:
+    - {fileID: 2800000, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1739762440, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1048710050, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -821939179, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 2036571024, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1298711514, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1858444086, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -697828550, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1943102967, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 982645273, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1957197708, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 151540182, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 495885452, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1155925409, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1052007237, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1588777995, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1834188582, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 543895827, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1476012041, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1814559463, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 852644210, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1872262525, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -2030964414, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 995752010, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1995057391, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -2028349654, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 183712196, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1576546096, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 737350118, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1585793269, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 463037391, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 415462908, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 749182897, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1040816045, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -706841946, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -902456105, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 686914355, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 105525715, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 524784103, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 870856472, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -715587134, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 2011868182, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1575772806, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1864720553, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1027725642, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1235830141, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 343128012, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -234350316, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -475756595, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -327536744, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -899397430, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1117399907, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -2070768669, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1444662158, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -467665694, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -817409057, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1071119968, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 650779577, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -25781314, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1100886925, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 645235821, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1398322503, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1432989322, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1572117620, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1941903733, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1321324227, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -886108424, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 848804037, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1122911518, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -587807477, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1149452213, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1523303380, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1931595170, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1142761969, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -219134993, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -436365447, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 326288532, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1628431385, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 2043782472, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1370206885, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 35604502, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -847657129, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -2011309658, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1774878459, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -278032535, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -2018464643, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -269463319, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1388044478, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 70139656, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1178474016, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1749560599, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 383779177, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -1012314062, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 1987483283, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 32391460, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: -112739169, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+    - {fileID: 594654446, guid: 1271d95a3e7f36642807f228ea536192, type: 3}
+  - key: CrossTheLine/DiscipleWalkMotion0
+    assets:
+    - {fileID: 2800000, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1403619338, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -1407200448, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1761779683, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1436308303, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 2132476106, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -2026320104, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1147987451, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -1403156241, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1488585750, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 71256663, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -507517629, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -1730493347, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1120914859, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -507147590, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 517247997, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -73540757, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -436411691, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -838308415, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -30637479, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1402619472, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1519772816, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -1369758537, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1522920866, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -1560567107, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -634002050, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -460547454, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: -183957374, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 813354835, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 49524041, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 1769351121, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 66363366, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+    - {fileID: 429193978, guid: f41feea7b5e221a4fb9fedf4ed6ead1c, type: 3}
+  - key: CrossTheLine/DiscipleWalkMotion1
+    assets:
+    - {fileID: 2800000, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 2058018716, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -380567261, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -1335118355, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -856949022, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -2092338150, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 2063689028, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1658899683, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 806200959, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -853364792, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 275135072, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -1764408549, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -853797271, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -475798939, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1383232276, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1001637037, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1769087113, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -178545974, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -1277606439, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -180091188, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1543620203, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 20238742, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -861557807, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1469723976, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -1868323956, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1898425385, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -528183233, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 48663300, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 1810285422, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 296588862, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: 800338485, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -1826239159, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+    - {fileID: -476211432, guid: 48e2139f5328dc64d979433c69762ab9, type: 3}
+  - key: CrossTheLine/DiscipleWalkMotion2
+    assets:
+    - {fileID: 2800000, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 1192168194, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 359371712, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1427336962, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 1942351773, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -11969942, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1419742086, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -142572246, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1551631020, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 438069608, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 1291524542, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -507068738, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1710689837, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 474741598, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1986848987, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -737049365, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -788151150, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 1903679725, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 1708929007, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 658336352, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -898619428, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1235358284, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 665034139, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 1399112204, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 587957863, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 886116547, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -10847738, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 863740238, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 793613410, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: 360294176, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1800962275, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1019218322, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+    - {fileID: -1192944433, guid: c5c61c749a01e6e47a212c71a937f43e, type: 3}
+  - key: CrossTheLine/EntryCityLandscape
+    assets:
+    - {fileID: 2800000, guid: 5f82d109a38896e4b82743b1d27b1271, type: 3}
+    - {fileID: 21300000, guid: 5f82d109a38896e4b82743b1d27b1271, type: 3}
+  - key: CrossTheLine/EntryGateLandscape
+    assets:
+    - {fileID: 2800000, guid: 59209b8e739e44141ab847b8a7992d24, type: 3}
+    - {fileID: 21300000, guid: 59209b8e739e44141ab847b8a7992d24, type: 3}
+  - key: CrossTheLine/EntryGriefAtlas
+    assets:
+    - {fileID: 2800000, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+    - {fileID: 797837049, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+    - {fileID: -441819281, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+    - {fileID: -1900561668, guid: 99f4f8e0ec487cc478315e677f0e68eb, type: 3}
+  - key: CrossTheLine/EntryJesusSad
+    assets:
+    - {fileID: 2800000, guid: b4dc32e7de689a34eae65af7abfa9bbe, type: 3}
+    - {fileID: 21300000, guid: b4dc32e7de689a34eae65af7abfa9bbe, type: 3}
+  - key: CrossTheLine/EntryPalmFrond
+    assets:
+    - {fileID: 2800000, guid: 75f8fd612f7bdb1469880c17d96266ad, type: 3}
+    - {fileID: 21300000, guid: 75f8fd612f7bdb1469880c17d96266ad, type: 3}
+  - key: CrossTheLine/EntryTownCityLandscape
+    assets:
+    - {fileID: 2800000, guid: c7775b829ac3a0240ba38869c13753fb, type: 3}
+    - {fileID: 21300000, guid: c7775b829ac3a0240ba38869c13753fb, type: 3}
+  - key: CrossTheLine/EntryTownGateLandscape
+    assets:
+    - {fileID: 2800000, guid: 9beb0f5675761634aa6b39efb92c5665, type: 3}
+    - {fileID: 21300000, guid: 9beb0f5675761634aa6b39efb92c5665, type: 3}
+  - key: CrossTheLine/EntryVillageLandscape
+    assets:
+    - {fileID: 2800000, guid: 8ec721f24df594241b6e28fa07c38413, type: 3}
+    - {fileID: 21300000, guid: 8ec721f24df594241b6e28fa07c38413, type: 3}
+  - key: CrossTheLine/EntryVillagersCheer
+    assets:
+    - {fileID: 2800000, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    - {fileID: -604448264, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    - {fileID: 494060564, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    - {fileID: 1237490878, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    - {fileID: -2123244437, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    - {fileID: 91636815, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+    - {fileID: 529751028, guid: cf726ee7b8156734299001112eb1fd2f, type: 3}
+  - key: CrossTheLine/EntryVillagersWalk
+    assets:
+    - {fileID: 2800000, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    - {fileID: 1877219829, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    - {fileID: 946011755, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    - {fileID: 838190139, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    - {fileID: 1654341013, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    - {fileID: -1439498912, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+    - {fileID: 1303524811, guid: 839042c5a8edf5144a0db457cf05b0f4, type: 3}
+  - key: CrossTheLine/EntryVillagersWork
+    assets:
+    - {fileID: 2800000, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    - {fileID: 590186678, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    - {fileID: -471164839, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    - {fileID: -2143871488, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    - {fileID: 1578191993, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    - {fileID: 1651846108, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+    - {fileID: -1833668822, guid: 2bdea4349c8bc8e4aaa9e2796a3942d7, type: 3}
+  - key: CrossTheLine/FeedingJesusActions
+    assets:
+    - {fileID: 2800000, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+    - {fileID: 314510542, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+    - {fileID: -872478689, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+    - {fileID: -222982973, guid: cd81930b5ab98bb4486ab2b21a3506b8, type: 3}
+  - key: CrossTheLine/FeedingProps
+    assets:
+    - {fileID: 2800000, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+    - {fileID: 889255412, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+    - {fileID: -1294559411, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+    - {fileID: -505175932, guid: 09fe9b8c76228764785f051c33429d0c, type: 3}
+  - key: CrossTheLine/FeedingSeatedCrowd
+    assets:
+    - {fileID: 2800000, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    - {fileID: 274425285, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    - {fileID: -992343654, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    - {fileID: -586899708, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+    - {fileID: 2134651066, guid: 5e8daf63ac54d85418d124f96724f380, type: 3}
+  - key: CrossTheLine/FisherActions
+    assets:
+    - {fileID: 2800000, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    - {fileID: 717158670, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    - {fileID: 73862098, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    - {fileID: -274571025, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    - {fileID: 819983644, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    - {fileID: -517112860, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+    - {fileID: -195134252, guid: 5b3b8dd7aedc0b84c873f5f7e5756bf8, type: 3}
+  - key: CrossTheLine/FishingNet
+    assets:
+    - {fileID: 2800000, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    - {fileID: 1647277188, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    - {fileID: -1793859549, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    - {fileID: -337271547, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+    - {fileID: 44924307, guid: 8b97489194cd6b24e82512cced962557, type: 3}
+  - key: CrossTheLine/GalileeBoatHull
+    assets:
+    - {fileID: 2800000, guid: 68a92d36a1bbf374baf6c0a7b165ce84, type: 3}
+    - {fileID: 1267319172, guid: 68a92d36a1bbf374baf6c0a7b165ce84, type: 3}
+  - key: CrossTheLine/JerusalemEntryAtlas
+    assets:
+    - {fileID: 2800000, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: -734109445, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: -2137258166, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: 1084910904, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: -456362963, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: -1173276848, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: 541652122, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+    - {fileID: 2111948794, guid: 6dd6c195d5a85334d8ff03ffc45a4d7d, type: 3}
+  - key: CrossTheLine/JourneyDot
+    assets:
+    - {fileID: 4800000, guid: 46546235f39524e4d920cf978000af9e, type: 3}
+  - key: CrossTheLine/JourneyDotPalette
+    assets:
+    - {fileID: 2800000, guid: 22e05b4f0e64628478de00ab83d181ae, type: 2}
+  - key: CrossTheLine/JourneyHeadAnchors
+    assets:
+    - {fileID: 4900000, guid: c73aa69c8afc8bd478394a6afaa45867, type: 3}
+  - key: CrossTheLine/JourneyJesusPalette
+    assets:
+    - {fileID: 2800000, guid: da54e4aed56281f48bf5ab3cfd40f1b6, type: 2}
+  - key: CrossTheLine/JourneySpriteCatalog
+    assets:
+    - {fileID: 11400000, guid: fef7a1abbeef16545816af3aa41ab426, type: 2}
+  - key: CrossTheLine/JourneyWardrobe
+    assets:
+    - {fileID: 4800000, guid: 61ede872f12947540b497998582d4265, type: 3}
+  - key: CrossTheLine/NativityNameFragments
+    assets:
+    - {fileID: 4800000, guid: 51ed9cde39c2c544aa2d902700674b11, type: 3}
+    - {fileID: 2100000, guid: 90df926b9dcba884b8b3e6f12f4e7426, type: 2}
+  - key: CrossTheLine/OlivesPrayerLandscape
+    assets:
+    - {fileID: 2800000, guid: 2c1b3e6fe42c7814fb2c76e33f75aec3, type: 3}
+    - {fileID: 21300000, guid: 2c1b3e6fe42c7814fb2c76e33f75aec3, type: 3}
+  - key: CrossTheLine/OriginalJesusPixels
+    assets:
+    - {fileID: 2800000, guid: 10a61a6549ff16b44a300b97a2867636, type: 3}
+    - {fileID: -292134455134019799, guid: 10a61a6549ff16b44a300b97a2867636, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine00
+    assets:
+    - {fileID: 8300000, guid: 8abae0048b02a13419ad22e2cb3943ba, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine01
+    assets:
+    - {fileID: 8300000, guid: 766b5918cf5f40344ae390329c635138, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine02
+    assets:
+    - {fileID: 8300000, guid: c1f5c62a74559814881d8e1949667965, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine03
+    assets:
+    - {fileID: 8300000, guid: 0dcffdc7134dfb4459568639352c0b04, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine04
+    assets:
+    - {fileID: 8300000, guid: 4fa1aab339dfba24ea46053d86733ea1, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine05
+    assets:
+    - {fileID: 8300000, guid: a58be89b993c8f34caadffaaf500d9da, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine06
+    assets:
+    - {fileID: 8300000, guid: f9ddfe3be8a0eab41b5a08e97c987740, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine07
+    assets:
+    - {fileID: 8300000, guid: e5547caaacae9a449866c32516a2d2e4, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine08
+    assets:
+    - {fileID: 8300000, guid: 2a5dd1329fae2e94b8d13a6530df575e, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine09
+    assets:
+    - {fileID: 8300000, guid: 3b378f369cc3ad046ab1a8062799baeb, type: 3}
+  - key: CrossTheLine/PrayerAudio/PrayerLine10
+    assets:
+    - {fileID: 8300000, guid: 929e2c2c95e3492429ba78ab215a98fe, type: 3}
+  - key: CrossTheLine/SailCanvas
+    assets:
+    - {fileID: 2100000, guid: 2d59b9272be0c284fa8e06851e2b7897, type: 2}
+  - key: CrossTheLine/SceneryJoin
+    assets:
+    - {fileID: 4800000, guid: 8ec49aac306346f4aa999add13ca3213, type: 3}
+  - key: CrossTheLine/SeaWaveAtlas
+    assets:
+    - {fileID: 2800000, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+    - {fileID: -1034679832, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+    - {fileID: 827837630, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+    - {fileID: -1149063308, guid: e008471ff65bdb249839c95b089f048c, type: 3}
+  - key: CrossTheLine/SecondTempleChildren
+    assets:
+    - {fileID: 2800000, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    - {fileID: 453375636, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    - {fileID: -1894594778, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    - {fileID: -482242436, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    - {fileID: -2119299870, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    - {fileID: 1805099261, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+    - {fileID: 197666275, guid: a8c36f1a7b754df468ca8a018ff242cc, type: 3}
+  - key: CrossTheLine/SecondTempleCourtyard
+    assets:
+    - {fileID: 2800000, guid: 9aaecde5083870a4bb224d21b58dca26, type: 3}
+    - {fileID: 21300000, guid: 9aaecde5083870a4bb224d21b58dca26, type: 3}
+  - key: CrossTheLine/SecondTempleCourtyardV2
+    assets:
+    - {fileID: 2800000, guid: 09220c052e7d0f34e90df8a1203e1df7, type: 3}
+    - {fileID: 21300000, guid: 09220c052e7d0f34e90df8a1203e1df7, type: 3}
+  - key: CrossTheLine/SecondTempleExterior
+    assets:
+    - {fileID: 2800000, guid: 4bf5dee739287664cb8b24720096d253, type: 3}
+    - {fileID: 21300000, guid: 4bf5dee739287664cb8b24720096d253, type: 3}
+  - key: CrossTheLine/SecondTempleJesus
+    assets:
+    - {fileID: 2800000, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    - {fileID: 1336160576, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    - {fileID: 1534867239, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    - {fileID: 1504861650, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+    - {fileID: -268076262, guid: c566fc183532e7f40ac8aebd4618d14a, type: 3}
+  - key: CrossTheLine/SecondTempleLeaders
+    assets:
+    - {fileID: 2800000, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    - {fileID: -224761369, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    - {fileID: 804906989, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    - {fileID: -1945990328, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+    - {fileID: 1393235231, guid: 1935b7f4f30ff5940b6b0766afad4e60, type: 3}
+  - key: CrossTheLine/SecondTempleMerchantsA
+    assets:
+    - {fileID: 2800000, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: -1212455386, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: 983826159, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: 1497191184, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: -1254928540, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: -1738497191, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: 301014207, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: 581012612, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+    - {fileID: 1676131116, guid: be770a5c53c5a2648ab4269a4e8e404c, type: 3}
+  - key: CrossTheLine/SecondTempleMerchantsB
+    assets:
+    - {fileID: 2800000, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: 770821473, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: -1813681053, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: -900505213, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: 342048134, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: 608989103, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: -238805853, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: 1369574914, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+    - {fileID: -500213166, guid: 17c4b48e01dfe8d4ba2ad64822bf46f2, type: 3}
+  - key: CrossTheLine/SecondTempleProps
+    assets:
+    - {fileID: 2800000, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: -495467709, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: -1284426379, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: 1864251769, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: 1384183219, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: -1215849485, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: 574398100, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: -143183672, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: 98630884, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+    - {fileID: 674227677, guid: 6459ce21f9c37ce4c821731d8da414bb, type: 3}
+  - key: CrossTheLine/SleepingJesus
+    assets:
+    - {fileID: 2800000, guid: dc09a57fd2f290246af8a003bcbcf6d9, type: 3}
+    - {fileID: -2869017941244362777, guid: dc09a57fd2f290246af8a003bcbcf6d9, type: 3}
+  - key: CrossTheLine/Story
+    assets:
+    - {fileID: 4900000, guid: 3fbce4e9ea9bfcd4690a88f6b99441c3, type: 3}
+  - key: CrossTheLine/WaterRescueActions
+    assets:
+    - {fileID: 2800000, guid: 54f44cc4326fd91499ab28729116aed1, type: 3}
+    - {fileID: -1864084615, guid: 54f44cc4326fd91499ab28729116aed1, type: 3}
+    - {fileID: -1020897876, guid: 54f44cc4326fd91499ab28729116aed1, type: 3}

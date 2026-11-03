@@ -1,0 +1,11 @@
+using System;using System.IO;using System.Threading.Tasks;using UnityEngine;using UnityEngine.InputSystem;using UnityEngine.InputSystem.LowLevel;using CrossTheLine;
+public static class ScriptedChapterInputTests {
+ public static async Task<string> Run(){var g=UnityEngine.Object.FindAnyObjectByType<JourneyGame>();var w=g.GetComponent<JourneyContinuousWorld>();bool saving=JourneySceneFlow.TestWithoutSaving;var behavior=InputSystem.settings.backgroundBehavior;var editorInput=InputSystem.settings.editorInputBehaviorInPlayMode;Keyboard kb=null;Action after=null;int checks=0;async Task Frame(){int frame=Time.frameCount;while(Time.frameCount==frame)await Task.Yield();w.Normalize();}
+ try{JourneySceneFlow.TestWithoutSaving=true;Time.timeScale=1;InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;InputSystem.settings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;kb=InputSystem.AddDevice<Keyboard>("ScriptedChapterKeyboard");after=()=>kb.MakeCurrent();InputSystem.onAfterUpdate+=after;
+ foreach(int chapter in new[]{10,11,14,15}){g.StartSketchPreview(chapter);await Frame();await Frame();InputSystem.QueueStateEvent(kb,new KeyboardState());await Frame();if(g.Mode!="exploration")throw new Exception("Unexpected initial mode "+chapter+" "+g.Mode);InputSystem.QueueStateEvent(kb,new KeyboardState(Key.E));for(int f=0;f<4;f++)await Frame();InputSystem.QueueStateEvent(kb,new KeyboardState());await Frame();if(g.Mode=="exploration")throw new Exception("Interaction did not start scripted chapter "+(chapter+1));checks++;}
+ string result="PASS "+checks+" Input System E-key scripted opening checks: chapters11/12/15/16 intentionally use scripted opening instead of free D walking; E key reaches real Update and starts expected dialogue/cinematic; editor focus routing temporarily directed to Game View and restored.";File.WriteAllText("Docs/QA/RenderedChapters/ScriptedInput.txt",result);return result;
+ }finally{if(after!=null)InputSystem.onAfterUpdate-=after;if(kb!=null)InputSystem.RemoveDevice(kb);InputSystem.settings.backgroundBehavior=behavior;InputSystem.settings.editorInputBehaviorInPlayMode=editorInput;JourneySceneFlow.TestWithoutSaving=saving;Time.timeScale=1;}}
+}
+
+
+

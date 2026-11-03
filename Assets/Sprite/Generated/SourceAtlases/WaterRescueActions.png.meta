@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 54f44cc4326fd91499ab28729116aed1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1287336629387022690
+    second: WaterRescueActions_0
+  - first:
+      213: 9156316315492325360
+    second: WaterRescueActions_1
+  - first:
+      213: -8620176431032591648
+    second: WaterRescueActions_2
+  - first:
+      213: -9189752568762946342
+    second: WaterRescueActions_3
+  - first:
+      213: 1530044023061922850
+    second: WaterRescueActions_4
+  - first:
+      213: -1484659183981619773
+    second: WaterRescueActions_5
+  - first:
+      213: -3222865776702678569
+    second: WaterRescueActions_6
+  - first:
+      213: 4131234986556308966
+    second: WaterRescueActions_7
+  - first:
+      213: -4437590158672875894
+    second: WaterRescueActions_8
+  - first:
+      213: 4910567119583699041
+    second: WaterRescueActions_9
+  - first:
+      213: -4265006667121026742
+    second: WaterRescueActions_10
+  - first:
+      213: -325615285607633343
+    second: WaterRescueActions_11
+  - first:
+      213: -9109936194762190244
+    second: WaterRescueActions_12
+  - first:
+      213: -9121763945363293894
+    second: WaterRescueActions_13
+  - first:
+      213: 6646260167887477041
+    second: WaterRescueActions_14
+  - first:
+      213: 6781786165549486274
+    second: WaterRescueActions_15
+  - first:
+      213: 7474755137090811845
+    second: WaterRescueActions_16
+  - first:
+      213: -3109522367029953452
+    second: WaterRescueActions_17
+  - first:
+      213: -285976183134259331
+    second: WaterRescueActions_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PeterSinking
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 45
+        width: 592
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e1a931a3fa2af479412ee4965455d1
+      internalID: -1020897876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JesusRescuing
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 73
+        width: 657
+        height: 729
+      alignment: 9
+      pivot: {x: 0.65981734, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1197599ff0bc6204c9113d32747b65fe
+      internalID: -1864084615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d375b7d873c94ad409cab1975015a272
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JesusRescuing: -1864084615
+      PeterSinking: -1020897876
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

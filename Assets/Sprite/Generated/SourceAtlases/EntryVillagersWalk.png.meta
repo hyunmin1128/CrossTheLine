@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 839042c5a8edf5144a0db457cf05b0f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8962331829736647734
+    second: EntryVillagersWalk_0
+  - first:
+      213: 5752207854992842171
+    second: EntryVillagersWalk_1
+  - first:
+      213: 7421494197019136449
+    second: EntryVillagersWalk_2
+  - first:
+      213: 2538110194787114465
+    second: EntryVillagersWalk_3
+  - first:
+      213: 3500056154700130218
+    second: EntryVillagersWalk_4
+  - first:
+      213: 7441113364474996532
+    second: EntryVillagersWalk_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Resident0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 58
+        width: 338
+        height: 577
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -169, y: -141.5}
+        - {x: -164, y: -205.5}
+        - {x: -154, y: -245.5}
+        - {x: -152, y: -250.5}
+        - {x: -149, y: -256.5}
+        - {x: -146, y: -261.5}
+        - {x: -142, y: -265.5}
+        - {x: -138, y: -268.5}
+        - {x: -135, y: -270.5}
+        - {x: -131, y: -272.5}
+        - {x: -122, y: -275.5}
+        - {x: 72, y: -288.5}
+        - {x: 86, y: -288.5}
+        - {x: 105, y: -283.5}
+        - {x: 114, y: -280.5}
+        - {x: 125, y: -276.5}
+        - {x: 133, y: -273.5}
+        - {x: 146, y: -267.5}
+        - {x: 150, y: -265.5}
+        - {x: 157, y: -260.5}
+        - {x: 167, y: -250.5}
+        - {x: 169, y: -247.5}
+        - {x: 169, y: -9.5}
+        - {x: 166, y: 217.5}
+        - {x: 164, y: 224.5}
+        - {x: 162, y: 230.5}
+        - {x: 159, y: 236.5}
+        - {x: 154, y: 244.5}
+        - {x: 150, y: 249.5}
+        - {x: 144, y: 255.5}
+        - {x: 122, y: 273.5}
+        - {x: 118, y: 276.5}
+        - {x: 104, y: 283.5}
+        - {x: 86, y: 287.5}
+        - {x: 74, y: 288.5}
+        - {x: 36, y: 288.5}
+        - {x: 23, y: 286.5}
+        - {x: 13, y: 283.5}
+        - {x: 7, y: 281.5}
+        - {x: 0, y: 278.5}
+        - {x: -6, y: 275.5}
+        - {x: -11, y: 272.5}
+        - {x: -23, y: 264.5}
+        - {x: -29, y: 258.5}
+        - {x: -40, y: 245.5}
+        - {x: -45, y: 237.5}
+        - {x: -161, y: 44.5}
+        - {x: -165, y: 37.5}
+        - {x: -168, y: 31.5}
+        - {x: -169, y: -128.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8223ff5fbf513864285f4bb642e6b572
+      internalID: 1877219829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resident1
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 58
+        width: 376
+        height: 604
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -188, y: -139}
+        - {x: -187, y: -144}
+        - {x: -150, y: -259}
+        - {x: -149, y: -262}
+        - {x: -146, y: -268}
+        - {x: -142, y: -274}
+        - {x: -137, y: -279}
+        - {x: -133, y: -282}
+        - {x: -130, y: -284}
+        - {x: -126, y: -286}
+        - {x: -120, y: -288}
+        - {x: -114, y: -289}
+        - {x: 69, y: -302}
+        - {x: 84, y: -302}
+        - {x: 106, y: -296}
+        - {x: 132, y: -286}
+        - {x: 142, y: -282}
+        - {x: 150, y: -278}
+        - {x: 155, y: -275}
+        - {x: 167, y: -265}
+        - {x: 171, y: -259}
+        - {x: 188, y: -24}
+        - {x: 188, y: -11}
+        - {x: 159, y: 234}
+        - {x: 157, y: 241}
+        - {x: 140, y: 270}
+        - {x: 137, y: 274}
+        - {x: 134, y: 277}
+        - {x: 131, y: 279}
+        - {x: 95, y: 299}
+        - {x: 87, y: 302}
+        - {x: 81, y: 302}
+        - {x: 28, y: 298}
+        - {x: -4, y: 287}
+        - {x: -8, y: 285}
+        - {x: -11, y: 283}
+        - {x: -36, y: 266}
+        - {x: -44, y: 260}
+        - {x: -47, y: 257}
+        - {x: -50, y: 253}
+        - {x: -67, y: 220}
+        - {x: -187, y: -122}
+        - {x: -188, y: -125}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6f6dae51b3c96409cb7a5ceaacc00d
+      internalID: 946011755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resident2
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 57
+        width: 355
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -177.5, y: -144.5}
+        - {x: -148.5, y: -243.5}
+        - {x: -146.5, y: -249.5}
+        - {x: -144.5, y: -254.5}
+        - {x: -140.5, y: -260.5}
+        - {x: -133.5, y: -267.5}
+        - {x: -129.5, y: -270.5}
+        - {x: -124.5, y: -273.5}
+        - {x: -117.5, y: -275.5}
+        - {x: 78.5, y: -283.5}
+        - {x: 91.5, y: -283.5}
+        - {x: 96.5, y: -282.5}
+        - {x: 112.5, y: -277.5}
+        - {x: 118.5, y: -275.5}
+        - {x: 133.5, y: -269.5}
+        - {x: 145.5, y: -264.5}
+        - {x: 157.5, y: -257.5}
+        - {x: 166.5, y: -251.5}
+        - {x: 170.5, y: -248.5}
+        - {x: 175.5, y: -242.5}
+        - {x: 177.5, y: -239.5}
+        - {x: 177.5, y: -231.5}
+        - {x: 173.5, y: 1.5}
+        - {x: 166.5, y: 209.5}
+        - {x: 165.5, y: 215.5}
+        - {x: 161.5, y: 226.5}
+        - {x: 158.5, y: 231.5}
+        - {x: 152.5, y: 240.5}
+        - {x: 148.5, y: 245.5}
+        - {x: 125.5, y: 268.5}
+        - {x: 122.5, y: 270.5}
+        - {x: 110.5, y: 276.5}
+        - {x: 101.5, y: 279.5}
+        - {x: 93.5, y: 281.5}
+        - {x: 83.5, y: 283.5}
+        - {x: 39.5, y: 283.5}
+        - {x: 21.5, y: 279.5}
+        - {x: 14.5, y: 277.5}
+        - {x: 11.5, y: 276.5}
+        - {x: 0.5, y: 271.5}
+        - {x: -9.5, y: 266.5}
+        - {x: -12.5, y: 264.5}
+        - {x: -16.5, y: 261.5}
+        - {x: -26.5, y: 253.5}
+        - {x: -32.5, y: 246.5}
+        - {x: -38.5, y: 238.5}
+        - {x: -44.5, y: 228.5}
+        - {x: -149.5, y: 45.5}
+        - {x: -177.5, y: -131.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e5e44536d970449b5f1db418630ea2
+      internalID: 838190139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resident3
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 57
+        width: 359
+        height: 593
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -179.5, y: -124.5}
+        - {x: -163.5, y: -211.5}
+        - {x: -152.5, y: -252.5}
+        - {x: -148.5, y: -262.5}
+        - {x: -145.5, y: -267.5}
+        - {x: -142.5, y: -271.5}
+        - {x: -138.5, y: -275.5}
+        - {x: -133.5, y: -279.5}
+        - {x: -127.5, y: -282.5}
+        - {x: -120.5, y: -284.5}
+        - {x: 73.5, y: -296.5}
+        - {x: 87.5, y: -296.5}
+        - {x: 105.5, y: -291.5}
+        - {x: 120.5, y: -286.5}
+        - {x: 134.5, y: -280.5}
+        - {x: 154.5, y: -270.5}
+        - {x: 157.5, y: -268.5}
+        - {x: 164.5, y: -263.5}
+        - {x: 169.5, y: -258.5}
+        - {x: 173.5, y: -252.5}
+        - {x: 179.5, y: -20.5}
+        - {x: 179.5, y: -7.5}
+        - {x: 163.5, y: 256.5}
+        - {x: 162.5, y: 258.5}
+        - {x: 159.5, y: 262.5}
+        - {x: 158.5, y: 263.5}
+        - {x: 134.5, y: 284.5}
+        - {x: 125.5, y: 290.5}
+        - {x: 98.5, y: 296.5}
+        - {x: 86.5, y: 296.5}
+        - {x: 42.5, y: 294.5}
+        - {x: 30.5, y: 290.5}
+        - {x: 18.5, y: 282.5}
+        - {x: -9.5, y: 263.5}
+        - {x: -17.5, y: 255.5}
+        - {x: -31.5, y: 234.5}
+        - {x: -46.5, y: 208.5}
+        - {x: -158.5, y: -14.5}
+        - {x: -160.5, y: -19.5}
+        - {x: -179.5, y: -119.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2974a657ab9d54b820cc7c8fc3e4ef
+      internalID: 1654341013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resident4
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 57
+        width: 455
+        height: 580
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -227.5, y: -128}
+        - {x: -226.5, y: -133}
+        - {x: -201.5, y: -244}
+        - {x: -200.5, y: -248}
+        - {x: -199.5, y: -251}
+        - {x: -194.5, y: -261}
+        - {x: -192.5, y: -264}
+        - {x: -187.5, y: -269}
+        - {x: -183.5, y: -272}
+        - {x: -178.5, y: -275}
+        - {x: -170.5, y: -278}
+        - {x: 17.5, y: -290}
+        - {x: 31.5, y: -290}
+        - {x: 38.5, y: -288}
+        - {x: 53.5, y: -283}
+        - {x: 61.5, y: -280}
+        - {x: 66.5, y: -278}
+        - {x: 78.5, y: -273}
+        - {x: 96.5, y: -264}
+        - {x: 101.5, y: -261}
+        - {x: 114.5, y: -250}
+        - {x: 117.5, y: -244}
+        - {x: 210.5, y: 85}
+        - {x: 227.5, y: 165}
+        - {x: 227.5, y: 167}
+        - {x: 203.5, y: 217}
+        - {x: 202.5, y: 218}
+        - {x: 46.5, y: 284}
+        - {x: 40.5, y: 286}
+        - {x: 33.5, y: 288}
+        - {x: -16.5, y: 290}
+        - {x: -22.5, y: 290}
+        - {x: -34.5, y: 288}
+        - {x: -42.5, y: 286}
+        - {x: -54.5, y: 282}
+        - {x: -62.5, y: 278}
+        - {x: -69.5, y: 274}
+        - {x: -77.5, y: 268}
+        - {x: -87.5, y: 258}
+        - {x: -95.5, y: 247}
+        - {x: -99.5, y: 241}
+        - {x: -121.5, y: 198}
+        - {x: -123.5, y: 194}
+        - {x: -203.5, y: -11}
+        - {x: -227.5, y: -116}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c775211f0374467478b39c4ffa862a12
+      internalID: -1439498912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resident5
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 58
+        width: 287
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -143.5, y: -164.5}
+        - {x: -142.5, y: -169.5}
+        - {x: -140.5, y: -176.5}
+        - {x: -138.5, y: -181.5}
+        - {x: -131.5, y: -188.5}
+        - {x: -126.5, y: -192.5}
+        - {x: -123.5, y: -194.5}
+        - {x: -117.5, y: -195.5}
+        - {x: 55.5, y: -207.5}
+        - {x: 67.5, y: -207.5}
+        - {x: 96.5, y: -199.5}
+        - {x: 102.5, y: -197.5}
+        - {x: 110.5, y: -194.5}
+        - {x: 119.5, y: -190.5}
+        - {x: 130.5, y: -184.5}
+        - {x: 135.5, y: -179.5}
+        - {x: 137.5, y: -175.5}
+        - {x: 143.5, y: -24.5}
+        - {x: 143.5, y: -11.5}
+        - {x: 135.5, y: 144.5}
+        - {x: 124.5, y: 172.5}
+        - {x: 117.5, y: 181.5}
+        - {x: 114.5, y: 183.5}
+        - {x: 77.5, y: 207.5}
+        - {x: 68.5, y: 207.5}
+        - {x: 16.5, y: 204.5}
+        - {x: -20.5, y: 193.5}
+        - {x: -24.5, y: 191.5}
+        - {x: -27.5, y: 189.5}
+        - {x: -29.5, y: 187.5}
+        - {x: -48.5, y: 167.5}
+        - {x: -63.5, y: 149.5}
+        - {x: -65.5, y: 145.5}
+        - {x: -76.5, y: 118.5}
+        - {x: -141.5, y: -115.5}
+        - {x: -142.5, y: -119.5}
+        - {x: -143.5, y: -125.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115d6cc3a7787054685e93c9294724b7
+      internalID: 1303524811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 54282bd27acd0ae4582a2ef2fb1408b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Resident0: 1877219829
+      Resident1: 946011755
+      Resident2: 838190139
+      Resident3: 1654341013
+      Resident4: -1439498912
+      Resident5: 1303524811
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

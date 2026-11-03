@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: 687f724c9f551e24e8f48343fe0248c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6255195044256897932
+    second: ChildrenBlessingAtlas_0
+  - first:
+      213: 1260290469375015458
+    second: ChildrenBlessingAtlas_1
+  - first:
+      213: 4491321193863596613
+    second: ChildrenBlessingAtlas_2
+  - first:
+      213: -3111976453412168602
+    second: ChildrenBlessingAtlas_3
+  - first:
+      213: 6514642344618189178
+    second: ChildrenBlessingAtlas_4
+  - first:
+      213: -7470075274010223597
+    second: ChildrenBlessingAtlas_5
+  - first:
+      213: -2516824794032320424
+    second: ChildrenBlessingAtlas_6
+  - first:
+      213: 8678150544535923902
+    second: ChildrenBlessingAtlas_7
+  - first:
+      213: 8103790970125565248
+    second: ChildrenBlessingAtlas_8
+  - first:
+      213: -1528160224691598530
+    second: ChildrenBlessingAtlas_9
+  - first:
+      213: -5698229197585406176
+    second: ChildrenBlessingAtlas_10
+  - first:
+      213: -408312174807721384
+    second: ChildrenBlessingAtlas_11
+  - first:
+      213: -4016167467391255502
+    second: ChildrenBlessingAtlas_12
+  - first:
+      213: 4787850699980174708
+    second: ChildrenBlessingAtlas_13
+  - first:
+      213: -5640611647142625471
+    second: ChildrenBlessingAtlas_14
+  - first:
+      213: 7361385034061441031
+    second: ChildrenBlessingAtlas_15
+  - first:
+      213: -7716118560418624081
+    second: ChildrenBlessingAtlas_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Child0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 47
+        width: 179
+        height: 366
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b62f668df2af114da4761fc4f2250e0
+      internalID: -940013339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child1
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 46
+        width: 175
+        height: 361
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3240300efea7449aca981df56e3513
+      internalID: 69501130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Child2
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 45
+        width: 195
+        height: 323
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9a945dfcdd3c048a96d3dc189579a5
+      internalID: 1771387610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mother
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 45
+        width: 239
+        height: 539
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9cfba5eade3514f8781003d924af8e
+      internalID: 745553784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Father
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 45
+        width: 268
+        height: 608
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a4b099186c3a649ac4f362e55f7c3e
+      internalID: 2028577466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JesusBlessing
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 45
+        width: 468
+        height: 592
+      alignment: 9
+      pivot: {x: 0.6826923, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2462d77ea7f804892e463db796532e
+      internalID: 1551834997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cabdb75efe2f5cf47aa2961a44dc4ae9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Child0: -940013339
+      Child1: 69501130
+      Child2: 1771387610
+      Father: 2028577466
+      JesusBlessing: 1551834997
+      Mother: 745553784
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

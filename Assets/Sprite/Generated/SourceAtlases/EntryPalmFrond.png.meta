@@ -1,0 +1,522 @@
+fileFormatVersion: 2
+guid: 75f8fd612f7bdb1469880c17d96266ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1268173848823187637
+    second: EntryPalmFrond_0
+  - first:
+      213: -4627144371284808919
+    second: EntryPalmFrond_1
+  - first:
+      213: -1316924021169236715
+    second: EntryPalmFrond_2
+  - first:
+      213: -8136901020244273525
+    second: EntryPalmFrond_3
+  - first:
+      213: -1117323762493423435
+    second: EntryPalmFrond_4
+  - first:
+      213: 7147770075274893034
+    second: EntryPalmFrond_5
+  - first:
+      213: 7057173653137767202
+    second: EntryPalmFrond_6
+  - first:
+      213: 4671603786092855175
+    second: EntryPalmFrond_7
+  - first:
+      213: 3856306488479900362
+    second: EntryPalmFrond_8
+  - first:
+      213: 7138668243032403363
+    second: EntryPalmFrond_9
+  - first:
+      213: -6408890233160687877
+    second: EntryPalmFrond_10
+  - first:
+      213: 4964933329934871848
+    second: EntryPalmFrond_11
+  - first:
+      213: -4716300208518711632
+    second: EntryPalmFrond_12
+  - first:
+      213: -1683181008512465926
+    second: EntryPalmFrond_13
+  - first:
+      213: 4410271200508604314
+    second: EntryPalmFrond_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EntryPalmFrond_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1011
+        height: 1509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8cb8c7565799110800000000000000
+      internalID: 1268173848823187637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_1
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 835
+        width: 11
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bee11c5b419cfb0800000000000000
+      internalID: -4627144371284808919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 723
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5155702849859bde0800000000000000
+      internalID: -1316924021169236715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 721
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8693db12abe31f80800000000000000
+      internalID: -8136901020244273525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 645
+        width: 5
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b00a7535f77e70f0800000000000000
+      internalID: -1117323762493423435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 685
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae65de0530bf13360800000000000000
+      internalID: 7147770075274893034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 693
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bb5890c0e10f160800000000000000
+      internalID: 7057173653137767202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 690
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f3f6964eed4d040800000000000000
+      internalID: 4671603786092855175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2e0e6d15a548530800000000000000
+      internalID: 3856306488479900362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_9
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 549
+        width: 67
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3adee4bd1f4a11360800000000000000
+      internalID: 7138668243032403363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_10
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 419
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe9cf7e94c0f07a0800000000000000
+      internalID: -6408890233160687877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 369
+        width: 13
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82de348ee8cf6e440800000000000000
+      internalID: 4964933329934871848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b63429c2f55c8eb0800000000000000
+      internalID: -4716300208518711632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 54
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af34ee66ac324a8e0800000000000000
+      internalID: -1683181008512465926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntryPalmFrond_14
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 11
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f637d4a4e643d30800000000000000
+      internalID: 4410271200508604314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EntryPalmFrond_0: 1268173848823187637
+      EntryPalmFrond_1: -4627144371284808919
+      EntryPalmFrond_10: -6408890233160687877
+      EntryPalmFrond_11: 4964933329934871848
+      EntryPalmFrond_12: -4716300208518711632
+      EntryPalmFrond_13: -1683181008512465926
+      EntryPalmFrond_14: 4410271200508604314
+      EntryPalmFrond_2: -1316924021169236715
+      EntryPalmFrond_3: -8136901020244273525
+      EntryPalmFrond_4: -1117323762493423435
+      EntryPalmFrond_5: 7147770075274893034
+      EntryPalmFrond_6: 7057173653137767202
+      EntryPalmFrond_7: 4671603786092855175
+      EntryPalmFrond_8: 3856306488479900362
+      EntryPalmFrond_9: 7138668243032403363
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

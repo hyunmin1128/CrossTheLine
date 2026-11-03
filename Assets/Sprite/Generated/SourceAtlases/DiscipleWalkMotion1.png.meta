@@ -1,0 +1,907 @@
+fileFormatVersion: 2
+guid: 48e2139f5328dc64d979433c69762ab9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4654871148072743198
+    second: DiscipleWalkMotion1_0
+  - first:
+      213: 3506411248148819759
+    second: DiscipleWalkMotion1_1
+  - first:
+      213: -681307899140799906
+    second: DiscipleWalkMotion1_2
+  - first:
+      213: -8430900254553584972
+    second: DiscipleWalkMotion1_3
+  - first:
+      213: 8924782326160524040
+    second: DiscipleWalkMotion1_4
+  - first:
+      213: -1995076189232522752
+    second: DiscipleWalkMotion1_5
+  - first:
+      213: -7140933558144683446
+    second: DiscipleWalkMotion1_6
+  - first:
+      213: -4462186025066702690
+    second: DiscipleWalkMotion1_7
+  - first:
+      213: -13501876221934165
+    second: DiscipleWalkMotion1_8
+  - first:
+      213: -7461424528853044911
+    second: DiscipleWalkMotion1_9
+  - first:
+      213: -3848873068191018725
+    second: DiscipleWalkMotion1_10
+  - first:
+      213: 6793614508267235802
+    second: DiscipleWalkMotion1_11
+  - first:
+      213: 1559771760833757589
+    second: DiscipleWalkMotion1_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Disciple04_00
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 654
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31969d80f4e38f144a5946f10d4e688d
+      internalID: 2058018716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_01
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 655
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3aac28be4baf9e469b7790f171d4c54
+      internalID: -380567261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_02
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 655
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28160213568110f4abcb0454855c47a1
+      internalID: -1335118355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_03
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 653
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a314373aa8a98047a6528886663a6dd
+      internalID: -856949022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_04
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 655
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f52c4704e5ae974f8f69f70f1b82cc7
+      internalID: -2092338150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_05
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 653
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5603dca2df759ae4296797a926a974d2
+      internalID: 2063689028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_06
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 655
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a370a3d53162ab94999d04ba70a8feb4
+      internalID: 1658899683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple04_07
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 653
+        width: 139
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee4ce0ad2a8d7d4a8a6252fc5364c0d
+      internalID: 806200959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_00
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 434
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef091dc5a428cd74ca5a203c81b9c957
+      internalID: -853364792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_01
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 434
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc83e2ee01ff34c49b67c940c81e7974
+      internalID: 275135072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_02
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 434
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a656588bd1cb14bb04927fa4bd920d
+      internalID: -1764408549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_03
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 433
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767edf6e0f0bb5047b8aa3551f0f2c69
+      internalID: -853797271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_04
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 434
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853e124b6fa650049ae962006ff9006a
+      internalID: -475798939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_05
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 433
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7603e2865d81e4fbdf3b00bb89df9c
+      internalID: 1383232276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_06
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 433
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7126948da11e79d4f9b10dd57db145f7
+      internalID: 1001637037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple05_07
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 433
+        width: 139
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03bcc61059ad564eb6af5c7d855427b
+      internalID: 1769087113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_00
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 221
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c75423d215498e42a7ef2cc2a75c3fa
+      internalID: -178545974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_01
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 220
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572a4e05e8741f34c8801166aaf2dde0
+      internalID: -1277606439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_02
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 220
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6714fb42076d3854fa93be969877a84f
+      internalID: -180091188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_03
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 219
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e504776f847ef4797ac28bdec507f2
+      internalID: 1543620203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_04
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 220
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e8c6cd6eac2f64fb0ae9209cebe43d
+      internalID: 20238742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_05
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 219
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf17c92a82e760a48990846d6c61fb93
+      internalID: -861557807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_06
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 219
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e916e318fb6ea45afdde7f6fc0ec2c
+      internalID: 1469723976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple06_07
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 219
+        width: 145
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a63dc6c57fddcb4bbd8340d454114df
+      internalID: -1868323956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_00
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 6
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53060962b1a8e5d4a9be5d0b17b414ed
+      internalID: 1898425385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_01
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 5
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbbfbd6030eba1418e1e656363dbcd9
+      internalID: -528183233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_02
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 6
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113022c722cc67d45a0a43a2a55693f3
+      internalID: 48663300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_03
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 5
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c89f3a1c06f7e48b9875ba284c202e
+      internalID: 1810285422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_04
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 6
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86387c8966e1c7646acb526fe0f2049e
+      internalID: 296588862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_05
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 5
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3870ad6f276a22b4297d34042d9960bd
+      internalID: 800338485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_06
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 5
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c799ebc84de434ebdc251d4afc5c13
+      internalID: -1826239159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disciple07_07
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 5
+        width: 142
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deadec589bcf7ac4ab7e0f03a5ab42ab
+      internalID: -476211432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 05a01dba1cc0aee4c8c53ba5fa57a6f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Disciple04_00: 2058018716
+      Disciple04_01: -380567261
+      Disciple04_02: -1335118355
+      Disciple04_03: -856949022
+      Disciple04_04: -2092338150
+      Disciple04_05: 2063689028
+      Disciple04_06: 1658899683
+      Disciple04_07: 806200959
+      Disciple05_00: -853364792
+      Disciple05_01: 275135072
+      Disciple05_02: -1764408549
+      Disciple05_03: -853797271
+      Disciple05_04: -475798939
+      Disciple05_05: 1383232276
+      Disciple05_06: 1001637037
+      Disciple05_07: 1769087113
+      Disciple06_00: -178545974
+      Disciple06_01: -1277606439
+      Disciple06_02: -180091188
+      Disciple06_03: 1543620203
+      Disciple06_04: 20238742
+      Disciple06_05: -861557807
+      Disciple06_06: 1469723976
+      Disciple06_07: -1868323956
+      Disciple07_00: 1898425385
+      Disciple07_01: -528183233
+      Disciple07_02: 48663300
+      Disciple07_03: 1810285422
+      Disciple07_04: 296588862
+      Disciple07_05: 800338485
+      Disciple07_06: -1826239159
+      Disciple07_07: -476211432
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

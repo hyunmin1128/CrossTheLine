@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: 09fe9b8c76228764785f051c33429d0c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7655762134185981607
+    second: FeedingProps_0
+  - first:
+      213: 3229242478632106520
+    second: FeedingProps_1
+  - first:
+      213: -7335098255161247622
+    second: FeedingProps_2
+  - first:
+      213: -5644739448205264685
+    second: FeedingProps_3
+  - first:
+      213: -4385482192817221910
+    second: FeedingProps_4
+  - first:
+      213: -6519871620624958871
+    second: FeedingProps_5
+  - first:
+      213: -7960540654183737706
+    second: FeedingProps_6
+  - first:
+      213: -3702434821273114892
+    second: FeedingProps_7
+  - first:
+      213: 3067854494799196322
+    second: FeedingProps_8
+  - first:
+      213: 4017562749394091348
+    second: FeedingProps_9
+  - first:
+      213: -1579374781269687696
+    second: FeedingProps_10
+  - first:
+      213: -6431300627468897745
+    second: FeedingProps_11
+  - first:
+      213: -796861327178210538
+    second: FeedingProps_12
+  - first:
+      213: -3477047391405457134
+    second: FeedingProps_13
+  - first:
+      213: 8961822383336581170
+    second: FeedingProps_14
+  - first:
+      213: -1644941589258911770
+    second: FeedingProps_15
+  - first:
+      213: -2159907443381259030
+    second: FeedingProps_16
+  - first:
+      213: -8072354014111618672
+    second: FeedingProps_17
+  - first:
+      213: -6958617720399546451
+    second: FeedingProps_18
+  - first:
+      213: 4790692863233700503
+    second: FeedingProps_19
+  - first:
+      213: 1372508368987168342
+    second: FeedingProps_20
+  - first:
+      213: 6465268808220264061
+    second: FeedingProps_21
+  - first:
+      213: -1938829617254356153
+    second: FeedingProps_22
+  - first:
+      213: -4316194700183564460
+    second: FeedingProps_23
+  - first:
+      213: 4839948818665515883
+    second: FeedingProps_24
+  - first:
+      213: -3035141730835885215
+    second: FeedingProps_25
+  - first:
+      213: 1285227999536669331
+    second: FeedingProps_26
+  - first:
+      213: 7383473813032137691
+    second: FeedingProps_27
+  - first:
+      213: 1499391448857124075
+    second: FeedingProps_28
+  - first:
+      213: 201098792597761218
+    second: FeedingProps_29
+  - first:
+      213: -1535474260012227034
+    second: FeedingProps_30
+  - first:
+      213: 6268834947207244105
+    second: FeedingProps_31
+  - first:
+      213: -5890005716272626260
+    second: FeedingProps_32
+  - first:
+      213: -5653418721585651228
+    second: FeedingProps_33
+  - first:
+      213: 8220313948014649472
+    second: FeedingProps_34
+  - first:
+      213: 8850719436386912207
+    second: FeedingProps_35
+  - first:
+      213: 3288348552636505999
+    second: FeedingProps_36
+  - first:
+      213: -7948331021580615782
+    second: FeedingProps_37
+  - first:
+      213: 4242245840644561375
+    second: FeedingProps_38
+  - first:
+      213: -6213511522629894162
+    second: FeedingProps_39
+  - first:
+      213: -1339332235145151013
+    second: FeedingProps_40
+  - first:
+      213: 5183528678149298304
+    second: FeedingProps_41
+  - first:
+      213: 3395056437405427144
+    second: FeedingProps_42
+  - first:
+      213: 61163042348962358
+    second: FeedingProps_43
+  - first:
+      213: -6615118760985189230
+    second: FeedingProps_44
+  - first:
+      213: -8010708454084122923
+    second: FeedingProps_45
+  - first:
+      213: -3899864566140344463
+    second: FeedingProps_46
+  - first:
+      213: 6795147936721037147
+    second: FeedingProps_47
+  - first:
+      213: -3628381868902218309
+    second: FeedingProps_48
+  - first:
+      213: 4500700028143853929
+    second: FeedingProps_49
+  - first:
+      213: 6242679223206394546
+    second: FeedingProps_50
+  - first:
+      213: -9137829204154064668
+    second: FeedingProps_51
+  - first:
+      213: 7693607864288644204
+    second: FeedingProps_52
+  - first:
+      213: 131387823964258064
+    second: FeedingProps_53
+  - first:
+      213: 903962702952205286
+    second: FeedingProps_54
+  - first:
+      213: -2471059081345678009
+    second: FeedingProps_55
+  - first:
+      213: -7547029246492343314
+    second: FeedingProps_56
+  - first:
+      213: 5687108222845423443
+    second: FeedingProps_57
+  - first:
+      213: 7104432386458378801
+    second: FeedingProps_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OfferingBasket
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 144
+        width: 774
+        height: 424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30f2e996b489a146ae96200c4838c46
+      internalID: -1294559411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarleyLoaf
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 186
+        width: 407
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76ef3ded1d7e444eb8a2ef63b713d2d
+      internalID: 889255412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OfferingFish
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 192
+        width: 699
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35617b7f50a7af4eaf1a286ea773760
+      internalID: -505175932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0c5f996a75f1b4a42ba60e643ec3cbeb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BarleyLoaf: 889255412
+      OfferingBasket: -1294559411
+      OfferingFish: -505175932
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,13 @@
+using System;using System.IO;using System.Linq;using System.Collections.Generic;using System.Text.RegularExpressions;using System.Threading.Tasks;using UnityEngine;using UnityEditor;using UnityEditor.SceneManagement;
+public static class ProjectIntegrityTests{
+ static int checks;static void Check(bool ok,string text){checks++;if(!ok)throw new Exception(text);}
+ public static async Task<string> Run(){if(EditorApplication.isPlaying)throw new Exception("Stop Play first");checks=0;var missing=new List<string>();var assets=AssetDatabase.GetAllAssetPaths().Where(p=>p.StartsWith("Assets/")&&!AssetDatabase.IsValidFolder(p)).ToArray();
+  foreach(var path in assets.Where(p=>new[]{".unity",".prefab",".asset",".mat",".controller",".anim"}.Contains(Path.GetExtension(p)))){var text=File.ReadAllText(path);if(!text.StartsWith("%YAML"))continue;foreach(Match m in Regex.Matches(text,@"guid: ([0-9a-f]{32})")){var guid=m.Groups[1].Value;if(guid.All(c=>c=='0')||guid.StartsWith("0000000000000000"))continue;checks++;if(string.IsNullOrEmpty(AssetDatabase.GUIDToAssetPath(guid)))missing.Add(path+"\t"+guid);}}
+  File.WriteAllLines("Docs/QA/WholeGame/MissingGuidReferences.tsv",missing);Check(missing.Count==0,"Dangling GUID references: "+missing.Count);
+  foreach(var scene in EditorBuildSettings.scenes){Check(File.Exists(scene.path),"Build scene missing: "+scene.path);Check(!scene.path.Contains("Prototypes"),"Prototype in build");}
+  Check(AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/Chapter01_NativityCutscene.unity"),"Renamed nativity scene missing");
+  foreach(string path in assets.Where(p=>p.EndsWith(".prefab"))){var prefab=AssetDatabase.LoadAssetAtPath<GameObject>(path);foreach(var t in prefab.GetComponentsInChildren<Transform>(true))Check(GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject)==0,"Missing script in "+path+"/"+t.name);}
+  foreach(string path in assets.Where(p=>p.StartsWith("Assets/Scenes/")&&p.EndsWith(".unity"))){var scene=EditorSceneManager.OpenScene(path,OpenSceneMode.Single);foreach(var root in scene.GetRootGameObjects())foreach(var t in root.GetComponentsInChildren<Transform>(true))Check(GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject)==0,"Missing script in "+path+"/"+t.name);await Task.Yield();}
+  EditorSceneManager.OpenScene("Assets/Scenes/CrossTheLineJourney.unity",OpenSceneMode.Single);var result="PASS "+checks+" project integrity checks: no missing serialized GUIDs/scripts, all build scenes exist, prototypes excluded, renamed scene and prefab references intact.";File.WriteAllText("Docs/QA/WholeGame/IntegrityValidation.txt",result);return result;
+ }
+}

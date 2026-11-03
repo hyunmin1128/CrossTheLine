@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: c566fc183532e7f40ac8aebd4618d14a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5810714819648792332
+    second: SecondTempleJesus_0
+  - first:
+      213: -6648231966663342228
+    second: SecondTempleJesus_1
+  - first:
+      213: 2466378521891416842
+    second: SecondTempleJesus_2
+  - first:
+      213: -1517971570672531418
+    second: SecondTempleJesus_3
+  - first:
+      213: 733665356266954199
+    second: SecondTempleJesus_4
+  - first:
+      213: -7831479051394862967
+    second: SecondTempleJesus_5
+  - first:
+      213: 6406881452995181402
+    second: SecondTempleJesus_6
+  - first:
+      213: -6728801738919695523
+    second: SecondTempleJesus_7
+  - first:
+      213: 609695759329737440
+    second: SecondTempleJesus_8
+  - first:
+      213: 1964110426673641046
+    second: SecondTempleJesus_9
+  - first:
+      213: 3041581918234107642
+    second: SecondTempleJesus_10
+  - first:
+      213: 6653284827964715687
+    second: SecondTempleJesus_11
+  - first:
+      213: -3368881100804102677
+    second: SecondTempleJesus_12
+  - first:
+      213: 8068762230412816714
+    second: SecondTempleJesus_13
+  - first:
+      213: 4231561676903052813
+    second: SecondTempleJesus_14
+  - first:
+      213: -5786810948334861580
+    second: SecondTempleJesus_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jesus0Rebuke
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 73
+        width: 389
+        height: 551
+      alignment: 9
+      pivot: {x: 0.41773778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -194.5, y: -157.5}
+        - {x: -177.5, y: -268.5}
+        - {x: -173.5, y: -272.5}
+        - {x: -169.5, y: -275.5}
+        - {x: -99.5, y: -275.5}
+        - {x: 105.5, y: -269.5}
+        - {x: 107.5, y: -268.5}
+        - {x: 111.5, y: -265.5}
+        - {x: 114.5, y: -262.5}
+        - {x: 194.5, y: 123.5}
+        - {x: 194.5, y: 142.5}
+        - {x: 187.5, y: 159.5}
+        - {x: 184.5, y: 163.5}
+        - {x: 177.5, y: 170.5}
+        - {x: 173.5, y: 173.5}
+        - {x: 49.5, y: 261.5}
+        - {x: 35.5, y: 268.5}
+        - {x: 27.5, y: 271.5}
+        - {x: -6.5, y: 275.5}
+        - {x: -42.5, y: 275.5}
+        - {x: -53.5, y: 271.5}
+        - {x: -60.5, y: 268.5}
+        - {x: -74.5, y: 260.5}
+        - {x: -82.5, y: 254.5}
+        - {x: -89.5, y: 247.5}
+        - {x: -98.5, y: 235.5}
+        - {x: -104.5, y: 225.5}
+        - {x: -162.5, y: 123.5}
+        - {x: -168.5, y: 99.5}
+        - {x: -194.5, y: -151.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50df83f47ff424d48b548be2e0155143
+      internalID: 1336160576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jesus1Push0
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 74
+        width: 500
+        height: 529
+      alignment: 9
+      pivot: {x: 0.348, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -250, y: -229.5}
+        - {x: -244, y: -239.5}
+        - {x: -231, y: -255.5}
+        - {x: -228, y: -258.5}
+        - {x: -223, y: -261.5}
+        - {x: -216, y: -264.5}
+        - {x: -158, y: -264.5}
+        - {x: 90, y: -259.5}
+        - {x: 92, y: -258.5}
+        - {x: 96, y: -255.5}
+        - {x: 99, y: -251.5}
+        - {x: 239, y: -7.5}
+        - {x: 250, y: 48.5}
+        - {x: 250, y: 66.5}
+        - {x: 244, y: 73.5}
+        - {x: 106, y: 229.5}
+        - {x: 95, y: 241.5}
+        - {x: 87, y: 247.5}
+        - {x: 80, y: 251.5}
+        - {x: 73, y: 254.5}
+        - {x: 33, y: 264.5}
+        - {x: -6, y: 264.5}
+        - {x: -13, y: 261.5}
+        - {x: -33, y: 251.5}
+        - {x: -38, y: 248.5}
+        - {x: -48, y: 239.5}
+        - {x: -55, y: 231.5}
+        - {x: -121, y: 147.5}
+        - {x: -125, y: 140.5}
+        - {x: -138, y: 107.5}
+        - {x: -216, y: -99.5}
+        - {x: -250, y: -216.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b427401950fd62e498ed7fca866b3a84
+      internalID: 1534867239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jesus2Push1
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 74
+        width: 556
+        height: 534
+      alignment: 9
+      pivot: {x: 0.3426259, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -278, y: -238}
+        - {x: -274, y: -243}
+        - {x: -264, y: -255}
+        - {x: -255, y: -264}
+        - {x: -249, y: -267}
+        - {x: -181, y: -267}
+        - {x: 96, y: -262}
+        - {x: 101, y: -258}
+        - {x: 104, y: -255}
+        - {x: 253, y: -53}
+        - {x: 278, y: -1}
+        - {x: 278, y: 7}
+        - {x: 277, y: 9}
+        - {x: 115, y: 232}
+        - {x: 105, y: 242}
+        - {x: 97, y: 249}
+        - {x: 90, y: 252}
+        - {x: 45, y: 267}
+        - {x: 9, y: 267}
+        - {x: -7, y: 261}
+        - {x: -23, y: 253}
+        - {x: -32, y: 246}
+        - {x: -44, y: 234}
+        - {x: -120, y: 144}
+        - {x: -257, y: -128}
+        - {x: -278, y: -224}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238c134b2bc2c74428fcb74504256561
+      internalID: 1504861650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jesus3Welcome
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 73
+        width: 354
+        height: 555
+      alignment: 9
+      pivot: {x: 0.42090395, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -177, y: 74.5}
+        - {x: -162, y: -120.5}
+        - {x: -157, y: -176.5}
+        - {x: -140, y: -269.5}
+        - {x: -136, y: -273.5}
+        - {x: -130, y: -276.5}
+        - {x: -102, y: -277.5}
+        - {x: -59, y: -277.5}
+        - {x: 76, y: -271.5}
+        - {x: 78, y: -270.5}
+        - {x: 85, y: -263.5}
+        - {x: 177, y: -36.5}
+        - {x: 177, y: -22.5}
+        - {x: 60, y: 230.5}
+        - {x: 52, y: 242.5}
+        - {x: 43, y: 252.5}
+        - {x: 38, y: 257.5}
+        - {x: 25, y: 267.5}
+        - {x: 20, y: 270.5}
+        - {x: 11, y: 274.5}
+        - {x: 2, y: 277.5}
+        - {x: -60, y: 277.5}
+        - {x: -71, y: 274.5}
+        - {x: -79, y: 270.5}
+        - {x: -86, y: 266.5}
+        - {x: -93, y: 261.5}
+        - {x: -99, y: 256.5}
+        - {x: -111, y: 244.5}
+        - {x: -113, y: 241.5}
+        - {x: -116, y: 236.5}
+        - {x: -121, y: 227.5}
+        - {x: -124, y: 221.5}
+        - {x: -168, y: 130.5}
+        - {x: -177, y: 94.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3042fcbb7d11b743865633f536f1594
+      internalID: -268076262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0cbc35b21892974438aa44f2d3b96275
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jesus0Rebuke: 1336160576
+      Jesus1Push0: 1534867239
+      Jesus2Push1: 1504861650
+      Jesus3Welcome: -268076262
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

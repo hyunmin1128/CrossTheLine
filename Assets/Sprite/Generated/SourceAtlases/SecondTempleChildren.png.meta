@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: a8c36f1a7b754df468ca8a018ff242cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 776700493113282231
+    second: SecondTempleChildren_0
+  - first:
+      213: -2106676607883525349
+    second: SecondTempleChildren_1
+  - first:
+      213: -124382689702184531
+    second: SecondTempleChildren_2
+  - first:
+      213: 5663863043969169219
+    second: SecondTempleChildren_3
+  - first:
+      213: 6466228583753512266
+    second: SecondTempleChildren_4
+  - first:
+      213: 8893536879651155506
+    second: SecondTempleChildren_5
+  - first:
+      213: 1942672202645878748
+    second: SecondTempleChildren_6
+  - first:
+      213: 3535203966121303815
+    second: SecondTempleChildren_7
+  - first:
+      213: 7363210341780237460
+    second: SecondTempleChildren_8
+  - first:
+      213: -5673541072538410489
+    second: SecondTempleChildren_9
+  - first:
+      213: 5463908681037238373
+    second: SecondTempleChildren_10
+  - first:
+      213: -1426612652233574099
+    second: SecondTempleChildren_11
+  - first:
+      213: -7080432216533564509
+    second: SecondTempleChildren_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChildPose0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 57
+        width: 281
+        height: 485
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -140.5, y: -75.5}
+        - {x: -139.5, y: -166.5}
+        - {x: -130.5, y: -198.5}
+        - {x: -129.5, y: -200.5}
+        - {x: -122.5, y: -213.5}
+        - {x: -119.5, y: -217.5}
+        - {x: -110.5, y: -226.5}
+        - {x: -102.5, y: -232.5}
+        - {x: 30.5, y: -242.5}
+        - {x: 55.5, y: -242.5}
+        - {x: 72.5, y: -236.5}
+        - {x: 83.5, y: -232.5}
+        - {x: 96.5, y: -226.5}
+        - {x: 103.5, y: -222.5}
+        - {x: 108.5, y: -219.5}
+        - {x: 112.5, y: -215.5}
+        - {x: 115.5, y: -211.5}
+        - {x: 140.5, y: -67.5}
+        - {x: 140.5, y: -48.5}
+        - {x: 113.5, y: 189.5}
+        - {x: 106.5, y: 197.5}
+        - {x: 81.5, y: 225.5}
+        - {x: 75.5, y: 231.5}
+        - {x: 40.5, y: 242.5}
+        - {x: 27.5, y: 242.5}
+        - {x: -13.5, y: 237.5}
+        - {x: -47.5, y: 224.5}
+        - {x: -80.5, y: 203.5}
+        - {x: -84.5, y: 200.5}
+        - {x: -88.5, y: 196.5}
+        - {x: -91.5, y: 192.5}
+        - {x: -106.5, y: 168.5}
+        - {x: -122.5, y: 141.5}
+        - {x: -140.5, y: -58.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1471d6f7cab1db48bb43cfc5e64b910
+      internalID: 453375636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildPose1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 59
+        width: 303
+        height: 487
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -151.5, y: 92.5}
+        - {x: -145.5, y: -95.5}
+        - {x: -110.5, y: -234.5}
+        - {x: -107.5, y: -237.5}
+        - {x: -103.5, y: -240.5}
+        - {x: -98.5, y: -243.5}
+        - {x: 60.5, y: -243.5}
+        - {x: 72.5, y: -242.5}
+        - {x: 75.5, y: -240.5}
+        - {x: 81.5, y: -234.5}
+        - {x: 151.5, y: 111.5}
+        - {x: 151.5, y: 127.5}
+        - {x: 148.5, y: 134.5}
+        - {x: 142.5, y: 142.5}
+        - {x: 138.5, y: 146.5}
+        - {x: 53.5, y: 221.5}
+        - {x: 49.5, y: 224.5}
+        - {x: 16.5, y: 238.5}
+        - {x: -12.5, y: 243.5}
+        - {x: -24.5, y: 243.5}
+        - {x: -56.5, y: 234.5}
+        - {x: -85.5, y: 221.5}
+        - {x: -89.5, y: 218.5}
+        - {x: -115.5, y: 196.5}
+        - {x: -122.5, y: 189.5}
+        - {x: -125.5, y: 185.5}
+        - {x: -151.5, y: 138.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec139741ac4f5c14586ddbdc3d144b09
+      internalID: -1894594778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildPose2
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 59
+        width: 289
+        height: 465
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -144.5, y: -65.5}
+        - {x: -143.5, y: -86.5}
+        - {x: -116.5, y: -182.5}
+        - {x: -113.5, y: -189.5}
+        - {x: -110.5, y: -195.5}
+        - {x: -101.5, y: -210.5}
+        - {x: -94.5, y: -219.5}
+        - {x: -89.5, y: -224.5}
+        - {x: -82.5, y: -229.5}
+        - {x: -75.5, y: -232.5}
+        - {x: 77.5, y: -232.5}
+        - {x: 93.5, y: -225.5}
+        - {x: 115.5, y: -212.5}
+        - {x: 120.5, y: -209.5}
+        - {x: 130.5, y: -201.5}
+        - {x: 133.5, y: -198.5}
+        - {x: 136.5, y: -194.5}
+        - {x: 144.5, y: -67.5}
+        - {x: 144.5, y: -50.5}
+        - {x: 124.5, y: 173.5}
+        - {x: 118.5, y: 185.5}
+        - {x: 115.5, y: 190.5}
+        - {x: 112.5, y: 194.5}
+        - {x: 100.5, y: 206.5}
+        - {x: 85.5, y: 217.5}
+        - {x: 80.5, y: 220.5}
+        - {x: 56.5, y: 232.5}
+        - {x: 33.5, y: 232.5}
+        - {x: -22.5, y: 223.5}
+        - {x: -32.5, y: 220.5}
+        - {x: -39.5, y: 217.5}
+        - {x: -44.5, y: 214.5}
+        - {x: -54.5, y: 207.5}
+        - {x: -58.5, y: 204.5}
+        - {x: -71.5, y: 191.5}
+        - {x: -76.5, y: 184.5}
+        - {x: -85.5, y: 169.5}
+        - {x: -89.5, y: 158.5}
+        - {x: -92.5, y: 148.5}
+        - {x: -144.5, y: -49.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5255a2d38ca4e4aa1c0dd42711c076
+      internalID: -482242436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildPose3
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 57
+        width: 225
+        height: 474
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -112.5, y: 86}
+        - {x: -110.5, y: -64}
+        - {x: -104.5, y: -88}
+        - {x: -69.5, y: -223}
+        - {x: -63.5, y: -229}
+        - {x: -51.5, y: -234}
+        - {x: -42.5, y: -237}
+        - {x: 2.5, y: -237}
+        - {x: 91.5, y: -234}
+        - {x: 96.5, y: -231}
+        - {x: 99.5, y: -227}
+        - {x: 112.5, y: 157}
+        - {x: 112.5, y: 178}
+        - {x: 109.5, y: 184}
+        - {x: 105.5, y: 191}
+        - {x: 102.5, y: 196}
+        - {x: 96.5, y: 203}
+        - {x: 86.5, y: 213}
+        - {x: 82.5, y: 216}
+        - {x: 71.5, y: 224}
+        - {x: 66.5, y: 227}
+        - {x: 50.5, y: 234}
+        - {x: 42.5, y: 237}
+        - {x: 17.5, y: 237}
+        - {x: -14.5, y: 233}
+        - {x: -30.5, y: 230}
+        - {x: -39.5, y: 228}
+        - {x: -50.5, y: 224}
+        - {x: -57.5, y: 221}
+        - {x: -62.5, y: 218}
+        - {x: -70.5, y: 212}
+        - {x: -79.5, y: 203}
+        - {x: -85.5, y: 196}
+        - {x: -92.5, y: 187}
+        - {x: -95.5, y: 182}
+        - {x: -102.5, y: 168}
+        - {x: -105.5, y: 156}
+        - {x: -112.5, y: 101}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c29f751e1c62d94a92cf872156195a4
+      internalID: -2119299870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildPose4
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 57
+        width: 254
+        height: 406
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -127, y: -78}
+        - {x: -113, y: -155}
+        - {x: -111, y: -162}
+        - {x: -105, y: -179}
+        - {x: -97, y: -192}
+        - {x: -93, y: -195}
+        - {x: -90, y: -197}
+        - {x: -83, y: -200}
+        - {x: 29, y: -203}
+        - {x: 49, y: -203}
+        - {x: 67, y: -197}
+        - {x: 75, y: -194}
+        - {x: 80, y: -192}
+        - {x: 90, y: -187}
+        - {x: 94, y: -184}
+        - {x: 103, y: -175}
+        - {x: 127, y: -69}
+        - {x: 127, y: -51}
+        - {x: 99, y: 146}
+        - {x: 86, y: 169}
+        - {x: 84, y: 172}
+        - {x: 81, y: 176}
+        - {x: 40, y: 203}
+        - {x: 28, y: 203}
+        - {x: -39, y: 196}
+        - {x: -41, y: 195}
+        - {x: -78, y: 175}
+        - {x: -110, y: 143}
+        - {x: -113, y: 138}
+        - {x: -127, y: 106}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318cd455eb21ba54f82efcedf09b6a31
+      internalID: 1805099261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildPose5
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 57
+        width: 290
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -145, y: 39.5}
+        - {x: -82, y: -194.5}
+        - {x: -77, y: -199.5}
+        - {x: -68, y: -205.5}
+        - {x: 81, y: -205.5}
+        - {x: 85, y: -202.5}
+        - {x: 90, y: -197.5}
+        - {x: 145, y: 52.5}
+        - {x: 145, y: 66.5}
+        - {x: 142, y: 72.5}
+        - {x: 90, y: 160.5}
+        - {x: 87, y: 164.5}
+        - {x: 65, y: 186.5}
+        - {x: 27, y: 205.5}
+        - {x: 16, y: 205.5}
+        - {x: -26, y: 201.5}
+        - {x: -56, y: 193.5}
+        - {x: -59, y: 192.5}
+        - {x: -62, y: 190.5}
+        - {x: -98, y: 163.5}
+        - {x: -101, y: 160.5}
+        - {x: -104, y: 156.5}
+        - {x: -116, y: 136.5}
+        - {x: -128, y: 111.5}
+        - {x: -145, y: 52.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad92d49c1390144469a4aa8bef7b9c2d
+      internalID: 197666275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1e876a3d63d257140b954ce27b469997
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ChildPose0: 453375636
+      ChildPose1: -1894594778
+      ChildPose2: -482242436
+      ChildPose3: -2119299870
+      ChildPose4: 1805099261
+      ChildPose5: 197666275
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

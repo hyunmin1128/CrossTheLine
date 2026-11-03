@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 1935b7f4f30ff5940b6b0766afad4e60
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5623782610190652097
+    second: SecondTempleLeaders_0
+  - first:
+      213: -4100464255268432026
+    second: SecondTempleLeaders_1
+  - first:
+      213: -508353745705219117
+    second: SecondTempleLeaders_2
+  - first:
+      213: 3397805273678770383
+    second: SecondTempleLeaders_3
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Leader0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 30
+        width: 367
+        height: 850
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -183.5, y: -333}
+        - {x: -154.5, y: -416}
+        - {x: -149.5, y: -422}
+        - {x: -142.5, y: -425}
+        - {x: -77.5, y: -425}
+        - {x: 167.5, y: -418}
+        - {x: 169.5, y: -417}
+        - {x: 174.5, y: -414}
+        - {x: 177.5, y: -411}
+        - {x: 183.5, y: -338}
+        - {x: 183.5, y: 63}
+        - {x: 63.5, y: 413}
+        - {x: 60.5, y: 417}
+        - {x: 57.5, y: 420}
+        - {x: 54.5, y: 422}
+        - {x: 47.5, y: 425}
+        - {x: 18.5, y: 425}
+        - {x: 5.5, y: 423}
+        - {x: -24.5, y: 413}
+        - {x: -29.5, y: 411}
+        - {x: -45.5, y: 403}
+        - {x: -62.5, y: 393}
+        - {x: -77.5, y: 382}
+        - {x: -84.5, y: 376}
+        - {x: -87.5, y: 372}
+        - {x: -90.5, y: 366}
+        - {x: -173.5, y: 155}
+        - {x: -175.5, y: 149}
+        - {x: -183.5, y: -321}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1182de63b18d75f418bf12954a15ec65
+      internalID: -224761369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leader1
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 37
+        width: 366
+        height: 813
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -183, y: -256.5}
+        - {x: -151, y: -399.5}
+        - {x: -145, y: -404.5}
+        - {x: -141, y: -406.5}
+        - {x: -77, y: -406.5}
+        - {x: 157, y: -405.5}
+        - {x: 162, y: -402.5}
+        - {x: 165, y: -399.5}
+        - {x: 183, y: 9.5}
+        - {x: 183, y: 35.5}
+        - {x: 180, y: 142.5}
+        - {x: 103, y: 358.5}
+        - {x: 94, y: 379.5}
+        - {x: 91, y: 383.5}
+        - {x: 85, y: 389.5}
+        - {x: 78, y: 395.5}
+        - {x: 75, y: 397.5}
+        - {x: 61, y: 403.5}
+        - {x: 49, y: 406.5}
+        - {x: 18, y: 406.5}
+        - {x: 5, y: 403.5}
+        - {x: -4, y: 400.5}
+        - {x: -12, y: 397.5}
+        - {x: -22, y: 392.5}
+        - {x: -27, y: 389.5}
+        - {x: -30, y: 387.5}
+        - {x: -34, y: 384.5}
+        - {x: -47, y: 374.5}
+        - {x: -59, y: 362.5}
+        - {x: -62, y: 357.5}
+        - {x: -153, y: 156.5}
+        - {x: -155, y: 151.5}
+        - {x: -183, y: -12.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617f5dea06bc6e74cbcbf929ffcd23ea
+      internalID: 804906989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leader2
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 30
+        width: 485
+        height: 844
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -242.5, y: -233}
+        - {x: -239.5, y: -240}
+        - {x: -194.5, y: -339}
+        - {x: -190.5, y: -345}
+        - {x: -183.5, y: -354}
+        - {x: -177.5, y: -361}
+        - {x: -145.5, y: -398}
+        - {x: -142.5, y: -401}
+        - {x: -139.5, y: -403}
+        - {x: -129.5, y: -408}
+        - {x: -121.5, y: -411}
+        - {x: 98.5, y: -422}
+        - {x: 123.5, y: -422}
+        - {x: 129.5, y: -421}
+        - {x: 139.5, y: -419}
+        - {x: 189.5, y: -403}
+        - {x: 197.5, y: -400}
+        - {x: 202.5, y: -398}
+        - {x: 209.5, y: -395}
+        - {x: 221.5, y: -389}
+        - {x: 229.5, y: -384}
+        - {x: 233.5, y: -381}
+        - {x: 240.5, y: -374}
+        - {x: 242.5, y: -371}
+        - {x: 242.5, y: -361}
+        - {x: 239.5, y: -42}
+        - {x: 137.5, y: 384}
+        - {x: 133.5, y: 400}
+        - {x: 130.5, y: 410}
+        - {x: 126.5, y: 416}
+        - {x: 122.5, y: 419}
+        - {x: 114.5, y: 422}
+        - {x: 87.5, y: 422}
+        - {x: 71.5, y: 419}
+        - {x: 61.5, y: 416}
+        - {x: 52.5, y: 413}
+        - {x: 37.5, y: 407}
+        - {x: 18.5, y: 398}
+        - {x: 16.5, y: 397}
+        - {x: 2.5, y: 388}
+        - {x: -6.5, y: 382}
+        - {x: -12.5, y: 377}
+        - {x: -17.5, y: 372}
+        - {x: -22.5, y: 365}
+        - {x: -111.5, y: 156}
+        - {x: -116.5, y: 144}
+        - {x: -242.5, y: -223}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b931623879bd58e49a8ff1965413a246
+      internalID: -1945990328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leader3
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 34
+        width: 436
+        height: 811
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -218, y: -222.5}
+        - {x: -205, y: -278.5}
+        - {x: -185, y: -335.5}
+        - {x: -183, y: -339.5}
+        - {x: -181, y: -342.5}
+        - {x: -178, y: -346.5}
+        - {x: -145, y: -385.5}
+        - {x: -141, y: -389.5}
+        - {x: -131, y: -395.5}
+        - {x: -122, y: -398.5}
+        - {x: 90, y: -405.5}
+        - {x: 117, y: -405.5}
+        - {x: 129, y: -403.5}
+        - {x: 176, y: -390.5}
+        - {x: 185, y: -387.5}
+        - {x: 190, y: -385.5}
+        - {x: 212, y: -374.5}
+        - {x: 218, y: -367.5}
+        - {x: 218, y: -358.5}
+        - {x: 164, y: 131.5}
+        - {x: 117, y: 352.5}
+        - {x: 114, y: 365.5}
+        - {x: 107, y: 378.5}
+        - {x: 101, y: 386.5}
+        - {x: 95, y: 392.5}
+        - {x: 92, y: 394.5}
+        - {x: 87, y: 397.5}
+        - {x: 81, y: 400.5}
+        - {x: 75, y: 402.5}
+        - {x: 63, y: 405.5}
+        - {x: 30, y: 405.5}
+        - {x: 17, y: 402.5}
+        - {x: 5, y: 399.5}
+        - {x: -6, y: 394.5}
+        - {x: -11, y: 391.5}
+        - {x: -19, y: 386.5}
+        - {x: -23, y: 383.5}
+        - {x: -34, y: 374.5}
+        - {x: -44, y: 365.5}
+        - {x: -46, y: 363.5}
+        - {x: -49, y: 359.5}
+        - {x: -55, y: 348.5}
+        - {x: -149, y: 151.5}
+        - {x: -152, y: 144.5}
+        - {x: -218, y: -205.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9668634096d22eb468515455d9152115
+      internalID: 1393235231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4b06bb741118c214d86ad1196678b85f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Leader0: -224761369
+      Leader1: 804906989
+      Leader2: -1945990328
+      Leader3: 1393235231
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

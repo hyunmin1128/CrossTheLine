@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: 5e8daf63ac54d85418d124f96724f380
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4408543872139996185
+    second: FeedingSeatedCrowd_0
+  - first:
+      213: -6092315725038765491
+    second: FeedingSeatedCrowd_1
+  - first:
+      213: 2816705697415418816
+    second: FeedingSeatedCrowd_2
+  - first:
+      213: -8458734809699761205
+    second: FeedingSeatedCrowd_3
+  - first:
+      213: -6465926688433303249
+    second: FeedingSeatedCrowd_4
+  - first:
+      213: -3271878887210182445
+    second: FeedingSeatedCrowd_5
+  - first:
+      213: 218259208907468364
+    second: FeedingSeatedCrowd_6
+  - first:
+      213: -562547383720989807
+    second: FeedingSeatedCrowd_7
+  - first:
+      213: 2515323325198049964
+    second: FeedingSeatedCrowd_8
+  - first:
+      213: -5319246446944029300
+    second: FeedingSeatedCrowd_9
+  - first:
+      213: -8736606446471584412
+    second: FeedingSeatedCrowd_10
+  - first:
+      213: 2295492028521367852
+    second: FeedingSeatedCrowd_11
+  - first:
+      213: -5098355672013740312
+    second: FeedingSeatedCrowd_12
+  - first:
+      213: 821661756814406023
+    second: FeedingSeatedCrowd_13
+  - first:
+      213: -5186665978733614399
+    second: FeedingSeatedCrowd_14
+  - first:
+      213: -6967870717666217992
+    second: FeedingSeatedCrowd_15
+  - first:
+      213: 5187823185385188179
+    second: FeedingSeatedCrowd_16
+  - first:
+      213: -4501221421989649978
+    second: FeedingSeatedCrowd_17
+  - first:
+      213: -6390083773419879350
+    second: FeedingSeatedCrowd_18
+  - first:
+      213: -839088189017034260
+    second: FeedingSeatedCrowd_19
+  - first:
+      213: 1523943046048437574
+    second: FeedingSeatedCrowd_20
+  - first:
+      213: 86052877273432819
+    second: FeedingSeatedCrowd_21
+  - first:
+      213: 731021665123369619
+    second: FeedingSeatedCrowd_22
+  - first:
+      213: -5951620457492927199
+    second: FeedingSeatedCrowd_23
+  - first:
+      213: 1844600098330105933
+    second: FeedingSeatedCrowd_24
+  - first:
+      213: 3597611072225615515
+    second: FeedingSeatedCrowd_25
+  - first:
+      213: -2591592526451808510
+    second: FeedingSeatedCrowd_26
+  - first:
+      213: 4597326502608947629
+    second: FeedingSeatedCrowd_27
+  - first:
+      213: -5615344995175308531
+    second: FeedingSeatedCrowd_28
+  - first:
+      213: -6312284133557999503
+    second: FeedingSeatedCrowd_29
+  - first:
+      213: 4597152120151190106
+    second: FeedingSeatedCrowd_30
+  - first:
+      213: -6090441532544082790
+    second: FeedingSeatedCrowd_31
+  - first:
+      213: -6695836658715732644
+    second: FeedingSeatedCrowd_32
+  - first:
+      213: -1625878243698730047
+    second: FeedingSeatedCrowd_33
+  - first:
+      213: 1753772303657873512
+    second: FeedingSeatedCrowd_34
+  - first:
+      213: 5008742131604804310
+    second: FeedingSeatedCrowd_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seated_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 69
+        width: 336
+        height: 479
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d597a8bfc2cc6148bf7a804210944e1
+      internalID: 274425285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seated_1
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 69
+        width: 456
+        height: 577
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb98bd8001d2d8441b2c8c1e4e81399f
+      internalID: -992343654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seated_2
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 55
+        width: 451
+        height: 612
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87919f8f29f3cf4e8993e10f1d71eaf
+      internalID: -586899708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seated_3
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 57
+        width: 471
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f1c3848ac56864586306a728f95fe0
+      internalID: 2134651066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2393f2fdad131a8449d4f973617a76fa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Seated_0: 274425285
+      Seated_1: -992343654
+      Seated_2: -586899708
+      Seated_3: 2134651066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

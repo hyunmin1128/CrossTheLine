@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 68a92d36a1bbf374baf6c0a7b165ce84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8028737338617794495
+    second: GalileeBoatHull_0
+  - first:
+      213: -2223670211241391702
+    second: GalileeBoatHull_1
+  - first:
+      213: -2181680299650980911
+    second: GalileeBoatHull_2
+  - first:
+      213: -2061809994164637038
+    second: GalileeBoatHull_3
+  - first:
+      213: -6864995048461116173
+    second: GalileeBoatHull_4
+  - first:
+      213: -1067739010893084411
+    second: GalileeBoatHull_5
+  - first:
+      213: -2821590580454186930
+    second: GalileeBoatHull_6
+  - first:
+      213: -7630987194335813797
+    second: GalileeBoatHull_7
+  - first:
+      213: 5725455534233688635
+    second: GalileeBoatHull_8
+  - first:
+      213: -7199894611196070790
+    second: GalileeBoatHull_9
+  - first:
+      213: 4018903607326692834
+    second: GalileeBoatHull_10
+  - first:
+      213: -829857794616583326
+    second: GalileeBoatHull_11
+  - first:
+      213: -4742390456714954437
+    second: GalileeBoatHull_12
+  - first:
+      213: -2777537413695489824
+    second: GalileeBoatHull_13
+  - first:
+      213: -1902704828574851378
+    second: GalileeBoatHull_14
+  - first:
+      213: 5890329926151599979
+    second: GalileeBoatHull_15
+  - first:
+      213: -5137573818125236170
+    second: GalileeBoatHull_16
+  - first:
+      213: -4248159657471344886
+    second: GalileeBoatHull_17
+  - first:
+      213: -6260015637281248506
+    second: GalileeBoatHull_18
+  - first:
+      213: -1742461702760432395
+    second: GalileeBoatHull_19
+  - first:
+      213: -2419152271598037309
+    second: GalileeBoatHull_20
+  - first:
+      213: 8809445398907674546
+    second: GalileeBoatHull_21
+  - first:
+      213: -6504008595605939408
+    second: GalileeBoatHull_22
+  - first:
+      213: -6474775018569312868
+    second: GalileeBoatHull_23
+  - first:
+      213: 6386328001756020170
+    second: GalileeBoatHull_24
+  - first:
+      213: 4089592648473360136
+    second: GalileeBoatHull_25
+  - first:
+      213: 6977010163566453730
+    second: GalileeBoatHull_26
+  - first:
+      213: -1084065846001896018
+    second: GalileeBoatHull_27
+  - first:
+      213: -8966180662548751400
+    second: GalileeBoatHull_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GalileeBoatHull
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 108
+        width: 2107
+        height: 513
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5984405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747c081117a76cb43907d7ed935c4375
+      internalID: 1267319172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 87ab3966b065dd741b3608fd5c293565
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GalileeBoatHull: 1267319172
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

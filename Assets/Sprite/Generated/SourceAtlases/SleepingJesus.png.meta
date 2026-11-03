@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: dc09a57fd2f290246af8a003bcbcf6d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2869017941244362777
+    second: SleepingJesus_0
+  - first:
+      213: -5691491712603325716
+    second: SleepingJesus_1
+  - first:
+      213: -661628420260393862
+    second: SleepingJesus_2
+  - first:
+      213: -6448497959030713814
+    second: SleepingJesus_3
+  - first:
+      213: 587881982335134764
+    second: SleepingJesus_4
+  - first:
+      213: -2417661663142150294
+    second: SleepingJesus_5
+  - first:
+      213: -8620936081657071120
+    second: SleepingJesus_6
+  - first:
+      213: -7760474186905893455
+    second: SleepingJesus_7
+  - first:
+      213: 4121731086772381984
+    second: SleepingJesus_8
+  - first:
+      213: 832945618901214533
+    second: SleepingJesus_9
+  - first:
+      213: -983688363497753008
+    second: SleepingJesus_10
+  - first:
+      213: 1461197979169883642
+    second: SleepingJesus_11
+  - first:
+      213: -7371192970793190513
+    second: SleepingJesus_12
+  - first:
+      213: 4310708254366068773
+    second: SleepingJesus_13
+  - first:
+      213: 8233674793091460869
+    second: SleepingJesus_14
+  - first:
+      213: -6327740351331407531
+    second: SleepingJesus_15
+  - first:
+      213: 6977906644625831760
+    second: SleepingJesus_16
+  - first:
+      213: 5588191336224346349
+    second: SleepingJesus_17
+  - first:
+      213: 6277896794149444617
+    second: SleepingJesus_18
+  - first:
+      213: 3458609879674451577
+    second: SleepingJesus_19
+  - first:
+      213: 4995626973661866367
+    second: SleepingJesus_20
+  - first:
+      213: 1959990285242233711
+    second: SleepingJesus_21
+  - first:
+      213: -4541561990756258084
+    second: SleepingJesus_22
+  - first:
+      213: 3193549722767529032
+    second: SleepingJesus_23
+  - first:
+      213: 2158264850899522505
+    second: SleepingJesus_24
+  - first:
+      213: 1657292376463653081
+    second: SleepingJesus_25
+  - first:
+      213: -2090595123052292337
+    second: SleepingJesus_26
+  - first:
+      213: 3538345278519017882
+    second: SleepingJesus_27
+  - first:
+      213: -4265113232887337808
+    second: SleepingJesus_28
+  - first:
+      213: -4508398992192934537
+    second: SleepingJesus_29
+  - first:
+      213: 7173184268413936270
+    second: SleepingJesus_30
+  - first:
+      213: 8382196911025922516
+    second: SleepingJesus_31
+  - first:
+      213: -2504456882049527211
+    second: SleepingJesus_32
+  - first:
+      213: 2396690193229854906
+    second: SleepingJesus_33
+  - first:
+      213: 4175353488631134603
+    second: SleepingJesus_34
+  - first:
+      213: 354348410132647894
+    second: SleepingJesus_35
+  - first:
+      213: 2830600563110382189
+    second: SleepingJesus_36
+  - first:
+      213: 628623222572285021
+    second: SleepingJesus_37
+  - first:
+      213: 8874392082176240385
+    second: SleepingJesus_38
+  - first:
+      213: 2269941929542112216
+    second: SleepingJesus_39
+  - first:
+      213: 7005231888187610443
+    second: SleepingJesus_40
+  - first:
+      213: -5925242359996698040
+    second: SleepingJesus_41
+  - first:
+      213: -4071298069467927445
+    second: SleepingJesus_42
+  - first:
+      213: 7190950417845041717
+    second: SleepingJesus_43
+  - first:
+      213: 1902967657283790113
+    second: SleepingJesus_44
+  - first:
+      213: -3185141209656449508
+    second: SleepingJesus_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SleepingJesus
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 110
+        width: 1396
+        height: 523
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef38e512633f28d0800000000000000
+      internalID: -2869017941244362777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b58844e0c4c6ded43ae5d7aae1bd1761
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SleepingJesus: -2869017941244362777
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
