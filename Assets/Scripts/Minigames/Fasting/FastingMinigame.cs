@@ -21,6 +21,18 @@ namespace CrossTheLine.Minigames
         public Image nightOverlay;
         public GameObject resultPanel;
         public Button replayButton;
+        public Vector2 feetHitSize=new Vector2(.4f,.22f);
+        public bool holdToMove=true;
+        public float holdDelay=.28f;
+        public enum StepState { Available, Moving, Obstacle, Boundary, Waiting, Inactive }
+        public bool Moving=>moving;
+        public string ActionMessage{get;private set;}="";
+        public string DamageMessage{get;private set;}="";
+        public float DamageNoticeRemaining{get;private set;}
+        public float Exposure=>exposure;
+        public float ExposureLimit=>Stage.exposureSeconds*(Night?1:1.6f);
+        public float GateSecondsRemaining=>Mathf.Max(0,Stage.seconds-stageTime);
+        public Rect FeetHitArea=>new Rect((Vector2)player.position-feetHitSize*.5f,feetHitSize);
         public int Stamina{get;private set;}
         public int StageIndex{get;private set;}
         public int Day=>Mathf.Clamp(StageIndex*5+1+Mathf.Clamp(Mathf.FloorToInt(stageTime/Stage.seconds*5),0,4),1,40);
@@ -36,6 +48,7 @@ namespace CrossTheLine.Minigames
         float stageTime,waveTime,warningTime,invulnerable,exposure,restartTime,walkClock;
         float moveTime;Vector3 moveFrom,moveTo;Vector2Int pending;int lane=1,waveNumber;
         bool moving,warningActive;
+        Vector2Int lastHeld;float heldSeconds,actionNotice;
         public float Gate=>Mathf.Min(settings.ground.xMax,settings.ground.xMin+(StageIndex+1)*settings.stageLength);
         void Start()
         {
@@ -52,6 +65,7 @@ namespace CrossTheLine.Minigames
             foreach(var s in storms)if(s){s.gameObject.SetActive(false);Destroy(s.gameObject);}storms.Clear();
             Stamina=settings.maximumStamina;StageIndex=0;stageTime=0;waveTime=2.5f;warningTime=0;waveNumber=0;
             exposure=0;invulnerable=0;warningActive=false;Finished=false;Restarting=false;moving=false;pending=Vector2Int.zero;lane=1;
+            lastHeld=Vector2Int.zero;heldSeconds=0;ActionMessage="";DamageMessage="";DamageNoticeRemaining=0;actionNotice=0;
             player.position=new Vector3(settings.ground.xMin,settings.lanes[lane],0);body.sprite=idle;body.color=Color.white;body.flipX=false;
             resultPanel.SetActive(false);foreach(var w in warnings)if(w)w.enabled=false;
             RefreshUI();FollowCamera();
@@ -69,26 +83,41 @@ namespace CrossTheLine.Minigames
             else if(k.wKey.wasPressedThisFrame||k.upArrowKey.wasPressedThisFrame)input=Vector2Int.up;
             else if(k.sKey.wasPressedThisFrame||k.downArrowKey.wasPressedThisFrame)input=Vector2Int.down;}
             if(input!=Vector2Int.zero)RequestStep(input);
+            Vector2Int held=Vector2Int.zero;
+            if(k!=null){if(k.dKey.isPressed||k.rightArrowKey.isPressed)held=Vector2Int.right;else if(k.aKey.isPressed||k.leftArrowKey.isPressed)held=Vector2Int.left;else if(k.wKey.isPressed||k.upArrowKey.isPressed)held=Vector2Int.up;else if(k.sKey.isPressed||k.downArrowKey.isPressed)held=Vector2Int.down;}
+            if(held!=lastHeld){lastHeld=held;heldSeconds=0;}else heldSeconds+=Time.deltaTime;
+            if(holdToMove&&held!=Vector2Int.zero&&input==Vector2Int.zero&&heldSeconds>=holdDelay&&!moving)RequestStep(held);
             Advance(Time.deltaTime);
+        }
+        public StepState InspectStep(Vector2Int direction,out Vector3 target)
+        {
+            target=player.position+new Vector3(direction.x*settings.stepWidth,-direction.y*1.1f,0);
+            if(Finished||Restarting)return StepState.Inactive;
+            if(moving)return StepState.Moving;
+            int nextLane=lane-direction.y;
+            if(nextLane<0||nextLane>=settings.lanes.Length)return StepState.Boundary;
+            target.y=settings.lanes[nextLane];
+            if(target.x<settings.ground.xMin-.001f||target.x>settings.ground.xMax+.001f)return StepState.Boundary;
+            if(target.x>Gate+.001f)return StageIndex<7&&GateSecondsRemaining>0?StepState.Waiting:StepState.Boundary;
+            var destination=target;
+            for(int i=1;i<=8;i++)if(Array.Exists(covers,c=>c&&c.Blocks(Vector3.Lerp(player.position,destination,i/8f))))return StepState.Obstacle;
+            return StepState.Available;
         }
         public void RequestStep(Vector2Int direction)
         {
             if(Finished||Restarting)return;
             if(moving){pending=direction;return;}
-            int nextLane=Mathf.Clamp(lane-direction.y,0,settings.lanes.Length-1);
-            Vector3 target=player.position;
-            target.x=Mathf.Clamp(target.x+direction.x*settings.stepWidth,settings.ground.xMin,Gate);
-            target.y=settings.lanes[nextLane];
-            if((target-player.position).sqrMagnitude<.001f)return;
-            // Feet follow the ground continuously. Swept solid check prevents walking through a rock.
-            for(int i=1;i<=8;i++)if(Array.Exists(covers,c=>c&&c.Blocks(Vector3.Lerp(player.position,target,i/8f))))return;
-            lane=nextLane;moveFrom=player.position;moveTo=target;moveTime=0;moving=true;
+            var state=InspectStep(direction,out var target);
+            if(state!=StepState.Available){ActionMessage=state==StepState.Obstacle?"이동 불가 · 바위/나무를 옆길로 돌아가세요":state==StepState.Waiting?$"다음 길 대기 · {Mathf.CeilToInt(GateSecondsRemaining)}초 후 열림":"이동 불가 · 길의 경계입니다";actionNotice=1.1f;return;}
+            ActionMessage="";actionNotice=0;
+            lane-=direction.y;moveFrom=player.position;moveTo=target;moveTime=0;moving=true;
             if(direction.x!=0)body.flipX=direction.x<0;
         }
         public void Advance(float dt)
         {
             if(Finished||Restarting||dt<=0)return;
-            invulnerable=Mathf.Max(0,invulnerable-dt);stageTime+=dt;
+            Vector2 previousFeet=player.position;
+            invulnerable=Mathf.Max(0,invulnerable-dt);stageTime+=dt;DamageNoticeRemaining=Mathf.Max(0,DamageNoticeRemaining-dt);actionNotice=Mathf.Max(0,actionNotice-dt);if(actionNotice==0)ActionMessage="";
             if(moving){moveTime+=dt;float t=Mathf.Clamp01(moveTime/settings.stepSeconds);player.position=Vector3.Lerp(moveFrom,moveTo,t);walkClock+=dt;body.sprite=walk!=null&&walk.Length>0?walk[(int)(walkClock*10)%walk.Length]:idle;
                 if(t>=1){moving=false;var queued=pending;pending=Vector2Int.zero;if(queued!=Vector2Int.zero)RequestStep(queued);}}
             else body.sprite=idle;
@@ -96,12 +125,14 @@ namespace CrossTheLine.Minigames
             bool safe=Sheltered;
             exposure=safe?0:exposure+dt;
             float limit=Stage.exposureSeconds*(Night?1:1.6f);
-            if(exposure>=limit){exposure=0;TakeHit();}
+            if(exposure>=limit){exposure=0;ApplyDamage(Night?"추위에 오래 노출 · 지침 -1칸":"더위에 오래 노출 · 지침 -1칸",true);}
             if(Restarting)return;
             if(warningActive){warningTime-=dt;if(warningTime<=0)SpawnWave();}
             else{waveTime-=dt;if(waveTime<=0)WarnWave();}
             for(int i=storms.Count-1;i>=0;i--){var s=storms[i];if(!s){storms.RemoveAt(i);continue;}s.Advance(dt);
-                if(!safe&&s.Hits(player.position)){s.spent=true;TakeHit();}
+                if(s.TryHit(previousFeet,player.position,feetHitSize,out float impact)){
+                    Vector2 feetAtImpact=Vector2.Lerp(previousFeet,player.position,impact);
+                    if(!Array.Exists(covers,c=>c&&c.Protects(feetAtImpact))){s.spent=true;ApplyDamage("모래바람에 닿음 · 지침 -1칸",false);s.RefreshFootprint();}}
                 if(s.transform.position.x<settings.ground.xMin-4){Destroy(s.gameObject);storms.RemoveAt(i);}}
             if(!Restarting&&stageTime>=Stage.seconds&&player.position.x>=Gate-.05f){
                 if(StageIndex==settings.stages.Length-1){Finished=true;resultPanel.SetActive(true);resultText.text="40일의 금식 기도 구간 완료\n다음 연결 예정: 지치심 → 사탄의 첫 시험";}
@@ -110,9 +141,12 @@ namespace CrossTheLine.Minigames
             RefreshUI();FollowCamera();
         }
         public void TakeHit()
+        { ApplyDamage("피격 · 지침 -1칸",true); }
+        void ApplyDamage(string reason,bool checkShelter)
         {
-            if(Finished||Restarting||invulnerable>0||Sheltered)return;
+            if(Finished||Restarting||invulnerable>0||(checkShelter&&Sheltered))return;
             Stamina=Mathf.Max(0,Stamina-1);invulnerable=settings.hitGraceSeconds;
+            DamageMessage=reason;DamageNoticeRemaining=2;
             if(Stamina==0){Restarting=true;restartTime=settings.restartDelay;moving=false;pending=Vector2Int.zero;
                 resultPanel.SetActive(true);resultText.text="지침을 모두 소모했습니다\n잠시 후 1일째부터 다시 시작합니다";}
             RefreshUI();
