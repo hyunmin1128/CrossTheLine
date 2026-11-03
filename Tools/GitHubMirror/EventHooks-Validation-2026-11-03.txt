@@ -1,0 +1,17 @@
+Mode: event-driven after successful UVCS client checkin / actual update.
+Registered client hooks: CTL-GitHub-Checkin (after-clientcheckin), CTL-GitHub-Update (after-update).
+Repository filter: CrossTheLine/CrossTheLine.
+Local opt-in variables: CTL_GITHUB_WSCRIPT, CTL_GITHUB_HOOK.
+Task: CrossTheLine-UnityToGitHub, on-demand, queued concurrency, hidden launcher.
+Final time/login trigger count: 0; NextRunTime=null.
+Real UVCS after-update invocation verified by switching only the generated mirror workspace cs:97 -> cs:98.
+Mirror workspace correctly ignored by hook; original workspace remained cs:98.
+Temporarily removed local opt-in variables, performed mirror update, restored config bytes: exit 0 without triggering hook (other-PC skip behavior).
+Direct dispatch of checkin and update hook with original workspace arguments: exit 0 each.
+Worker processed 2 requests; pending requests=0; LastTaskResult=0; task Ready.
+No background mirror powershell/wscript process after completion.
+Installer rerun: existing hooks reused, no duplicates, still zero time triggers.
+No artificial UVCS checkin made. Native after-clientcheckin registration and its dispatched script tested; next real user checkin will exercise that native event end to end.
+UVCS rewrites slash-prefixed command arguments. Removed wscript //B //NoLogo flags from UVCS hook command after detecting this during testing. Flags remain valid for the direct Windows task launcher.
+Initial old wscript test child was terminated specifically; mirror returned to cs:98 and original workspace was unchanged.
+Upload errors retain event requests and retry on the next checkin/update event, not on a timer or login.

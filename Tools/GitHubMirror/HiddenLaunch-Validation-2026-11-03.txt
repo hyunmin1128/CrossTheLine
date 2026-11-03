@@ -1,0 +1,11 @@
+Issue: Repeated empty console windows after installing 1-minute GitHub sync.
+Likely source: scheduled action directly launching powershell.exe with -WindowStyle Hidden; not a captured pre-fix reproduction of the flashing window.
+Action: paused only CrossTheLine-UnityToGitHub, backed up task XML, changed launcher to wscript.exe //B //NoLogo Run-Hidden.vbs.
+Run-Hidden.vbs starts PowerShell with WScript.Shell.Run window style 0 and waits for its exit code.
+Manual scheduled launch: success (0).
+Observed next scheduled invocation: 2026-11-03 18:16:10 Asia/Seoul.
+Scheduled result: 0, task returned Ready.
+Observed child processes wscript, powershell and cm: VisibleMainWindow=false, empty title.
+Read-only open-window inspection after fix: no visible console window.
+GitHub mirror remains enabled; last uploaded UVCS changeset 98.
+No unrelated processes terminated; no Windows security or persistent execution-policy settings changed.
