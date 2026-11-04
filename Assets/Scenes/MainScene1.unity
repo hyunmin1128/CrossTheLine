@@ -131,6 +131,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2597087057931177627, guid: 166d2e29f810c47a8893d2239da7f29a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+    - target: {fileID: 3591059488472342311, guid: 166d2e29f810c47a8893d2239da7f29a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+    - target: {fileID: 7467736471298991065, guid: 166d2e29f810c47a8893d2239da7f29a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+    - target: {fileID: 8389201128246961640, guid: 166d2e29f810c47a8893d2239da7f29a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
     - target: {fileID: 8535376634796302665, guid: 166d2e29f810c47a8893d2239da7f29a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1063,8 +1079,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1161,7 +1177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4387,8 +4403,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4485,7 +4501,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5154,7 +5170,7 @@ Transform:
   m_GameObject: {fileID: 1779484828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57.15425, y: 0.01999998, z: -10}
+  m_LocalPosition: {x: -57.43515, y: 0.01999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5248,7 +5264,7 @@ Transform:
   m_GameObject: {fileID: 1829946722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -54.529755, y: 0.02, z: -10}
+  m_LocalPosition: {x: -55.372448, y: 0.0200004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

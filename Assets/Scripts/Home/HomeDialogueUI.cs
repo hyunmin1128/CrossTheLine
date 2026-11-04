@@ -35,7 +35,12 @@ public class HomeDialogueUI : MonoBehaviour
     HomeDialogueLine[] lines;
     int index;
     float visible;
-    void Awake() { if (panel) panel.SetActive(false); }
+    void Awake()
+    {
+        if (dialogueText && !dialogueText.GetComponent<BitmapTextPixelScale>()) dialogueText.gameObject.AddComponent<BitmapTextPixelScale>();
+        if (speakerText && !speakerText.GetComponent<BitmapTextPixelScale>()) speakerText.gameObject.AddComponent<BitmapTextPixelScale>();
+        if (panel) panel.SetActive(false);
+    }
     void OnValidate() { if (!Application.isPlaying && portraitImage && speakerText && dialogueText) Apply(preview); }
     void Apply(HomeDialogueLine line)
     {

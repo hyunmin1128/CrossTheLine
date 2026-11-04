@@ -124,6 +124,9 @@ MonoBehaviour:
   dialogueText: {fileID: 3591059488472342311}
   continueArrow: {fileID: 8676004956634066182}
   preview:
+    onFinished:
+      m_PersistentCalls:
+        m_Calls: []
     portrait: {fileID: -2037470831614555417, guid: 9164a18d3bb75cc46a9b087ba97e704c, type: 3}
     speakerName: Maria
     content: Hello, Jesus.
@@ -199,8 +202,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -337,8 +340,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello, Jesus.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -474,8 +477,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jesus
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -686,8 +689,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Maria
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

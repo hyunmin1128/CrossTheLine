@@ -401,8 +401,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Maria
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -539,8 +539,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello, Jesus.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -867,11 +867,17 @@ MonoBehaviour:
     Talk'
   sceneName: MainScene1
   lines:
-  - portrait: {fileID: -1826521572983043662, guid: 7b169aad34d684650b37c4667f97beff, type: 3}
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: -1826521572983043662, guid: 7b169aad34d684650b37c4667f97beff, type: 3}
     speakerName: Maria
     content: Hello, Jesus.
   afterDialogue:
-  - portrait: {fileID: 0}
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: 0}
     speakerName: 
     content: See you later.
   bubbleOffset: {x: 0, y: 0.5, z: 0}
@@ -1039,11 +1045,17 @@ MonoBehaviour:
     Enter'
   sceneName: MainScene1
   lines:
-  - portrait: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     speakerName: Maria
     content: Hello, Jesus.
   afterDialogue:
-  - portrait: {fileID: 0}
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: 0}
     speakerName: 
     content: See you later.
   bubbleOffset: {x: 0, y: 0.5, z: 0}
@@ -1183,6 +1195,7 @@ MonoBehaviour:
   animator: {fileID: 736973017}
   characterSprite: {fileID: 736973016}
   dialogueUI: {fileID: 1927217962}
+  groundSnapDistance: 0.3
 --- !u!1 &740100934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,8 +1670,8 @@ MonoBehaviour:
 
     Enter'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1755,7 +1768,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2164,8 +2177,8 @@ MonoBehaviour:
 
     Talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
-  m_sharedMaterial: {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2262,7 +2275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3715071720254381824, guid: 036383ed99e0c46da9702ad6abb11fb8, type: 2}
+  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2427,6 +2440,9 @@ MonoBehaviour:
   dialogueText: {fileID: 407512574}
   continueArrow: {fileID: 461248986}
   preview:
+    onFinished:
+      m_PersistentCalls:
+        m_Calls: []
     portrait: {fileID: -2037470831614555417, guid: 9164a18d3bb75cc46a9b087ba97e704c, type: 3}
     speakerName: Maria
     content: Hello, Jesus.
