@@ -6,6 +6,23 @@ Unity Version Control은 지금처럼 사용합니다. 이 PC의 원본 작업 �
 
 GitHub의 변경을 Unity로 가져오지 않는 단방향 백업입니다. 자동 체크인이나 원본 워크스페이스 업데이트는 하지 않습니다. 형·노트북의 `/main` 체크인은 이 PC에서 변경을 받거나 다음 체크인을 한 뒤 복사됩니다. 이 PC가 켜져 있기만 해서는 업로드하지 않습니다. 다른 브랜치는 포함하지 않습니다.
 
+## 공동 작업자 표시
+
+`authors.json`에서 Unity 체크인의 `OWNER`를 Git 커밋 작성자 이름·이메일에 연결합니다. 이름이 아니라 **GitHub 계정에 등록된 이메일**이 계정 귀속을 결정합니다. 형의 `yohan2kim@gmail.com`은 사용자가 GitHub/Unity 양쪽에 사용하는 이메일이라고 확인했습니다. `name`은 커밋에 표시할 이름이며 GitHub 사용자 이름일 필요는 없습니다.
+
+- 체크인 작성자 → Git **Author**, 원래 체크인 시각 → Author date.
+- 업로드용 Git 계정 → **Committer** 및 Push 인증. 형의 체크인도 형의 Author로 기록합니다.
+- 등록하지 않은 Unity 계정이나 잘못된 날짜가 있으면 복사 전에 중단합니다. 업로더 이름으로 대신 기록하지 않습니다.
+- 같은 체크인에 누가 함께 기여했는지는 OWNER만으로 알 수 없으므로 공동 작성자를 임의로 추가하지 않습니다.
+- 이미 올라간 커밋의 작성자와 기여 내역은 자동으로 바뀌지 않습니다. 기존 이력 수정·강제 Push는 하지 않습니다.
+- 이전 버전이 `-Push` 없이 준비해 둔 커밋의 작성자가 새 매핑과 다르면 중단합니다. 잘못된 작성자의 커밋을 그대로 업로드하지 않습니다.
+
+새 작업자는 GitHub에 등록된 이메일 또는 GitHub 설정에 표시되는 정확한 noreply 주소로 등록합니다. 출처: https://docs.github.com/en/account-and-profile/concepts/email-addresses
+
+설정 반영은 **자동 업로드가 실제 실행되는 PC**에서 이 수정된 Tools 파일들을 받았을 때부터 적용됩니다. 이 파일을 수정하는 것만으로 체크인·업로드하거나, 노트북에 별도 자동화를 설치하지 않습니다. 로컬 검증은 `Tools/GitHubMirror/Test-AuthorIdentity.ps1`로 실행하며 원격 업로드 없이 임시 Git 저장소에서 작성자와 날짜를 확인합니다.
+
+새 기기나 다른 기기에서 앞서 업로드한 이력을 받을 때는 `MirrorRemote.ps1`이 GitHub의 마지막 UVCS 체크인 번호를 확인하고 기존 커밋을 이어받습니다. 깨끗한 생성 복사본에서 fast-forward만 허용하며, 원격 이력과 갈라졌거나 메타데이터가 맞지 않으면 중단합니다. 이 동작은 다른 기기에 예약 작업을 자동 설치하지 않습니다. 두 PC가 동시에 업로드하다 충돌해도 강제 Push하지 않습니다. `Test-MirrorRemote.ps1`은 외부 업로드 없이 로컬 bare 저장소에서 이 동작을 검증합니다.
+
 포함: 체크인된 Assets, Packages, ProjectSettings, AgentScripts, Tools와 자동 생성 README/.gitignore.
 제외: Docs(백업·QA·미리보기), output, ProfilerCaptures, Library, Temp, Logs, Builds, UserSettings 및 개인 인증 파일 패턴. 원본 ZIP 백업이 GitHub 일반 파일 제한을 초과하므로 전체 UVCS 이력을 직접 GitSync하지 않고 별도 워크스페이스의 체크인 스냅샷을 복사합니다. 향후 포함된 파일이 100,000,000바이트 이상이면 자동 업로드를 멈추고 로그에 기록합니다. 해당 시점에 LFS 적용 여부를 결정해야 합니다.
 

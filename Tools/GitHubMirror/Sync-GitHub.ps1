@@ -1,6 +1,8 @@
 [CmdletBinding()]
 param([switch]$Push, [switch]$Status)
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'AuthorIdentity.ps1')
+. (Join-Path $PSScriptRoot 'MirrorRemote.ps1')
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..'))
 $stateRoot = Join-Path (Split-Path $projectRoot -Parent) 'CrossTheLine-GitHubMirror.private'
 $sourceRoot = Join-Path $stateRoot 'source'
@@ -22,32 +24,34 @@ try {
     }
     $lastFile = Join-Path $stateRoot 'last-pushed.txt'
     $last = if (Test-Path -LiteralPath $lastFile) { [int](Get-Content -LiteralPath $lastFile -Raw) } else { $baseline - 1 }
+    if (!$Status) {
+        $last = Connect-MirrorRemote -GitRoot $gitRoot -StateRoot $stateRoot -RemoteUrl $remoteUrl -LastPushed $last -Baseline $baseline
+        [IO.File]::WriteAllText($lastFile,[string]$last)
+    }
     $query = "where branch = '/main' and changesetid > $last order by changesetid asc"
     [xml]$changes = (Run cm @('find','changeset',$query,'on',"repository '$repoSpec'",'--xml')) -join "`n"
     $pending = @($changes.PLASTICQUERY.CHANGESET | Where-Object { $_ })
     if ($Status) { [pscustomobject]@{ Repository=$remoteUrl; LastPushed=$last; Pending=@($pending | ForEach-Object {$_.CHANGESETID}); State=$stateRoot }; return }
     if (!$pending.Count) { Write-Output "Up to date at UVCS cs:$last"; return }
+    # Resolve every author before copying any new snapshot. Never attribute
+    # an unknown collaborator to the account that happens to upload the mirror.
+    $authors = Read-MirrorAuthors -Path (Join-Path $PSScriptRoot 'authors.json')
+    $identities = @{}
+    foreach ($change in $pending) {
+        $identities[[int]$change.CHANGESETID] = Resolve-MirrorAuthor -Change $change -Authors $authors
+    }
     if (!(Test-Path -LiteralPath (Join-Path $sourceRoot '.plastic'))) {
         New-Item -ItemType Directory -Path $sourceRoot -Force | Out-Null
         # Only the committed Unity project and authoring tools are mirrored.
         @('/Docs','/output','/ProfilerCaptures','/Builds','/Library','/Temp','/Logs','/UserSettings') | Set-Content -LiteralPath (Join-Path $sourceRoot 'cloaked.conf') -Encoding UTF8
         Run cm @('workspace','create','CrossTheLine_GitHubMirror_1128',$sourceRoot,$repoSpec) | Out-Null
     }
-    if (!(Test-Path -LiteralPath (Join-Path $gitRoot '.git'))) {
-        New-Item -ItemType Directory -Path $gitRoot -Force | Out-Null
-        Run git @('init','--initial-branch=main',$gitRoot) | Out-Null
-        Run git @('-C',$gitRoot,'remote','add','origin',$remoteUrl) | Out-Null
-        Run git @('-C',$gitRoot,'config','user.name','hyunmin1128') | Out-Null
-        Run git @('-C',$gitRoot,'config','user.email','hyunmin1128@users.noreply.github.com') | Out-Null
-        Run git @('-C',$gitRoot,'config','core.autocrlf','false') | Out-Null
-        Run git @('-C',$gitRoot,'config','credential.https://github.com.username','hyunmin1128') | Out-Null
-        'CrossTheLine generated mirror only' | Set-Content -LiteralPath (Join-Path $stateRoot 'mirror.marker')
-    }
     if (!(Test-Path -LiteralPath (Join-Path $stateRoot 'mirror.marker'))) { throw 'Missing mirror safety marker.' }
     $actualRemote = (Run git @('-C',$gitRoot,'remote','get-url','origin')) -join ''
     if ($actualRemote -ne $remoteUrl) { throw 'Unexpected GitHub destination.' }
     foreach ($change in $pending) {
         $id = [int]$change.CHANGESETID
+        $identity = $identities[$id]
         Run cm @('update',$sourceRoot,"--changeset=cs:$id@$repoSpec",'--dontmerge','--noinput','--silent') | Out-Null
         foreach ($folder in @('Assets','Packages','ProjectSettings','AgentScripts','Tools')) {
             $from = Join-Path $sourceRoot $folder
@@ -67,7 +71,16 @@ try {
         $messageFile = Join-Path $stateRoot 'commit-message.txt'
         [IO.File]::WriteAllText($messageFile,$message,[Text.UTF8Encoding]::new($false))
         $staged = (Run git @('-C',$gitRoot,'diff','--cached','--name-only')) -join ''
-        if ($staged) { Run git @('-C',$gitRoot,'commit','--file',$messageFile) | Out-Null }
+        if ($staged) {
+            Run git @('-C',$gitRoot,'commit','--author',"$($identity.Name) <$($identity.Email)>",'--date',$identity.Date,'--file',$messageFile) | Out-Null
+        } else {
+            # A previous no-Push run may already have created this commit using
+            # the old fixed author. Do not silently push it or rewrite history.
+            $headAuthor = (Run git @('-C',$gitRoot,'log','-1','--format=%an%n%ae'))
+            if (@($headAuthor).Count -ne 2 -or $headAuthor[0] -cne $identity.Name -or $headAuthor[1] -ine $identity.Email) {
+                throw "Prepared cs:$id has a different Git author. Inspect the local mirror before uploading."
+            }
+        }
         if (!$Push) { Write-Output "Prepared UVCS cs:$id locally; no upload. Re-run with -Push."; break }
         Run git @('-C',$gitRoot,'push','--porcelain','origin','HEAD:refs/heads/main') | Out-Null
         [IO.File]::WriteAllText($lastFile,[string]$id)
