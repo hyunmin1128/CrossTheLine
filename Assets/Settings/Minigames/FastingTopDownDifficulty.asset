@@ -40,11 +40,22 @@ MonoBehaviour:
   visionOpacity: 0.42
   laneSpacing: 3
   pickupChance: 0.2
-  waveIntervals:
-  - 3.4
+  bibleSpawnChance: 0.03
+  pageSpawnChance: 0.08
+  pieceSpawnChance: 0.1
+  stageMoveSpeeds:
+  - 2.5
+  - 2.75
   - 3
-  - 2.7
+  - 3.25
+  manualMoveSpeed: 4.5
+  feverSeconds: 5
+  flamesForFever: 3
+  waveIntervals:
   - 2.4
+  - 2
+  - 1.7
+  - 1.4
   places:
   - "\uAD11\uC57C \uC0AC\uB9C9"
   - "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"

@@ -22,7 +22,13 @@ namespace CrossTheLine.Minigames
         }
         public float hitGrace=1.2f, warningSeconds=1.4f, visionSeconds=1.1f, visionOpacity=.42f;
         public float laneSpacing=3, pickupChance=.20f;
-        public float[] waveIntervals={3.4f,3f,2.7f,2.4f};
+        public float bibleSpawnChance=.03f,pageSpawnChance=.08f,pieceSpawnChance=.10f;
+        public float[] stageMoveSpeeds={2.5f,2.75f,3f,3.25f};
+        public float manualMoveSpeed=4.5f,feverSeconds=5;
+        public int flamesForFever=3;
+        public float StageSpeed(int stage)=>stageMoveSpeeds!=null&&stage>=0&&stage<stageMoveSpeeds.Length?stageMoveSpeeds[stage]:moveSpeed;
+        public float DropChance(FastingTopDownEntity.Kind kind)=>kind==FastingTopDownEntity.Kind.Book?bibleSpawnChance:kind==FastingTopDownEntity.Kind.Page?pageSpawnChance:kind==FastingTopDownEntity.Kind.Fragment?pieceSpawnChance:pickupChance;
+        public float[] waveIntervals={2.4f,2f,1.7f,1.4f};
         public string[] places={"광야 사막","어두운 동굴","지하 폐유적","마지막 시련"};
     }
 }

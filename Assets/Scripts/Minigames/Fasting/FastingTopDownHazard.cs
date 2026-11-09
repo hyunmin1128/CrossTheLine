@@ -10,6 +10,14 @@ namespace CrossTheLine.Minigames
         public bool spent;
         float phase;
         public SpriteRenderer body,footprint,arrow;
+        Vector3 baseBodyScale;bool visualReady;
+        public float ApproachScale{get;private set;}=1;
+        public void UpdateApproach(Vector2 player)
+        {
+            if(!body)return;if(!visualReady){baseBodyScale=body.transform.localScale;visualReady=true;}
+            ApproachScale=Mathf.Lerp(.8f,1.25f,1-Mathf.Clamp01(Vector2.Distance(player,transform.position)/9));
+            body.transform.localScale=baseBodyScale*ApproachScale;
+        }
         public bool Active=>warning<=0&&!spent;
         public bool Advance(float dt,Vector2 from,Vector2 to,out float time)
         {
