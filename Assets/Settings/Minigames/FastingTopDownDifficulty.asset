@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556be4334602ac14da367c04976eb974, type: 3}
+  m_Name: FastingTopDownDifficulty
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownSettings
+  maximumHealth: 5
+  damage: 1
+  moveSpeed: 2.5
+  stageLength: 24
+  finishLineDistance: 6
+  prayerTarget: 200
+  prayerPerSecond: 1
+  prayerTargets:
+  - 200
+  - 250
+  - 300
+  - 350
+  pageFractions:
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  fragmentFractions:
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  hitGrace: 1.2
+  warningSeconds: 1.4
+  visionSeconds: 1.1
+  visionOpacity: 0.42
+  laneSpacing: 3
+  pickupChance: 0.2
+  waveIntervals:
+  - 3.4
+  - 3
+  - 2.7
+  - 2.4
+  places:
+  - "\uAD11\uC57C \uC0AC\uB9C9"
+  - "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"
+  - "\uC9C0\uD558 \uD3D0\uC720\uC801"
+  - "\uB9C8\uC9C0\uB9C9 \uC2DC\uB828"
