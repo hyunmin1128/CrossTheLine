@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195331fac683ddd458b920ef1c163aa5, type: 3}
+  m_Name: FastingDesertObstacleArt
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingDesertObstacleArt
+  rock: {fileID: 21300000, guid: 145eeb3a7592cec4c97f1c9fe54b5b22, type: 3}
+  sandstorm: {fileID: 21300000, guid: 9a66ebfffd09d1341b38680437f45ea5, type: 3}
+  cactus: {fileID: 21300000, guid: c52baf92d2347f449b93d310eaeaeaf2, type: 3}
+  quicksand: {fileID: 21300000, guid: 7d6520b0f47cf7d4f955d515bd28aea1, type: 3}
+  rockPrefab: {fileID: 4800531505179010345, guid: 74e55484c1cec804bb2324308898dda9, type: 3}
+  sandstormPrefab: {fileID: 4549930111265714938, guid: 6a33e49557a5b9044b44b3a484ee15cc, type: 3}
+  cactusPrefab: {fileID: 6026945071443181718, guid: e90ce5c5befa99243954ec415533348d, type: 3}
+  quicksandPrefab: {fileID: 3590187386754745887, guid: 320bcc5c1bbef4d40b342e37a8052f4c, type: 3}
