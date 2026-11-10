@@ -29,6 +29,14 @@ namespace CrossTheLine.Minigames
         public float StageSpeed(int stage)=>stageMoveSpeeds!=null&&stage>=0&&stage<stageMoveSpeeds.Length?stageMoveSpeeds[stage]:moveSpeed;
         public float DropChance(FastingTopDownEntity.Kind kind)=>kind==FastingTopDownEntity.Kind.Book?bibleSpawnChance:kind==FastingTopDownEntity.Kind.Page?pageSpawnChance:kind==FastingTopDownEntity.Kind.Fragment?pieceSpawnChance:pickupChance;
         public float[] waveIntervals={2.4f,2f,1.7f,1.4f};
+        public Vector2 spawnIntervalMultiplier=new Vector2(.75f,1.35f);
+        public float NextSpawnInterval(int stage)
+        {
+            float mean=waveIntervals[Mathf.Clamp(stage,0,waveIntervals.Length-1)];
+            float min=Mathf.Max(.8f,mean*Mathf.Min(spawnIntervalMultiplier.x,spawnIntervalMultiplier.y));
+            float max=Mathf.Max(min,mean*Mathf.Max(spawnIntervalMultiplier.x,spawnIntervalMultiplier.y));
+            return Random.Range(min,max);
+        }
         public string[] places={"광야 사막","어두운 동굴","지하 폐유적","마지막 시련"};
     }
 }

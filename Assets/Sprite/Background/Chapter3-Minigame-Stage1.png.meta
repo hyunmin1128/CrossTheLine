@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 110bdf53b9b0e9c47b5f30274534fc3f
+guid: 0d9effd3ee66b704d8eda3143cb0592a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 770190867909988151
-    second: TempDesert960x540_0
+      213: -2716890153601548874
+    second: Chapter3-Minigame-Stage1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TempDesert960x540_0
+      name: Chapter3-Minigame-Stage1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 960
-        height: 540
+        width: 320
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73f4603838440ba00800000000000000
-      internalID: 770190867909988151
+      spriteID: 6bdb2dccccaab4ad0800000000000000
+      internalID: -2716890153601548874
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TempDesert960x540_0: 770190867909988151
+      Chapter3-Minigame-Stage1_0: -2716890153601548874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

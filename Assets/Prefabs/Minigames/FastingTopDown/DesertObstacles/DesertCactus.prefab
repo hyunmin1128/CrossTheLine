@@ -55,7 +55,7 @@ MonoBehaviour:
   footprint: {fileID: 0}
   arrow: {fileID: 0}
   occupiedLanes: 1
-  artworkWidth: 1.375
+  artworkWidth: 1.34375
 --- !u!1 &4446268145546375892
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 30
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c52baf92d2347f449b93d310eaeaeaf2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d6170f44abc58a48977e60ba0ea4af4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
