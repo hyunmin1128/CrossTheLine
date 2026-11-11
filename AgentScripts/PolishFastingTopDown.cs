@@ -17,7 +17,8 @@ public static class PolishFastingTopDown
         if(EditorApplication.isPlaying)throw new Exception("Stop Play");var g=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();if(!g)throw new Exception("Open top-down scene");
         Sprite down=Icon("TempDownArrow",(x,y)=>{bool fill=(y>=7&&y<21&&Math.Abs(x-12)<=2)||(y>=2&&y<=12&&Math.Abs(x-12)<=y-2);return fill?2:0;},new Color32(255,248,210,255));
         var hz=PrefabUtility.LoadPrefabContents(Pref+"TelegraphedHazard.prefab");var arrow=hz.GetComponent<FastingTopDownHazard>().arrow;arrow.sprite=down;arrow.transform.localScale=Vector3.one;PrefabUtility.SaveAsPrefabAsset(hz,Pref+"TelegraphedHazard.prefab");PrefabUtility.UnloadPrefabContents(hz);
-        Sprite water=Icon("TempWater",(x,y)=>{int dx=x-12,dy=y-11;float d=dx*dx+dy*dy;if(d>100)return 0;if(d>65)return 1;return y>12?3:2;},new Color32(55,157,211,255));
+        Sprite water=AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/Well.png").OfType<Sprite>().SingleOrDefault();
+        if(!water)throw new Exception("Import the user's Well.png sprite before rebuilding water points.");
         Sprite shield=Icon("TempShield",(x,y)=>{int w=y<10?y/2+2:8;if(y<2||y>21||Math.Abs(x-12)>w)return 0;return Math.Abs(x-12)>=w-1||y>=20?1:Math.Abs(x-12)<1?3:2;},new Color32(61,190,199,255));
         Sprite flame=Icon("TempFlame",(x,y)=>{int w=y<8?y+1:Math.Max(1,(23-y)/2);if(y<2||y>22||Math.Abs(x-12)>w)return 0;return Math.Abs(x-12)==w?1:y<10&&Math.Abs(x-12)<3?3:2;},new Color32(246,132,35,255));
         Sprite book=Icon("TempBook",(x,y)=>x<3||x>21||y<4||y>20?0:x<5||x>19||y<6||y>18||x==12?1:y%4==0?3:2,new Color32(198,163,102,255));
