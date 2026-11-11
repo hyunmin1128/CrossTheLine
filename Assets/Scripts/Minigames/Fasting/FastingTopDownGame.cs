@@ -21,6 +21,7 @@ namespace CrossTheLine.Minigames
         public TMP_Text heading,status,items,help,result;
         public UnityEngine.UI.Image prayerFill,transition;
         public UnityEngine.UI.Image[] hearts,visionPanels;
+        public Sprite fullHeart,emptyHeart;
         public GameObject introduction,resultPanel;
         public UnityEngine.UI.Button startButton,retryButton;
         public int StageIndex{get;private set;}
@@ -73,7 +74,7 @@ namespace CrossTheLine.Minigames
                 if(e.kind==FastingTopDownEntity.Kind.Water){if(StageIndex<3){HasWater=true;waterGrace=.15f;if(waterNotice<=0){Message="물 보급 · 수통 충전 / 이곳에 머무는 동안 보호";waterNotice=2;}}}
                 else Collect(e);
             }
-            for(int i=hazards.Count-1;i>=0;i--){var h=hazards[i];if(!h){hazards.RemoveAt(i);continue;}h.UpdateApproach(to);if(h.Advance(dt,from,to,out var entry)){bool shieldBefore=Shielded;bool damaged=TryDamage(h.kind.ToString());if(damaged||shieldBefore&&!Shielded){h.spent=true;h.gameObject.SetActive(false);if(damaged)ApplyEffect(h.kind);}}if(h.transform.position.y<cameraY-gameCamera.orthographicSize-3){h.spent=true;h.gameObject.SetActive(false);}if(h.spent){Destroy(h.gameObject);hazards.RemoveAt(i);}}
+            for(int i=hazards.Count-1;i>=0;i--){var h=hazards[i];if(!h){hazards.RemoveAt(i);continue;}h.UpdateApproach(to);if(h.Advance(dt,from,to,out var entry)){bool shieldBefore=Shielded;bool damaged=TryDamage(h.kind.ToString());if(damaged||shieldBefore&&!Shielded){h.spent=true;h.gameObject.SetActive(false);if(damaged)ApplyEffect(h.kind);}}if(h.transform.position.y<cameraY-gameCamera.orthographicSize-3||SideHazardExited(h)){h.spent=true;h.gameObject.SetActive(false);}if(h.spent){Destroy(h.gameObject);hazards.RemoveAt(i);}}
             wave-=dt;if(wave<=0){SpawnWave();wave=settings.NextSpawnInterval(StageIndex);}
             if(StageIndex>0&&waveNumber>0&&waveNumber%4==0&&lastVisionWave!=waveNumber){vision=settings.visionSeconds;lastVisionWave=waveNumber;}
             ArmGateIfReady();RecycleMap();
@@ -87,6 +88,7 @@ namespace CrossTheLine.Minigames
         public void SpawnWave()
         {
             waveNumber++;var kind=ChooseKind();
+            if(kind==FastingTopDownHazard.Kind.Sand){int origin=UnityEngine.Random.Range(0,3);if(origin>0){SpawnSideSand(origin==1);return;}}
             if(StageIndex==0){int lanes=kind==FastingTopDownHazard.Kind.Sand?UnityEngine.Random.Range(1,3):1;int first=UnityEngine.Random.Range(0,6-lanes);SpawnAbove(kind,first,lanes);return;}
             int safe=Mathf.Clamp(Mathf.RoundToInt(player.position.x/settings.laneSpacing)+2+UnityEngine.Random.Range(-1,2),0,4);
             int count=StageIndex==3&&kind==FastingTopDownHazard.Kind.Reaper?4:2;
@@ -103,6 +105,38 @@ namespace CrossTheLine.Minigames
             h.body.color=StageIndex==3?new Color(1,.4f,.13f):StageIndex==1?new Color(.55f,.48f,.75f):new Color(.84f,.66f,.34f);
             if(StageIndex==0&&desertArt)desertArt.Apply(h);
             h.ConfigureLanes(lanes,settings.laneSpacing);h.transform.position=new Vector3(h.transform.position.x,cameraY+gameCamera.orthographicSize+Mathf.Max(2.5f,h.body.bounds.extents.y+1),0);hazards.Add(h);
+        }
+        void SpawnSideSand(bool fromLeft)
+        {
+            var prefab=desertArt?desertArt.PrefabFor(FastingTopDownHazard.Kind.Sand,hazardPrefab):hazardPrefab;
+            var h=Instantiate(prefab,hazardRoot);h.kind=FastingTopDownHazard.Kind.Sand;
+            h.name=fromLeft?"Sand_LeftToRight":"Sand_RightToLeft";h.warning=0;h.lifetime=30;
+            if(desertArt)desertArt.Apply(h);
+            h.ConfigureLanes(1,settings.laneSpacing);
+            float halfWidth=gameCamera.orthographicSize*gameCamera.aspect;
+            float margin=Mathf.Max(h.body.bounds.extents.x*1.25f,.5f)+.5f;
+            float x=gameCamera.transform.position.x+(fromLeft?-1:1)*(halfWidth+margin);
+            float y=cameraY+UnityEngine.Random.Range(-gameCamera.orthographicSize*.65f,gameCamera.orthographicSize*.55f);
+            h.transform.position=new Vector3(x,y,0);
+            // Match camera scrolling vertically so the visible trajectory is horizontal.
+            h.velocity=new Vector2(fromLeft?6f:-6f,CurrentSpeed);h.body.flipX=!fromLeft;
+            hazards.Add(h);
+        }
+        bool SideHazardExited(FastingTopDownHazard h)
+        {
+            if(h.kind!=FastingTopDownHazard.Kind.Sand||Mathf.Abs(h.velocity.x)<.01f)return false;
+            float edge=gameCamera.orthographicSize*gameCamera.aspect+Mathf.Max(2,h.body.bounds.extents.x+1);
+            float x=h.transform.position.x-gameCamera.transform.position.x;
+            return h.velocity.x>0?x>edge:x< -edge;
+        }
+        public void RefreshHealthHearts()
+        {
+            for(int i=0;i<hearts.Length;i++)
+            {
+                var heart=hearts[i];if(!heart)continue;
+                if(fullHeart&&emptyHeart){heart.sprite=Health>=i+1?fullHeart:emptyHeart;heart.type=UnityEngine.UI.Image.Type.Simple;heart.preserveAspect=true;heart.fillAmount=1;heart.color=Color.white;}
+                else heart.fillAmount=Mathf.Clamp01(Health-i);
+            }
         }
         FastingTopDownHazard.Kind ChooseKind()
         {
@@ -138,7 +172,7 @@ namespace CrossTheLine.Minigames
             for(float offset=.25f;offset<=2;offset+=.25f)foreach(int side in new[]{-1,1}){var alternate=new Vector2(Mathf.Clamp(p.x+side*offset,-6.7f,6.7f),y);if(CanMove(alternate)){player.position=alternate;return;}}
         }
         void Follow(){gameCamera.transform.position=new Vector3(0,cameraY,-10);foreach(var lane in laneGuides)if(lane)lane.transform.position=new Vector3(lane.transform.position.x,cameraY,lane.transform.position.z);}
-        public void Refresh(){if(!heading)return;int day=Mathf.Clamp(StageIndex*10+Mathf.FloorToInt(Prayer/PrayerTarget*10),StageIndex*10+1,StageIndex*10+10);heading.text=$"{settings.places[StageIndex]} · {day}/40일   {Elapsed:0.0}초";prayerFill.fillAmount=Mathf.Clamp01(Prayer/PrayerTarget);status.text=$"기도 {Prayer:0}/{PrayerTarget:0} · "+(Prayer>=PrayerTarget?"목표 완료! 위쪽 종착지로":Praying?"자동 기도 충전 중 · 상하좌우 회피 가능":PrayerBlockRemaining>0?$"기도 방해 · {PrayerBlockRemaining:0.0}초":"자동 전진 중 · WASD로 장애물을 피하세요");items.text=$"수통[E] {(HasWater?"1":"0")}   방패 {(Shielded?"있음":"없음")}   "+(fever>0?"피버!":buff>0?"기도 가속":"");help.text=Message;for(int i=0;i<hearts.Length;i++)hearts[i].fillAmount=Mathf.Clamp01(Health-i);feet.color=new Color(1,1,1,.75f);float opacity=vision>0?settings.visionOpacity:0;foreach(var p in visionPanels)p.color=new Color(.03f,.025f,.06f,opacity);Vector3 screen=gameCamera.WorldToViewportPoint(player.position);float cx=Mathf.Clamp01(screen.x),cy=Mathf.Clamp01(screen.y),halfX=.11f,halfY=.2f;SetPanel(0,new Vector2(0,0),new Vector2(Mathf.Max(0,cx-halfX),1));SetPanel(1,new Vector2(Mathf.Min(1,cx+halfX),0),Vector2.one);SetPanel(2,new Vector2(cx-halfX,0),new Vector2(cx+halfX,Mathf.Max(0,cy-halfY)));SetPanel(3,new Vector2(cx-halfX,Mathf.Min(1,cy+halfY)),new Vector2(cx+halfX,1));}
+        public void Refresh(){if(!heading)return;int day=Mathf.Clamp(StageIndex*10+Mathf.FloorToInt(Prayer/PrayerTarget*10),StageIndex*10+1,StageIndex*10+10);heading.text=$"{settings.places[StageIndex]} · {day}/40일   {Elapsed:0.0}초";prayerFill.fillAmount=Mathf.Clamp01(Prayer/PrayerTarget);status.text=$"기도 {Prayer:0}/{PrayerTarget:0} · "+(Prayer>=PrayerTarget?"목표 완료! 위쪽 종착지로":Praying?"자동 기도 충전 중 · 상하좌우 회피 가능":PrayerBlockRemaining>0?$"기도 방해 · {PrayerBlockRemaining:0.0}초":"자동 전진 중 · WASD로 장애물을 피하세요");items.text=$"수통[E] {(HasWater?"1":"0")}   방패 {(Shielded?"있음":"없음")}   "+(fever>0?"피버!":buff>0?"기도 가속":"");help.text=Message;RefreshHealthHearts();feet.color=new Color(1,1,1,.75f);float opacity=vision>0?settings.visionOpacity:0;foreach(var p in visionPanels)p.color=new Color(.03f,.025f,.06f,opacity);Vector3 screen=gameCamera.WorldToViewportPoint(player.position);float cx=Mathf.Clamp01(screen.x),cy=Mathf.Clamp01(screen.y),halfX=.11f,halfY=.2f;SetPanel(0,new Vector2(0,0),new Vector2(Mathf.Max(0,cx-halfX),1));SetPanel(1,new Vector2(Mathf.Min(1,cx+halfX),0),Vector2.one);SetPanel(2,new Vector2(cx-halfX,0),new Vector2(cx+halfX,Mathf.Max(0,cy-halfY)));SetPanel(3,new Vector2(cx-halfX,Mathf.Min(1,cy+halfY)),new Vector2(cx+halfX,1));}
         void SetPanel(int i,Vector2 min,Vector2 max){var r=visionPanels[i].rectTransform;r.anchorMin=min;r.anchorMax=max;r.offsetMin=r.offsetMax=Vector2.zero;}
     }
 }

@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: FastingDesertObstacleArt
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingDesertObstacleArt
   rock: {fileID: 21300000, guid: 26a47c8c6b8043a4f807b26af1a71dba, type: 3}
-  sandstorm: {fileID: 21300000, guid: 99251241e51cbba4986cee5fa6fd8dbc, type: 3}
+  sandstorm: {fileID: 6885451926742573650, guid: 0ee6b535ec8de924e98214b3d843c297, type: 3}
   cactus: {fileID: 21300000, guid: 7d6170f44abc58a48977e60ba0ea4af4, type: 3}
   quicksand: {fileID: 21300000, guid: 48f0b4dcecbb8e84d81edb8eb81c385b, type: 3}
+  sandstormFrames:
+  - {fileID: 6885451926742573650, guid: 0ee6b535ec8de924e98214b3d843c297, type: 3}
+  - {fileID: 2219046865998396728, guid: 0ee6b535ec8de924e98214b3d843c297, type: 3}
+  - {fileID: 6497126010098445614, guid: 0ee6b535ec8de924e98214b3d843c297, type: 3}
+  - {fileID: 6675916719585900907, guid: 0ee6b535ec8de924e98214b3d843c297, type: 3}
+  - {fileID: 4097696715098785735, guid: 0ee6b535ec8de924e98214b3d843c297, type: 3}
+  sandstormFramesPerSecond: 8
   rockPrefab: {fileID: 4800531505179010345, guid: 74e55484c1cec804bb2324308898dda9, type: 3}
   sandstormPrefab: {fileID: 4549930111265714938, guid: 6a33e49557a5b9044b44b3a484ee15cc, type: 3}
   cactusPrefab: {fileID: 6026945071443181718, guid: e90ce5c5befa99243954ec415533348d, type: 3}

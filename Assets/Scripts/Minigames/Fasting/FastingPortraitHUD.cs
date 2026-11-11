@@ -13,6 +13,7 @@ namespace CrossTheLine.Minigames
         public void Refresh()
         {
             if(!game||!game.settings)return;
+            game.RefreshHealthHearts();
             ring.Set(game.FireGauge,game.FeverActive);healthFill.fillAmount=Mathf.Clamp01(game.Health/game.settings.maximumHealth);
             healthText.text=$"체력 {game.Health:0.#} / {game.settings.maximumHealth:0.#}";prayerText.text=$"기도 {game.Prayer:0} / {game.PrayerTarget:0}";
             stackText.text=game.FeverActive?"성령불 피버":$"성령불 {game.FlameStacks} / {game.settings.flamesForFever}";

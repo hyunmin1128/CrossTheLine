@@ -12,6 +12,8 @@ namespace CrossTheLine.Minigames
         [HideInInspector] public SpriteRenderer footprint,arrow;
         public int occupiedLanes=1;
         public float artworkWidth;
+        public Sprite[] animationFrames;
+        public float framesPerSecond=8;
         float phase;Vector3 baseBodyScale;bool visualReady;SpriteRenderer secondBody;
         public float ApproachScale{get;private set;}=1;
         public bool Active=>warning<=0&&!spent;
@@ -19,7 +21,9 @@ namespace CrossTheLine.Minigames
         {
             body.sprite=sprite;body.color=Color.white;body.transform.localScale=Vector3.one;
             body.transform.localPosition=-sprite.bounds.center;visualReady=false;
+            animationFrames=null;
         }
+        public void SetAnimation(Sprite[] frames,float speed){animationFrames=frames;framesPerSecond=Mathf.Max(1,speed);if(frames!=null&&frames.Length>0)body.sprite=frames[0];}
         public void ConfigureLanes(int count,float laneWidth)
         {
             occupiedLanes=Mathf.Clamp(count,1,2);
@@ -44,6 +48,7 @@ namespace CrossTheLine.Minigames
             time=0;if(spent)return false;
             if(warning>0){float before=warning;warning-=dt;body.enabled=false;if(secondBody)secondBody.enabled=false;if(warning>0)return false;from=Vector2.Lerp(from,to,Mathf.Clamp01(before/dt));dt=Mathf.Max(0,dt-before);}
             phase+=dt;lifetime-=dt;
+            if(animationFrames!=null&&animationFrames.Length>0){body.sprite=animationFrames[Mathf.FloorToInt(phase*framesPerSecond)%animationFrames.Length];if(secondBody){secondBody.sprite=body.sprite;secondBody.flipX=body.flipX;}}
             if(lifetime<=0){spent=true;gameObject.SetActive(false);return false;}
             bool visible=!((kind==Kind.Pillar||kind==Kind.Crack)&&phase%2>1.1f);
             body.enabled=visible;if(secondBody)secondBody.enabled=visible;if(!visible)return false;
