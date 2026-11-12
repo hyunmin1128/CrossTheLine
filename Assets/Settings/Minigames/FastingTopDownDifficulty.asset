@@ -50,12 +50,18 @@ MonoBehaviour:
   - 3.25
   manualMoveSpeed: 4.5
   feverSeconds: 5
+  prayerMoveMultiplier: 0.15
+  scrollSpeedMultiplier: 1.15
+  hazardSpeedMultiplier: 1.2
+  sideSandSpeed: 7.2
+  prayerPreparationSeconds: 0.3
   flamesForFever: 3
   waveIntervals:
-  - 2.4
   - 2
   - 1.7
-  - 1.4
+  - 1.45
+  - 1.2
+  spawnIntervalMultiplier: {x: 0.75, y: 1.35}
   places:
   - "\uAD11\uC57C \uC0AC\uB9C9"
   - "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"

@@ -9,6 +9,7 @@ namespace CrossTheLine.Minigames
         public Material effectMaterial;
         [Range(.2f, 1.2f)] public float duration = .65f;
         public float liftHeight = .65f, sinkDepth = .32f;
+        public float sandAirSeconds=1.1f,sandAirHeight=1.2f;
         public int sortingOrder = 100;
         public Color rockColor = new Color(.46f,.34f,.23f,1);
         public Color thornColor = new Color(.19f,.31f,.12f,1);
@@ -34,7 +35,7 @@ namespace CrossTheLine.Minigames
         }
         public void Play(FastingTopDownHazard.Kind cause)
         {
-            Clear();kind=cause;remaining=duration;meshRenderer.enabled=true;Draw(0);
+            Clear();kind=cause;remaining=kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:duration;meshRenderer.enabled=true;Draw(0);
         }
         public void Clear()
         {
@@ -45,11 +46,11 @@ namespace CrossTheLine.Minigames
         public void Advance(float dt)
         {
             if(!Active)return;
-            remaining=Mathf.Max(0,remaining-dt);float t=1-remaining/Mathf.Max(.01f,duration);
+            remaining=Mathf.Max(0,remaining-dt);float t=1-remaining/Mathf.Max(.01f,kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:duration);
             if(artwork)
             {
                 float arc=Mathf.Sin(t*Mathf.PI);
-                float dy=kind==FastingTopDownHazard.Kind.Sand?liftHeight*arc:kind==FastingTopDownHazard.Kind.Quicksand?-sinkDepth*arc:0;
+                float dy=kind==FastingTopDownHazard.Kind.Sand?sandAirHeight*arc:kind==FastingTopDownHazard.Kind.Quicksand?-sinkDepth*arc:0;
                 float shake=kind==FastingTopDownHazard.Kind.Rock?Mathf.Sin(t*38)*.10f*(1-t):0;
                 artwork.transform.localPosition=basePosition+new Vector3(shake,dy,0);
                 artwork.transform.localScale=Vector3.Scale(baseScale,new Vector3(1,kind==FastingTopDownHazard.Kind.Quicksand?1-.35f*arc:1,1));

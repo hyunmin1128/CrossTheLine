@@ -16,6 +16,8 @@ namespace CrossTheLine.Minigames
         public float framesPerSecond=8;
         float phase;Vector3 baseBodyScale;bool visualReady;SpriteRenderer secondBody;
         public float ApproachScale{get;private set;}=1;
+        public float quicksandMaximumScale=2;
+        Vector2 baseSize;float growth=1;
         public bool Active=>warning<=0&&!spent;
         public void SetArtwork(Sprite sprite)
         {
@@ -33,6 +35,8 @@ namespace CrossTheLine.Minigames
             body.transform.localScale=Vector3.one*scale;
             body.transform.localPosition=occupiedLanes==2?new Vector3(-laneWidth*.45f,0):Vector3.zero;
             size=new Vector2((occupiedLanes-1)*laneWidth+desiredWidth,1.15f);
+            if(kind==Kind.Sand)size.y=2.2f;
+            baseSize=size;growth=1;
             if(occupiedLanes==2){var o=new GameObject("SecondSandCloud");o.transform.SetParent(transform,false);o.transform.localPosition=new Vector3(laneWidth*.45f,0);o.transform.localScale=body.transform.localScale;secondBody=o.AddComponent<SpriteRenderer>();secondBody.sprite=body.sprite;secondBody.sharedMaterial=body.sharedMaterial;secondBody.color=body.color;secondBody.sortingOrder=body.sortingOrder;}
             visualReady=false;
         }
@@ -40,6 +44,7 @@ namespace CrossTheLine.Minigames
         {
             if(!body)return;if(!visualReady){baseBodyScale=body.transform.localScale;visualReady=true;}
             ApproachScale=Mathf.Lerp(.8f,1.25f,1-Mathf.Clamp01(Vector2.Distance(player,transform.position)/9));
+            if(kind==Kind.Quicksand){growth=Mathf.Max(growth,Mathf.Lerp(1,quicksandMaximumScale,1-Mathf.Clamp01((Vector2.Distance(player,transform.position)-2)/9)));ApproachScale=growth;size=baseSize*growth;}
             body.transform.localScale=baseBodyScale*ApproachScale;
             if(secondBody)secondBody.transform.localScale=baseBodyScale*ApproachScale;
         }
@@ -55,6 +60,13 @@ namespace CrossTheLine.Minigames
             if(kind==Kind.Rock)body.transform.localRotation=Quaternion.Euler(0,0,(Mathf.FloorToInt(phase*6)%4)*90);
             Vector2 start=transform.position;transform.position+=(Vector3)(velocity*dt);
             Vector2 a=from-start,b=to-(Vector2)transform.position,d=b-a,extent=size*.5f+new Vector2(.28f,.2f);
+            if(kind==Kind.Sand)
+            {
+                // Swept ellipse: the moving cloud's opaque core, not the transparent corners.
+                Vector2 na=a/extent,nd=d/extent;
+                float closest=nd.sqrMagnitude>.000001f?Mathf.Clamp01(-Vector2.Dot(na,nd)/nd.sqrMagnitude):0;
+                time=closest;return (na+nd*closest).sqrMagnitude<=1;
+            }
             float enter=0,leave=1;
             for(int axis=0;axis<2;axis++){if(Mathf.Abs(d[axis])<.00001f){if(Mathf.Abs(a[axis])>extent[axis])return false;}else{float l=(-extent[axis]-a[axis])/d[axis],h=(extent[axis]-a[axis])/d[axis];if(l>h){float tmp=l;l=h;h=tmp;}enter=Mathf.Max(enter,l);leave=Mathf.Min(leave,h);if(enter>leave)return false;}}
             time=enter;return true;

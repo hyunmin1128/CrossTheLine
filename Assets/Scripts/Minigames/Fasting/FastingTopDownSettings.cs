@@ -25,6 +25,8 @@ namespace CrossTheLine.Minigames
         public float bibleSpawnChance=.03f,pageSpawnChance=.08f,pieceSpawnChance=.10f;
         public float[] stageMoveSpeeds={2.5f,2.75f,3f,3.25f};
         public float manualMoveSpeed=4.5f,feverSeconds=5;
+        public float prayerMoveMultiplier=.15f,scrollSpeedMultiplier=1.15f,hazardSpeedMultiplier=1.2f,sideSandSpeed=7.2f;
+        [Min(0)] public float prayerPreparationSeconds=.3f;
         public int flamesForFever=3;
         public float StageSpeed(int stage)=>stageMoveSpeeds!=null&&stage>=0&&stage<stageMoveSpeeds.Length?stageMoveSpeeds[stage]:moveSpeed;
         public float DropChance(FastingTopDownEntity.Kind kind)=>kind==FastingTopDownEntity.Kind.Book?bibleSpawnChance:kind==FastingTopDownEntity.Kind.Page?pageSpawnChance:kind==FastingTopDownEntity.Kind.Fragment?pieceSpawnChance:pickupChance;

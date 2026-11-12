@@ -11,6 +11,7 @@ namespace CrossTheLine.Minigames
         public Color thornColor=new Color(.14f,.25f,.10f,.95f);
         public Color sandColor=new Color(.65f,.39f,.12f,.85f);
         public Color shieldColor=new Color(1,.85f,.25f,.85f);
+        public Color damageEdgeColor=new Color(.8f,.12f,.12f,.12f);
         float remaining;
         bool shield;
         FastingTopDownHazard.Kind kind;
@@ -31,11 +32,13 @@ namespace CrossTheLine.Minigames
             bool thorn=kind==FastingTopDownHazard.Kind.Cactus||kind==FastingTopDownHazard.Kind.Thorns;
             Color c=shield?shieldColor:thorn?thornColor:sand||pit?sandColor:stoneColor;c.a*=fade;
             float unit=r.height/540f,depth=r.height*edgeDepth;
+            if(!shield){Color red=damageEdgeColor;red.a*=fade;float band=12*unit;Quad(vh,r.xMin+band/2,r.center.y,band/2,r.height/2,red);Quad(vh,r.xMax-band/2,r.center.y,band/2,r.height/2,red);Quad(vh,r.center.x,r.yMin+band/2,r.width/2,band/2,red);Quad(vh,r.center.x,r.yMax-band/2,r.width/2,band/2,red);}
             // All geometry stays at the edges. No full-screen tint or input interception.
             if(shield)
             {
                 for(int side=0;side<2;side++)for(int n=0;n<12;n++)
-                {float y=r.yMin+r.height*(n+.5f)/12;float x=side==0?r.xMin+8*unit:r.xMax-8*unit;Quad(vh,x,y,4*unit,10*unit,c);}
+                {float y=r.yMin+r.height*(n+.5f)/12;float x=side==0?r.xMin+18*unit:r.xMax-18*unit;Quad(vh,x,y,14*unit,20*unit,c);}
+                Quad(vh,r.center.x,r.yMax-10*unit,r.width/2,10*unit,c);Quad(vh,r.center.x,r.yMin+10*unit,r.width/2,10*unit,c);
                 return;
             }
             if(pit)

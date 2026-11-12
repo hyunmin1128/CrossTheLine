@@ -10,6 +10,7 @@ namespace CrossTheLine.Minigames
         public float laneWidth=3;
         public SpriteRenderer marker,windMarker;
         public bool consumed;
+        public void SetUsed(bool used){consumed=used;if(kind==Kind.Water)foreach(var r in GetComponentsInChildren<SpriteRenderer>(true))r.color=used?new Color(.38f,.34f,.30f,.7f):Color.white;}
         public bool Contains(Vector2 point)=>new Rect((Vector2)transform.position-footprint*.5f,footprint).Contains(point);
         public Rect ShelterArea=>new Rect((Vector2)transform.position+new Vector2(-laneWidth*.5f,-laneWidth*1.5f),Vector2.one*laneWidth);
         public Rect WindShelterArea=>new Rect((Vector2)transform.position+new Vector2(-laneWidth*1.5f,-laneWidth*.5f),Vector2.one*laneWidth);
