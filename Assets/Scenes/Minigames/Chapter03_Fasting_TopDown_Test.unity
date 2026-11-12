@@ -5234,6 +5234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0933e81f8c5a82a479ba6c3e2264f5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownGame
+  encounterDirector: {fileID: 1978574855}
   settings: {fileID: 11400000, guid: a588ee22222e9664bb91511001a12d6f, type: 2}
   player: {fileID: 747589369}
   world: {fileID: 1659342395}
@@ -5328,7 +5329,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1978574856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1956279281
@@ -5440,6 +5442,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a571c374a70928a4a8071fd9f85e8180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownEntity
+--- !u!1001 &1978574854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1922565231}
+    m_Modifications:
+    - target: {fileID: 1149728580838381587, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_Name
+      value: FastingEncounterDirector
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691295741538601278, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1922565230}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+--- !u!114 &1978574855 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7691295741538601278, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+  m_PrefabInstance: {fileID: 1978574854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6bd4dc0aa0d9e4cbeb0100c50388d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingEncounterDirector
+--- !u!4 &1978574856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3801071127760110707, guid: 18deddb59705af043b35612545b2acf4, type: 3}
+  m_PrefabInstance: {fileID: 1978574854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1992356479
 GameObject:
   m_ObjectHideFlags: 0
@@ -6028,7 +6107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4278487356288592734, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_text
-      value: "\uCE74\uBA54\uB77C\uB294 \uC55E\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4. WASD/\uBC29\uD5A5\uD0A4\uB85C \uC790\uC720\uB86D\uAC8C \uD53C\uD558\uC138\uC694.\n\uAE30\uB3C4\uB294 \uAE30\uBCF8 \uCD08\uB2F9 1 \uC790\uB3D9 \uCDA9\uC804 / \uBC29\uD574 \uC911 \uC7A0\uC2DC \uC815\uC9C0\n\n1. \uC218\uD1B5 [E] : \uC815\uD654 + \uCCB4\uB825 1 \uD68C\uBCF5 + \uC7A0\uC2DC \uAC00\uC18D\n2. \uBBFF\uC74C\uC758 \uBC29\uD328 : \uB2E4\uC74C \uCDA9\uB3CC \uC790\uB3D9 \uBC29\uC5B4 \uD6C4 \uC18C\uBAA8\n3. \uC131\uB839\uBD88 3\uAC1C : \uD53C\uBC84 5\uCD08 / \uCD08\uC0C1\uD654\uC758 \uBD88\uAF43\uACFC \uAC8C\uC774\uC9C0\uB85C \uD655\uC778\n4. \uC644\uBCF8 100% / \uD398\uC774\uC9C0 25~40% / \uC870\uAC01 10~25%\n5. \uBB3C \uBCF4\uAE09 : \uC218\uD1B5 \uCDA9\uC804 + \uBCF4\uD638 (\uB9C8\uC9C0\uB9C9 \uAD6C\uAC04 \uC5C6\uC74C)\n\n\uD53C\uBC84 \uC911 \uAC8C\uC774\uC9C0\uAC00 \uC904\uC5B4\uB4E4\uBA70 0\uC774 \uB418\uBA74 \uC885\uB8CC\uB429\uB2C8\uB2E4.\n\uC7A5\uC560\uBB3C\uC740 \uC704\uC5D0\uC11C \uB4F1\uC7A5\uD569\uB2C8\uB2E4. \uBAA8\uB798\uBC14\uB78C 1~2\uAE38 / \uB3CC\uBA69\uC774 1\uAE38"
+      value: "WASD / \uBC29\uD5A5\uD0A4: \uC774\uB3D9\nSpace \uC720\uC9C0: 0.3\uCD08 \uC900\uBE44 \uD6C4 \uAE30\uB3C4 \xB7 \uC774\uB3D9\uC18D\uB3C4 15%\n\uACF5\uACA9\uC774 \uC9C0\uB098\uAC04 \uB4A4 \uCCAD\uB85D\uC0C9 \uD45C\uC2DC\uAC00 \uCF1C\uC9C0\uBA74 \uAE30\uB3C4\uD560 \uD2C8\uC785\uB2C8\uB2E4.\nE: \uC218\uD1B5 \uC0AC\uC6A9 \xB7 R: \uCC98\uC74C\uBD80\uD130\n\n\uC131\uACBD \uC644\uBCF8: \uC774 \uAD6C\uAC04 \uAE30\uB3C4 \uC644\uB8CC\n\uD398\uC774\uC9C0 / \uC870\uAC01: \uAE30\uB3C4 \uAC8C\uC774\uC9C0 \uC77C\uBD80 \uCDA9\uC804\n\uC131\uB839\uBD88: \uAE30\uB3C4 \uAC00\uC18D \xB7 3\uAC1C\uB85C \uD53C\uBC84 (\uAE30\uB3C4\uD560 \uB54C\uB9CC \uC2DC\uAC04 \uC18C\uBAA8)\n\uBC29\uD328: \uB2E4\uC74C \uD53C\uACA9 \uC790\uB3D9 \uBC29\uC5B4\n\uC6B0\uBB3C: \uBE48 \uC218\uD1B5\uC744 \uD55C \uBC88 \uCDA9\uC804 \xB7 \uC704\uCE58/\uB4F1\uC7A5\uC740 \uBB34\uC791\uC704\n\uC2E4\uD328\uD558\uBA74 \uB2E4\uC2DC \uC2DC\uC791 \uBC84\uD2BC\uC73C\uB85C \uC7AC\uB3C4\uC804\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
       objectReference: {fileID: 0}
     - target: {fileID: 4739252915705420007, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: game

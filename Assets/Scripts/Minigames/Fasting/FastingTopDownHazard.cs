@@ -45,6 +45,7 @@ namespace CrossTheLine.Minigames
             if(!body)return;if(!visualReady){baseBodyScale=body.transform.localScale;visualReady=true;}
             ApproachScale=Mathf.Lerp(.8f,1.25f,1-Mathf.Clamp01(Vector2.Distance(player,transform.position)/9));
             if(kind==Kind.Quicksand){growth=Mathf.Max(growth,Mathf.Lerp(1,quicksandMaximumScale,1-Mathf.Clamp01((Vector2.Distance(player,transform.position)-2)/9)));ApproachScale=growth;size=baseSize*growth;}
+            else size=baseSize*ApproachScale;
             body.transform.localScale=baseBodyScale*ApproachScale;
             if(secondBody)secondBody.transform.localScale=baseBodyScale*ApproachScale;
         }

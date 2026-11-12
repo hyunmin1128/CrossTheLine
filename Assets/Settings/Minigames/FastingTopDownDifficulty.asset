@@ -17,13 +17,13 @@ MonoBehaviour:
   moveSpeed: 2.5
   stageLength: 24
   finishLineDistance: 6
-  prayerTarget: 200
+  prayerTarget: 90
   prayerPerSecond: 1
   prayerTargets:
-  - 200
-  - 250
-  - 300
-  - 350
+  - 90
+  - 100
+  - 110
+  - 120
   pageFractions:
   - 0.25
   - 0.3
@@ -40,9 +40,46 @@ MonoBehaviour:
   visionOpacity: 0.42
   laneSpacing: 3
   pickupChance: 0.2
-  bibleSpawnChance: 0.03
-  pageSpawnChance: 0.08
-  pieceSpawnChance: 0.1
+  bibleSpawnChance: 0.01
+  pageSpawnChance: 0.1
+  pieceSpawnChance: 0.18
+  bibleChances:
+  - 0.01
+  - 0.01
+  - 0.01
+  - 0.01
+  pageChances:
+  - 0.1
+  - 0.12
+  - 0.14
+  - 0.16
+  pieceChances:
+  - 0.18
+  - 0.2
+  - 0.22
+  - 0.24
+  flameChance: 0.3
+  shieldChance: 0.16
+  wellChances:
+  - 0.65
+  - 0.6
+  - 0.55
+  - 0
+  wellIntervalSeconds:
+  - 18
+  - 20
+  - 22
+  - 24
+  attackSeconds:
+  - 5
+  - 5.5
+  - 6
+  - 6.5
+  restSeconds:
+  - 3
+  - 2.8
+  - 2.6
+  - 2.4
   stageMoveSpeeds:
   - 2.5
   - 2.75
@@ -57,10 +94,10 @@ MonoBehaviour:
   prayerPreparationSeconds: 0.3
   flamesForFever: 3
   waveIntervals:
-  - 2
-  - 1.7
+  - 1.6
   - 1.45
-  - 1.2
+  - 1.3
+  - 1.15
   spawnIntervalMultiplier: {x: 0.75, y: 1.35}
   places:
   - "\uAD11\uC57C \uC0AC\uB9C9"
