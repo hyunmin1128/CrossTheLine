@@ -5,6 +5,8 @@ namespace CrossTheLine.Minigames
     public sealed partial class FastingTopDownGame
     {
         public FastingEncounterDirector encounterDirector;
+        public FastingPlayerAura playerAura;
+        public float WaterBoostRemaining=>waterBoost;
         public bool PrayerPreparing=>prayerHeldFor>0&&!Praying&&PrayerBlockRemaining<=0&&Prayer<PrayerTarget;
         public float PreparationProgress=>Mathf.Clamp01(prayerHeldFor/Mathf.Max(.01f,settings.prayerPreparationSeconds));
         public bool InPrayerWindow=>encounterDirector&&encounterDirector.CurrentPhase==FastingEncounterDirector.Phase.PrayerWindow;

@@ -18,7 +18,7 @@ public static class StudyFastingBalancePass
         }
         for(int lane=0;lane<5;lane++)
         {
-            float x=(lane-2)*3,score=Mathf.Abs(x-p.x)*.08f,travel=Mathf.Abs(x-p.x)/4.5f;
+            float x=(lane-2)*3,score=Mathf.Abs(x-p.x)*.08f,travel=Mathf.Abs(x-p.x)/g.settings.manualMoveSpeed;
             foreach(var h in g.Hazards)
             {
                 if(!h||h.spent||Mathf.Abs(h.velocity.x)>.1f)continue;
@@ -34,7 +34,7 @@ public static class StudyFastingBalancePass
             }
             if(score<best){best=score;target=x;}
         }
-        return new Vector2(Mathf.Clamp((target-p.x)/(4.5f*.05f),-1,1),0);
+        return new Vector2(Mathf.Clamp((target-p.x)/(g.settings.manualMoveSpeed*.05f),-1,1),0);
     }
     public static async Task<string> Run()
     {

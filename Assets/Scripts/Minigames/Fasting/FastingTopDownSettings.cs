@@ -5,6 +5,7 @@ namespace CrossTheLine.Minigames
     public sealed class FastingTopDownSettings : ScriptableObject
     {
         public float maximumHealth=5, damage=1, moveSpeed=2.5f, stageLength=24;
+        public float cactusDamage=2,quicksandStunSeconds=2;
         public float finishLineDistance=6;
         public float prayerTarget=90, prayerPerSecond=1f;
         public float[] prayerTargets={90,100,110,120};
@@ -30,13 +31,13 @@ namespace CrossTheLine.Minigames
         public float StageValue(float[] values,int stage,float fallback)=>values!=null&&stage>=0&&stage<values.Length?values[stage]:fallback;
         public float StageDropChance(FastingTopDownEntity.Kind kind,int stage)=>Mathf.Clamp01(kind==FastingTopDownEntity.Kind.Book?StageValue(bibleChances,stage,bibleSpawnChance):kind==FastingTopDownEntity.Kind.Page?StageValue(pageChances,stage,pageSpawnChance):kind==FastingTopDownEntity.Kind.Fragment?StageValue(pieceChances,stage,pieceSpawnChance):kind==FastingTopDownEntity.Kind.Water?StageValue(wellChances,stage,0):kind==FastingTopDownEntity.Kind.Flame?flameChance:kind==FastingTopDownEntity.Kind.Shield?shieldChance:pickupChance);
         public float[] stageMoveSpeeds={2.5f,2.75f,3f,3.25f};
-        public float manualMoveSpeed=4.5f,feverSeconds=5;
+        public float manualMoveSpeed=5.2f,feverSeconds=5;
         public float prayerMoveMultiplier=.15f,scrollSpeedMultiplier=1.15f,hazardSpeedMultiplier=1.2f,sideSandSpeed=7.2f;
         [Min(0)] public float prayerPreparationSeconds=.3f;
         public int flamesForFever=3;
         public float StageSpeed(int stage)=>stageMoveSpeeds!=null&&stage>=0&&stage<stageMoveSpeeds.Length?stageMoveSpeeds[stage]:moveSpeed;
         public float DropChance(FastingTopDownEntity.Kind kind)=>StageDropChance(kind,0);
-        public float[] waveIntervals={1.6f,1.45f,1.3f,1.15f};
+        public float[] waveIntervals={1.35f,1.25f,1.15f,1f};
         public Vector2 spawnIntervalMultiplier=new Vector2(.75f,1.35f);
         public float NextSpawnInterval(int stage)
         {

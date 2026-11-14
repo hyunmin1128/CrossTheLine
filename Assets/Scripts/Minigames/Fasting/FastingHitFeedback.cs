@@ -9,7 +9,8 @@ namespace CrossTheLine.Minigames
         public Material effectMaterial;
         [Range(.2f, 1.2f)] public float duration = .65f;
         public float liftHeight = .65f, sinkDepth = .32f;
-        public float sandAirSeconds=1.1f,sandAirHeight=1.2f;
+        public float sandAirSeconds=1.35f,sandAirHeight=2.4f;
+        public float quicksandSinkSeconds=2;
         public int sortingOrder = 100;
         public Color rockColor = new Color(.46f,.34f,.23f,1);
         public Color thornColor = new Color(.19f,.31f,.12f,1);
@@ -21,6 +22,7 @@ namespace CrossTheLine.Minigames
         FastingTopDownHazard.Kind kind;
         const int Count = 20;
         public bool Active => remaining > 0;
+        float EffectDuration=>kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:kind==FastingTopDownHazard.Kind.Quicksand?quicksandSinkSeconds:duration;
         void Awake()
         {
             if(artwork){basePosition=artwork.transform.localPosition;baseScale=artwork.transform.localScale;}
@@ -35,7 +37,7 @@ namespace CrossTheLine.Minigames
         }
         public void Play(FastingTopDownHazard.Kind cause)
         {
-            Clear();kind=cause;remaining=kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:duration;meshRenderer.enabled=true;Draw(0);
+            Clear();kind=cause;remaining=EffectDuration;meshRenderer.enabled=true;Draw(0);
         }
         public void Clear()
         {
@@ -46,7 +48,7 @@ namespace CrossTheLine.Minigames
         public void Advance(float dt)
         {
             if(!Active)return;
-            remaining=Mathf.Max(0,remaining-dt);float t=1-remaining/Mathf.Max(.01f,kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:duration);
+            remaining=Mathf.Max(0,remaining-dt);float t=1-remaining/Mathf.Max(.01f,EffectDuration);
             if(artwork)
             {
                 float arc=Mathf.Sin(t*Mathf.PI);
