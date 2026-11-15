@@ -6,7 +6,8 @@ namespace CrossTheLine.Minigames
     /// <summary>Moves the consumed shield into screen space, then separates its texture into shards.</summary>
     public sealed class FastingShieldBreakGraphic : UnityEngine.UI.MaskableGraphic
     {
-        public const float Duration=.9f;
+        public const float Duration=1.8f;
+        public const float MinimumProtectionSeconds=.9f;
         Sprite sprite;
         Vector2 origin;
         float elapsed=Duration;
@@ -25,23 +26,29 @@ namespace CrossTheLine.Minigames
         protected override void OnPopulateMesh(UnityEngine.UI.VertexHelper vh)
         {
             vh.Clear();if(!Active)return;
-            float zoom=Mathf.SmoothStep(0,1,elapsed/.3f),fracture=Mathf.Clamp01((elapsed-.3f)/.6f);
+            float zoom=Mathf.SmoothStep(0,1,elapsed/.45f),fracture=Mathf.Clamp01((elapsed-.75f)/1.05f);
+            float crack=Mathf.SmoothStep(0,1,Mathf.InverseLerp(.45f,.75f,elapsed));
             Vector2 center=Vector2.Lerp(origin,rectTransform.rect.center,zoom);
             float height=Mathf.Lerp(40,Mathf.Min(180,rectTransform.rect.height*.30f),zoom),width=height*sprite.rect.width/sprite.rect.height;
             var uv=DataUtility.GetOuterUV(sprite);Color tint=Color.white;tint.a=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(.35f,1,fracture));
             const int cells=4;
             for(int y=0;y<cells;y++)for(int x=0;x<cells;x++)
             {
-                Vector2 offset=new Vector2((x+.5f)/cells-.5f,(y+.5f)/cells-.5f);
+                Vector2 p0=CrackPoint(x,y),p1=CrackPoint(x,y+1),p2=CrackPoint(x+1,y+1),p3=CrackPoint(x+1,y);
+                Vector2 offset=(p0+p1+p2+p3)*.25f;
                 Vector2 travel=offset.normalized*(40+((x*7+y*3)%5)*12)*fracture+Vector2.down*(100*fracture*fracture);
                 Vector2 at=center+Vector2.Scale(offset,new Vector2(width,height))+travel;
                 float spin=((x+y)%2==0?1:-1)*fracture*(25+x*12+y*7)*Mathf.Deg2Rad;
-                float gap=fracture>0?Mathf.Lerp(.96f,.7f,fracture):1;
-                Vector2 side=new Vector2(Mathf.Cos(spin),Mathf.Sin(spin))*width/cells*.5f*gap;
-                Vector2 up=new Vector2(-Mathf.Sin(spin),Mathf.Cos(spin))*height/cells*.5f*gap;
-                float u0=Mathf.Lerp(uv.x,uv.z,(float)x/cells),u1=Mathf.Lerp(uv.x,uv.z,(float)(x+1)/cells),v0=Mathf.Lerp(uv.y,uv.w,(float)y/cells),v1=Mathf.Lerp(uv.y,uv.w,(float)(y+1)/cells);
-                int i=vh.currentVertCount;vh.AddVert(at-side-up,tint,new Vector2(u0,v0));vh.AddVert(at-side+up,tint,new Vector2(u0,v1));vh.AddVert(at+side+up,tint,new Vector2(u1,v1));vh.AddVert(at+side-up,tint,new Vector2(u1,v0));vh.AddTriangle(i,i+1,i+2);vh.AddTriangle(i,i+2,i+3);
+                float gap=fracture>0?Mathf.Lerp(.95f,.7f,fracture):1-.05f*crack;
+                int i=vh.currentVertCount;ShardVertex(vh,p0,offset,at,width,height,gap,spin,tint,uv);ShardVertex(vh,p1,offset,at,width,height,gap,spin,tint,uv);ShardVertex(vh,p2,offset,at,width,height,gap,spin,tint,uv);ShardVertex(vh,p3,offset,at,width,height,gap,spin,tint,uv);vh.AddTriangle(i,i+1,i+2);vh.AddTriangle(i,i+2,i+3);
             }
+        }
+        static Vector2 CrackPoint(int x,int y)=>new Vector2(x/4f-.5f+(x==0||x==4?0:Mathf.Sin(x*17+y*31)*.055f),y/4f-.5f+(y==0||y==4?0:Mathf.Sin(x*29+y*13)*.055f));
+        static void ShardVertex(UnityEngine.UI.VertexHelper vh,Vector2 p,Vector2 pivot,Vector2 at,float width,float height,float gap,float angle,Color tint,Vector4 uv)
+        {
+            Vector2 q=Vector2.Scale(p-pivot,new Vector2(width,height))*gap;
+            Vector2 position=at+new Vector2(q.x*Mathf.Cos(angle)-q.y*Mathf.Sin(angle),q.x*Mathf.Sin(angle)+q.y*Mathf.Cos(angle));
+            vh.AddVert(position,tint,new Vector2(Mathf.Lerp(uv.x,uv.z,p.x+.5f),Mathf.Lerp(uv.y,uv.w,p.y+.5f)));
         }
         protected override void OnDisable(){Clear();base.OnDisable();}
     }

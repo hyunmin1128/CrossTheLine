@@ -12,8 +12,14 @@ namespace CrossTheLine.Minigames
         public Color shieldColor=new Color(.22f,.7f,1,.7f),boostColor=new Color(.35f,.88f,1,.8f);
         public Vector2 shieldRadius=new Vector2(.85f,1.15f);
         public float breakSeconds=.5f;
+        public float acquireSeconds=.6f;
+        public Color rimColor=new Color(.45f,.9f,1,.95f),goldColor=new Color(1,.82f,.36f,.9f);
+        [Range(.05f,.3f)] public float membraneOpacity=.16f;
         Mesh mesh;Material material;MeshRenderer auraRenderer;
-        float breakRemaining,clock;
+        float breakRemaining,clock,acquireRemaining;
+        public bool Acquiring=>acquireRemaining>0;
+        float MembraneScale=>1+.012f*Mathf.Sin(clock*2.5f)+(Acquiring?.12f*acquireRemaining/Mathf.Max(.01f,acquireSeconds):0);
+        public Vector2 MembraneRadii=>shieldRadius*MembraneScale;
         public bool Breaking=>breakRemaining>0;
         public bool BoostVisible=>game&&game.WaterBoostRemaining>0;
         readonly List<Vector3> vertices=new List<Vector3>();readonly List<Color> colors=new List<Color>();readonly List<int> triangles=new List<int>();
@@ -23,23 +29,25 @@ namespace CrossTheLine.Minigames
             auraRenderer=GetComponent<MeshRenderer>();material=new Material(effectMaterial);auraRenderer.sharedMaterial=material;
             if(artwork){auraRenderer.sortingLayerID=artwork.sortingLayerID;auraRenderer.sortingOrder=artwork.sortingOrder+8;}
         }
-        public void BreakShield(){breakRemaining=breakSeconds;}
-        public void Clear(){breakRemaining=0;if(mesh)mesh.Clear();}
+        public void AcquireShield(){acquireRemaining=acquireSeconds;}
+        public void BreakShield(){acquireRemaining=0;breakRemaining=breakSeconds;}
+        public void Clear(){acquireRemaining=breakRemaining=0;if(mesh)mesh.Clear();}
         void LateUpdate(){Advance(Time.deltaTime);}
         public void Advance(float dt)
         {
-            if(!mesh||!game||!artwork)return;clock+=dt;breakRemaining=Mathf.Max(0,breakRemaining-dt);
+            if(!mesh||!game||!artwork)return;clock+=dt;breakRemaining=Mathf.Max(0,breakRemaining-dt);acquireRemaining=Mathf.Max(0,acquireRemaining-dt);
             vertices.Clear();colors.Clear();triangles.Clear();
             Vector2 center=transform.InverseTransformPoint(artwork.bounds.center);
             if(game.Shielded)
             {
-                for(int n=0;n<32;n++)
-                {
-                    float a=n*Mathf.PI*2/32,b=(n+1)*Mathf.PI*2/32;Vector2 outerA=Point(a,shieldRadius),outerB=Point(b,shieldRadius),innerA=Point(a,shieldRadius-Vector2.one*.075f),innerB=Point(b,shieldRadius-Vector2.one*.075f);
-                    Color c=shieldColor;c.a*=.8f+.2f*Mathf.Sin(clock*4);Poly(center+outerA,center+outerB,center+innerB,center+innerA,c);
-                }
-                // Small blue facets make the persistent barrier distinguishable from the water trail.
-                for(int n=0;n<6;n++){float a=n*Mathf.PI/3+clock*.35f;Quad(center+Point(a,shieldRadius),new Vector2(.06f,.09f),shieldColor);}
+                float pulse=.9f+.1f*Mathf.Sin(clock*2.5f),scale=MembraneScale;
+                Bubble(center,scale,pulse);
+                for(int n=0;n<2;n++){Vector2 at=center+Point(clock*.35f+n*Mathf.PI,shieldRadius*scale);Color c=rimColor;c.a=.6f;Spark(at,.045f,c);}
+            }
+            if(Acquiring)
+            {
+                float t=1-acquireRemaining/Mathf.Max(.01f,acquireSeconds);Color c=goldColor;c.a*=Mathf.Sin(Mathf.PI*t);
+                for(int n=0;n<8;n++){float a=n*Mathf.PI/4;Spark(center+Point(a,shieldRadius+Vector2.one*t*.55f),.045f+.025f*(1-t),c);}
             }
             if(Breaking)
             {
@@ -58,6 +66,40 @@ namespace CrossTheLine.Minigames
             mesh.Clear();mesh.SetVertices(vertices);mesh.SetColors(colors);mesh.SetTriangles(triangles,0);mesh.RecalculateBounds();auraRenderer.enabled=vertices.Count>0;
         }
         static Vector2 Point(float a,Vector2 radius)=>new Vector2(Mathf.Round(Mathf.Cos(a)*radius.x*32)/32,Mathf.Round(Mathf.Sin(a)*radius.y*32)/32);
+        void Bubble(Vector2 center,float scale,float pulse)
+        {
+            Vector2 radius=shieldRadius*scale;
+            int rows=Mathf.CeilToInt(radius.y*64);
+            // Flat, pixel-aligned translucent bands tint the character without hiding the artwork.
+            for(int row=0;row<rows;row++)
+            {
+                float y=(row+.5f)/rows*radius.y*2-radius.y,normalized=y/radius.y;
+                float width=Mathf.Floor(Mathf.Sqrt(Mathf.Max(0,1-normalized*normalized))*radius.x*32)/32;
+                if(width<=0)continue;
+                Color c=shieldColor;c.a=membraneOpacity*pulse*(Mathf.Abs(normalized)>.72f?1.15f:.8f);
+                Quad(center+new Vector2(0,y),new Vector2(width,radius.y/rows),c);
+            }
+            Color glow=shieldColor;glow.a=.1f*pulse;BubbleOutline(center,radius,glow,3);
+            Color rim=rimColor;rim.a=.65f*pulse;BubbleOutline(center,radius,rim,1);
+            // A few pale highlights suggest a curved protective surface, rather than an empty ring.
+            Color shine=new Color(.8f,.97f,1,.32f*pulse);
+            for(int n=0;n<7;n++)Quad(center+Point((118+n*5)*Mathf.Deg2Rad,radius*.87f),new Vector2(.026f,.045f),shine);
+        }
+        void BubbleOutline(Vector2 center,Vector2 radius,Color color,int pixels)
+        {
+            Vector2 previous=new Vector2(float.MaxValue,float.MaxValue);
+            for(int n=0;n<160;n++)
+            {
+                Vector2 a=Point(n*Mathf.PI*2/160,radius),b=Point((n+1)*Mathf.PI*2/160,radius);
+                int steps=Mathf.Max(1,Mathf.CeilToInt(Mathf.Max(Mathf.Abs(a.x-b.x),Mathf.Abs(a.y-b.y))*32));
+                for(int k=0;k<steps;k++)
+                {
+                    Vector2 p=Vector2.Lerp(a,b,(float)k/steps);p=center+new Vector2(Mathf.Round(p.x*32)/32,Mathf.Round(p.y*32)/32);
+                    if(p==previous)continue;Quad(p,Vector2.one*(pixels/64f),color);previous=p;
+                }
+            }
+        }
+        void Spark(Vector2 at,float size,Color c){Quad(at,new Vector2(size*.35f,size),c);Quad(at,new Vector2(size,size*.35f),c);}
         void Quad(Vector2 p,Vector2 half,Color c)=>Poly(p+new Vector2(-half.x,-half.y),p+new Vector2(-half.x,half.y),p+new Vector2(half.x,half.y),p+new Vector2(half.x,-half.y),c);
         void Poly(Vector2 a,Vector2 b,Vector2 c,Vector2 d,Color color)
         {

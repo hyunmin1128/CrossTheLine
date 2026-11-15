@@ -6,6 +6,7 @@ namespace CrossTheLine.Minigames
     {
         public FastingEncounterDirector encounterDirector;
         public FastingPlayerAura playerAura;
+        public FastingHitVignette hitVignette;
         public float WaterBoostRemaining=>waterBoost;
         public bool PrayerPreparing=>prayerHeldFor>0&&!Praying&&PrayerBlockRemaining<=0&&Prayer<PrayerTarget;
         public float PreparationProgress=>Mathf.Clamp01(prayerHeldFor/Mathf.Max(.01f,settings.prayerPreparationSeconds));

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2444310335736479246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6411048745297351864}
+  - component: {fileID: 2577908221440956582}
+  - component: {fileID: 7394470083269213027}
+  m_Layer: 0
+  m_Name: FastingHitVignette
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6411048745297351864
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444310335736479246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2577908221440956582
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444310335736479246}
+  m_CullTransparentMesh: 1
+--- !u!114 &7394470083269213027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444310335736479246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82893089cc190f4995337cfe9e12354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingHitVignette
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  damageSeconds: 0.65
+  shieldSeconds: 0.45
+  attackSeconds: 0.08
+  clearCenter: 0.72
+  damageColor: {r: 0.68, g: 0.08, b: 0.14, a: 0.18}
+  shieldColor: {r: 0.18, g: 0.52, b: 1, a: 0.12}
+  obstacleStyles:
+  - obstacle: 0
+    tint: {r: 0.48, g: 0.22, b: 0.16, a: 0.18}
+    seconds: 0.6
+  - obstacle: 1
+    tint: {r: 0.72, g: 0.48, b: 0.14, a: 0.18}
+    seconds: 0.8
+  - obstacle: 2
+    tint: {r: 0.22, g: 0.47, b: 0.12, a: 0.18}
+    seconds: 0.65
+  - obstacle: 3
+    tint: {r: 0.42, g: 0.25, b: 0.08, a: 0.18}
+    seconds: 0.95
+  - obstacle: 4
+    tint: {r: 0.32, g: 0.22, b: 0.52, a: 0.16}
+    seconds: 0.75
+  - obstacle: 5
+    tint: {r: 0.46, g: 0.35, b: 0.25, a: 0.18}
+    seconds: 0.7
+  - obstacle: 6
+    tint: {r: 0.35, g: 0.2, b: 0.19, a: 0.18}
+    seconds: 0.65
+  - obstacle: 7
+    tint: {r: 0.4, g: 0.25, b: 0.52, a: 0.16}
+    seconds: 0.8
+  - obstacle: 8
+    tint: {r: 0.35, g: 0.4, b: 0.48, a: 0.16}
+    seconds: 0.6
+  - obstacle: 9
+    tint: {r: 0.42, g: 0.53, b: 0.12, a: 0.18}
+    seconds: 0.9
+  - obstacle: 10
+    tint: {r: 0.95, g: 0.32, b: 0.05, a: 0.18}
+    seconds: 0.75
+  - obstacle: 11
+    tint: {r: 0.27, g: 0.32, b: 0.11, a: 0.18}
+    seconds: 0.75
+  - obstacle: 12
+    tint: {r: 1, g: 0.48, b: 0.08, a: 0.18}
+    seconds: 0.85
+  - obstacle: 13
+    tint: {r: 0.32, g: 0.17, b: 0.4, a: 0.18}
+    seconds: 0.9
