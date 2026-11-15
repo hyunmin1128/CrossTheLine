@@ -2201,9 +2201,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5b55c643e8a547545bc32cd329b09388, type: 3}
     - target: {fileID: 4730262774404054689, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b9c3c054d6139ee4095032d97969f120, type: 2}
+    - target: {fileID: 5513729572364424318, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7875
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5336,7 +5340,7 @@ MonoBehaviour:
   gameCamera: {fileID: 1992356483}
   playerBody: {fileID: 747589371}
   feet: {fileID: 747589370}
-  idle: {fileID: -5726393533013489711, guid: 3233efe58dd8c5d4999b3ad9854b81e9, type: 3}
+  idle: {fileID: 21300000, guid: 5b55c643e8a547545bc32cd329b09388, type: 3}
   prayingSprite: {fileID: 21300000, guid: 5b55c643e8a547545bc32cd329b09388, type: 3}
   entities:
   - {fileID: 1805646992}
