@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f58fe3c8dd595458f5ca59fba68e93, type: 3}
+  m_Name: FastingEffectSprites
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingEffectSprites
+  shieldBreak:
+  - {fileID: 21300000, guid: 0beeb7a44eb12584ea56a47db0dd9ce3, type: 3}
+  - {fileID: 21300000, guid: 0017ed07d709fb445a7203bbf512952c, type: 3}
+  - {fileID: 21300000, guid: 628a2af7381de324482a099cbc662026, type: 3}
+  - {fileID: 21300000, guid: 42680cbf7032c0e4fbf159396984dc99, type: 3}
+  - {fileID: 21300000, guid: a78976f6c3e32e14aa4362764389bfa7, type: 3}
+  - {fileID: 21300000, guid: bf7220892d52f0c40ab3ff7c3fdc5c35, type: 3}
+  bubble:
+  - {fileID: 21300000, guid: 07aa12f7b19d0b04e94f8f3279ff86c0, type: 3}
+  - {fileID: 21300000, guid: 7cad75ba687f6d94186717f061aab321, type: 3}
+  - {fileID: 21300000, guid: 39003a28acf1bfd4896f86511f23111a, type: 3}
+  - {fileID: 21300000, guid: e004ac725fa280e4986e55d58791989f, type: 3}
+  water:
+  - {fileID: 21300000, guid: 6967d59b6aa854f4a8aadfdd71832ed3, type: 3}
+  - {fileID: 21300000, guid: 4fcab293c24c1754bbcdee0a7d9744e4, type: 3}
+  - {fileID: 21300000, guid: 3c9c7b2a51b7fd642b45e63635a88f84, type: 3}
+  - {fileID: 21300000, guid: 80bd2df22c732be41ad85e6f24e36939, type: 3}
+  prayer:
+  - {fileID: 21300000, guid: ac05c8139fb919b43aaa91a9c60b07bb, type: 3}
+  - {fileID: 21300000, guid: 8304f32769717f64cbf73d38626ffc07, type: 3}
+  - {fileID: 21300000, guid: 13a560c351a36f4488c39a6c3ef9f151, type: 3}
+  - {fileID: 21300000, guid: 66ac26636a6c6c2428f0c34c9aa16fa5, type: 3}
+  rocks:
+  - {fileID: 21300000, guid: 605b196a83420424c9b593688ddd37f0, type: 3}
+  - {fileID: 21300000, guid: 4ea9f6811ed7ffb44bf0e7cff03cda5e, type: 3}
+  - {fileID: 21300000, guid: 26334c62d941d07498980511dbd6613f, type: 3}
+  thorns:
+  - {fileID: 21300000, guid: ae4712bcd3a57e943843d029772c0065, type: 3}
+  - {fileID: 21300000, guid: 57c52a705b9997546b8479f19c9037a0, type: 3}
+  - {fileID: 21300000, guid: 3a66d856344c1e140a9a7fceda144f1b, type: 3}
+  sand:
+  - {fileID: 21300000, guid: cabcd3ccc3804704687dc8c988585b88, type: 3}
+  - {fileID: 21300000, guid: 52f772df48662d845a180a72c6cc5a9d, type: 3}
+  - {fileID: 21300000, guid: fb2916713213ac845a299c0c6877cbdb, type: 3}
+  spark: {fileID: 21300000, guid: d82db1d294a3ad240b4178891331fb21, type: 3}

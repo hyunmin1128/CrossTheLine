@@ -8,12 +8,14 @@ namespace CrossTheLine.Minigames
     {
         public const float Duration=1.8f;
         public const float MinimumProtectionSeconds=.9f;
+        public FastingEffectSprites effectSprites;
         Sprite sprite;
         Vector2 origin;
         float elapsed=Duration;
         public bool Active=>sprite&&elapsed<Duration;
         public float Progress=>Mathf.Clamp01(elapsed/Duration);
-        public override Texture mainTexture=>sprite?sprite.texture:Texture2D.whiteTexture;
+        Sprite IllustratedFrame=>effectSprites?FastingEffectSprites.Frame(effectSprites.shieldBreak,elapsed<.45f?0:elapsed<.60f?1:elapsed<.75f?2:elapsed<1.05f?3:elapsed<1.4f?4:5):null;
+        public override Texture mainTexture=>IllustratedFrame?IllustratedFrame.texture:sprite?sprite.texture:Texture2D.whiteTexture;
         public void Play(Sprite artwork,Vector2 screenPoint)
         {
             sprite=artwork;var parentCanvas=canvas;
@@ -22,7 +24,7 @@ namespace CrossTheLine.Minigames
         }
         public void Clear(){elapsed=Duration;SetVerticesDirty();}
         void Update(){if(Active)Advance(Time.deltaTime);}
-        public void Advance(float dt){elapsed=Mathf.Min(Duration,elapsed+Mathf.Max(0,dt));SetVerticesDirty();}
+        public void Advance(float dt){var before=IllustratedFrame;elapsed=Mathf.Min(Duration,elapsed+Mathf.Max(0,dt));if(before!=IllustratedFrame)SetMaterialDirty();SetVerticesDirty();}
         protected override void OnPopulateMesh(UnityEngine.UI.VertexHelper vh)
         {
             vh.Clear();if(!Active)return;
@@ -30,6 +32,11 @@ namespace CrossTheLine.Minigames
             float crack=Mathf.SmoothStep(0,1,Mathf.InverseLerp(.45f,.75f,elapsed));
             Vector2 center=Vector2.Lerp(origin,rectTransform.rect.center,zoom);
             float height=Mathf.Lerp(40,Mathf.Min(180,rectTransform.rect.height*.30f),zoom),width=height*sprite.rect.width/sprite.rect.height;
+            if(IllustratedFrame)
+            {
+                var frame=IllustratedFrame;var bounds=DataUtility.GetOuterUV(frame);float size=height*1.25f;Color c=Color.white;c.a=1-Mathf.InverseLerp(1.6f,Duration,elapsed);
+                vh.AddVert(center+new Vector2(-size/2,-size/2),c,new Vector2(bounds.x,bounds.y));vh.AddVert(center+new Vector2(-size/2,size/2),c,new Vector2(bounds.x,bounds.w));vh.AddVert(center+new Vector2(size/2,size/2),c,new Vector2(bounds.z,bounds.w));vh.AddVert(center+new Vector2(size/2,-size/2),c,new Vector2(bounds.z,bounds.y));vh.AddTriangle(0,1,2);vh.AddTriangle(0,2,3);return;
+            }
             var uv=DataUtility.GetOuterUV(sprite);Color tint=Color.white;tint.a=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(.35f,1,fracture));
             const int cells=4;
             for(int y=0;y<cells;y++)for(int x=0;x<cells;x++)

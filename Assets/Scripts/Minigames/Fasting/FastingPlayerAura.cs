@@ -17,6 +17,9 @@ namespace CrossTheLine.Minigames
         [Range(.05f,.3f)] public float membraneOpacity=.16f;
         Mesh mesh;Material material;MeshRenderer auraRenderer;
         float breakRemaining,clock,acquireRemaining;
+        FastingIllustratedAura illustrated;
+        public float AcquireProgress=>1-acquireRemaining/Mathf.Max(.01f,acquireSeconds);
+        public float BreakProgress=>1-breakRemaining/Mathf.Max(.01f,breakSeconds);
         public bool Acquiring=>acquireRemaining>0;
         float MembraneScale=>1+.012f*Mathf.Sin(clock*2.5f)+(Acquiring?.12f*acquireRemaining/Mathf.Max(.01f,acquireSeconds):0);
         public Vector2 MembraneRadii=>shieldRadius*MembraneScale;
@@ -31,13 +34,20 @@ namespace CrossTheLine.Minigames
         }
         public void AcquireShield(){acquireRemaining=acquireSeconds;}
         public void BreakShield(){acquireRemaining=0;breakRemaining=breakSeconds;}
-        public void Clear(){acquireRemaining=breakRemaining=0;if(mesh)mesh.Clear();}
+        public void Clear(){acquireRemaining=breakRemaining=0;if(mesh)mesh.Clear();if(illustrated)illustrated.Clear();}
         void LateUpdate(){Advance(Time.deltaTime);}
         public void Advance(float dt)
         {
             if(!mesh||!game||!artwork)return;clock+=dt;breakRemaining=Mathf.Max(0,breakRemaining-dt);acquireRemaining=Mathf.Max(0,acquireRemaining-dt);
             vertices.Clear();colors.Clear();triangles.Clear();
             Vector2 center=transform.InverseTransformPoint(artwork.bounds.center);
+            if(game.effectSprites)
+            {
+                if(!illustrated){illustrated=gameObject.AddComponent<FastingIllustratedAura>();illustrated.Initialize(this,game,artwork,material);}
+                illustrated.Draw(dt);
+                if(game.Shielded)Bubble(center,MembraneScale,.9f+.1f*Mathf.Sin(clock*2.5f));
+                mesh.Clear();mesh.SetVertices(vertices);mesh.SetColors(colors);mesh.SetTriangles(triangles,0);mesh.RecalculateBounds();auraRenderer.enabled=vertices.Count>0;return;
+            }
             if(game.Shielded)
             {
                 float pulse=.9f+.1f*Mathf.Sin(clock*2.5f),scale=MembraneScale;
@@ -79,6 +89,7 @@ namespace CrossTheLine.Minigames
                 Color c=shieldColor;c.a=membraneOpacity*pulse*(Mathf.Abs(normalized)>.72f?1.15f:.8f);
                 Quad(center+new Vector2(0,y),new Vector2(width,radius.y/rows),c);
             }
+            if(game&&game.effectSprites)return;
             Color glow=shieldColor;glow.a=.1f*pulse;BubbleOutline(center,radius,glow,3);
             Color rim=rimColor;rim.a=.65f*pulse;BubbleOutline(center,radius,rim,1);
             // A few pale highlights suggest a curved protective surface, rather than an empty ring.

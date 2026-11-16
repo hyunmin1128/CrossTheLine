@@ -31,7 +31,7 @@ namespace CrossTheLine.Minigames
             if(canvas)
             {
                 var child=new GameObject("ShieldBreakOverlay",typeof(RectTransform),typeof(UnityEngine.CanvasRenderer));
-                child.transform.SetParent(canvas.transform,false);breakGraphic=child.AddComponent<FastingShieldBreakGraphic>();
+                child.transform.SetParent(canvas.transform,false);breakGraphic=child.AddComponent<FastingShieldBreakGraphic>();breakGraphic.effectSprites=game.effectSprites;
                 var rect=breakGraphic.rectTransform;rect.anchorMin=Vector2.zero;rect.anchorMax=Vector2.one;rect.offsetMin=rect.offsetMax=Vector2.zero;
                 breakGraphic.raycastTarget=false;
             }

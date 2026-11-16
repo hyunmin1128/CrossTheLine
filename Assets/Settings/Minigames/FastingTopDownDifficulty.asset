@@ -96,10 +96,10 @@ MonoBehaviour:
   prayerPreparationSeconds: 0.3
   flamesForFever: 3
   waveIntervals:
-  - 1.35
-  - 1.25
-  - 1.15
+  - 1.08
   - 1
+  - 0.92
+  - 0.8
   spawnIntervalMultiplier: {x: 0.75, y: 1.35}
   places:
   - "\uAD11\uC57C \uC0AC\uB9C9"

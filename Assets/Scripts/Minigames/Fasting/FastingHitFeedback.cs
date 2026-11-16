@@ -6,6 +6,7 @@ namespace CrossTheLine.Minigames
     public sealed class FastingHitFeedback : MonoBehaviour
     {
         public SpriteRenderer artwork;
+        public FastingEffectSprites effectSprites;
         public Material effectMaterial;
         [Range(.2f, 1.2f)] public float duration = .65f;
         public float liftHeight = .65f, sinkDepth = .32f;
@@ -21,6 +22,7 @@ namespace CrossTheLine.Minigames
         Vector3 basePosition, baseScale; float remaining;
         FastingTopDownHazard.Kind kind;
         const int Count = 20;
+        SpriteRenderer[] particles;
         public bool Active => remaining > 0;
         float EffectDuration=>kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:kind==FastingTopDownHazard.Kind.Quicksand?quicksandSinkSeconds:duration;
         void Awake()
@@ -34,6 +36,7 @@ namespace CrossTheLine.Minigames
             meshRenderer.sortingOrder=sortingOrder;meshRenderer.enabled=false;
             vertices=new Vector3[Count*4];colors=new Color[Count*4];triangles=new int[Count*6];
             for(int n=0;n<Count;n++){int v=n*4,t=n*6;triangles[t]=v;triangles[t+1]=v+1;triangles[t+2]=v+2;triangles[t+3]=v;triangles[t+4]=v+2;triangles[t+5]=v+3;}
+            if(effectSprites){particles=new SpriteRenderer[Count];for(int n=0;n<Count;n++){var child=new GameObject("IllustratedParticle"+n);child.transform.SetParent(transform,false);var renderer=child.AddComponent<SpriteRenderer>();renderer.sharedMaterial=material;renderer.sortingLayerID=meshRenderer.sortingLayerID;renderer.sortingOrder=sortingOrder;renderer.enabled=false;particles[n]=renderer;}}
         }
         public void Play(FastingTopDownHazard.Kind cause)
         {
@@ -42,6 +45,7 @@ namespace CrossTheLine.Minigames
         public void Clear()
         {
             remaining=0;if(meshRenderer)meshRenderer.enabled=false;
+            if(particles!=null)foreach(var particle in particles)if(particle)particle.enabled=false;
             if(artwork){artwork.transform.localPosition=basePosition;artwork.transform.localScale=baseScale;}
         }
         void Update(){if(Active)Advance(Time.deltaTime);}
@@ -75,13 +79,21 @@ namespace CrossTheLine.Minigames
                 else if(thorn)p=new Vector2(Mathf.Cos(a)*(.48f+t*.14f),.65f+Mathf.Sin(a)*.55f);
                 else p=new Vector2(Mathf.Cos(a)*(.15f+t*(1.4f+(n%3)*.3f)),.35f+Mathf.Sin(a)*t*1.4f+(sand?t*.6f:1.8f*t-2.5f*t*t));
                 p.x=Mathf.Round(p.x*32)/32;p.y=Mathf.Round(p.y*32)/32;
+                if(particles!=null&&effectSprites)
+                {
+                    var particle=particles[n];particle.sprite=effectSprites.Particle(kind,n);particle.enabled=particle.sprite;
+                    particle.transform.localPosition=p;particle.transform.localRotation=Quaternion.Euler(0,0,thorn?-a*Mathf.Rad2Deg+45:t*(n%2==0?180:-150)+n*47);
+                    float height=thorn?.30f:sand?.12f:pit?.13f:.17f+(n%3)*.035f;
+                    particle.transform.localScale=Vector3.one*(height/Mathf.Max(.01f,particle.sprite?particle.sprite.bounds.size.y:1));particle.color=new Color(1,1,1,color.a);
+                    continue;
+                }
                 float w=thorn?.035f:sand?.10f:.10f,h=thorn?.18f:sand?.055f:.08f;
                 Vector2 axis=thorn?new Vector2(Mathf.Cos(a),Mathf.Sin(a)):Vector2.up;
                 Vector2 side=new Vector2(axis.y,-axis.x)*w;axis*=h;
                 int v=n*4;vertices[v]=p-side-axis;vertices[v+1]=p+side-axis;vertices[v+2]=p+side+axis;vertices[v+3]=p-side+axis;
                 for(int k=0;k<4;k++)colors[v+k]=color;
             }
-            mesh.Clear();mesh.vertices=vertices;mesh.colors=colors;mesh.triangles=triangles;mesh.RecalculateBounds();
+            mesh.Clear();if(particles!=null){meshRenderer.enabled=false;return;}mesh.vertices=vertices;mesh.colors=colors;mesh.triangles=triangles;mesh.RecalculateBounds();
         }
         void OnDisable(){Clear();}
         void OnDestroy(){if(mesh)Destroy(mesh);if(material)Destroy(material);}
