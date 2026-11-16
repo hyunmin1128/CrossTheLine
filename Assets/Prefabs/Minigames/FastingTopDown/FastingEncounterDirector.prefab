@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3801071127760110707}
   - component: {fileID: 7691295741538601278}
+  - component: {fileID: 2112873096035520113}
   m_Layer: 0
   m_Name: FastingEncounterDirector
   m_TagString: Untagged
@@ -45,3 +46,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingEncounterDirector
   game: {fileID: 0}
+--- !u!114 &2112873096035520113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149728580838381587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43930ef4330099349b3dac5a08ec232c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingObstaclePatterns
+  choices:
+  - pattern: 0
+    weight: 1
+  - pattern: 1
+    weight: 3
+  - pattern: 2
+    weight: 2
+  - pattern: 3
+    weight: 2
+  - pattern: 4
+    weight: 2
+  staggerDistance: 3.8

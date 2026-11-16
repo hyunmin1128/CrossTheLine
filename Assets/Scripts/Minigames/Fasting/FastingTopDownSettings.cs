@@ -37,12 +37,13 @@ namespace CrossTheLine.Minigames
         public int flamesForFever=3;
         public float StageSpeed(int stage)=>stageMoveSpeeds!=null&&stage>=0&&stage<stageMoveSpeeds.Length?stageMoveSpeeds[stage]:moveSpeed;
         public float DropChance(FastingTopDownEntity.Kind kind)=>StageDropChance(kind,0);
-        public float[] waveIntervals={1.08f,1f,.92f,.8f};
+        public float[] waveIntervals={.84f,.8f,.74f,.68f};
+        [Min(.1f)] public float minimumSpawnInterval=.55f;
         public Vector2 spawnIntervalMultiplier=new Vector2(.75f,1.35f);
         public float NextSpawnInterval(int stage)
         {
             float mean=waveIntervals[Mathf.Clamp(stage,0,waveIntervals.Length-1)];
-            float min=Mathf.Max(.8f,mean*Mathf.Min(spawnIntervalMultiplier.x,spawnIntervalMultiplier.y));
+            float min=Mathf.Max(Mathf.Max(.1f,minimumSpawnInterval),mean*Mathf.Min(spawnIntervalMultiplier.x,spawnIntervalMultiplier.y));
             float max=Mathf.Max(min,mean*Mathf.Max(spawnIntervalMultiplier.x,spawnIntervalMultiplier.y));
             return Random.Range(min,max);
         }

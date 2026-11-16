@@ -20,6 +20,7 @@ namespace CrossTheLine.Minigames
         Mesh mesh; Material material; MeshRenderer meshRenderer;
         Vector3[] vertices; Color[] colors; int[] triangles;
         Vector3 basePosition, baseScale; float remaining;
+        bool artworkPoseCaptured;
         FastingTopDownHazard.Kind kind;
         const int Count = 20;
         SpriteRenderer[] particles;
@@ -27,7 +28,7 @@ namespace CrossTheLine.Minigames
         float EffectDuration=>kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:kind==FastingTopDownHazard.Kind.Quicksand?quicksandSinkSeconds:duration;
         void Awake()
         {
-            if(artwork){basePosition=artwork.transform.localPosition;baseScale=artwork.transform.localScale;}
+            if(artwork){basePosition=artwork.transform.localPosition;baseScale=artwork.transform.localScale;artworkPoseCaptured=true;}
             var filter=GetComponent<MeshFilter>();if(!filter)filter=gameObject.AddComponent<MeshFilter>();
             meshRenderer=GetComponent<MeshRenderer>();if(!meshRenderer)meshRenderer=gameObject.AddComponent<MeshRenderer>();
             mesh=new Mesh{name="Fasting hit particles"};mesh.MarkDynamic();filter.sharedMesh=mesh;
@@ -46,7 +47,7 @@ namespace CrossTheLine.Minigames
         {
             remaining=0;if(meshRenderer)meshRenderer.enabled=false;
             if(particles!=null)foreach(var particle in particles)if(particle)particle.enabled=false;
-            if(artwork){artwork.transform.localPosition=basePosition;artwork.transform.localScale=baseScale;}
+            if(artwork&&artworkPoseCaptured){artwork.transform.localPosition=basePosition;artwork.transform.localScale=baseScale;}
         }
         void Update(){if(Active)Advance(Time.deltaTime);}
         public void Advance(float dt)

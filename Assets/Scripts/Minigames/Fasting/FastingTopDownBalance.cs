@@ -40,11 +40,11 @@ namespace CrossTheLine.Minigames
             }
             return true;
         }
-        bool AcceptHazard(FastingTopDownHazard h)
+        bool AcceptHazard(FastingTopDownHazard h,bool keepLane=false)
         {
             bool side=Mathf.Abs(h.velocity.x)>.01f;float originalX=h.transform.position.x;
             int first=Mathf.Clamp(Mathf.RoundToInt(originalX/settings.laneSpacing+2-(h.occupiedLanes-1)*.5f),0,5-h.occupiedLanes);
-            for(int attempt=0;attempt<(side?1:6-h.occupiedLanes);attempt++)
+            for(int attempt=0;attempt<(side||keepLane?1:6-h.occupiedLanes);attempt++)
             {
                 if(!side){int lane=(first+attempt)%(6-h.occupiedLanes);h.transform.position=new Vector3((lane-2+(h.occupiedLanes-1)*.5f)*settings.laneSpacing,h.transform.position.y,0);}
                 if(encounterDirector&&!encounterDirector.LeavesLaneOpen(h))continue;

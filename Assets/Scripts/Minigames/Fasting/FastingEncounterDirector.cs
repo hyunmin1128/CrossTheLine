@@ -12,7 +12,7 @@ namespace CrossTheLine.Minigames
         public int SpawnAttempts{get;private set;}
         public void ResetEncounter()
         {
-            CurrentPhase=Phase.Attack;OpenLane=Random.Range(0,5);remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=1.5f;SpawnAttempts=0;
+            CurrentPhase=Phase.Attack;OpenLane=Random.Range(0,5);remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=1.5f;SpawnAttempts=0;if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();
         }
         public void Tick(float dt)
         {
@@ -32,7 +32,7 @@ namespace CrossTheLine.Minigames
                 }
                 CurrentPhase=Phase.PrayerWindow;remaining=game.settings.StageValue(game.settings.restSeconds,game.StageIndex,3);return;
             }
-            remaining-=dt;if(remaining<=0){OpenLane=(OpenLane+Random.Range(1,5))%5;CurrentPhase=Phase.Attack;remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=.25f;}
+            remaining-=dt;if(remaining<=0){OpenLane=(OpenLane+Random.Range(1,5))%5;CurrentPhase=Phase.Attack;remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=.25f;if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();}
         }
         public bool LeavesLaneOpen(FastingTopDownHazard h)
         {
