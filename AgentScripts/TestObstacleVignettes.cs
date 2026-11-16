@@ -15,7 +15,7 @@ public static class TestObstacleVignettes
             {
                 g.Begin();float hp=g.Health;g.TryDamage(kind.ToString());ok(g.Health<hp&&fx.CurrentObstacle==kind,"Damage identifies "+kind);
                 fx.Advance(.14f);Canvas.ForceUpdateCanvases();var mesh=fx.canvasRenderer.GetMesh();var vertices=mesh.vertices;var colors=mesh.colors;var r=fx.rectTransform.rect;
-                ok(colors.Any(c=>c.a>0)&&colors.Max(c=>c.a)<=.181f,"Visible but restrained "+kind);
+                ok(colors.Any(c=>c.a>0)&&colors.Max(c=>c.a)<=fx.maximumOpacity+1f/255f,"Visible but restrained "+kind);
                 ok(Enumerable.Range(0,vertices.Length).Where(i=>Mathf.Abs(vertices[i].x-r.center.x)<r.width*.25f&&Mathf.Abs(vertices[i].y-r.center.y)<r.height*.25f).All(i=>colors[i].a==0),"Center clear "+kind);
                 float elapsed=fx.Elapsed;g.TryDamage(kind.ToString());ok(fx.Elapsed==elapsed,"No invulnerable repeat "+kind);
                 fx.Advance(fx.CurrentDuration);ok(!fx.Active,"Style expires "+kind);

@@ -12,6 +12,8 @@ namespace CrossTheLine.Minigames
         public Color sandColor=new Color(.65f,.39f,.12f,.85f);
         public Color shieldColor=new Color(1,.85f,.25f,.85f);
         public Color damageEdgeColor=new Color(.8f,.12f,.12f,.12f);
+        [Range(0,1)] public float debrisOpacity=.28f;
+        [Range(.15f,.6f)] public float debrisSeconds=.32f;
         float remaining;
         bool shield;
         FastingTopDownHazard.Kind kind;
@@ -26,21 +28,24 @@ namespace CrossTheLine.Minigames
         {
             vh.Clear();if(!Active)return;
             Rect r=rectTransform.rect;float t=1-remaining/Mathf.Max(.01f,effectDuration);
-            float fade=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(.45f,1,t));
+            // Brief debris accents; the longer, continuous vignette owns the screen edge.
+            float debrisTime=(effectDuration-remaining)/Mathf.Max(.01f,debrisSeconds);
+            if(debrisTime>=1)return;
+            float fade=1-Mathf.SmoothStep(0,1,debrisTime);
             bool sand=kind==FastingTopDownHazard.Kind.Sand;
             bool pit=kind==FastingTopDownHazard.Kind.Quicksand;
             bool thorn=kind==FastingTopDownHazard.Kind.Cactus||kind==FastingTopDownHazard.Kind.Thorns;
-            Color c=shield?shieldColor:thorn?thornColor:sand||pit?sandColor:stoneColor;c.a*=fade;
+            Color c=shield?shieldColor:thorn?thornColor:sand||pit?sandColor:stoneColor;c.a*=fade*debrisOpacity;
             float unit=r.height/540f,depth=r.height*edgeDepth;
             if(shield)return; // Blue defense feedback belongs to the dedicated vignette layer.
             if(pit)
             {
-                float rise=Mathf.Sin(t*Mathf.PI)*depth;
-                for(int n=0;n<40;n++)
-                {float w=r.width/40;float h=rise*(.70f+.30f*Hash(n));Quad(vh,r.xMin+(n+.5f)*w,r.yMin+h*.5f,w*.52f,h*.5f,c);}
+                // Sinking is shown on the character. Avoid a solid sand curtain over the vignette/HUD.
+                for(int n=0;n<18;n++)
+                {float size=unit*(2+Hash(n)*3);float x=r.xMin+Hash(n*3+1)*r.width;float y=r.yMin+depth*(.45f+.35f*Hash(n*5+3))*(1-debrisTime*.3f);Quad(vh,x,y,size*2,size*.5f,c);}
                 return;
             }
-            int count=sand?56:22;
+            int count=sand?24:12;
             for(int n=0;n<count;n++)
             {
                 int side=n%4;float along=Hash(n*3+1),inset=Hash(n*5+3)*depth;
@@ -53,7 +58,7 @@ namespace CrossTheLine.Minigames
                 if(thorn)
                 {
                     Vector2 inward=side==0?Vector2.right:side==1?Vector2.left:side==2?Vector2.up:Vector2.down;
-                    Thorn(vh,new Vector2(x,y),inward,unit*(12+Hash(n)*14),c);
+                    Thorn(vh,new Vector2(x,y),inward,unit*(8+Hash(n)*8),c);
                 }
                 else{float size=unit*(sand?2+Hash(n)*4:4+Hash(n)*7);Quad(vh,x,y,sand?size*2:size,sand?size*.5f:size,c);}
             }

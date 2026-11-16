@@ -7,11 +7,11 @@ namespace CrossTheLine.Minigames
     {
         public enum HitKind { None, Damage, Shield }
         public float damageSeconds=.65f,shieldSeconds=.45f,attackSeconds=.08f;
-        [Range(1,3)] public float opacityMultiplier=1.9f;
+        [Range(1,3)] public float opacityMultiplier=2.4f;
         [Range(1,3)] public float durationMultiplier=1.7f;
-        public float peakHoldSeconds=.25f;
-        [Range(.2f,.6f)] public float maximumOpacity=.4f;
-        [Range(.5f,.9f)] public float clearCenter=.72f;
+        public float peakHoldSeconds=.45f;
+        [Range(.2f,.6f)] public float maximumOpacity=.46f;
+        [Range(.5f,.9f)] public float clearCenter=.64f;
         public Color damageColor=new Color(.68f,.08f,.14f,.18f);
         public Color shieldColor=new Color(.18f,.52f,1,.12f);
         [System.Serializable]
@@ -58,11 +58,12 @@ namespace CrossTheLine.Minigames
         {
             float x=Mathf.Abs(u*2-1),y=Mathf.Abs(v*2-1);
             float distance=Mathf.Pow(x*x*x*x+y*y*y*y,.25f);
-            float intensity=Mathf.SmoothStep(0,1,Mathf.InverseLerp(clearCenter,1.08f,distance));
+            float intensity=Mathf.SmoothStep(0,1,Mathf.InverseLerp(clearCenter,1f,distance));
             if(style!=null)
             {
                 float angle=Mathf.Atan2(v-.5f,u-.5f),pattern=Pattern(style.obstacle,u,v,angle);
-                intensity*=Mathf.Clamp01(pattern);
+                // Preserve a continuous readable band; obstacle patterns are accents, not holes.
+                intensity*=Mathf.Lerp(.85f,1f,Mathf.Clamp01(pattern));
                 // Keep a restrained common damage cue at the very outside, without stacking opacity.
                 Color baseTint=tint;tint=Color.Lerp(baseTint,damageColor,Mathf.SmoothStep(0,1,Mathf.InverseLerp(.96f,1.18f,distance))*.45f);tint.a=baseTint.a;
             }

@@ -68,7 +68,11 @@ MonoBehaviour:
   damageSeconds: 0.65
   shieldSeconds: 0.45
   attackSeconds: 0.08
-  clearCenter: 0.72
+  opacityMultiplier: 2.4
+  durationMultiplier: 1.7
+  peakHoldSeconds: 0.45
+  maximumOpacity: 0.46
+  clearCenter: 0.64
   damageColor: {r: 0.68, g: 0.08, b: 0.14, a: 0.18}
   shieldColor: {r: 0.18, g: 0.52, b: 1, a: 0.12}
   obstacleStyles:
