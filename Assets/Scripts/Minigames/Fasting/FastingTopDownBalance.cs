@@ -62,9 +62,21 @@ namespace CrossTheLine.Minigames
                     }
                     if(!moved){e.transform.position=original;allClear=false;break;}
                 }
-                if(allClear)return true;
+                if(allClear&&!SpawnOverlapsHazard(h))return true;
             }
             h.transform.position=new Vector3(originalX,h.transform.position.y,0);return false;
+        }
+        bool SpawnOverlapsHazard(FastingTopDownHazard candidate)
+        {
+            Vector2 extent=Vector2.Max(candidate.size,(Vector2)candidate.body.bounds.size)*.625f;
+            foreach(var other in hazards)
+            {
+                if(!other||other.spent||!other.gameObject.activeSelf)continue;
+                Vector2 otherExtent=Vector2.Max(other.size,(Vector2)other.body.bounds.size)*.625f;
+                Vector2 gap=extent+otherExtent+new Vector2(.15f,.35f),delta=candidate.transform.position-other.transform.position;
+                if(Mathf.Abs(delta.x)<gap.x&&Mathf.Abs(delta.y)<gap.y)return true;
+            }
+            return false;
         }
     }
 }

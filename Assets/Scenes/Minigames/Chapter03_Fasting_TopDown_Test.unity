@@ -6770,6 +6770,14 @@ PrefabInstance:
       propertyPath: waterSkin
       value: 
       objectReference: {fileID: 236123006}
+    - target: {fileID: 4956026035678695597, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956026035678695597, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 5479813015150664232, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_text
       value: 

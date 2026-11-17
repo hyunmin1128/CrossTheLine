@@ -9,10 +9,16 @@ namespace CrossTheLine.Minigames
         public Phase CurrentPhase{get;private set;}
         public int OpenLane{get;private set;}
         float remaining,nextWave;
+        [Min(1)] public float patternIntervalMultiplier=1.8f;
+        public Vector2 randomIntervals=new Vector2(.85f,1.65f);
+        float nextRandom;
         public int SpawnAttempts{get;private set;}
+        public int RandomSpawnAttempts{get;private set;}
+        public int PatternSpawnAttempts{get;private set;}
+        float RandomInterval()=>Random.Range(Mathf.Max(.35f,Mathf.Min(randomIntervals.x,randomIntervals.y)),Mathf.Max(.35f,Mathf.Max(randomIntervals.x,randomIntervals.y)));
         public void ResetEncounter()
         {
-            CurrentPhase=Phase.Attack;OpenLane=Random.Range(0,5);remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=1.5f;SpawnAttempts=0;if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();
+            CurrentPhase=Phase.Attack;OpenLane=Random.Range(0,5);remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=1.5f;nextRandom=RandomInterval();SpawnAttempts=RandomSpawnAttempts=PatternSpawnAttempts=0;if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();
         }
         public void Tick(float dt)
         {
@@ -20,7 +26,9 @@ namespace CrossTheLine.Minigames
             if(CurrentPhase==Phase.Attack)
             {
                 remaining-=dt;if(remaining<=0){CurrentPhase=Phase.Clearing;return;}
-                nextWave-=dt;if(nextWave<=0){SpawnAttempts++;game.SpawnWave();nextWave=game.settings.NextSpawnInterval(game.StageIndex);}return;
+                // Separate clocks: random obstacles are not tied to the selected pattern or its beat.
+                nextWave-=dt;if(nextWave<=0){SpawnAttempts++;PatternSpawnAttempts++;game.SpawnWave();nextWave=game.settings.NextSpawnInterval(game.StageIndex)*Mathf.Max(1,patternIntervalMultiplier);}
+                nextRandom-=dt;if(nextRandom<=0){SpawnAttempts++;RandomSpawnAttempts++;game.SpawnRandomObstacle();nextRandom=RandomInterval();}return;
             }
             if(CurrentPhase==Phase.Clearing)
             {
@@ -32,7 +40,7 @@ namespace CrossTheLine.Minigames
                 }
                 CurrentPhase=Phase.PrayerWindow;remaining=game.settings.StageValue(game.settings.restSeconds,game.StageIndex,3);return;
             }
-            remaining-=dt;if(remaining<=0){OpenLane=(OpenLane+Random.Range(1,5))%5;CurrentPhase=Phase.Attack;remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=.25f;if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();}
+            remaining-=dt;if(remaining<=0){OpenLane=(OpenLane+Random.Range(1,5))%5;CurrentPhase=Phase.Attack;remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=Random.Range(.35f,.7f);nextRandom=RandomInterval();if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();}
         }
         public bool LeavesLaneOpen(FastingTopDownHazard h)
         {

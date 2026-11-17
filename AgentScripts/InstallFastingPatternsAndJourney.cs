@@ -18,10 +18,6 @@ public static class InstallFastingPatternsAndJourney
         var root=Rect("FastingJourneyPresentation",null,Vector2.zero,Vector2.zero,Vector2.zero);Stretch(root);
         var fx=root.gameObject.AddComponent<FastingJourneyPresentation>();
         var atmosphere=Rect("DayNightTint",root,Vector2.zero,Vector2.zero,Vector2.zero);Stretch(atmosphere);fx.atmosphere=Image(atmosphere,Color.clear);
-        var banner=Rect("DayAnnouncement",root,new Vector2(.5f,1),new Vector2(0,-12),new Vector2(280,64));banner.pivot=new Vector2(.5f,1);
-        var panel=Image(banner,Color.white);panel.sprite=g.heading.transform.parent.Find("Header").GetComponent<UnityEngine.UI.Image>().sprite;panel.type=UnityEngine.UI.Image.Type.Sliced;
-        fx.dayBanner=banner.gameObject.AddComponent<CanvasGroup>();fx.dayBanner.interactable=false;fx.dayBanner.blocksRaycasts=false;fx.dayBanner.alpha=0;
-        var label=Rect("DayLabel",banner,new Vector2(.5f,.5f),new Vector2(0,3),new Vector2(254,44));var text=label.gameObject.AddComponent<TextMeshProUGUI>();text.font=g.heading.font;text.fontSharedMaterial=g.heading.fontSharedMaterial;text.fontSize=16;text.color=Color.black;text.alignment=TextAlignmentOptions.Center;text.raycastTarget=false;text.text="1일째 · 광야 사막\n<size=70%>금식과 기도의 여정</size>";fx.dayLabel=text;
         PrefabUtility.SaveAsPrefabAsset(root.gameObject,PresentationPath);UnityEngine.Object.DestroyImmediate(root.gameObject);
     }
     static void TuneHUD(GameObject root)

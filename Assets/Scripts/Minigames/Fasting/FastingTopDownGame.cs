@@ -109,6 +109,14 @@ namespace CrossTheLine.Minigames
             int count=StageIndex==3&&kind==FastingTopDownHazard.Kind.Reaper?4:2;
             for(int i=0;i<count;i++)SpawnAbove(kind,(safe+1+i)%5,1);
         }
+        public void SpawnRandomObstacle()
+        {
+            var kind=ChooseKind();
+            if(kind==FastingTopDownHazard.Kind.Sand&&UnityEngine.Random.value<.4f){SpawnSideSand(UnityEngine.Random.value<.5f);return;}
+            int lanes=kind==FastingTopDownHazard.Kind.Sand?UnityEngine.Random.Range(1,3):1;
+            // No player tracking or pattern sequence: choose the type, column and spacing independently.
+            SpawnAbove(kind,UnityEngine.Random.Range(0,6-lanes),lanes,UnityEngine.Random.Range(0,1.8f));
+        }
         void SpawnAbove(FastingTopDownHazard.Kind kind,int firstLane,int lanes,float heightOffset=0,bool keepLane=false)
         {
             var prefab=StageIndex==0&&desertArt?desertArt.PrefabFor(kind,hazardPrefab):hazardPrefab;

@@ -12,6 +12,7 @@ public static class TestFastingBoundaryMovement
         foreach(var e in g.entities)e.gameObject.SetActive(false);
         var flags=BindingFlags.Instance|BindingFlags.NonPublic;
         typeof(FastingEncounterDirector).GetField("nextWave",flags).SetValue(g.encounterDirector,100f);
+        typeof(FastingEncounterDirector).GetField("nextRandom",flags).SetValue(g.encounterDirector,100f);
         typeof(FastingEncounterDirector).GetField("remaining",flags).SetValue(g.encounterDirector,100f);
     }
     public static string Run()

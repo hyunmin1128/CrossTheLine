@@ -9,7 +9,7 @@ public static class TestFastingPatternsAndResults
     static readonly BindingFlags flags=BindingFlags.NonPublic|BindingFlags.Instance;
     static void Set(object o,string name,object value)=>o.GetType().GetProperty(name).SetValue(o,value);
     static void Field(object o,string name,object value)=>o.GetType().GetField(name,flags).SetValue(o,value);
-    static void Quiet(FastingTopDownGame g){foreach(var e in g.entities)e.gameObject.SetActive(false);Field(g.encounterDirector,"nextWave",100f);Field(g.encounterDirector,"remaining",100f);}
+    static void Quiet(FastingTopDownGame g){foreach(var e in g.entities)e.gameObject.SetActive(false);Field(g.encounterDirector,"nextWave",100f);Field(g.encounterDirector,"nextRandom",100f);Field(g.encounterDirector,"remaining",100f);}
     public static string Run()
     {
         var g=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();if(!Application.isPlaying||!g.obstaclePatterns)throw new Exception("Play updated scene");
@@ -44,9 +44,9 @@ public static class TestFastingPatternsAndResults
             g.TryDamage("Sand");Field(g,"grace",0f);g.TryDamage("Cactus");Field(g,"grace",0f);g.TryDamage("Cactus");
             ok(!g.Running&&g.resultPanel.activeSelf,"Failure shows result");ok(g.DamageHitCount==3&&g.result.text.Contains("선인장 · 2회"),"Most hit obstacle report");ok(g.result.text.Contains("직접 기도")&&g.result.text.Contains("지난 도전보다"),"Prayer and progress comparison");
             g.result.ForceMeshUpdate();ok(g.result.preferredHeight<=g.result.rectTransform.rect.height,"Result text fits");
-            var fx=UnityEngine.Object.FindAnyObjectByType<FastingJourneyPresentation>();fx.Refresh(.2f);ok(fx.atmosphere.color.a==0&&fx.dayBanner.alpha==0,"Effects hidden on failure");
-            g.Begin();fx.Refresh(.2f);ok(fx.dayBanner.alpha>0&&fx.dayLabel.text.Contains("1일째"),"New run day banner");Set(g,"Elapsed",17f);fx.Refresh(.1f);ok(fx.atmosphere.color.b>fx.atmosphere.color.r&&fx.atmosphere.color.a<=.181f,"Night tint bounded and blue");
-            Set(g,"Prayer",g.PrayerTarget*.5f);fx.Refresh(.2f);ok(fx.dayLabel.text.Contains(g.CurrentDay+"일째"),"Day changes announced");g.Begin();ok(g.DamageHitCount==0&&g.AvoidedHazards==0&&g.DirectPrayerSeconds==0,"Retry resets run statistics");
+            var fx=UnityEngine.Object.FindAnyObjectByType<FastingJourneyPresentation>();fx.Refresh(.2f);ok(fx.atmosphere.color.a==0,"Effects hidden on failure");
+            g.Begin();fx.Refresh(.2f);ok(!fx.transform.Find("DayAnnouncement"),"Date popup removed");Set(g,"Elapsed",17f);fx.Refresh(.1f);ok(fx.atmosphere.color.b>fx.atmosphere.color.r&&fx.atmosphere.color.a<=.181f,"Night tint bounded and blue");
+            Set(g,"Prayer",g.PrayerTarget*.5f);fx.Refresh(.2f);ok(!fx.transform.Find("DayAnnouncement"),"No popup after day change");g.Begin();ok(g.DamageHitCount==0&&g.AvoidedHazards==0&&g.DirectPrayerSeconds==0,"Retry resets run statistics");
             return n+" checks passed: 5 patterns x 4 stages x 5 corridors, spawn positions, weighted selection, prayer/item rules, statistics, results and day/night.";
         }
         finally{patterns.choices=choices;for(int i=0;i<keys.Length;i++){if(exists[i])PlayerPrefs.SetInt(keys[i],values[i]);else PlayerPrefs.DeleteKey(keys[i]);}PlayerPrefs.Save();UnityEngine.Random.state=random;Time.timeScale=1;g.Begin();g.enabled=true;}
