@@ -23,7 +23,8 @@ namespace CrossTheLine.Minigames
         public TMP_Text heading,status,items,help,result;
         public UnityEngine.UI.Image prayerFill,transition;
         public UnityEngine.UI.Image[] hearts,visionPanels;
-        public Sprite fullHeart,emptyHeart;
+        public Sprite fullHeart,halfHeart,emptyHeart;
+        public FastingVisionMask caveVisionMask;
         public GameObject introduction,resultPanel;
         public UnityEngine.UI.Button startButton,retryButton;
         public int StageIndex{get;private set;}
@@ -56,7 +57,7 @@ namespace CrossTheLine.Minigames
         {
             if(!Running)return;dt=Mathf.Clamp(dt,0,.1f);Elapsed+=dt;grace=Mathf.Max(0,grace-dt);RefreshInvulnerability();
             if(failed)return;
-            if(swap>0){swap-=dt;transition.color=new Color(.04f,.03f,.04f,Mathf.Sin(Mathf.Clamp01(swap/.6f)*Mathf.PI));if(swap<=0){StageIndex++;Health=Mathf.Min(settings.maximumHealth,Health+1);Prayer=0;player.position=Vector3.zero;ApplyStage(false);}Refresh();return;}
+            if(swap>0){ConsumeFever(dt);swap-=dt;transition.color=new Color(.04f,.03f,.04f,Mathf.Sin(Mathf.Clamp01(swap/.6f)*Mathf.PI));if(swap<=0){StageIndex++;Health=Mathf.Min(settings.maximumHealth,Health+1);Prayer=0;player.position=Vector3.zero;ApplyStage(false);}Refresh();return;}
             slow=Mathf.Max(0,slow-dt);root=Mathf.Max(0,root-dt);prayerLock=Mathf.Max(0,prayerLock-dt);vision=Mathf.Max(0,vision-dt);buff=Mathf.Max(0,buff-dt);waterGrace=Mathf.Max(0,waterGrace-dt);waterNotice=Mathf.Max(0,waterNotice-dt);waterBoost=Mathf.Max(0,waterBoost-dt);reverse=Mathf.Max(0,reverse-dt);if(reverse>0)direction=-direction;
             Vector2 from=player.position;
             bool prayerEngaged=legacyPrayerInput&&Prayer<PrayerTarget&&PrayerBlockRemaining<=0;
@@ -65,7 +66,8 @@ namespace CrossTheLine.Minigames
             float readyAfter=Mathf.Max(0,settings.prayerPreparationSeconds);
             Praying=prayerEngaged&&prayerHeldFor>=readyAfter;
             float chargingTime=prayerEngaged?Mathf.Max(0,prayerHeldFor-Mathf.Max(previousHold,readyAfter)):0;
-            if(Praying){DirectPrayerSeconds+=chargingTime;ConsumeFever(chargingTime);}if(Praying)Prayer=Mathf.Min(PrayerTarget,Prayer+settings.prayerPerSecond*(buff>0?1.5f:1)*(fever>0?2:1)*chargingTime);
+            if(Praying){DirectPrayerSeconds+=chargingTime;float boostedTime=fever>0?Mathf.Clamp(fever-(dt-chargingTime),0,chargingTime):0;Prayer=Mathf.Min(PrayerTarget,Prayer+settings.prayerPerSecond*(buff>0?1.5f:1)*(chargingTime+boostedTime));}
+            ConsumeFever(dt);
             cameraY+=CurrentSpeed*dt;
             if(playArea)
             {
@@ -96,10 +98,10 @@ namespace CrossTheLine.Minigames
             if(gateArmed&&player.position.y>=gate.position.y-.05f){if(Prayer>=PrayerTarget){if(StageIndex==3){Complete=true;Running=false;resultPanel.SetActive(true);result.text=BuildRunResult(true);}else{swap=.6f;ClearHazards();Message="기도 완료 · 다음 장소로 이동";}}}
             Follow();Refresh();
         }
-        public bool TryDamage(string cause){if(!Running||Invulnerable||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=cause==nameof(FastingTopDownHazard.Kind.Cactus)?settings.cactusDamage:settings.damage;Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
-        void ApplyEffect(FastingTopDownHazard.Kind k){if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat||k==FastingTopDownHazard.Kind.Thorns)slow=1.2f;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack)root=.3f;if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar||k==FastingTopDownHazard.Kind.Tomb)prayerLock=1.5f;if(k==FastingTopDownHazard.Kind.Bat||k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=1.2f;Message="오염된 물 · 방향 반전 1.2초 / E 수통으로 정화";}}
+        public bool TryDamage(string cause){if(!Running||Invulnerable||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=cause==nameof(FastingTopDownHazard.Kind.Cactus)?settings.cactusDamage:cause==nameof(FastingTopDownHazard.Kind.Crack)?settings.crackDamage:settings.damage;Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
+        void ApplyEffect(FastingTopDownHazard.Kind k){if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat||k==FastingTopDownHazard.Kind.Thorns)slow=1.2f;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack){root=hitFeedback?hitFeedback.crackFallSeconds:.9f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.crackFallSeconds+hitFeedback.crackBlinkSeconds:1.7f);}if(k==FastingTopDownHazard.Kind.Bat){slow=settings.batSlowSeconds;vision=settings.batVisionSeconds;if(hitFeedback)grace=Mathf.Max(grace,hitFeedback.batAirSeconds);}if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar||k==FastingTopDownHazard.Kind.Tomb)prayerLock=1.5f;if(k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=1.2f;Message="오염된 물 · 방향 반전 1.2초 / E 수통으로 정화";}}
         public void UseWater(){if(!HasWater||!Running||failed)return;HasWater=false;slow=root=prayerLock=vision=reverse=0;waterBoost=3;Health=Mathf.Min(settings.maximumHealth,Health+1);grace=Mathf.Max(grace,.5f);Message="수통 사용 · 정화 / 지침 +1 / 이동 가속 3초";}
-        public void Collect(FastingTopDownEntity e){switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:buff=8;if(fever<=0){flames++;if(flames>=Mathf.Max(1,settings.flamesForFever)){flames=settings.flamesForFever;fever=settings.feverSeconds;}}Message=fever>0?"불꽃 3개 · 기도 피버 5초":"성령의 불꽃 · 기도 속도 증가";break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?1f:settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
+        public void Collect(FastingTopDownEntity e){switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:buff=8;if(fever<=0){flames++;if(flames>=Mathf.Max(1,settings.flamesForFever)){flames=settings.flamesForFever;fever=settings.feverSeconds;}}Message=fever>0?$"불꽃 3개 · 기도 피버 {settings.feverSeconds:0.#}초":"성령의 불꽃 · 기도 속도 증가";break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?1f:settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
         public void SpawnWave()
         {
             waveNumber++;if(obstaclePatterns&&obstaclePatterns.Spawn(this))return;var kind=ChooseKind();
@@ -117,17 +119,20 @@ namespace CrossTheLine.Minigames
             // No player tracking or pattern sequence: choose the type, column and spacing independently.
             SpawnAbove(kind,UnityEngine.Random.Range(0,6-lanes),lanes,UnityEngine.Random.Range(0,1.8f));
         }
-        void SpawnAbove(FastingTopDownHazard.Kind kind,int firstLane,int lanes,float heightOffset=0,bool keepLane=false)
+        void SpawnAbove(FastingTopDownHazard.Kind kind,int firstLane,int lanes,float heightOffset=0,bool keepLane=false,bool caveFormation=true,int formationId=0,int formationCount=1)
         {
+            if(StageIndex==1&&caveArt&&caveFormation&&(kind==FastingTopDownHazard.Kind.Bat||kind==FastingTopDownHazard.Kind.Rock||kind==FastingTopDownHazard.Kind.Collapse)){SpawnCaveFormation(kind,firstLane,heightOffset);return;}
             var prefab=StageIndex==0&&desertArt?desertArt.PrefabFor(kind,hazardPrefab):hazardPrefab;
-            var h=Instantiate(prefab,hazardRoot);h.kind=kind;h.name=$"Stage{StageIndex+1}_{kind}_Lanes{lanes}";
+            if(StageIndex==1&&caveArt)prefab=caveArt.PrefabFor(kind,prefab);
+            var h=Instantiate(prefab,hazardRoot);h.kind=kind;h.formationId=formationId;h.formationCount=formationCount;h.name=$"Stage{StageIndex+1}_{kind}_Lanes{lanes}";
             h.warning=0;h.lifetime=30;
             h.transform.position=new Vector3((firstLane-2+(lanes-1)*.5f)*settings.laneSpacing,cameraY+gameCamera.orthographicSize+2.5f);
             bool moving=kind==FastingTopDownHazard.Kind.Rock||kind==FastingTopDownHazard.Kind.Sand||kind==FastingTopDownHazard.Kind.Bat||kind==FastingTopDownHazard.Kind.Collapse||kind==FastingTopDownHazard.Kind.Reaper;
-            h.velocity=moving?new Vector2(0,-(kind==FastingTopDownHazard.Kind.Sand?2.2f:3.1f+StageIndex*.45f))*settings.hazardSpeedMultiplier:Vector2.zero;
+            h.velocity=moving&&!h.scrollOnly?new Vector2(0,-(kind==FastingTopDownHazard.Kind.Sand?2.2f:3.1f+StageIndex*.45f))*settings.hazardSpeedMultiplier:Vector2.zero;
             h.body.color=StageIndex==3?new Color(1,.4f,.13f):StageIndex==1?new Color(.55f,.48f,.75f):new Color(.84f,.66f,.34f);
             if(StageIndex==0&&desertArt)desertArt.Apply(h);
-            h.ConfigureLanes(lanes,settings.laneSpacing);if(kind==FastingTopDownHazard.Kind.Quicksand)h.quicksandMaximumScale=UnityEngine.Random.value<.5f?Mathf.Sqrt(2):2;h.transform.position=new Vector3(h.transform.position.x,cameraY+gameCamera.orthographicSize+Mathf.Max(2.5f,h.body.bounds.extents.y+1)+Mathf.Max(0,heightOffset),0);if(!AcceptHazard(h,keepLane)){Destroy(h.gameObject);return;}hazards.Add(h);
+            if(StageIndex==1&&caveArt)caveArt.Apply(h);
+            h.ConfigureLanes(lanes,settings.laneSpacing);if(kind==FastingTopDownHazard.Kind.Quicksand||h.expandsOnApproach)h.quicksandMaximumScale=UnityEngine.Random.value<.5f?Mathf.Sqrt(2):2;h.transform.position=new Vector3(h.transform.position.x,cameraY+gameCamera.orthographicSize+Mathf.Max(2.5f,h.body.bounds.extents.y+1)+Mathf.Max(0,heightOffset),0);if(!AcceptHazard(h,keepLane)){Destroy(h.gameObject);return;}hazards.Add(h);
         }
         void SpawnSideSand(bool fromLeft)
         {
@@ -157,7 +162,7 @@ namespace CrossTheLine.Minigames
             for(int i=0;i<hearts.Length;i++)
             {
                 var heart=hearts[i];if(!heart)continue;
-                if(fullHeart&&emptyHeart){heart.sprite=Health>=i+1?fullHeart:emptyHeart;heart.type=UnityEngine.UI.Image.Type.Simple;heart.preserveAspect=true;heart.fillAmount=1;heart.color=Color.white;}
+                if(fullHeart&&emptyHeart){heart.sprite=Health>=i+1?fullHeart:Health>i&&halfHeart?halfHeart:emptyHeart;heart.type=UnityEngine.UI.Image.Type.Simple;heart.preserveAspect=true;heart.fillAmount=1;heart.color=Color.white;}
                 else heart.fillAmount=Mathf.Clamp01(Health-i);
             }
         }
@@ -170,7 +175,7 @@ namespace CrossTheLine.Minigames
                 new[]{FastingTopDownHazard.Kind.Fire,FastingTopDownHazard.Kind.Thorns,FastingTopDownHazard.Kind.Pillar,FastingTopDownHazard.Kind.Reaper}};
             var list=kinds[Mathf.Clamp(StageIndex,0,kinds.Length-1)];return list[UnityEngine.Random.Range(0,list.Length)];
         }
-        void ApplyStage(bool first){prayerHeldFor=0;Praying=false;CacheMapStarts();gateArmed=false;gate.gameObject.SetActive(false);for(int n=0;n<entities.Length;n++)if(entities[n])entities[n].transform.position=entityStarts[n];for(int n=0;n<backgrounds.Length;n++)if(backgrounds[n])backgrounds[n].transform.position=backgroundStarts[n];ClearHazards();cameraY=2.5f;wave=1.5f;waveNumber=lastVisionWave=0;slow=root=prayerLock=vision=0;transition.color=Color.clear;gate.position=new Vector3(0,settings.stageLength);foreach(var e in entities){if(!e)continue;e.SetUsed(false);e.gameObject.SetActive(false);if(e.stage==StageIndex)PlaceEntity(e,true);}if(encounterDirector)encounterDirector.ResetEncounter();Color[] colors={Color.white,new Color(.4f,.45f,.62f),new Color(.65f,.59f,.55f),new Color(.75f,.37f,.28f)};foreach(var bg in backgrounds)bg.color=colors[StageIndex];Message=first?"WASD 이동 · Space 기도 · E 수통":$"{settings.places[StageIndex]} · 지침 1칸 회복";Follow();}
+        void ApplyStage(bool first){prayerHeldFor=0;Praying=false;CacheMapStarts();gateArmed=false;gate.gameObject.SetActive(false);for(int n=0;n<entities.Length;n++)if(entities[n])entities[n].transform.position=entityStarts[n];for(int n=0;n<backgrounds.Length;n++)if(backgrounds[n])backgrounds[n].transform.position=backgroundStarts[n];ClearHazards();cameraY=2.5f;wave=1.5f;waveNumber=lastVisionWave=0;slow=root=prayerLock=vision=0;transition.color=Color.clear;gate.position=new Vector3(0,settings.stageLength);foreach(var e in entities){if(!e)continue;e.SetUsed(false);e.gameObject.SetActive(false);if(e.stage==StageIndex)PlaceEntity(e,true);}if(encounterDirector)encounterDirector.ResetEncounter();Color[] colors={Color.white,new Color(.4f,.45f,.62f),new Color(.65f,.59f,.55f),new Color(.75f,.37f,.28f)};ApplyStageBackgrounds(colors[StageIndex]);Message=first?"WASD 이동 · Space 기도 · E 수통":$"{settings.places[StageIndex]} · 지침 1칸 회복";Follow();}
         void CacheMapStarts()
         {
             if(entityStarts==null){entityStarts=new Vector3[entities.Length];for(int i=0;i<entities.Length;i++)if(entities[i])entityStarts[i]=entities[i].transform.position;}
@@ -196,16 +201,16 @@ namespace CrossTheLine.Minigames
             for(float offset=.25f;offset<=2;offset+=.25f)foreach(int side in new[]{-1,1}){var alternate=new Vector2(Mathf.Clamp(p.x+side*offset,-6.7f,6.7f),y);if(CanMove(alternate)){player.position=alternate;return;}}
         }
         void Follow(){gameCamera.transform.position=new Vector3(0,cameraY,-10);foreach(var lane in laneGuides)if(lane)lane.transform.position=new Vector3(lane.transform.position.x,cameraY,lane.transform.position.z);}
-        public void Refresh(){if(!heading)return;int day=CurrentDay;heading.text=$"{settings.places[StageIndex]} · {day}/40일";prayerFill.fillAmount=Mathf.Clamp01(Prayer/PrayerTarget);status.text="";items.text="";help.text="";RefreshHealthHearts();feet.color=new Color(1,1,1,.75f);float opacity=vision>0?settings.visionOpacity:0;foreach(var p in visionPanels)p.color=new Color(.03f,.025f,.06f,opacity);Vector3 screen=gameCamera.WorldToViewportPoint(player.position);float cx=Mathf.Clamp01(screen.x),cy=Mathf.Clamp01(screen.y),halfX=.11f,halfY=.2f;SetPanel(0,new Vector2(0,0),new Vector2(Mathf.Max(0,cx-halfX),1));SetPanel(1,new Vector2(Mathf.Min(1,cx+halfX),0),Vector2.one);SetPanel(2,new Vector2(cx-halfX,0),new Vector2(cx+halfX,Mathf.Max(0,cy-halfY)));SetPanel(3,new Vector2(cx-halfX,Mathf.Min(1,cy+halfY)),new Vector2(cx+halfX,1));}
+        public void Refresh(){if(!heading)return;int day=CurrentDay;heading.text=$"{settings.places[StageIndex]} · {day}/40일";prayerFill.fillAmount=Mathf.Clamp01(Prayer/PrayerTarget);status.text="";items.text="";help.text="";RefreshHealthHearts();feet.color=new Color(1,1,1,.75f);float opacity=vision>0&&!(StageIndex==1&&caveVisionMask)?settings.visionOpacity:0;foreach(var p in visionPanels)p.color=new Color(.03f,.025f,.06f,opacity);float halfHeight=gameCamera.orthographicSize,halfWidth=halfHeight*gameCamera.aspect;Vector3 screen=gameCamera.orthographic?new Vector3(.5f+(player.position.x-gameCamera.transform.position.x)/(2*halfWidth),.5f+(player.position.y-gameCamera.transform.position.y)/(2*halfHeight)):gameCamera.WorldToViewportPoint(player.position);float cx=Mathf.Clamp01(screen.x),cy=Mathf.Clamp01(screen.y),halfX=.11f,halfY=.22f;if(caveVisionMask){var at=playerBody.bounds.center;caveVisionMask.Set(StageIndex==1&&vision>0?1:0,new Vector2(.5f+(at.x-gameCamera.transform.position.x)/(2*halfWidth),.5f+(at.y-gameCamera.transform.position.y)/(2*halfHeight)),gameCamera);}SetPanel(0,new Vector2(0,0),new Vector2(Mathf.Max(0,cx-halfX),1));SetPanel(1,new Vector2(Mathf.Min(1,cx+halfX),0),Vector2.one);SetPanel(2,new Vector2(cx-halfX,0),new Vector2(cx+halfX,Mathf.Max(0,cy-halfY)));SetPanel(3,new Vector2(cx-halfX,Mathf.Min(1,cy+halfY)),new Vector2(cx+halfX,1));}
         MaterialPropertyBlock flashProperties;
-        void RefreshInvulnerability(){if(!playerBody)return;if(flashProperties==null)flashProperties=new MaterialPropertyBlock();playerBody.color=Color.white;playerBody.GetPropertyBlock(flashProperties);flashProperties.SetFloat("_Flash",grace>0&&Mathf.FloorToInt(Elapsed*12)%2==0?1:0);playerBody.SetPropertyBlock(flashProperties);}
+        void RefreshInvulnerability(){if(!playerBody)return;if(flashProperties==null)flashProperties=new MaterialPropertyBlock();playerBody.color=new Color(1,1,1,hitFeedback?hitFeedback.ArtworkOpacity:1);playerBody.GetPropertyBlock(flashProperties);flashProperties.SetFloat("_Flash",grace>0&&Mathf.FloorToInt(Elapsed*12)%2==0?1:0);playerBody.SetPropertyBlock(flashProperties);}
         bool PickupPathClear(FastingTopDownHazard h){foreach(var e in entities)if(e&&e.gameObject.activeSelf&&!e.consumed&&e.kind!=FastingTopDownEntity.Kind.Cover&&PathOverlaps(h,e))return false;return true;}
         bool PickupPositionClear(FastingTopDownEntity e){foreach(var h in hazards)if(h&&!h.spent&&PathOverlaps(h,e))return false;return true;}
         bool PathOverlaps(FastingTopDownHazard h,FastingTopDownEntity e)
         {
             float duration=Mathf.Clamp((e.transform.position.y-player.position.y+8)/CurrentSpeed,0,30);
             Vector2 a=h.transform.position,b=a+h.velocity*duration;
-            float growth=h.kind==FastingTopDownHazard.Kind.Quicksand?h.quicksandMaximumScale:1;
+            float growth=h.kind==FastingTopDownHazard.Kind.Quicksand||h.expandsOnApproach?h.quicksandMaximumScale:1;
             Vector2 half=h.size*growth*.5f+e.footprint*.5f+Vector2.one*.35f;
             Vector2 relative=(Vector2)e.transform.position-a,d=b-a;float enter=0,leave=1;
             for(int axis=0;axis<2;axis++){if(Mathf.Abs(d[axis])<.0001f){if(Mathf.Abs(relative[axis])>half[axis])return false;}else{float lo=(relative[axis]-half[axis])/d[axis],hi=(relative[axis]+half[axis])/d[axis];if(lo>hi){float temp=lo;lo=hi;hi=temp;}enter=Mathf.Max(enter,lo);leave=Mathf.Min(leave,hi);if(enter>leave)return false;}}return true;

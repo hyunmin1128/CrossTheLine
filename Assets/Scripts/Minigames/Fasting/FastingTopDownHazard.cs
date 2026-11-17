@@ -12,11 +12,17 @@ namespace CrossTheLine.Minigames
         [HideInInspector] public SpriteRenderer footprint,arrow;
         public int occupiedLanes=1;
         public float artworkWidth;
+        public Vector2 artworkCenter;
+        public float collisionHeight;
+        public bool scrollOnly,rotateRollingRock=true;
+        public bool expandsOnApproach;
+        [HideInInspector] public int formationId,formationCount=1;
         public Sprite[] animationFrames;
         public float framesPerSecond=8;
-        float phase;Vector3 baseBodyScale;bool visualReady;SpriteRenderer secondBody;
+        float phase;Vector3 baseBodyScale,bodyLaneOffset,secondLaneOffset;bool visualReady;SpriteRenderer secondBody;
         public float ApproachScale{get;private set;}=1;
         public float quicksandMaximumScale=2;
+        public float MaximumApproachScale=>kind==Kind.Quicksand||expandsOnApproach?quicksandMaximumScale:1.25f;
         Vector2 baseSize;float growth=1;
         public bool Active=>warning<=0&&!spent;
         public void SetArtwork(Sprite sprite)
@@ -33,21 +39,25 @@ namespace CrossTheLine.Minigames
             float visualWidth=artworkWidth>0?artworkWidth:body.sprite?body.sprite.bounds.size.x:1;
             float scale=desiredWidth/Mathf.Max(.01f,visualWidth);
             body.transform.localScale=Vector3.one*scale;
-            body.transform.localPosition=occupiedLanes==2?new Vector3(-laneWidth*.45f,0):Vector3.zero;
+            bodyLaneOffset=occupiedLanes==2?new Vector3(-laneWidth*.45f,0):Vector3.zero;
+            body.transform.localPosition=bodyLaneOffset-(Vector3)artworkCenter*scale;
             size=new Vector2((occupiedLanes-1)*laneWidth+desiredWidth,1.15f);
             if(kind==Kind.Sand)size.y=2.2f;
+            if(collisionHeight>0)size.y=collisionHeight;
             baseSize=size;growth=1;
-            if(occupiedLanes==2){var o=new GameObject("SecondSandCloud");o.transform.SetParent(transform,false);o.transform.localPosition=new Vector3(laneWidth*.45f,0);o.transform.localScale=body.transform.localScale;secondBody=o.AddComponent<SpriteRenderer>();secondBody.sprite=body.sprite;secondBody.sharedMaterial=body.sharedMaterial;secondBody.color=body.color;secondBody.sortingOrder=body.sortingOrder;}
+            if(occupiedLanes==2){var o=new GameObject("SecondSandCloud");o.transform.SetParent(transform,false);secondLaneOffset=new Vector3(laneWidth*.45f,0);o.transform.localPosition=secondLaneOffset-(Vector3)artworkCenter*scale;o.transform.localScale=body.transform.localScale;secondBody=o.AddComponent<SpriteRenderer>();secondBody.sprite=body.sprite;secondBody.sharedMaterial=body.sharedMaterial;secondBody.color=body.color;secondBody.sortingOrder=body.sortingOrder;}
             visualReady=false;
         }
         public void UpdateApproach(Vector2 player)
         {
             if(!body)return;if(!visualReady){baseBodyScale=body.transform.localScale;visualReady=true;}
             ApproachScale=Mathf.Lerp(.8f,1.25f,1-Mathf.Clamp01(Vector2.Distance(player,transform.position)/9));
-            if(kind==Kind.Quicksand){growth=Mathf.Max(growth,Mathf.Lerp(1,quicksandMaximumScale,1-Mathf.Clamp01((Vector2.Distance(player,transform.position)-2)/9)));ApproachScale=growth;size=baseSize*growth;}
+            if(kind==Kind.Quicksand||expandsOnApproach){growth=Mathf.Max(growth,Mathf.Lerp(1,quicksandMaximumScale,1-Mathf.Clamp01((Vector2.Distance(player,transform.position)-2)/9)));ApproachScale=growth;size=baseSize*growth;}
             else size=baseSize*ApproachScale;
             body.transform.localScale=baseBodyScale*ApproachScale;
+            if(artworkCenter!=Vector2.zero)body.transform.localPosition=bodyLaneOffset-(Vector3)artworkCenter*(baseBodyScale.x*ApproachScale);
             if(secondBody)secondBody.transform.localScale=baseBodyScale*ApproachScale;
+            if(secondBody&&artworkCenter!=Vector2.zero)secondBody.transform.localPosition=secondLaneOffset-(Vector3)artworkCenter*(baseBodyScale.x*ApproachScale);
         }
         public bool Advance(float dt,Vector2 from,Vector2 to,out float time)
         {
@@ -58,7 +68,7 @@ namespace CrossTheLine.Minigames
             if(lifetime<=0){spent=true;gameObject.SetActive(false);return false;}
             bool visible=!((kind==Kind.Pillar||kind==Kind.Crack)&&phase%2>1.1f);
             body.enabled=visible;if(secondBody)secondBody.enabled=visible;if(!visible)return false;
-            if(kind==Kind.Rock)body.transform.localRotation=Quaternion.Euler(0,0,(Mathf.FloorToInt(phase*6)%4)*90);
+            if(kind==Kind.Rock&&rotateRollingRock)body.transform.localRotation=Quaternion.Euler(0,0,(Mathf.FloorToInt(phase*6)%4)*90);
             Vector2 start=transform.position;transform.position+=(Vector3)(velocity*dt);
             Vector2 a=from-start,b=to-(Vector2)transform.position,d=b-a,extent=size*.5f+new Vector2(.28f,.2f);
             if(kind==Kind.Sand)

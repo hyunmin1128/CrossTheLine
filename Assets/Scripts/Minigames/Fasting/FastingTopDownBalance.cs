@@ -72,6 +72,7 @@ namespace CrossTheLine.Minigames
             foreach(var other in hazards)
             {
                 if(!other||other.spent||!other.gameObject.activeSelf)continue;
+                if(candidate.formationId!=0&&candidate.formationId==other.formationId)continue;
                 Vector2 otherExtent=Vector2.Max(other.size,(Vector2)other.body.bounds.size)*.625f;
                 Vector2 gap=extent+otherExtent+new Vector2(.15f,.35f),delta=candidate.transform.position-other.transform.position;
                 if(Mathf.Abs(delta.x)<gap.x&&Mathf.Abs(delta.y)<gap.y)return true;

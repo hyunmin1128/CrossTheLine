@@ -28,7 +28,7 @@ public static class TestFastingPatternsAndResults
                     ok(h.occupiedLanes>=1&&h.occupiedLanes<=2,"One/two lane width");
                     if(Mathf.Abs(h.velocity.x)<.01f)
                     {
-                        float growth=h.kind==FastingTopDownHazard.Kind.Quicksand?h.quicksandMaximumScale:1.25f;
+                        float growth=h.MaximumApproachScale;
                         ok(Mathf.Abs(h.transform.position.x-(safe-2)*g.settings.laneSpacing)>h.size.x*.5f*growth+.28f,"Maximum size preserves escape corridor: "+pattern+" "+h.kind);
                         ok(h.body.bounds.min.y>g.gameCamera.transform.position.y+g.gameCamera.orthographicSize,"Appears from above screen");
                     }

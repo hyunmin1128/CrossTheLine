@@ -41,8 +41,8 @@ namespace CrossTheLine.Minigames
             {
                 float t=Mathf.Repeat(clock*1.7f+i/(float)water.Length,1);Show(water[i],FastingEffectSprites.Frame(art.water,(int)(t*4)),aura.BoostVisible,feet+new Vector3((i%3-1)*.2f,-.08f-t*.9f,0),Vector2.one*Mathf.Lerp(.65f,.4f,t),1-t);
             }
-            bool praying=game.Praying||game.PrayerPreparing||game.InPrayerWindow;
-            Show(prayer,FastingEffectSprites.Frame(art.prayer,game.PrayerPreparing?0:(int)(clock*5)%4),praying,new Vector3(center.x,artwork.bounds.max.y+.3f,center.z),Vector2.one*1.25f,game.PrayerPreparing?.6f:1);
+            bool praying=game.Running&&game.Praying;
+            Show(prayer,FastingEffectSprites.Frame(art.prayer,(int)(clock*5)%4),praying,new Vector3(center.x,artwork.bounds.max.y+.3f,center.z),Vector2.one*1.7f);
         }
         public void Clear(){if(bubble)bubble.enabled=false;if(prayer)prayer.enabled=false;foreach(var r in water)if(r)r.enabled=false;foreach(var r in sparks)if(r)r.enabled=false;}
         void OnDisable(){Clear();}

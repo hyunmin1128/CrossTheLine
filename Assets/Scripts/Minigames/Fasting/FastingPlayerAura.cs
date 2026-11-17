@@ -11,6 +11,9 @@ namespace CrossTheLine.Minigames
         public Material effectMaterial;
         public Color shieldColor=new Color(.22f,.7f,1,.7f),boostColor=new Color(.35f,.88f,1,.8f);
         public Vector2 shieldRadius=new Vector2(.85f,1.15f);
+        public Vector2 prayerRadius=new Vector2(1.15f,1.5f);
+        public Color prayerGlowColor=new Color(1,.85f,.38f,1);
+        public bool PrayerGlowVisible=>game&&game.Running&&game.Praying;
         public float breakSeconds=.5f;
         public float acquireSeconds=.6f;
         public Color rimColor=new Color(.45f,.9f,1,.95f),goldColor=new Color(1,.82f,.36f,.9f);
@@ -46,6 +49,7 @@ namespace CrossTheLine.Minigames
                 if(!illustrated){illustrated=gameObject.AddComponent<FastingIllustratedAura>();illustrated.Initialize(this,game,artwork,material);}
                 illustrated.Draw(dt);
                 if(game.Shielded)Bubble(center,MembraneScale,.9f+.1f*Mathf.Sin(clock*2.5f));
+                if(PrayerGlowVisible)PrayerBubble(center);
                 mesh.Clear();mesh.SetVertices(vertices);mesh.SetColors(colors);mesh.SetTriangles(triangles,0);mesh.RecalculateBounds();auraRenderer.enabled=vertices.Count>0;return;
             }
             if(game.Shielded)
@@ -73,7 +77,16 @@ namespace CrossTheLine.Minigames
                     float x=(n%3-1)*.24f;Quad(feet+new Vector2(x,-.12f-t*1.2f),new Vector2(.035f,.09f+.08f*t),c);
                 }
             }
+            if(PrayerGlowVisible)PrayerBubble(center);
             mesh.Clear();mesh.SetVertices(vertices);mesh.SetColors(colors);mesh.SetTriangles(triangles,0);mesh.RecalculateBounds();auraRenderer.enabled=vertices.Count>0;
+        }
+        void PrayerBubble(Vector2 center)
+        {
+            float pulse=1+.035f*Mathf.Sin(clock*4);Vector2 radius=prayerRadius*pulse;
+            Color glow=prayerGlowColor;glow.a=.10f;BubbleOutline(center,radius*1.06f,glow,4);
+            Color rim=prayerGlowColor;rim.a=.8f;BubbleOutline(center,radius,rim,1);
+            for(int i=0;i<48;i++){float y=(i+.5f)/48*radius.y*2-radius.y;float w=Mathf.Sqrt(Mathf.Max(0,1-y*y/(radius.y*radius.y)))*radius.x;var fill=prayerGlowColor;fill.a=.055f;Quad(center+Vector2.up*y,new Vector2(w,radius.y/48),fill);}
+            for(int i=0;i<8;i++){float angle=clock*.55f+i*Mathf.PI/4;var shine=Color.Lerp(prayerGlowColor,Color.white,.6f);shine.a=.65f+.25f*Mathf.Sin(clock*5+i);Spark(center+Point(angle,radius),.045f+.015f*Mathf.Sin(clock*3+i),shine);}
         }
         static Vector2 Point(float a,Vector2 radius)=>new Vector2(Mathf.Round(Mathf.Cos(a)*radius.x*32)/32,Mathf.Round(Mathf.Sin(a)*radius.y*32)/32);
         void Bubble(Vector2 center,float scale,float pulse)

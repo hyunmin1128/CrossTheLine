@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5d65ebd2e203e4196bf90b6813fb96, type: 3}
+  m_Name: FastingCaveObstacleArt
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingCaveObstacleArt
+  background: {fileID: -7360753985401943361, guid: d1c1727a7eda4854ab7e84035e08eb72, type: 3}
+  stalagmite: {fileID: -7323123083701031367, guid: ac860d086a007df4ba5c211772acbe26, type: 3}
+  fallingRock: {fileID: 907180060966303384, guid: 43377f6a00b4a6246a08e3f1a3b6c937, type: 3}
+  crack: {fileID: -2114233804336852664, guid: 73542342aac84ec4b9df6c571becfbc4, type: 3}
+  batFrames:
+  - {fileID: 3772812001997586333, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: 1284425156171360464, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: -1936085847543769569, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: 1466300177189382137, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: 4497293826386631562, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: -4051054751218304001, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: 3524149966106308142, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: -1276838024932502884, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: 4063428202471931980, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  - {fileID: 727149968569796620, guid: c9d2d9b631f4c0c48b2f94607d564b63, type: 3}
+  batFramesPerSecond: 10
+  maximumBatCount: 3
+  maximumFixedCount: 2
+  stalagmitePrefab: {fileID: 1152916383223802975, guid: d8651c4028e0830489d98f595dc5cb8a, type: 3}
+  fallingRockPrefab: {fileID: 4473044459657873042, guid: 52e60f6f994a08944834f469c0936d64, type: 3}
+  crackPrefab: {fileID: 549282296878465975, guid: 86cc63b55c1b3264c88e6a36cd32a36c, type: 3}
+  batPrefab: {fileID: 2592642422724112627, guid: 755b6786c784cd043bc9a6b77f3a6b6e, type: 3}

@@ -47,6 +47,12 @@ namespace CrossTheLine.Minigames
             get
             {
                 var area=VisibleWorldArea;var body=game.playerBody.transform;Vector3 a=body.TransformPoint(visibleSpriteRect.min),b=body.TransformPoint(visibleSpriteRect.max),root=game.player.position;
+                // Hit animations move/shrink only the artwork; they must not move the walkable rectangle.
+                if(game.hitFeedback&&game.hitFeedback.Active&&game.hitFeedback.TryGetRestPose(out var restPosition,out var restScale))
+                {
+                    Vector3 la=restPosition+body.localRotation*Vector3.Scale(restScale,(Vector3)visibleSpriteRect.min),lb=restPosition+body.localRotation*Vector3.Scale(restScale,(Vector3)visibleSpriteRect.max);
+                    a=body.parent?body.parent.TransformPoint(la):la;b=body.parent?body.parent.TransformPoint(lb):lb;
+                }
                 Vector2 min=Vector2.Min(a,b)-(Vector2)root,max=Vector2.Max(a,b)-(Vector2)root;
                 float left=area.xMin-min.x+visualClearance,right=area.xMax-max.x-visualClearance,bottom=area.yMin-min.y+visualClearance,top=area.yMax-max.y-visualClearance;
                 if(right<left)left=right=(left+right)*.5f;if(top<bottom)bottom=top=(top+bottom)*.5f;return Rect.MinMaxRect(left,bottom,right,top);

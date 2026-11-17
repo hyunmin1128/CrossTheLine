@@ -11,11 +11,13 @@ namespace CrossTheLine.Minigames
         float remaining,nextWave;
         [Min(1)] public float patternIntervalMultiplier=1.8f;
         public Vector2 randomIntervals=new Vector2(.85f,1.65f);
+        [Range(.3f,1)] public float desertSpawnIntervalMultiplier=.75f;
+        float StageIntervalMultiplier=>game&&game.StageIndex==0?desertSpawnIntervalMultiplier:1;
         float nextRandom;
         public int SpawnAttempts{get;private set;}
         public int RandomSpawnAttempts{get;private set;}
         public int PatternSpawnAttempts{get;private set;}
-        float RandomInterval()=>Random.Range(Mathf.Max(.35f,Mathf.Min(randomIntervals.x,randomIntervals.y)),Mathf.Max(.35f,Mathf.Max(randomIntervals.x,randomIntervals.y)));
+        float RandomInterval()=>Random.Range(Mathf.Max(.35f,Mathf.Min(randomIntervals.x,randomIntervals.y)),Mathf.Max(.35f,Mathf.Max(randomIntervals.x,randomIntervals.y)))*StageIntervalMultiplier;
         public void ResetEncounter()
         {
             CurrentPhase=Phase.Attack;OpenLane=Random.Range(0,5);remaining=game.settings.StageValue(game.settings.attackSeconds,game.StageIndex,5);nextWave=1.5f;nextRandom=RandomInterval();SpawnAttempts=RandomSpawnAttempts=PatternSpawnAttempts=0;if(game.obstaclePatterns)game.obstaclePatterns.BeginAttack();
@@ -27,7 +29,7 @@ namespace CrossTheLine.Minigames
             {
                 remaining-=dt;if(remaining<=0){CurrentPhase=Phase.Clearing;return;}
                 // Separate clocks: random obstacles are not tied to the selected pattern or its beat.
-                nextWave-=dt;if(nextWave<=0){SpawnAttempts++;PatternSpawnAttempts++;game.SpawnWave();nextWave=game.settings.NextSpawnInterval(game.StageIndex)*Mathf.Max(1,patternIntervalMultiplier);}
+                nextWave-=dt;if(nextWave<=0){SpawnAttempts++;PatternSpawnAttempts++;game.SpawnWave();nextWave=game.settings.NextSpawnInterval(game.StageIndex)*Mathf.Max(1,patternIntervalMultiplier)*StageIntervalMultiplier;}
                 nextRandom-=dt;if(nextRandom<=0){SpawnAttempts++;RandomSpawnAttempts++;game.SpawnRandomObstacle();nextRandom=RandomInterval();}return;
             }
             if(CurrentPhase==Phase.Clearing)
@@ -45,7 +47,7 @@ namespace CrossTheLine.Minigames
         public bool LeavesLaneOpen(FastingTopDownHazard h)
         {
             if(Mathf.Abs(h.velocity.x)>.01f)return true; // Side winds have vertical escape space.
-            float half=h.size.x*.5f*(h.kind==FastingTopDownHazard.Kind.Quicksand?h.quicksandMaximumScale:1)+.5f;
+            float half=h.size.x*.5f*h.MaximumApproachScale+.5f;
             return Mathf.Abs(h.transform.position.x-(OpenLane-2)*game.settings.laneSpacing)>half;
         }
     }

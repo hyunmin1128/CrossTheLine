@@ -18,6 +18,9 @@ MonoBehaviour:
   stageLength: 24
   cactusDamage: 2
   quicksandStunSeconds: 2
+  crackDamage: 2
+  batSlowSeconds: 1.8
+  batVisionSeconds: 1.4
   finishLineDistance: 6
   prayerTarget: 90
   prayerPerSecond: 1
@@ -88,7 +91,7 @@ MonoBehaviour:
   - 3
   - 3.25
   manualMoveSpeed: 5.2
-  feverSeconds: 5
+  feverSeconds: 6
   prayerMoveMultiplier: 0.15
   scrollSpeedMultiplier: 1.15
   hazardSpeedMultiplier: 1.2
