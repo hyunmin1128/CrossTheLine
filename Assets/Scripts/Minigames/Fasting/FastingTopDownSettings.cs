@@ -7,6 +7,7 @@ namespace CrossTheLine.Minigames
         public float maximumHealth=5, damage=1, moveSpeed=2.5f, stageLength=24;
         public float cactusDamage=2,quicksandStunSeconds=2;
         public float crackDamage=2,batSlowSeconds=1.8f,batVisionSeconds=1.4f;
+        public float poisonDamage=2,poisonReverseSeconds=3,tombPrayerBlockSeconds=3;
         public float finishLineDistance=6;
         public float prayerTarget=90, prayerPerSecond=1f;
         public float[] prayerTargets={90,100,110,120};

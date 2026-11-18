@@ -22,7 +22,7 @@ namespace CrossTheLine.Minigames
         float phase;Vector3 baseBodyScale,bodyLaneOffset,secondLaneOffset;bool visualReady;SpriteRenderer secondBody;
         public float ApproachScale{get;private set;}=1;
         public float quicksandMaximumScale=2;
-        public float MaximumApproachScale=>kind==Kind.Quicksand||expandsOnApproach?quicksandMaximumScale:kind==Kind.Rock||kind==Kind.Cactus?1:1.25f;
+        public float MaximumApproachScale=>kind==Kind.Quicksand||expandsOnApproach?quicksandMaximumScale:kind==Kind.Rock||kind==Kind.Cactus||kind==Kind.Wall||kind==Kind.Tomb?1:1.25f;
         Vector2 baseSize;float growth=1;
         public bool Active=>warning<=0&&!spent;
         public void SetArtwork(Sprite sprite)
@@ -52,7 +52,7 @@ namespace CrossTheLine.Minigames
         {
             if(!body)return;if(!visualReady){baseBodyScale=body.transform.localScale;visualReady=true;}
             ApproachScale=Mathf.Lerp(.8f,1.25f,1-Mathf.Clamp01(Vector2.Distance(player,transform.position)/9));
-            if(kind==Kind.Rock||kind==Kind.Cactus)ApproachScale=1;
+            if(kind==Kind.Rock||kind==Kind.Cactus||kind==Kind.Wall||kind==Kind.Tomb)ApproachScale=1;
             if(kind==Kind.Quicksand||expandsOnApproach){growth=Mathf.Max(growth,Mathf.Lerp(1,quicksandMaximumScale,1-Mathf.Clamp01((Vector2.Distance(player,transform.position)-2)/9)));ApproachScale=growth;size=baseSize*growth;}
             else size=baseSize*ApproachScale;
             body.transform.localScale=baseBodyScale*ApproachScale;

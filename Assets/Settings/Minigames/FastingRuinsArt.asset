@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1650f6ceee8ff45499693f0ae24c5b09, type: 3}
+  m_Name: FastingRuinsArt
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingRuinsArt
+  background: {fileID: -2122560057111828611, guid: 73ba97625015e1e4e9c5086d7c12c2d4, type: 3}
+  rubble: {fileID: 662274860870048653, guid: e124b34488ef041498c3f43e4ef0624c, type: 3}
+  wall: {fileID: 5152944785000004698, guid: a627157d99f718844823f01a83d7ea7e, type: 3}
+  tomb: {fileID: 5825460111293098403, guid: a2037cf5a0259e448975621600109b69, type: 3}
+  poisonWell: {fileID: 6234055135722933347, guid: 0575188f32ffb86479176ce4b820a1e9, type: 3}

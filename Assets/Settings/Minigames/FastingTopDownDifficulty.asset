@@ -21,6 +21,9 @@ MonoBehaviour:
   crackDamage: 2
   batSlowSeconds: 1.8
   batVisionSeconds: 1.4
+  poisonDamage: 2
+  poisonReverseSeconds: 3
+  tombPrayerBlockSeconds: 3
   finishLineDistance: 6
   prayerTarget: 90
   prayerPerSecond: 1
