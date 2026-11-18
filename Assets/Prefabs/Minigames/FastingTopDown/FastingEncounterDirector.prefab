@@ -48,6 +48,7 @@ MonoBehaviour:
   game: {fileID: 0}
   patternIntervalMultiplier: 1.8
   randomIntervals: {x: 0.85, y: 1.65}
+  desertSpawnIntervalMultiplier: 0.75
 --- !u!114 &2112873096035520113
 MonoBehaviour:
   m_ObjectHideFlags: 0

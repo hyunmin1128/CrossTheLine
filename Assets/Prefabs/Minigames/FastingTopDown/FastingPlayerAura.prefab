@@ -109,6 +109,8 @@ MonoBehaviour:
   shieldColor: {r: 0.22, g: 0.7, b: 1, a: 0.7}
   boostColor: {r: 0.35, g: 0.88, b: 1, a: 0.8}
   shieldRadius: {x: 0.85, y: 1.15}
+  prayerRadius: {x: 1.15, y: 1.5}
+  prayerGlowColor: {r: 1, g: 0.85, b: 0.38, a: 1}
   breakSeconds: 0.5
   acquireSeconds: 0.6
   rimColor: {r: 0.45, g: 0.9, b: 1, a: 0.95}
