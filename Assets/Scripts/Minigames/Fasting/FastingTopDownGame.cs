@@ -8,6 +8,8 @@ namespace CrossTheLine.Minigames
     public sealed partial class FastingTopDownGame : MonoBehaviour
     {
         public FastingTopDownSettings settings;
+        public FastingSpawnSettings spawnSettings;
+        public bool TryChooseObstacle(out FastingTopDownHazard.Kind kind){if(spawnSettings)return spawnSettings.TryPick(StageIndex,out kind);kind=ChooseKind();return true;}
         public Transform player,world,hazardRoot,gate;
         public Camera gameCamera;
         public SpriteRenderer playerBody,feet;
@@ -106,7 +108,7 @@ namespace CrossTheLine.Minigames
         public void Collect(FastingTopDownEntity e){switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:buff=8;if(fever<=0){flames++;if(flames>=Mathf.Max(1,settings.flamesForFever)){flames=settings.flamesForFever;fever=settings.feverSeconds;}}Message=fever>0?$"불꽃 3개 · 기도 피버 {settings.feverSeconds:0.#}초":"성령의 불꽃 · 기도 속도 증가";break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?1f:settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
         public void SpawnWave()
         {
-            waveNumber++;if(obstaclePatterns&&obstaclePatterns.Spawn(this))return;var kind=ChooseKind();
+            waveNumber++;if(obstaclePatterns&&obstaclePatterns.Spawn(this))return;if(!TryChooseObstacle(out var kind))return;
             if(kind==FastingTopDownHazard.Kind.Sand){int origin=UnityEngine.Random.Range(0,3);if(origin>0){SpawnSideSand(origin==1);return;}}
             if(StageIndex==0){int lanes=kind==FastingTopDownHazard.Kind.Sand?UnityEngine.Random.Range(1,3):1;int first=UnityEngine.Random.value<.6f?Mathf.Clamp(Mathf.RoundToInt(player.position.x/settings.laneSpacing)+2,0,5-lanes):UnityEngine.Random.Range(0,6-lanes);SpawnAbove(kind,first,lanes);return;}
             if(StageIndex==3&&trialArt){SpawnAbove(kind,UnityEngine.Random.Range(0,5),1);return;}
@@ -116,7 +118,7 @@ namespace CrossTheLine.Minigames
         }
         public void SpawnRandomObstacle()
         {
-            var kind=ChooseKind();
+            if(!TryChooseObstacle(out var kind))return;
             if(kind==FastingTopDownHazard.Kind.Sand&&UnityEngine.Random.value<.4f){SpawnSideSand(UnityEngine.Random.value<.5f);return;}
             int lanes=kind==FastingTopDownHazard.Kind.Sand?UnityEngine.Random.Range(1,3):1;
             // No player tracking or pattern sequence: choose the type, column and spacing independently.
@@ -141,7 +143,8 @@ namespace CrossTheLine.Minigames
             if(StageIndex==1&&caveArt)caveArt.Apply(h);
             if(StageIndex==2&&ruinsArt)h.body.color=Color.white;
             if(StageIndex==3&&trialArt)h.body.color=Color.white;
-            h.ConfigureLanes(lanes,StageIndex==3&&(kind==FastingTopDownHazard.Kind.Thorns||kind==FastingTopDownHazard.Kind.Pillar)?settings.laneSpacing/.75f:settings.laneSpacing);if(kind==FastingTopDownHazard.Kind.Quicksand||h.expandsOnApproach)h.quicksandMaximumScale=UnityEngine.Random.value<.5f?Mathf.Sqrt(2):2;h.transform.position=new Vector3(h.transform.position.x,cameraY+gameCamera.orthographicSize+Mathf.Max(2.5f,h.body.bounds.extents.y+1)+Mathf.Max(0,heightOffset),0);if(!AcceptHazard(h,keepLane)){Destroy(h.gameObject);return;}hazards.Add(h);
+            if(StageIndex==2&&ruinsArt)h.collisionHeight*=ruinsArt.obstacleScale;
+            h.ConfigureLanes(lanes,StageIndex==2&&ruinsArt?settings.laneSpacing*ruinsArt.obstacleScale:StageIndex==3&&(kind==FastingTopDownHazard.Kind.Thorns||kind==FastingTopDownHazard.Kind.Pillar)?settings.laneSpacing/.75f:settings.laneSpacing);if(StageIndex>0)h.Enlarge(settings.laterStageObstacleScale);h.transform.position=new Vector3(h.transform.position.x,cameraY+gameCamera.orthographicSize+Mathf.Max(2.5f,h.body.bounds.extents.y+1)+Mathf.Max(0,heightOffset),0);if(!AcceptHazard(h,keepLane)){Destroy(h.gameObject);return;}hazards.Add(h);
         }
         void SpawnSideSand(bool fromLeft)
         {
@@ -182,6 +185,7 @@ namespace CrossTheLine.Minigames
                 new[]{FastingTopDownHazard.Kind.Rock,FastingTopDownHazard.Kind.Bat,FastingTopDownHazard.Kind.Collapse,FastingTopDownHazard.Kind.Crack},
                 new[]{FastingTopDownHazard.Kind.Rock,FastingTopDownHazard.Kind.Tomb,FastingTopDownHazard.Kind.Wall,FastingTopDownHazard.Kind.Poison},
                 new[]{FastingTopDownHazard.Kind.Fire,FastingTopDownHazard.Kind.Thorns,FastingTopDownHazard.Kind.Pillar,FastingTopDownHazard.Kind.Reaper}};
+
             var list=kinds[Mathf.Clamp(StageIndex,0,kinds.Length-1)];return list[UnityEngine.Random.Range(0,list.Length)];
         }
         void ApplyStage(bool first){thornSlow=0;prayerHeldFor=0;Praying=false;CacheMapStarts();gateArmed=false;gate.gameObject.SetActive(false);for(int n=0;n<entities.Length;n++)if(entities[n])entities[n].transform.position=entityStarts[n];for(int n=0;n<backgrounds.Length;n++)if(backgrounds[n])backgrounds[n].transform.position=backgroundStarts[n];ClearHazards();cameraY=2.5f;wave=1.5f;waveNumber=lastVisionWave=0;slow=root=prayerLock=vision=0;transition.color=Color.clear;gate.position=new Vector3(0,settings.stageLength);foreach(var e in entities){if(!e)continue;e.SetUsed(false);e.gameObject.SetActive(false);if(e.stage==StageIndex)PlaceEntity(e,true);}if(encounterDirector)encounterDirector.ResetEncounter();Color[] colors={Color.white,new Color(.4f,.45f,.62f),new Color(.65f,.59f,.55f),new Color(.75f,.37f,.28f)};ApplyStageBackgrounds(colors[StageIndex]);Message=first?"WASD 이동 · Space 기도 · E 수통":$"{settings.places[StageIndex]} · 지침 1칸 회복";Follow();}
@@ -210,7 +214,7 @@ namespace CrossTheLine.Minigames
             for(float offset=.25f;offset<=2;offset+=.25f)foreach(int side in new[]{-1,1}){var alternate=new Vector2(Mathf.Clamp(p.x+side*offset,-6.7f,6.7f),y);if(CanMove(alternate)){player.position=alternate;return;}}
         }
         void Follow(){gameCamera.transform.position=new Vector3(0,cameraY,-10);foreach(var lane in laneGuides)if(lane)lane.transform.position=new Vector3(lane.transform.position.x,cameraY,lane.transform.position.z);}
-        public void Refresh(){if(!heading)return;int day=CurrentDay;heading.text=$"{settings.places[StageIndex]} · {day}/40일";prayerFill.fillAmount=Mathf.Clamp01(Prayer/PrayerTarget);status.text="";items.text="";help.text="";RefreshHealthHearts();feet.color=new Color(1,1,1,.75f);float opacity=vision>0&&!(StageIndex==1&&caveVisionMask)?settings.visionOpacity:0;foreach(var p in visionPanels)p.color=new Color(.03f,.025f,.06f,opacity);float halfHeight=gameCamera.orthographicSize,halfWidth=halfHeight*gameCamera.aspect;Vector3 screen=gameCamera.orthographic?new Vector3(.5f+(player.position.x-gameCamera.transform.position.x)/(2*halfWidth),.5f+(player.position.y-gameCamera.transform.position.y)/(2*halfHeight)):gameCamera.WorldToViewportPoint(player.position);float cx=Mathf.Clamp01(screen.x),cy=Mathf.Clamp01(screen.y),halfX=.11f,halfY=.22f;if(caveVisionMask){var at=playerBody.bounds.center;caveVisionMask.Set(StageIndex==1&&vision>0?1:0,new Vector2(.5f+(at.x-gameCamera.transform.position.x)/(2*halfWidth),.5f+(at.y-gameCamera.transform.position.y)/(2*halfHeight)),gameCamera);}SetPanel(0,new Vector2(0,0),new Vector2(Mathf.Max(0,cx-halfX),1));SetPanel(1,new Vector2(Mathf.Min(1,cx+halfX),0),Vector2.one);SetPanel(2,new Vector2(cx-halfX,0),new Vector2(cx+halfX,Mathf.Max(0,cy-halfY)));SetPanel(3,new Vector2(cx-halfX,Mathf.Min(1,cy+halfY)),new Vector2(cx+halfX,1));}
+        public void Refresh(){if(!heading)return;int day=CurrentDay;heading.text=$"{settings.places[StageIndex]} · {day}/40일";prayerFill.fillAmount=Mathf.Clamp01(Prayer/PrayerTarget);status.text="";items.text="";help.text="";RefreshHealthHearts();feet.color=new Color(1,1,1,.75f);float opacity=StageIndex>0&&vision>0&&!caveVisionMask?settings.visionOpacity:0;foreach(var p in visionPanels)p.color=new Color(.03f,.025f,.06f,opacity);float halfHeight=gameCamera.orthographicSize,halfWidth=halfHeight*gameCamera.aspect;Vector3 screen=gameCamera.orthographic?new Vector3(.5f+(player.position.x-gameCamera.transform.position.x)/(2*halfWidth),.5f+(player.position.y-gameCamera.transform.position.y)/(2*halfHeight)):gameCamera.WorldToViewportPoint(player.position);float cx=Mathf.Clamp01(screen.x),cy=Mathf.Clamp01(screen.y),halfX=.11f,halfY=.22f;if(caveVisionMask){var at=playerBody.bounds.center;caveVisionMask.Set(StageIndex>0&&vision>0?1:0,new Vector2(.5f+(at.x-gameCamera.transform.position.x)/(2*halfWidth),.5f+(at.y-gameCamera.transform.position.y)/(2*halfHeight)),gameCamera);}SetPanel(0,new Vector2(0,0),new Vector2(Mathf.Max(0,cx-halfX),1));SetPanel(1,new Vector2(Mathf.Min(1,cx+halfX),0),Vector2.one);SetPanel(2,new Vector2(cx-halfX,0),new Vector2(cx+halfX,Mathf.Max(0,cy-halfY)));SetPanel(3,new Vector2(cx-halfX,Mathf.Min(1,cy+halfY)),new Vector2(cx+halfX,1));}
         MaterialPropertyBlock flashProperties;
         void RefreshInvulnerability(){if(!playerBody)return;if(flashProperties==null)flashProperties=new MaterialPropertyBlock();playerBody.color=new Color(1,1,1,hitFeedback?hitFeedback.ArtworkOpacity:1);playerBody.GetPropertyBlock(flashProperties);flashProperties.SetFloat("_Flash",grace>0&&Mathf.FloorToInt(Elapsed*12)%2==0?1:0);playerBody.SetPropertyBlock(flashProperties);}
         bool PickupPathClear(FastingTopDownHazard h){foreach(var e in entities)if(e&&e.gameObject.activeSelf&&!e.consumed&&e.kind!=FastingTopDownEntity.Kind.Cover&&PathOverlaps(h,e))return false;return true;}
@@ -219,7 +223,7 @@ namespace CrossTheLine.Minigames
         {
             float duration=Mathf.Clamp((e.transform.position.y-player.position.y+8)/CurrentSpeed,0,30);
             Vector2 a=h.transform.position,b=a+h.velocity*duration;
-            float growth=h.kind==FastingTopDownHazard.Kind.Quicksand||h.expandsOnApproach?h.quicksandMaximumScale:1;
+            float growth=h.MaximumApproachScale;
             Vector2 half=h.size*growth*.5f+e.footprint*.5f+Vector2.one*.35f;
             Vector2 relative=(Vector2)e.transform.position-a,d=b-a;float enter=0,leave=1;
             for(int axis=0;axis<2;axis++){if(Mathf.Abs(d[axis])<.0001f){if(Mathf.Abs(relative[axis])>half[axis])return false;}else{float lo=(relative[axis]-half[axis])/d[axis],hi=(relative[axis]+half[axis])/d[axis];if(lo>hi){float temp=lo;lo=hi;hi=temp;}enter=Mathf.Max(enter,lo);leave=Mathf.Min(leave,hi);if(enter>leave)return false;}}return true;

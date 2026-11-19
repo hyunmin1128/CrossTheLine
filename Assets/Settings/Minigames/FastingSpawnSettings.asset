@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce029ad916128ea44ac3ae97cea2cee6, type: 3}
+  m_Name: FastingSpawnSettings
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingSpawnSettings
+  globalFrequency: 1
+  stages:
+  - name: "\uC0AC\uB9C9"
+    frequency: 1
+    obstacles:
+    - kind: 0
+      weight: 25
+    - kind: 1
+      weight: 25
+    - kind: 2
+      weight: 25
+    - kind: 3
+      weight: 25
+  - name: "\uB3D9\uAD74"
+    frequency: 1
+    obstacles:
+    - kind: 0
+      weight: 25
+    - kind: 4
+      weight: 25
+    - kind: 5
+      weight: 25
+    - kind: 6
+      weight: 25
+  - name: "\uD3D0\uC720\uC801"
+    frequency: 1
+    obstacles:
+    - kind: 0
+      weight: 25
+    - kind: 7
+      weight: 25
+    - kind: 8
+      weight: 25
+    - kind: 9
+      weight: 25
+  - name: "\uB9C8\uC9C0\uB9C9 \uC2DC\uB828"
+    frequency: 1
+    obstacles:
+    - kind: 10
+      weight: 21.666666
+    - kind: 11
+      weight: 21.666666
+    - kind: 12
+      weight: 21.666666
+    - kind: 13
+      weight: 35

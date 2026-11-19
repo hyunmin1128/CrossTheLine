@@ -29,8 +29,8 @@ namespace CrossTheLine.Minigames
             int safe=game.encounterDirector?game.encounterDirector.OpenLane:2;
             int[] lanes=new int[4];for(int i=0,n=0;i<5;i++)if(i!=safe)lanes[n++]=i;
             int lane=lanes[wave%4],opposite=lanes[3-wave%4];
-            var moving=game.StageIndex==1?FastingTopDownHazard.Kind.Collapse:game.StageIndex==3?FastingTopDownHazard.Kind.Fire:FastingTopDownHazard.Kind.Rock;
-            var fixedKind=game.StageIndex==0?FastingTopDownHazard.Kind.Cactus:game.StageIndex==1?FastingTopDownHazard.Kind.Crack:game.StageIndex==2?FastingTopDownHazard.Kind.Wall:FastingTopDownHazard.Kind.Thorns;
+            if(!game.TryChooseObstacle(out var moving))return true;
+            var fixedKind=moving;
             switch(CurrentPattern)
             {
                 case Pattern.Alternating:
@@ -41,8 +41,8 @@ namespace CrossTheLine.Minigames
                     // Keep the same corridor throughout this attack; do not build a closing wall.
                     game.SpawnPatternObstacle(fixedKind,lanes[0],1,0);game.SpawnPatternObstacle(moving,lanes[3],1,staggerDistance);break;
                 case Pattern.SandBands:
-                    var wind=game.StageIndex==0?FastingTopDownHazard.Kind.Sand:game.StageIndex==1?FastingTopDownHazard.Kind.Bat:game.StageIndex==2?FastingTopDownHazard.Kind.Tomb:FastingTopDownHazard.Kind.Pillar;
-                    int count=wave%2==0?1:2;
+                    var wind=moving;
+                    int count=wind==FastingTopDownHazard.Kind.Sand?(wave%2==0?1:2):1;
                     int[] starts=new int[5];int valid=0;for(int i=0;i<=5-count;i++)if(safe<i||safe>=i+count)starts[valid++]=i;
                     game.SpawnPatternObstacle(wind,starts[wave%valid],count,0);break;
             }

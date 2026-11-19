@@ -20,3 +20,4 @@ MonoBehaviour:
   maximumThornCount: 3
   reaperSpeed: 5.5
   reaperWarningSeconds: 0.7
+  reaperSelectionChance: 0.35

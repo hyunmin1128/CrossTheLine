@@ -17,3 +17,9 @@ MonoBehaviour:
   wall: {fileID: 5152944785000004698, guid: a627157d99f718844823f01a83d7ea7e, type: 3}
   tomb: {fileID: 5825460111293098403, guid: a2037cf5a0259e448975621600109b69, type: 3}
   poisonWell: {fileID: 6234055135722933347, guid: 0575188f32ffb86479176ce4b820a1e9, type: 3}
+  verticalWall: {fileID: 58260106739387002, guid: 6a5c24e7f6cad7142b960828413da3dd, type: 3}
+  largeMazeWalls: 1
+  obstacleScale: 1.3
+  wallThicknessScale: 1.2
+  maximumTombCount: 4
+  maximumWallSegments: 4

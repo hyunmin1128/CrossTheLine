@@ -5914,6 +5914,7 @@ MonoBehaviour:
   playerAura: {fileID: 901470990}
   hitVignette: {fileID: 629459903}
   settings: {fileID: 11400000, guid: a588ee22222e9664bb91511001a12d6f, type: 2}
+  spawnSettings: {fileID: 11400000, guid: 7c83ac27232ff6d4ba1f52f473198f24, type: 2}
   player: {fileID: 747589369}
   world: {fileID: 1659342395}
   hazardRoot: {fileID: 26863539}

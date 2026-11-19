@@ -25,7 +25,7 @@ namespace CrossTheLine.Minigames
             int original=encounterDirector?encounterDirector.OpenLane:escape;
             if(encounterDirector)encounterDirector.ReserveSweepEscape(escape);
             int first=escape==0?1:0;var h=Instantiate(trialArt.reaper,hazardRoot);h.name="Reaper_FourLaneScytheSweep";
-            h.ConfigureSweep(settings.laneSpacing);h.warning=trialArt.reaperWarningSeconds;h.velocity=Vector2.down*trialArt.reaperSpeed;h.lifetime=12;
+            h.ConfigureSweep(settings.laneSpacing);h.Enlarge(settings.laterStageObstacleScale,true);h.warning=trialArt.reaperWarningSeconds;h.velocity=Vector2.down*trialArt.reaperSpeed;h.lifetime=12;
             h.transform.position=new Vector3((first-2+1.5f)*settings.laneSpacing,cameraY+gameCamera.orthographicSize+3+offset,0);
             if(!AcceptHazard(h,true)){Destroy(h.gameObject);if(encounterDirector)encounterDirector.ReserveSweepEscape(original);return;}
             hazards.Add(h);lastReaperEscape=escape;

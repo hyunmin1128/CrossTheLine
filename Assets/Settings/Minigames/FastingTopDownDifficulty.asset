@@ -28,6 +28,7 @@ MonoBehaviour:
   burnPrayerBlockSeconds: 3
   thornSlowSeconds: 1.5
   thornMoveMultiplier: 0.75
+  laterStageObstacleScale: 1.2
   finishLineDistance: 6
   prayerTarget: 90
   prayerPerSecond: 1
