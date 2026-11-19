@@ -16,13 +16,14 @@ namespace CrossTheLine.Minigames
         public float collisionHeight;
         public bool scrollOnly,rotateRollingRock=true;
         public bool expandsOnApproach;
+        public bool fixedApproachScale;
         [HideInInspector] public int formationId,formationCount=1;
         public Sprite[] animationFrames;
         public float framesPerSecond=8;
         float phase;Vector3 baseBodyScale,bodyLaneOffset,secondLaneOffset;bool visualReady;SpriteRenderer secondBody;
         public float ApproachScale{get;private set;}=1;
         public float quicksandMaximumScale=2;
-        public float MaximumApproachScale=>kind==Kind.Quicksand||expandsOnApproach?quicksandMaximumScale:kind==Kind.Rock||kind==Kind.Cactus||kind==Kind.Wall||kind==Kind.Tomb?1:1.25f;
+        public float MaximumApproachScale=>fixedApproachScale?1:kind==Kind.Quicksand||expandsOnApproach?quicksandMaximumScale:kind==Kind.Rock||kind==Kind.Cactus||kind==Kind.Wall||kind==Kind.Tomb?1:1.25f;
         Vector2 baseSize;float growth=1;
         public bool Active=>warning<=0&&!spent;
         public void SetArtwork(Sprite sprite)
@@ -32,6 +33,7 @@ namespace CrossTheLine.Minigames
             animationFrames=null;
         }
         public void SetAnimation(Sprite[] frames,float speed){animationFrames=frames;framesPerSecond=Mathf.Max(1,speed);if(frames!=null&&frames.Length>0)body.sprite=frames[0];}
+        public void ConfigureSweep(float laneWidth){ConfigureLanes(1,laneWidth);occupiedLanes=4;size=baseSize=new Vector2(laneWidth*4,1.6f);fixedApproachScale=true;}
         public void ConfigureLanes(int count,float laneWidth)
         {
             occupiedLanes=Mathf.Clamp(count,1,2);
@@ -52,7 +54,7 @@ namespace CrossTheLine.Minigames
         {
             if(!body)return;if(!visualReady){baseBodyScale=body.transform.localScale;visualReady=true;}
             ApproachScale=Mathf.Lerp(.8f,1.25f,1-Mathf.Clamp01(Vector2.Distance(player,transform.position)/9));
-            if(kind==Kind.Rock||kind==Kind.Cactus||kind==Kind.Wall||kind==Kind.Tomb)ApproachScale=1;
+            if(fixedApproachScale||kind==Kind.Rock||kind==Kind.Cactus||kind==Kind.Wall||kind==Kind.Tomb)ApproachScale=1;
             if(kind==Kind.Quicksand||expandsOnApproach){growth=Mathf.Max(growth,Mathf.Lerp(1,quicksandMaximumScale,1-Mathf.Clamp01((Vector2.Distance(player,transform.position)-2)/9)));ApproachScale=growth;size=baseSize*growth;}
             else size=baseSize*ApproachScale;
             body.transform.localScale=baseBodyScale*ApproachScale;

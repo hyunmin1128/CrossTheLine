@@ -24,6 +24,10 @@ MonoBehaviour:
   poisonDamage: 2
   poisonReverseSeconds: 3
   tombPrayerBlockSeconds: 3
+  pillarDamage: 2
+  burnPrayerBlockSeconds: 3
+  thornSlowSeconds: 1.5
+  thornMoveMultiplier: 0.75
   finishLineDistance: 6
   prayerTarget: 90
   prayerPerSecond: 1

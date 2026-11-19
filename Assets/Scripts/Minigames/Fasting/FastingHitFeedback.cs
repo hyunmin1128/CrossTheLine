@@ -13,6 +13,7 @@ namespace CrossTheLine.Minigames
         public float sandAirSeconds=1.35f,sandAirHeight=2.4f;
         public float quicksandSinkSeconds=2;
         public float batAirSeconds=1.1f,batAirHeight=1.8f;
+        public float pillarAirSeconds=1.5f,pillarAirHeight=3,pillarProtectionSeconds=3;
         public float crackFallSeconds=.9f,crackBlinkSeconds=.8f,crackFallDepth=1.2f;
         public Sprite crackGroundSprite;
         public float crackOpeningWidth=4;
@@ -32,7 +33,7 @@ namespace CrossTheLine.Minigames
         const int Count = 20;
         SpriteRenderer[] particles;
         public bool Active => remaining > 0;
-        float EffectDuration=>kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:kind==FastingTopDownHazard.Kind.Bat?batAirSeconds:kind==FastingTopDownHazard.Kind.Quicksand?quicksandSinkSeconds:kind==FastingTopDownHazard.Kind.Crack?crackFallSeconds+crackBlinkSeconds:duration;
+        float EffectDuration=>kind==FastingTopDownHazard.Kind.Pillar?pillarAirSeconds:kind==FastingTopDownHazard.Kind.Sand?sandAirSeconds:kind==FastingTopDownHazard.Kind.Bat?batAirSeconds:kind==FastingTopDownHazard.Kind.Quicksand?quicksandSinkSeconds:kind==FastingTopDownHazard.Kind.Crack?crackFallSeconds+crackBlinkSeconds:duration;
         public bool TryGetRestPose(out Vector3 position,out Vector3 scale){position=basePosition;scale=baseScale;return artworkPoseCaptured;}
         void Awake()
         {
@@ -74,6 +75,7 @@ namespace CrossTheLine.Minigames
             {
                 float arc=Mathf.Sin(t*Mathf.PI);
                 float dy=kind==FastingTopDownHazard.Kind.Sand?sandAirHeight*arc:kind==FastingTopDownHazard.Kind.Bat?batAirHeight*arc:kind==FastingTopDownHazard.Kind.Quicksand?-sinkDepth*arc:0;
+                if(kind==FastingTopDownHazard.Kind.Pillar)dy=pillarAirHeight*arc;
                 float shake=kind==FastingTopDownHazard.Kind.Rock?Mathf.Sin(t*38)*.10f*(1-t):0;
                 if(kind==FastingTopDownHazard.Kind.Crack)
                 {

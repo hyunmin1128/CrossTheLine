@@ -8,6 +8,7 @@ namespace CrossTheLine.Minigames
         public enum Phase { Attack, Clearing, PrayerWindow }
         public Phase CurrentPhase{get;private set;}
         public int OpenLane{get;private set;}
+        public void ReserveSweepEscape(int lane){OpenLane=Mathf.Clamp(lane,0,4);}
         float remaining,nextWave;
         [Min(1)] public float patternIntervalMultiplier=1.8f;
         public Vector2 randomIntervals=new Vector2(.85f,1.65f);
