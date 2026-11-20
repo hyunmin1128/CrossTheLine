@@ -29,6 +29,7 @@ MonoBehaviour:
   thornSlowSeconds: 1.5
   thornMoveMultiplier: 0.75
   laterStageObstacleScale: 1.2
+  minimumVisibleReactionSeconds: 0.6
   finishLineDistance: 6
   prayerTarget: 90
   prayerPerSecond: 1

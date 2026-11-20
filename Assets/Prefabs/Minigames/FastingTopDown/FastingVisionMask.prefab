@@ -68,3 +68,7 @@ MonoBehaviour:
   visibleWorldRadius: {x: 3.2, y: 3.6}
   edgeSoftness: 0.12
   obscuredColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeInSeconds: 1.6
+  blackoutSeconds: 0.2
+  fadeOutSeconds: 0.8
+  recoveryGrace: 0.9

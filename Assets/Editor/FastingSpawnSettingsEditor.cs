@@ -13,6 +13,7 @@ public sealed class FastingSpawnSettingsEditor : Editor
         for(int i=0;i<stages.arraySize;i++){
             var stage=stages.GetArrayElementAtIndex(i);EditorGUILayout.Space();EditorGUILayout.LabelField((i+1)+"스테이지 · "+stage.FindPropertyRelative("name").stringValue,EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(stage.FindPropertyRelative("frequency"),new GUIContent("이 스테이지 생성 빈도"));
+            EditorGUILayout.PropertyField(stage.FindPropertyRelative("roadEdges"),new GUIContent("길 안쪽 범위 (왼쪽/오른쪽)"));
             var entries=stage.FindPropertyRelative("obstacles");float total=0;
             for(int j=0;j<entries.arraySize;j++)total+=Mathf.Max(0,entries.GetArrayElementAtIndex(j).FindPropertyRelative("weight").floatValue);
             for(int j=0;j<entries.arraySize;j++){

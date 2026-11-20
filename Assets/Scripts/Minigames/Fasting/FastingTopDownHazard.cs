@@ -13,6 +13,18 @@ namespace CrossTheLine.Minigames
         public int occupiedLanes=1;
         public float artworkWidth;
         public Vector2 artworkCenter;
+        public Vector2 collisionOffset;
+        public Vector2 CollisionCenter=>(Vector2)transform.position+collisionOffset;
+        [HideInInspector] public float minimumVisibleReactionSeconds;
+        float visibleSeconds;
+        public bool ReadyToHit=>visibleSeconds>=minimumVisibleReactionSeconds;
+        public void HideOutsideRoad(){body.enabled=false;if(secondBody)secondBody.enabled=false;}
+        public void TrackVisibility(Camera camera,float dt)
+        {
+            float hh=camera.orthographicSize,hw=hh*camera.aspect;var p=camera.transform.position;var b=body.bounds;
+            if(b.max.x>=p.x-hw&&b.min.x<=p.x+hw&&b.max.y>=p.y-hh&&b.min.y<=p.y+hh)visibleSeconds+=Mathf.Max(0,dt);
+            var color=body.color;color.a=ReadyToHit?1:.4f;body.color=color;if(secondBody)secondBody.color=color;
+        }
         public float collisionHeight;
         public bool scrollOnly,rotateRollingRock=true;
         public bool expandsOnApproach;
@@ -43,7 +55,7 @@ namespace CrossTheLine.Minigames
             bodyLaneOffset*=factor;secondLaneOffset*=factor;
             size=baseSize=Vector2.Scale(baseSize,new Vector2(preserveSweepWidth?1:factor,factor));visualReady=false;
         }
-        public void ConfigureWallSegment(bool vertical,float length,float thicknessMultiplier=1)
+        public void ConfigureWallSegment(bool vertical,float length,float thicknessMultiplier=1,float floorThickness=0)
         {
             verticalWall=vertical;
             // Slight overlap covers the transparent edge pixels in the authored wall sprite.
@@ -58,6 +70,8 @@ namespace CrossTheLine.Minigames
             body.transform.localPosition=-(body.transform.localRotation*Vector3.Scale(artworkCenter,wallScale));
             float thickness=(authoredWallOrientation?(vertical?bounds.size.x:bounds.size.y):Mathf.Min(bounds.size.x,bounds.size.y))*scale*(authoredWallOrientation?thicknessMultiplier:1);
             size=baseSize=vertical?new Vector2(thickness,length):new Vector2(length,thickness);
+            collisionOffset=Vector2.zero;
+            if(!vertical&&floorThickness>0){collisionOffset=Vector2.down*(thickness-floorThickness)*.5f;size=baseSize=new Vector2(length,floorThickness);}
             occupiedLanes=1;fixedApproachScale=true;visualReady=true;ApproachScale=1;
         }
         public void ConfigureLanes(int count,float laneWidth)
@@ -98,8 +112,8 @@ namespace CrossTheLine.Minigames
             // Speed surges stay on the authored path, preserving the reserved escape lane.
             float surge=!scrollOnly&&(kind==Kind.Rock||kind==Kind.Sand)?1+.18f*Mathf.Sin(phase*5+transform.position.x*.2f):1;
             Vector2 travel=velocity*surge;if(kind==Kind.Sand&&Mathf.Abs(velocity.x)>.01f)travel.y=velocity.y;
-            Vector2 start=transform.position;transform.position+=(Vector3)(travel*dt);
-            Vector2 a=from-start,b=to-(Vector2)transform.position,d=b-a,extent=size*.5f+new Vector2(.28f,.2f);
+            Vector2 start=CollisionCenter;transform.position+=(Vector3)(travel*dt);
+            Vector2 a=from-start,b=to-CollisionCenter,d=b-a,extent=size*.5f+new Vector2(.28f,.2f);
             if(kind==Kind.Sand)
             {
                 // Swept ellipse: the moving cloud's opaque core, not the transparent corners.

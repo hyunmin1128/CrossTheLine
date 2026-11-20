@@ -7,7 +7,7 @@ namespace CrossTheLine.Minigames
     {
         [Min(0),Tooltip("1=현재 빈도, 2=두 배 자주, 0=생성 중지. 공격·휴식 시간과 아이템은 유지합니다.")] public float globalFrequency=1;
         [Serializable] public sealed class Entry {public FastingTopDownHazard.Kind kind;[Min(0)] public float weight=25;}
-        [Serializable] public sealed class Stage {public string name;[Min(0)] public float frequency=1;public Entry[] obstacles;}
+        [Serializable] public sealed class Stage {public string name;[Min(0)] public float frequency=1;[Tooltip("배경 왼쪽/오른쪽 장식을 제외한 길의 가로 범위. 0=화면 왼쪽, 1=오른쪽")] public Vector2 roadEdges=new Vector2(.18f,.82f);public Entry[] obstacles;}
         public Stage[] stages;
         public float Frequency(int stage)=>Mathf.Max(0,globalFrequency)*(stages!=null&&stage>=0&&stage<stages.Length&&stages[stage]!=null?Mathf.Max(0,stages[stage].frequency):1);
         public bool TryPick(int stage,out FastingTopDownHazard.Kind kind)

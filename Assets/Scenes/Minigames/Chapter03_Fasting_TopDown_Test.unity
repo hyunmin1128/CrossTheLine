@@ -2495,6 +2495,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3033382382933846092, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 901470989}
+    - targetCorrespondingSourceObject: {fileID: 3033382382933846092, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1813490884}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
 --- !u!4 &747589369 stripped
@@ -5503,6 +5506,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a571c374a70928a4a8071fd9f85e8180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownEntity
+--- !u!1001 &1813490883
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 747589369}
+    m_Modifications:
+    - target: {fileID: 165202819170876409, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1922565230}
+    - target: {fileID: 165202819170876409, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: artwork
+      value: 
+      objectReference: {fileID: 747589371}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543028136834686556, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+      propertyPath: m_Name
+      value: FastingStatusParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+--- !u!4 &1813490884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1790180133873177808, guid: 73cf96fcd16a6124c874ebd7cf3d99ef, type: 3}
+  m_PrefabInstance: {fileID: 1813490883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1837265254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6759,11 +6832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 126
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 21
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6835,11 +6908,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1688687331641656589, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 158
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 1688687331641656589, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 41
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 1755278990792171399, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -7064,6 +7137,10 @@ PrefabInstance:
     - target: {fileID: 5479813015150664232, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496168179915541239, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
+      propertyPath: fadeInSeconds
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 5580646594718861715, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_text

@@ -10,6 +10,7 @@ namespace CrossTheLine.Minigames
         public float poisonDamage=2,poisonReverseSeconds=3,tombPrayerBlockSeconds=3;
         public float pillarDamage=2,burnPrayerBlockSeconds=3,thornSlowSeconds=1.5f,thornMoveMultiplier=.75f;
         [Range(1,1.5f)] public float laterStageObstacleScale=1.2f;
+        [Min(0)] public float minimumVisibleReactionSeconds=.6f;
         public float finishLineDistance=6;
         public float prayerTarget=90, prayerPerSecond=1f;
         public float[] prayerTargets={90,100,110,120};

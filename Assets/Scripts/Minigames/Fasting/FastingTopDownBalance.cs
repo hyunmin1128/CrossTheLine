@@ -22,10 +22,10 @@ namespace CrossTheLine.Minigames
             float y=first?(e.kind==FastingTopDownEntity.Kind.Water?gap:e.transform.position.y):Mathf.Max(e.transform.position.y+gap,player.position.y+gap-7);
             e.transform.position=new Vector3(0,y,0);e.SetUsed(false);
             if(Random.value>=settings.StageDropChance(e.kind,StageIndex)){e.gameObject.SetActive(false);return;}
-            int start=Random.Range(0,5);bool placed=false;
-            for(int n=0;n<5;n++)
+            int start=Random.Range(0,SpawnLaneCount);bool placed=false;
+            for(int n=0;n<SpawnLaneCount;n++)
             {
-                e.transform.position=new Vector3(((start+n)%5-2)*settings.laneSpacing,y,0);
+                e.transform.position=new Vector3(SpawnLaneX((start+n)%SpawnLaneCount),y,0);
                 if(PickupPositionClear(e)&&NoOtherPickup(e)){placed=true;break;}
             }
             e.gameObject.SetActive(placed);
@@ -42,29 +42,31 @@ namespace CrossTheLine.Minigames
         }
         bool AcceptHazard(FastingTopDownHazard h,bool keepLane=false)
         {
-            bool side=Mathf.Abs(h.velocity.x)>.01f;float originalX=h.transform.position.x;
-            int first=Mathf.Clamp(Mathf.RoundToInt(originalX/settings.laneSpacing+2-(h.occupiedLanes-1)*.5f),0,5-h.occupiedLanes);
-            for(int attempt=0;attempt<(side||keepLane?1:6-h.occupiedLanes);attempt++)
+            bool side=Mathf.Abs(h.velocity.x)>.01f;float originalX=h.transform.position.x;string rejectedReason="escape";
+            int first=Mathf.Clamp(Mathf.RoundToInt((originalX-(SpawnRoadRange.x+SpawnRoadRange.y)*.5f)/settings.laneSpacing+SpawnLaneCenter-(h.occupiedLanes-1)*.5f),0,SpawnLaneCount-h.occupiedLanes);
+            for(int attempt=0;attempt<(side||keepLane?1:SpawnLaneCount+1-h.occupiedLanes);attempt++)
             {
-                if(!side){int lane=(first+attempt)%(6-h.occupiedLanes);h.transform.position=new Vector3((lane-2+(h.occupiedLanes-1)*.5f)*settings.laneSpacing,h.transform.position.y,0);}
+                if(!side){int lane=(first+attempt)%(SpawnLaneCount+1-h.occupiedLanes);h.transform.position=new Vector3(SpawnLaneX(lane+(h.occupiedLanes-1)*.5f),h.transform.position.y,0);}
+                if(!side&&!FitsSpawnRoad(h)){rejectedReason="decoration";continue;}
                 if(encounterDirector&&!encounterDirector.LeavesLaneOpen(h))continue;
+                rejectedReason="pickup";
                 bool allClear=true;
                 foreach(var e in entities)
                 {
                     if(!e||!e.gameObject.activeSelf||e.consumed||e.stage!=StageIndex||!PathOverlaps(h,e))continue;
                     // Visible rewards never jump. Offscreen rewards can choose a new lane instead of protecting a whole road.
                     if(e.transform.position.y<cameraY+gameCamera.orthographicSize+1){allClear=false;break;}
-                    Vector3 original=e.transform.position;bool moved=false;int start=Random.Range(0,5);
-                    for(int n=0;n<5;n++)
+                    Vector3 original=e.transform.position;bool moved=false;int start=Random.Range(0,SpawnLaneCount);
+                    for(int n=0;n<SpawnLaneCount;n++)
                     {
-                        e.transform.position=new Vector3(((start+n)%5-2)*settings.laneSpacing,original.y,0);
+                        e.transform.position=new Vector3(SpawnLaneX((start+n)%SpawnLaneCount),original.y,0);
                         if(!PathOverlaps(h,e)&&PickupPositionClear(e)&&NoOtherPickup(e)){moved=true;break;}
                     }
                     if(!moved){e.transform.position=original;allClear=false;break;}
                 }
-                if(allClear&&!SpawnOverlapsHazard(h))return true;
+                if(allClear){rejectedReason="overlap";if(!SpawnOverlapsHazard(h))return true;}
             }
-            h.transform.position=new Vector3(originalX,h.transform.position.y,0);return false;
+            RecordRejection(h,rejectedReason);h.transform.position=new Vector3(originalX,h.transform.position.y,0);return false;
         }
         bool SpawnOverlapsHazard(FastingTopDownHazard candidate)
         {

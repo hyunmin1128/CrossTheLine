@@ -16,6 +16,7 @@ MonoBehaviour:
   stages:
   - name: "\uC0AC\uB9C9"
     frequency: 1
+    roadEdges: {x: 0.18, y: 0.82}
     obstacles:
     - kind: 0
       weight: 25
@@ -27,6 +28,7 @@ MonoBehaviour:
       weight: 25
   - name: "\uB3D9\uAD74"
     frequency: 1
+    roadEdges: {x: 0.18, y: 0.82}
     obstacles:
     - kind: 0
       weight: 25
@@ -38,6 +40,7 @@ MonoBehaviour:
       weight: 25
   - name: "\uD3D0\uC720\uC801"
     frequency: 1
+    roadEdges: {x: 0.18, y: 0.82}
     obstacles:
     - kind: 0
       weight: 25
@@ -49,6 +52,7 @@ MonoBehaviour:
       weight: 25
   - name: "\uB9C8\uC9C0\uB9C9 \uC2DC\uB828"
     frequency: 1
+    roadEdges: {x: 0.18, y: 0.82}
     obstacles:
     - kind: 10
       weight: 21.666666

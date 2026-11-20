@@ -6,24 +6,33 @@ namespace CrossTheLine.Minigames
         void BlockRuinsWalls(Vector2 from)
         {
             if(StageIndex!=2)return;
-            Vector2 to=player.position;
+            Vector2 to=player.position;bool blocked=false;
             foreach(var h in hazards){
                 if(!h||h.spent||h.kind!=FastingTopDownHazard.Kind.Wall)continue;
-                var r=new Rect((Vector2)h.transform.position-h.size*.5f-new Vector2(.28f,.2f),h.size+new Vector2(.56f,.4f));
-                if(r.Contains(new Vector2(to.x,from.y)))to.x=from.x;
-                if(r.Contains(new Vector2(to.x,to.y)))to.y=from.y;
+                var r=new Rect(h.CollisionCenter-h.size*.5f-new Vector2(.28f,.2f),h.size+new Vector2(.56f,.4f));
+                if(from.y>=r.yMin&&from.y<=r.yMax){
+                    if(from.x<=r.xMin&&to.x>=r.xMin){to.x=r.xMin-.001f;blocked=true;}
+                    else if(from.x>=r.xMax&&to.x<=r.xMax){to.x=r.xMax+.001f;blocked=true;}
+                }
+                if(to.x>=r.xMin&&to.x<=r.xMax){
+                    if(from.y<=r.yMin&&to.y>=r.yMin){to.y=r.yMin-.001f;blocked=true;}
+                    else if(from.y>=r.yMax&&to.y<=r.yMax){to.y=r.yMax+.001f;blocked=true;}
+                }
+                if(r.Contains(to)){to=from;blocked=true;}
             }
             player.position=to;
+            // Do not let the camera's bottom clamp push a stopped player through a wall.
+            if(blocked&&playArea){float overlap=playArea.RootArea.yMin-player.position.y;if(overlap>0){cameraY-=overlap;Follow();}}
         }
         void SpawnRuinsFormation(FastingTopDownHazard.Kind kind,int lane,float offset)
         {
             if(kind==FastingTopDownHazard.Kind.Wall){SpawnRuinsWall(lane,offset);return;}
             int safe=encounterDirector?encounterDirector.OpenLane:2;
-            int first=lane==safe?(lane+1)%5:lane;
+            int first=lane==safe?(lane+1)%SpawnLaneCount:lane;
             int count=Random.Range(2,(kind==FastingTopDownHazard.Kind.Tomb?ruinsArt.maximumTombCount:ruinsArt.maximumWallSegments)+1);
             bool vertical=kind==FastingTopDownHazard.Kind.Wall&&Random.value<.5f;
             int side=first<safe?-1:1,adjacent=first+side;
-            bool pair=adjacent>=0&&adjacent<5&&adjacent!=safe;
+            bool pair=adjacent>=0&&adjacent<SpawnLaneCount&&adjacent!=safe;
             int id=++nextFormationId;
             for(int i=0;i<count;i++){
                 int column=vertical||!pair?first:i%2==0?first:adjacent;
@@ -47,9 +56,9 @@ namespace CrossTheLine.Minigames
             int safe=encounterDirector?encounterDirector.OpenLane:2;
             bool vertical=Random.value<.5f;int count=Random.Range(2,Mathf.Clamp(ruinsArt.maximumWallSegments,2,5)+1);
             var starts=new System.Collections.Generic.List<int>();
-            if(vertical){for(int i=0;i<5;i++)if(i!=safe)starts.Add(i);}
+            if(vertical){for(int i=0;i<SpawnLaneCount;i++)if(i!=safe)starts.Add(i);}
             else{
-                for(;count>=2;count--){for(int i=0;i<=5-count;i++)if(safe<i||safe>=i+count)starts.Add(i);if(starts.Count>0)break;}
+                for(;count>=2;count--){for(int i=0;i<=SpawnLaneCount-count;i++)if(safe<i||safe>=i+count)starts.Add(i);if(starts.Count>0)break;}
             }
             if(starts.Count==0)return;
             int first=starts.Contains(preferred)?preferred:starts[Random.Range(0,starts.Count)],id=++nextFormationId;
@@ -57,10 +66,10 @@ namespace CrossTheLine.Minigames
             // Configure artwork and collision before spacing/escape checks, with no grid gaps.
             for(int i=0;i<count;i++){
                 var h=Instantiate(vertical&&ruinsArt.verticalWall?ruinsArt.verticalWall:ruinsArt.wall,hazardRoot);h.name=vertical?"RuinsWall_Vertical":"RuinsWall_Horizontal";
-                h.formationId=id;h.formationCount=count;h.ConfigureWallSegment(vertical,length,ruinsArt.wallThicknessScale*settings.laterStageObstacleScale);h.warning=0;h.velocity=Vector2.zero;h.scrollOnly=true;h.lifetime=30;
+                h.formationId=id;h.formationCount=count;h.ConfigureWallSegment(vertical,length,ruinsArt.wallThicknessScale*settings.laterStageObstacleScale,WallFloorThickness);h.warning=0;h.velocity=Vector2.zero;h.scrollOnly=true;h.lifetime=30;
                 float y=cameraY+gameCamera.orthographicSize+2+length*.5f+offset;
-                h.transform.position=new Vector3(((vertical?first:first+i)-2)*length,y+(vertical?i*length:0),0);
-                if(!AcceptHazard(h,true)){Destroy(h.gameObject);continue;}hazards.Add(h);
+                h.transform.position=new Vector3(SpawnLaneX(vertical?first:first+i),y+(vertical?i*length:0),0);
+                if(!AcceptHazard(h,true)){Destroy(h.gameObject);continue;}RegisterHazard(h);
             }
         }
     }

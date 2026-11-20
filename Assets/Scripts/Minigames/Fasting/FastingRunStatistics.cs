@@ -15,7 +15,7 @@ namespace CrossTheLine.Minigames
         void ResetRunStatistics(){DirectPrayerSeconds=0;DamageHitCount=AvoidedHazards=0;Array.Clear(damageByObstacle,0,damageByObstacle.Length);}
         void RecordDamage(string cause)
         {
-            DamageHitCount++;if(Enum.TryParse(cause,true,out FastingTopDownHazard.Kind kind)&&(int)kind>=0&&(int)kind<damageByObstacle.Length)damageByObstacle[(int)kind]++;
+            DamageHitCount++;if(Enum.TryParse(cause,true,out FastingTopDownHazard.Kind kind)&&(int)kind>=0&&(int)kind<damageByObstacle.Length){damageByObstacle[(int)kind]++;CurrentBalance.hits[(int)kind]++;}
         }
         public static string ObstacleName(FastingTopDownHazard.Kind kind)
         {
@@ -23,6 +23,7 @@ namespace CrossTheLine.Minigames
         }
         string BuildRunResult(bool completed)
         {
+            ExportBalance(completed?"completed":"failed");if(caveVisionMask)caveVisionMask.Clear();
             int day=completed?40:CurrentDay,best=PlayerPrefs.GetInt(BestDayKey,0),previous=PlayerPrefs.GetInt(PreviousDayKey,0),index=-1;
             for(int i=0;i<damageByObstacle.Length;i++)if(damageByObstacle[i]>0&&(index<0||damageByObstacle[i]>damageByObstacle[index]))index=i;
             string most=index>=0?ObstacleName((FastingTopDownHazard.Kind)index)+" · "+damageByObstacle[index]+"회":"없음";
