@@ -28,8 +28,13 @@ namespace CrossTheLine.Minigames
             if(encounterDirector)encounterDirector.ReserveSweepEscape(escape);
             var h=Instantiate(trialArt.reaper,hazardRoot);h.name="Reaper_FourLaneScytheSweep";
             h.ConfigureSweep(settings.laneSpacing);h.Enlarge(settings.laterStageObstacleScale,true);h.warning=trialArt.reaperWarningSeconds;h.velocity=Vector2.down*trialArt.reaperSpeed;h.lifetime=12;
+            // Display the authored pixels at their imported PPU rather than fitting one lane.
+            h.body.transform.localScale=Vector3.one;
+            h.body.transform.localPosition=-(Vector3)h.artworkCenter;
             h.transform.position=new Vector3(SpawnLaneX(first+1.5f),cameraY+gameCamera.orthographicSize+3+offset,0);
             if(!AcceptHazard(h,true)){Destroy(h.gameObject);if(encounterDirector)encounterDirector.ReserveSweepEscape(original);return;}
+            var sweep=h.GetComponent<FastingReaperSweep>();
+            if(sweep){sweep.BeginTracking(this,escape);if(h.spent){Destroy(h.gameObject);if(encounterDirector)encounterDirector.ReserveSweepEscape(original);return;}}
             RegisterHazard(h);lastReaperEscape=first;
         }
     }

@@ -35,6 +35,8 @@ namespace CrossTheLine.Minigames
         public Sprite[] animationFrames;
         public float framesPerSecond=8;
         float phase;Vector3 baseBodyScale,bodyLaneOffset,secondLaneOffset;bool visualReady;SpriteRenderer secondBody;
+        FastingReaperSweep reaperSweep;
+        void Awake(){reaperSweep=GetComponent<FastingReaperSweep>();}
         public float ApproachScale{get;private set;}=1;
         public float quicksandMaximumScale=2;
         public float MaximumApproachScale=>1;
@@ -102,8 +104,15 @@ namespace CrossTheLine.Minigames
         public bool Advance(float dt,Vector2 from,Vector2 to,out float time)
         {
             time=0;if(spent)return false;
-            if(warning>0){float before=warning;warning-=dt;body.enabled=false;if(secondBody)secondBody.enabled=false;if(warning>0)return false;from=Vector2.Lerp(from,to,Mathf.Clamp01(before/dt));dt=Mathf.Max(0,dt-before);}
+            if(reaperSweep&&reaperSweep.Choreographed)
+            {
+                float fullStep=dt;
+                if(!reaperSweep.PrepareStep(dt,out dt))return false;
+                from=Vector2.Lerp(from,to,fullStep>0?Mathf.Clamp01(1-dt/fullStep):0);
+            }
+            else if(warning>0){float before=warning;warning-=dt;body.enabled=false;if(secondBody)secondBody.enabled=false;if(warning>0)return false;from=Vector2.Lerp(from,to,Mathf.Clamp01(before/dt));dt=Mathf.Max(0,dt-before);}
             phase+=dt;lifetime-=dt;
+            if(reaperSweep)reaperSweep.AdvanceVisual(phase);
             if(animationFrames!=null&&animationFrames.Length>0){body.sprite=animationFrames[Mathf.FloorToInt(phase*framesPerSecond)%animationFrames.Length];if(secondBody){secondBody.sprite=body.sprite;secondBody.flipX=body.flipX;}}
             if(lifetime<=0){spent=true;gameObject.SetActive(false);return false;}
             bool visible=!((kind==Kind.Pillar||kind==Kind.Crack)&&phase%2>1.1f);
