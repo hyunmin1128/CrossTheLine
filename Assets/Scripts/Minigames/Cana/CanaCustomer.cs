@@ -2,8 +2,9 @@ using UnityEngine;
 
 namespace CrossTheLine.Cana
 {
-    public enum CanaCustomerState { NotSpawned, WalkingToChair, WaitingForOrder, Reacting, WalkingToMoneyBin, Leaving }
+    public enum CanaCustomerState { NotSpawned, WalkingToChair, WaitingForOrder, Reacting, WalkingToMoneyBin, Leaving, Drinking }
     public enum CanaReaction { None, Heart, Smile, Angry }
+    public enum CanaCustomerKind { Normal, Glutton, Impatient, Group, Troublemaker }
     public enum CanaOrderType { Basic, Large, Group }
 
     public sealed class CanaCustomer : MonoBehaviour
@@ -14,7 +15,20 @@ namespace CrossTheLine.Cana
         public Animator animator;
         public RuntimeAnimatorController moveAnimation;
         public RuntimeAnimatorController idleAnimation;
+        public RuntimeAnimatorController drinkAnimation;
+        [Min(0.01f)] public float drinkAnimationSpeed = 1;
+        [Min(0)] public float idleAnimationSpeed = 1;
+        private CanaReaction servedReaction;
         public bool sourceFacesLeft = true;
+        public CanaCustomerKind Kind { get; private set; }
+        public CanaParty Party { get; private set; }
+        public bool PartyLeader { get; private set; }
+        public int OrdersCompleted { get; private set; }
+        public Sprite[] requestFrames;
+        private bool drinkingReported;
+        private float nextTrash;
+        public bool RoundFinished => owner && owner.round && owner.round.Finished;
+        public float WaitDuration => gaugeFrames.Length * secondsPerGauge;
         public SpriteRenderer requestRenderer, gaugeRenderer, reactionRenderer;
         public Sprite[] gaugeFrames;
         public Sprite heart, smile, angry;
@@ -27,9 +41,10 @@ namespace CrossTheLine.Cana
         public int lastGreenFrame = 3;
         [SerializeField] private CanaCustomerState state;
         public CanaCustomerState State => state;
-        public CanaOrderType OrderType => CanaOrderType.Basic;
+        public CanaOrderType OrderType => Kind == CanaCustomerKind.Group ? CanaOrderType.Group : Kind == CanaCustomerKind.Glutton ? CanaOrderType.Large : CanaOrderType.Basic;
         public CanaReaction Reaction { get; private set; }
         public bool VisitedMoneyBin { get; private set; }
+        public bool RejectedAtDoor { get; private set; }
         public int GaugeIndex => Mathf.Clamp(Mathf.FloorToInt(waitTime / secondsPerGauge), 0, gaugeFrames.Length - 1);
         private Vector3[] route;
         private int waypointIndex;
@@ -44,6 +59,16 @@ namespace CrossTheLine.Cana
             owner = spawner; seatIndex = seat;
             requestRenderer.enabled = gaugeRenderer.enabled = reactionRenderer.enabled = false;
             WalkToChair(path, facesLeft);
+        }
+
+        public void RejectAtDoor(CanaCustomerSpawner spawner, CanaCustomerKind kind)
+        {
+            owner = spawner;
+            seatIndex = -1;
+            Kind = kind;
+            RejectedAtDoor = true;
+            reactionRenderer.transform.localPosition = reactionOffset;
+            React(CanaReaction.Angry);
         }
 
         public void WalkToChair(Vector3[] waypoints, bool faceLeftAtSeat)
@@ -61,10 +86,37 @@ namespace CrossTheLine.Cana
 
         private void Update()
         {
-            animator.speed = animationSpeed;
+            if (RoundFinished) { animator.speed = 0; return; }
+            if (Kind == CanaCustomerKind.Troublemaker && state == CanaCustomerState.WaitingForOrder && Time.time >= nextTrash)
+            {
+                owner.ScatterTrash(seatIndex);
+                nextTrash = Time.time + owner.troubleTrashInterval;
+            }
+            if (owner && owner.dissatisfaction && owner.dissatisfaction.IsGameOver) { animator.speed = 0; return; }
+            if (owner)
+            {
+                animationSpeed = owner.moveAnimationSpeed;
+                idleAnimationSpeed = owner.idleAnimationSpeed;
+                drinkAnimationSpeed = owner.drinkAnimationSpeed;
+            }
+            animator.speed = state == CanaCustomerState.Drinking ? drinkAnimationSpeed :
+                state == CanaCustomerState.WaitingForOrder || state == CanaCustomerState.Reacting ? idleAnimationSpeed : animationSpeed;
+            if (state == CanaCustomerState.Drinking)
+            {
+                if (!drinkingReported && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 3)
+                {
+                    drinkingReported = true;
+                    OrdersCompleted++;
+                    if (Party) Party.Drank();
+                    else if (Kind == CanaCustomerKind.Glutton && OrdersCompleted < 3) BeginOrder();
+                    else React(servedReaction);
+                }
+                return;
+            }
             if (state == CanaCustomerState.NotSpawned) return;
             if (state == CanaCustomerState.WaitingForOrder)
             {
+                if (Party) return;
                 waitTime = Time.time - waitStarted;
                 gaugeRenderer.sprite = gaugeFrames[GaugeIndex];
                 if (waitTime >= gaugeFrames.Length * secondsPerGauge) React(CanaReaction.Angry);
@@ -100,14 +152,18 @@ namespace CrossTheLine.Cana
                 reactionRenderer.transform.localPosition = reactionOffset;
                 reactionRenderer.transform.localScale = seatFacesLeft ? Vector3.one : new Vector3(-1, 1, 1);
                 if (!seatFacesLeft) reactionRenderer.transform.localPosition = new Vector3(-reactionOffset.x, reactionOffset.y, 0);
-                waitTime = 0;
-                waitStarted = Time.time;
-                gaugeRenderer.sprite = gaugeFrames[0];
-                requestRenderer.enabled = gaugeRenderer.enabled = true;
+                if (Party) Party.Arrived();
+                else BeginOrder();
                 return;
             }
             if (state == CanaCustomerState.WalkingToMoneyBin)
             {
+                if (!VisitedMoneyBin && owner.wallet)
+                {
+                    if (Kind == CanaCustomerKind.Glutton) owner.wallet.DepositGold(500);
+                    else if (Party) { if (PartyLeader) owner.wallet.DepositGold(700); }
+                    else owner.wallet.Deposit(Reaction);
+                }
                 VisitedMoneyBin = true;
                 BeginExit(owner.spawnPoint.position, CanaCustomerState.Leaving);
                 return;
@@ -117,16 +173,20 @@ namespace CrossTheLine.Cana
 
         public bool TryServe(CanaPlayer player)
         {
+            if (RoundFinished) return false;
             if (state != CanaCustomerState.WaitingForOrder || Vector2.Distance(player.transform.position, transform.position) > 1.25f) return false;
+            if (Party) return Party.Serve(player);
             waitTime = Time.time - waitStarted;
             if (waitTime >= gaugeFrames.Length * secondsPerGauge) { React(CanaReaction.Angry); return false; }
-            if (!player.TryServeWine()) return false;
-            React(GaugeIndex <= lastGreenFrame ? CanaReaction.Heart : CanaReaction.Smile);
+            if (!player.TryServeWine(Kind == CanaCustomerKind.Glutton ? 2 : 1)) return false;
+            StartDrinking(Kind == CanaCustomerKind.Glutton ? CanaReaction.Heart :
+                GaugeIndex <= lastGreenFrame ? CanaReaction.Heart : CanaReaction.Smile);
             return true;
         }
 
-        private void React(CanaReaction reaction)
+        public void React(CanaReaction reaction)
         {
+            animator.runtimeAnimatorController = idleAnimation;
             Reaction = reaction;
             state = CanaCustomerState.Reacting;
             reactionTime = 0;
@@ -138,9 +198,79 @@ namespace CrossTheLine.Cana
         private void Depart()
         {
             reactionRenderer.enabled = false;
+            if (RejectedAtDoor)
+            {
+                owner.dissatisfaction.AddComplaint();
+                Destroy(gameObject);
+                return;
+            }
             bool success = Reaction != CanaReaction.Angry;
-            BeginExit(success ? owner.moneyPoint.position : owner.spawnPoint.position,
-                success ? CanaCustomerState.WalkingToMoneyBin : CanaCustomerState.Leaving);
+            if (Party) Party.LeaveSeatsDirty();
+            if (!success && owner.dissatisfaction && (!Party || PartyLeader))
+                owner.dissatisfaction.AddComplaint(Party ? 2 : 1);
+            owner.VacateSeat(seatIndex, this, OrdersCompleted > 0 || Party);
+            bool pays = success && (!Party || PartyLeader);
+            BeginExit(pays ? owner.moneyPoint.position : owner.spawnPoint.position,
+                pays ? CanaCustomerState.WalkingToMoneyBin : CanaCustomerState.Leaving);
+        }
+
+        public void MarkSeatDirty()
+        {
+            if (owner && seatIndex >= 0) owner.MarkDirty(seatIndex);
+        }
+
+        public void Configure(CanaCustomerKind kind, CanaParty party, bool leader)
+        {
+            Kind = kind; Party = party; PartyLeader = leader;
+            if (kind == CanaCustomerKind.Glutton) moveSpeed *= 0.5f;
+            if (kind == CanaCustomerKind.Impatient) secondsPerGauge *= 0.5f;
+            nextTrash = Time.time + owner.troubleTrashInterval;
+        }
+
+        private void BeginOrder()
+        {
+            state = CanaCustomerState.WaitingForOrder;
+            waitTime = 0;
+            waitStarted = Time.time;
+            ShowOrder();
+        }
+
+        public void ShowOrder()
+        {
+            if (Party)
+            {
+                var scale = requestRenderer.transform.localScale;
+                scale.x = Mathf.Abs(scale.x);
+                requestRenderer.transform.localScale = scale;
+            }
+            animator.runtimeAnimatorController = idleAnimation;
+            requestRenderer.enabled = gaugeRenderer.enabled = !Party || PartyLeader;
+            reactionRenderer.enabled = false;
+            gaugeRenderer.sprite = gaugeFrames[0];
+            SetRequest(Party ? 4 - Party.Served : 1);
+        }
+
+        public void SetRequest(int remaining)
+        {
+            requestRenderer.sprite = requestFrames[Kind == CanaCustomerKind.Glutton ? 1 :
+                Party ? Mathf.Clamp(6 - remaining, 2, 5) : 0];
+        }
+
+        public void ShowPatience(float seconds)
+        {
+            waitTime = seconds;
+            gaugeRenderer.sprite = gaugeFrames[GaugeIndex];
+        }
+
+        public void StartDrinking(CanaReaction reaction)
+        {
+            servedReaction = reaction;
+            state = CanaCustomerState.Drinking;
+            drinkingReported = false;
+            requestRenderer.enabled = gaugeRenderer.enabled = false;
+            animator.runtimeAnimatorController = drinkAnimation;
+            animator.Play(0, 0, 0);
+            animator.Update(0);
         }
 
         private void BeginExit(Vector3 destination, CanaCustomerState next)
@@ -156,7 +286,7 @@ namespace CrossTheLine.Cana
 
         private void OnDestroy()
         {
-            if (owner) owner.ReleaseSeat(seatIndex, this);
+            if (owner && seatIndex >= 0) owner.ReleaseSeat(seatIndex, this);
         }
     }
 }

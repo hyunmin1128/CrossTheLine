@@ -322,7 +322,17 @@ MonoBehaviour:
   animator: {fileID: 4777591647020133172}
   moveAnimation: {fileID: -7125167522576077665, guid: 62de5e7f86ccf4cab8ea3300fb0515dd, type: 3}
   idleAnimation: {fileID: -3252229405519199106, guid: 1ef5ff6a318fe411eabd623f29e52c3c, type: 3}
+  drinkAnimation: {fileID: -6021893505534789167, guid: 701042e57c174405286cbb377ec7f59d, type: 3}
+  drinkAnimationSpeed: 1
+  idleAnimationSpeed: 1
   sourceFacesLeft: 1
+  requestFrames:
+  - {fileID: -5881976364905574782, guid: 8f9b9ecf1894d4fb88f4464863a5c139, type: 3}
+  - {fileID: 856022335624532226, guid: 8f9b9ecf1894d4fb88f4464863a5c139, type: 3}
+  - {fileID: 3250028081764568733, guid: 8f9b9ecf1894d4fb88f4464863a5c139, type: 3}
+  - {fileID: -4361180325657093324, guid: 8f9b9ecf1894d4fb88f4464863a5c139, type: 3}
+  - {fileID: 6361310287455245568, guid: 8f9b9ecf1894d4fb88f4464863a5c139, type: 3}
+  - {fileID: -4627946542474598604, guid: 8f9b9ecf1894d4fb88f4464863a5c139, type: 3}
   requestRenderer: {fileID: 1498357868584789137}
   gaugeRenderer: {fileID: 7594064074803202690}
   reactionRenderer: {fileID: 3840723433251266707}

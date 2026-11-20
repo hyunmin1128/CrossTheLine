@@ -5,7 +5,7 @@ namespace CrossTheLine.Cana
 {
     public sealed class CanaJesus : MonoBehaviour
     {
-        [Min(0.1f)] public float prayerDuration = 1.5f;
+        [Min(0.1f)] public float prayerDuration = 0.5f;
         [Min(0)] public float interactionDistance = 1.5f;
         [Min(0)] public float idleAnimationSpeed = 1;
         [Min(0)] public float effectAnimationSpeed = 1;
@@ -13,6 +13,7 @@ namespace CrossTheLine.Cana
         public SpriteRenderer characterSprite;
         public Sprite prayingSprite;
         public GameObject prayerEffect;
+        public Vector3 effectOffset = new Vector3(0, -0.0625f, 0);
         private CanaPlayer prayingPlayer;
         private Coroutine prayer;
         private Sprite idleSprite;
@@ -46,7 +47,8 @@ namespace CrossTheLine.Cana
             idleAnimator.enabled = false;
             characterSprite.sprite = prayingSprite;
             prayerEffect.transform.SetParent(prayingPlayer.transform, false);
-            prayerEffect.transform.localPosition = Vector3.zero;
+            prayerEffect.transform.localPosition = effectOffset;
+            prayerEffect.GetComponent<CanaOneShotEffect>().animationSpeed = effectAnimationSpeed;
             prayerEffect.GetComponent<Animator>().speed = effectAnimationSpeed;
             prayerEffect.SetActive(true);
             yield return new WaitForSeconds(prayerDuration);
@@ -62,8 +64,7 @@ namespace CrossTheLine.Cana
 
         private void EndPrayer(bool completed)
         {
-            prayerEffect.SetActive(false);
-            prayerEffect.transform.SetParent(transform, false);
+            if (!completed) prayerEffect.SetActive(false);
             characterSprite.sprite = idleSprite;
             idleAnimator.enabled = true;
             if (prayingPlayer) prayingPlayer.FinishPrayer(completed);
