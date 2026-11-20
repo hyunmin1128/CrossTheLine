@@ -1,0 +1,1666 @@
+fileFormatVersion: 2
+guid: 2a41611bd1a9828468fa5a33c15eab1b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8100727708230563131
+    second: RealReaperAttack-Completed-v2_0
+  - first:
+      213: -7038702499675391202
+    second: RealReaperAttack-Completed-v2_1
+  - first:
+      213: -2299942588414058043
+    second: RealReaperAttack-Completed-v2_2
+  - first:
+      213: -5181096036240565696
+    second: RealReaperAttack-Completed-v2_3
+  - first:
+      213: 191476770579910953
+    second: RealReaperAttack-Completed-v2_4
+  - first:
+      213: 4621765816994853621
+    second: RealReaperAttack-Completed-v2_5
+  - first:
+      213: -1073336793157929059
+    second: RealReaperAttack-Completed-v2_6
+  - first:
+      213: -6727613025957643218
+    second: RealReaperAttack-Completed-v2_7
+  - first:
+      213: -3948631112840805549
+    second: RealReaperAttack-Completed-v2_8
+  - first:
+      213: -8505848250798988709
+    second: RealReaperAttack-Completed-v2_9
+  - first:
+      213: 3991881456632729833
+    second: RealReaperAttack-Completed-v2_10
+  - first:
+      213: 4965178064084677004
+    second: RealReaperAttack-Completed-v2_11
+  - first:
+      213: -6914164250734885319
+    second: RealReaperAttack-Completed-v2_12
+  - first:
+      213: -3248572281900245093
+    second: RealReaperAttack-Completed-v2_13
+  - first:
+      213: 533369065778073306
+    second: RealReaperAttack-Completed-v2_14
+  - first:
+      213: -2948313648856344115
+    second: RealReaperAttack-Completed-v2_15
+  - first:
+      213: -5114501208999417490
+    second: RealReaperAttack-Completed-v2_16
+  - first:
+      213: 6573396748900670706
+    second: RealReaperAttack-Completed-v2_17
+  - first:
+      213: -5805871657636237834
+    second: RealReaperAttack-Completed-v2_18
+  - first:
+      213: -2590337492607090684
+    second: RealReaperAttack-Completed-v2_19
+  - first:
+      213: -3024681881571554417
+    second: RealReaperAttack-Completed-v2_20
+  - first:
+      213: -1807445782718265960
+    second: RealReaperAttack-Completed-v2_21
+  - first:
+      213: 5403291665879627873
+    second: RealReaperAttack-Completed-v2_22
+  - first:
+      213: 3303929509768013796
+    second: RealReaperAttack-Completed-v2_23
+  - first:
+      213: -9221352430272391861
+    second: RealReaperAttack-Completed-v2_24
+  - first:
+      213: -1797123777484345717
+    second: RealReaperAttack-Completed-v2_25
+  - first:
+      213: -818339157079177699
+    second: RealReaperAttack-Completed-v2_26
+  - first:
+      213: 3843955607425724387
+    second: RealReaperAttack-Completed-v2_27
+  - first:
+      213: -3822820103774085638
+    second: RealReaperAttack-Completed-v2_28
+  - first:
+      213: 1607624435438393446
+    second: RealReaperAttack-Completed-v2_29
+  - first:
+      213: -5025466316082059330
+    second: RealReaperAttack-Completed-v2_30
+  - first:
+      213: -7884511797049970123
+    second: RealReaperAttack-Completed-v2_31
+  - first:
+      213: -2564299433028243373
+    second: RealReaperAttack-Completed-v2_32
+  - first:
+      213: 6014740026892303963
+    second: RealReaperAttack-Completed-v2_33
+  - first:
+      213: 6907274278059739129
+    second: RealReaperAttack-Completed-v2_34
+  - first:
+      213: -225706698119372143
+    second: RealReaperAttack-Completed-v2_35
+  - first:
+      213: 8768192580085076962
+    second: RealReaperAttack-Completed-v2_36
+  - first:
+      213: -4608635989460127673
+    second: RealReaperAttack-Completed-v2_37
+  - first:
+      213: 2320384373573353006
+    second: RealReaperAttack-Completed-v2_38
+  - first:
+      213: 5535635328087311033
+    second: RealReaperAttack-Completed-v2_39
+  - first:
+      213: -8511169780018825464
+    second: RealReaperAttack-Completed-v2_40
+  - first:
+      213: 9201211191344936327
+    second: RealReaperAttack-Completed-v2_41
+  - first:
+      213: -5207216367545914009
+    second: RealReaperAttack-Completed-v2_42
+  - first:
+      213: -2636164173508418760
+    second: RealReaperAttack-Completed-v2_43
+  - first:
+      213: 8085752327844890
+    second: RealReaperAttack-Completed-v2_44
+  - first:
+      213: 4601473736083742818
+    second: RealReaperAttack-Completed-v2_45
+  - first:
+      213: 4921050656289494893
+    second: RealReaperAttack-Completed-v2_46
+  - first:
+      213: 13572812008000600
+    second: RealReaperAttack-Completed-v2_47
+  - first:
+      213: 1902305648755088364
+    second: RealReaperAttack-Completed-v2_48
+  - first:
+      213: -665893052842817709
+    second: RealReaperAttack-Completed-v2_49
+  - first:
+      213: 2393814788861470401
+    second: RealReaperAttack-Completed-v2_50
+  - first:
+      213: -1860167158588314952
+    second: RealReaperAttack-Completed-v2_51
+  - first:
+      213: -5126412176380025643
+    second: RealReaperAttack-Completed-v2_52
+  - first:
+      213: -8994147486479446207
+    second: RealReaperAttack-Completed-v2_53
+  - first:
+      213: -5845468522680094992
+    second: RealReaperAttack-Completed-v2_54
+  - first:
+      213: 2974467577899678831
+    second: RealReaperAttack-Completed-v2_55
+  - first:
+      213: 4641023348869690848
+    second: RealReaperAttack-Completed-v2_56
+  - first:
+      213: -4094426909163026388
+    second: RealReaperAttack-Completed-v2_57
+  - first:
+      213: -2884721981348674096
+    second: RealReaperAttack-Completed-v2_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 624
+        width: 264
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cac0c0a11f649f80800000000000000
+      internalID: -8100727708230563131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 601
+        width: 292
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bb1338e51815e90800000000000000
+      internalID: -7038702499675391202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_2
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 620
+        width: 307
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1a9c5c666f410e0800000000000000
+      internalID: -2299942588414058043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_3
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 763
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a52bc0b9c0918b0800000000000000
+      internalID: -5181096036240565696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_4
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 603
+        width: 320
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921972dbb1348a200800000000000000
+      internalID: 191476770579910953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_5
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 775
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2750df58fc32040800000000000000
+      internalID: 4621765816994853621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_6
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 585
+        width: 360
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97f6779fddba11f0800000000000000
+      internalID: -1073336793157929059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_7
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 807
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cf089e897b2a2a0800000000000000
+      internalID: -6727613025957643218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_8
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 791
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35381127ce4a339c0800000000000000
+      internalID: -3948631112840805549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_9
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 735
+        width: 68
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52afb1f41825f980800000000000000
+      internalID: -8505848250798988709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_10
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 694
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e01010f803066730800000000000000
+      internalID: 3991881456632729833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_11
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 697
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c813454842bd7e440800000000000000
+      internalID: 4965178064084677004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 688
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9360e3c2f34fb00a0800000000000000
+      internalID: -6914164250734885319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 189
+        width: 437
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fd726a8b0cae2d0800000000000000
+      internalID: -3248572281900245093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_14
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 646
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade42e3e658e66700800000000000000
+      internalID: 533369065778073306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_15
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 191
+        width: 254
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc95b717b5c7517d0800000000000000
+      internalID: -2948313648856344115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_16
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 18
+        width: 479
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69a84a8f34a509b0800000000000000
+      internalID: -5114501208999417490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_17
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 620
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc9ee90485693b50800000000000000
+      internalID: 6573396748900670706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_18
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 589
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd651bfc766d6fa0800000000000000
+      internalID: -5805871657636237834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_19
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 193
+        width: 297
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40047c056c54d0cd0800000000000000
+      internalID: -2590337492607090684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_20
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 185
+        width: 356
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b0e5aaadb2606d0800000000000000
+      internalID: -3024681881571554417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_21
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 587
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895cc4a03a9aae6e0800000000000000
+      internalID: -1807445782718265960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_22
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 523
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168759a64295cfa40800000000000000
+      internalID: 5403291665879627873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_23
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 516
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e727a8526ae9dd20800000000000000
+      internalID: 3303929509768013796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_24
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 484
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45ddec42dc270080800000000000000
+      internalID: -9221352430272391861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_25
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 486
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e23a922755f07e0800000000000000
+      internalID: -1797123777484345717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_26
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 436
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16c0845fdca4a4f0800000000000000
+      internalID: -818339157079177699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_27
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 423
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef2bf04249785530800000000000000
+      internalID: 3843955607425724387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_28
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 446
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdd25aae5d92fac0800000000000000
+      internalID: -3822820103774085638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_29
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 454
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6681b8e08ed6f4610800000000000000
+      internalID: 1607624435438393446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_30
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 442
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7ec37f205f14ab0800000000000000
+      internalID: -5025466316082059330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_31
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 428
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532b5756b46949290800000000000000
+      internalID: -7884511797049970123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_32
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 369
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350bd9c7047c96cd0800000000000000
+      internalID: -2564299433028243373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_33
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 403
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e3d3fdf26a87350800000000000000
+      internalID: 6014740026892303963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_34
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 389
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f781fd0c519bdf50800000000000000
+      internalID: 6907274278059739129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_35
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 343
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1922b2334f02edcf0800000000000000
+      internalID: -225706698119372143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_36
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 312
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3df2a12b0eea970800000000000000
+      internalID: 8768192580085076962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_37
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 272
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740f5253cf5da00c0800000000000000
+      internalID: -4608635989460127673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_38
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 248
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ef4393b49a33020800000000000000
+      internalID: 2320384373573353006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_39
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 231
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b24fb8700782dc40800000000000000
+      internalID: 5535635328087311033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_40
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 217
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80730fedd2042e980800000000000000
+      internalID: -8511169780018825464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 316
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785b67314d441bf70800000000000000
+      internalID: 9201211191344936327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_42
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 165
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d63df7d404cb7b0800000000000000
+      internalID: -5207216367545914009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_43
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 0
+        width: 293
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8336b64b6a67a6bd0800000000000000
+      internalID: -2636164173508418760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_44
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 0
+        width: 246
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a143e3be2f9bc1000800000000000000
+      internalID: 8085752327844890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_45
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 191
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260af8abbf7bbdf30800000000000000
+      internalID: 4601473736083742818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_46
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 181
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6796d1cf751b4440800000000000000
+      internalID: 4921050656289494893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_47
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 159
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c075e8668303000800000000000000
+      internalID: 13572812008000600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_48
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 140
+        width: 40
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb1440a8e8566a10800000000000000
+      internalID: 1902305648755088364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_49
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 0
+        width: 280
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35747e6ebc542c6f0800000000000000
+      internalID: -665893052842817709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_50
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 149
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c62a241ed9883120800000000000000
+      internalID: 2393814788861470401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_51
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 0
+        width: 350
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8baee7923db5f26e0800000000000000
+      internalID: -1860167158588314952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_52
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 169
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4a1a659435bd8b0800000000000000
+      internalID: -5126412176380025643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_53
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 98
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f8bea938e5e2380800000000000000
+      internalID: -8994147486479446207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_54
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 66
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0feece76959b0eea0800000000000000
+      internalID: -5845468522680094992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_55
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 68
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c70a0b08e674920800000000000000
+      internalID: 2974467577899678831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_56
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 70
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5fba7852a386040800000000000000
+      internalID: 4641023348869690848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_57
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 48
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2889885b6cad27c0800000000000000
+      internalID: -4094426909163026388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RealReaperAttack-Completed-v2_58
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 50
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d583f154a867f7d0800000000000000
+      internalID: -2884721981348674096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RealReaperAttack-Completed-v2_0: -8100727708230563131
+      RealReaperAttack-Completed-v2_1: -7038702499675391202
+      RealReaperAttack-Completed-v2_10: 3991881456632729833
+      RealReaperAttack-Completed-v2_11: 4965178064084677004
+      RealReaperAttack-Completed-v2_12: -6914164250734885319
+      RealReaperAttack-Completed-v2_13: -3248572281900245093
+      RealReaperAttack-Completed-v2_14: 533369065778073306
+      RealReaperAttack-Completed-v2_15: -2948313648856344115
+      RealReaperAttack-Completed-v2_16: -5114501208999417490
+      RealReaperAttack-Completed-v2_17: 6573396748900670706
+      RealReaperAttack-Completed-v2_18: -5805871657636237834
+      RealReaperAttack-Completed-v2_19: -2590337492607090684
+      RealReaperAttack-Completed-v2_2: -2299942588414058043
+      RealReaperAttack-Completed-v2_20: -3024681881571554417
+      RealReaperAttack-Completed-v2_21: -1807445782718265960
+      RealReaperAttack-Completed-v2_22: 5403291665879627873
+      RealReaperAttack-Completed-v2_23: 3303929509768013796
+      RealReaperAttack-Completed-v2_24: -9221352430272391861
+      RealReaperAttack-Completed-v2_25: -1797123777484345717
+      RealReaperAttack-Completed-v2_26: -818339157079177699
+      RealReaperAttack-Completed-v2_27: 3843955607425724387
+      RealReaperAttack-Completed-v2_28: -3822820103774085638
+      RealReaperAttack-Completed-v2_29: 1607624435438393446
+      RealReaperAttack-Completed-v2_3: -5181096036240565696
+      RealReaperAttack-Completed-v2_30: -5025466316082059330
+      RealReaperAttack-Completed-v2_31: -7884511797049970123
+      RealReaperAttack-Completed-v2_32: -2564299433028243373
+      RealReaperAttack-Completed-v2_33: 6014740026892303963
+      RealReaperAttack-Completed-v2_34: 6907274278059739129
+      RealReaperAttack-Completed-v2_35: -225706698119372143
+      RealReaperAttack-Completed-v2_36: 8768192580085076962
+      RealReaperAttack-Completed-v2_37: -4608635989460127673
+      RealReaperAttack-Completed-v2_38: 2320384373573353006
+      RealReaperAttack-Completed-v2_39: 5535635328087311033
+      RealReaperAttack-Completed-v2_4: 191476770579910953
+      RealReaperAttack-Completed-v2_40: -8511169780018825464
+      RealReaperAttack-Completed-v2_41: 9201211191344936327
+      RealReaperAttack-Completed-v2_42: -5207216367545914009
+      RealReaperAttack-Completed-v2_43: -2636164173508418760
+      RealReaperAttack-Completed-v2_44: 8085752327844890
+      RealReaperAttack-Completed-v2_45: 4601473736083742818
+      RealReaperAttack-Completed-v2_46: 4921050656289494893
+      RealReaperAttack-Completed-v2_47: 13572812008000600
+      RealReaperAttack-Completed-v2_48: 1902305648755088364
+      RealReaperAttack-Completed-v2_49: -665893052842817709
+      RealReaperAttack-Completed-v2_5: 4621765816994853621
+      RealReaperAttack-Completed-v2_50: 2393814788861470401
+      RealReaperAttack-Completed-v2_51: -1860167158588314952
+      RealReaperAttack-Completed-v2_52: -5126412176380025643
+      RealReaperAttack-Completed-v2_53: -8994147486479446207
+      RealReaperAttack-Completed-v2_54: -5845468522680094992
+      RealReaperAttack-Completed-v2_55: 2974467577899678831
+      RealReaperAttack-Completed-v2_56: 4641023348869690848
+      RealReaperAttack-Completed-v2_57: -4094426909163026388
+      RealReaperAttack-Completed-v2_58: -2884721981348674096
+      RealReaperAttack-Completed-v2_6: -1073336793157929059
+      RealReaperAttack-Completed-v2_7: -6727613025957643218
+      RealReaperAttack-Completed-v2_8: -3948631112840805549
+      RealReaperAttack-Completed-v2_9: -8505848250798988709
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
