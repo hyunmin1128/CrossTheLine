@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556be4334602ac14da367c04976eb974, type: 3}
+  m_Name: Stage02_Cave_Advanced
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownSettings
+  maximumHealth: 5
+  damage: 1
+  moveSpeed: 2.5
+  stageLength: 24
+  cactusDamage: 2
+  quicksandStunSeconds: 2
+  crackDamage: 2
+  batSlowSeconds: 1.8
+  batVisionSeconds: 1.4
+  poisonDamage: 2
+  poisonReverseSeconds: 3
+  tombPrayerBlockSeconds: 3
+  pillarDamage: 2
+  burnPrayerBlockSeconds: 3
+  thornSlowSeconds: 1.5
+  thornMoveMultiplier: 0.75
+  laterStageObstacleScale: 1.2
+  minimumVisibleReactionSeconds: 0.6
+  finishLineDistance: 6
+  prayerTarget: 90
+  prayerPerSecond: 1
+  prayerTargets:
+  - 90
+  - 100
+  - 110
+  - 120
+  pageFractions:
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  fragmentFractions:
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  hitGrace: 1.2
+  warningSeconds: 1.4
+  visionSeconds: 1.1
+  visionOpacity: 0.42
+  laneSpacing: 3
+  pickupChance: 0.2
+  bibleSpawnChance: 0.01
+  pageSpawnChance: 0.1
+  pieceSpawnChance: 0.18
+  bibleChances:
+  - 0.01
+  - 0.01
+  - 0.01
+  - 0.01
+  pageChances:
+  - 0.1
+  - 0.12
+  - 0.14
+  - 0.16
+  pieceChances:
+  - 0.18
+  - 0.2
+  - 0.22
+  - 0.24
+  flameChance: 0.3
+  shieldChance: 0.16
+  wellChances:
+  - 0.65
+  - 0.6
+  - 0.55
+  - 0
+  wellIntervalSeconds:
+  - 18
+  - 20
+  - 22
+  - 24
+  attackSeconds:
+  - 5
+  - 5.5
+  - 6
+  - 6.5
+  restSeconds:
+  - 3
+  - 2.8
+  - 2.6
+  - 2.4
+  stageMoveSpeeds:
+  - 2.5
+  - 2.75
+  - 3
+  - 3.25
+  manualMoveSpeed: 6.6
+  feverSeconds: 6
+  prayerMoveMultiplier: 0.15
+  scrollSpeedMultiplier: 1.15
+  hazardSpeedMultiplier: 1.55
+  sideSandSpeed: 9
+  prayerPreparationSeconds: 0.3
+  flamesForFever: 3
+  waveIntervals:
+  - 0.84
+  - 0.8
+  - 0.74
+  - 0.68
+  minimumSpawnInterval: 0.55
+  spawnIntervalMultiplier: {x: 0.75, y: 1.35}
+  places:
+  - "\uAD11\uC57C \uC0AC\uB9C9"
+  - "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"
+  - "\uC9C0\uD558 \uD3D0\uC720\uC801"
+  - "\uB9C8\uC9C0\uB9C9 \uC2DC\uB828"

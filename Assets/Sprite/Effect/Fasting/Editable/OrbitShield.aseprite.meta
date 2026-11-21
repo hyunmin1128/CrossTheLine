@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3774c576cfe4c714d81ccb9ded623234
+guid: a6d536d847787e542a7baf3557f037c7
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,10 +33,10 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 32
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -78,7 +78,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -93,7 +93,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Flame
+  - name: OrbitShield
     originalName: 
-    pivot: {x: 0.46808508, y: -0.056603774}
+    pivot: {x: 0.5, y: 0.5166667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 47
-      height: 53
-    spriteID: 39bcf3df022af17409510005b6c582c5
+      width: 42
+      height: 60
+    spriteID: 5d30a0db217bbde47ac493faa5188d1b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,151 +147,31 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: Frame_1
-    originalName: 
-    pivot: {x: 0.46808508, y: -0.056603774}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 65
-      width: 47
-      height: 53
-    spriteID: fb00e609e92889b44b7bf2fde55e1a8b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 65}
-  - name: Frame_2
-    originalName: 
-    pivot: {x: 0.46808508, y: -0.056603774}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 126
-      width: 47
-      height: 53
-    spriteID: 4b891810d388aaf4698acd3818163d93
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 126}
-  - name: Frame_3
-    originalName: 
-    pivot: {x: 0.46808508, y: -0.056603774}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 187
-      width: 47
-      height: 53
-    spriteID: 5d30d93f3c51801428998ce9c91afc2c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 187}
-  - name: Frame_4
-    originalName: 
-    pivot: {x: 0.46808508, y: -0.056603774}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 59
-      y: 4
-      width: 47
-      height: 53
-    spriteID: b1f582e687b188f4aa737cf51dfc076c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 59, y: 4}
+    uvTransform: {x: -8, y: 4}
   spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 2939288603
+      value0: 2757211581
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Flame
+    name: OrbitShield
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: OrbitShield
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 3
-        width: 47
-        height: 53
-      spriteId: 39bcf3df022af17409510005b6c582c5
-    - name: Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 10
-        y: 3
-        width: 47
-        height: 53
-      spriteId: fb00e609e92889b44b7bf2fde55e1a8b
-    - name: Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 10
-        y: 3
-        width: 47
-        height: 53
-      spriteId: 4b891810d388aaf4698acd3818163d93
-    - name: Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 10
-        y: 3
-        width: 47
-        height: 53
-      spriteId: 5d30d93f3c51801428998ce9c91afc2c
-    - name: Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 10
-        y: 3
-        width: 47
-        height: 53
-      spriteId: b1f582e687b188f4aa737cf51dfc076c
+        x: -1
+        y: 1
+        width: 64
+        height: 64
+      spriteId: 5d30a0db217bbde47ac493faa5188d1b
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -300,5 +180,5 @@ ScriptedImporter:
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
-  previousTextureSize: {x: 128, y: 256}
+  previousTextureSize: {x: 64, y: 128}
   canvasSize: {x: 64, y: 64}

@@ -9,7 +9,7 @@ namespace CrossTheLine.Minigames
         {
             if(kind==FastingTopDownHazard.Kind.Reaper){SpawnReaperSweep(offset);return;}
             int safe=encounterDirector?encounterDirector.OpenLane:2;
-            int width=kind==FastingTopDownHazard.Kind.Thorns?Random.Range(1,Mathf.Clamp(trialArt.maximumThornCount,1,3)+1):2;
+            int width=kind==FastingTopDownHazard.Kind.Fire?1:kind==FastingTopDownHazard.Kind.Thorns?Random.Range(1,Mathf.Clamp(trialArt.maximumThornCount,1,3)+1):2;
             int rows=kind==FastingTopDownHazard.Kind.Pillar&&Random.value<.5f?2:1;
             var starts=new List<int>();
             for(;width>0;width--){for(int s=0;s<=SpawnLaneCount-width;s++)if(safe<s||safe>=s+width)starts.Add(s);if(starts.Count>0)break;}

@@ -42,7 +42,7 @@ namespace CrossTheLine.Minigames
             if(!entity)return;
             foreach(var renderer in entity.GetComponentsInChildren<SpriteRenderer>(true))if(renderer.name=="Symbol"&&renderer.sprite)
             {
-                sprite=renderer.sprite;spriteMaterial=renderer.sharedMaterial;
+                sprite=game&&game.effectSprites&&game.effectSprites.orbitShield?game.effectSprites.orbitShield:renderer.sprite;spriteMaterial=renderer.sharedMaterial;
                 foreach(var shield in shields)if(shield){shield.sprite=sprite;shield.sharedMaterial=spriteMaterial;}
                 return;
             }

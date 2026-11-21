@@ -19,7 +19,7 @@ namespace CrossTheLine.Minigames
         }
         public static string ObstacleName(FastingTopDownHazard.Kind kind)
         {
-            string[] names={"돌멩이","모래바람","선인장","모래지옥","박쥐","낙석","균열","해골무덤","벽","오염된 우물","불","가시덤불","화염 기둥","사신"};int i=(int)kind;return i>=0&&i<names.Length?names[i]:"장애물";
+            string[] names={"돌멩이","모래바람","선인장","모래지옥","박쥐","낙석","균열","해골무덤","벽","오염된 우물","용암 구멍","가시덤불","화염 기둥","사신"};int i=(int)kind;return i>=0&&i<names.Length?names[i]:"장애물";
         }
         string BuildRunResult(bool completed)
         {

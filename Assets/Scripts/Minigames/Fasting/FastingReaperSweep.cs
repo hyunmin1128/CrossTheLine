@@ -8,9 +8,12 @@ namespace CrossTheLine.Minigames
         public Color slashColor=new Color(1,.8f,.55f,.85f);
         public float slashWidth=.09f;
         public Sprite[] slashFrames;
+        [Min(1)] public int firstSwingFrame=2;
+        [Min(.05f)] public float attackAnimationSeconds=.4f;
         public float preparationSeconds=.10f,cutSeconds=.07f;
         [Min(.1f)] public float followSeconds=1.25f,lockSeconds=.85f;
         [Min(1)] public float followSpeed=10,dashSpeed=24;
+        [Min(0)] public float topInset=.05f;
         public AttackPhase CurrentPhase{get;private set;}
         public bool Choreographed{get;private set;}
         public bool RangeVisible=>range&&range.enabled;
@@ -47,7 +50,11 @@ namespace CrossTheLine.Minigames
             transform.position=new Vector3(Mathf.Clamp(transform.position.x,minX,maxX),HoverY(),0);
             ShowFrame(0);hazard.body.enabled=true;
         }
-        float HoverY()=>game.gameCamera.transform.position.y+game.gameCamera.orthographicSize-Mathf.Max(3,hazard.body.bounds.extents.y+.9f);
+        float HoverY()
+        {
+            float top=game.gameCamera.transform.position.y+game.gameCamera.orthographicSize-topInset;
+            return transform.position.y+top-hazard.body.bounds.max.y;
+        }
         void ShowFrame(int index)
         {
             if(slashFrames!=null&&slashFrames.Length>0)hazard.body.sprite=slashFrames[Mathf.Min(index,slashFrames.Length-1)];
@@ -68,19 +75,29 @@ namespace CrossTheLine.Minigames
                     float x=Mathf.MoveTowards(transform.position.x,Mathf.Clamp(game.player.position.x,minX,maxX),followSpeed*step);
                     transform.position=new Vector3(x,HoverY(),0);
                 }
+                else transform.position=new Vector3(transform.position.x,HoverY(),0);
                 hazard.body.enabled=true;hazard.velocity=Vector2.zero;
+                if(CurrentPhase==AttackPhase.Preparing)ShowFrame(Mathf.Min(firstSwingFrame-1,Mathf.FloorToInt(clock/duration*firstSwingFrame)));
                 hazard.warning=Mathf.Max(.001f,duration-clock+(CurrentPhase==AttackPhase.Following?Mathf.Max(.1f,lockSeconds):0));
                 if(clock+0.00001f<duration){RefreshLines();return false;}
                 clock=0;
-                if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;ShowFrame(1);}
-                else{CurrentPhase=AttackPhase.Dashing;ShowFrame(2);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
+                if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;ShowFrame(0);}
+                else{CurrentPhase=AttackPhase.Dashing;ShowFrame(firstSwingFrame);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
                 if(remaining<=0)break;
             }
             RefreshLines();travelSeconds=CurrentPhase==AttackPhase.Dashing?remaining:0;return travelSeconds>0;
         }
         public void AdvanceVisual(float attackSeconds)
         {
-            if(!Choreographed)ShowFrame(attackSeconds<preparationSeconds?0:attackSeconds<preparationSeconds+cutSeconds?1:2);
+            if(Choreographed)
+            {
+                if(CurrentPhase==AttackPhase.Dashing&&slashFrames!=null&&slashFrames.Length>0)
+                {
+                    int first=Mathf.Clamp(firstSwingFrame,0,slashFrames.Length-1);
+                    ShowFrame(first+Mathf.FloorToInt(Mathf.Clamp01(attackSeconds/Mathf.Max(.05f,attackAnimationSeconds))*(slashFrames.Length-first)));
+                }
+            }
+            else ShowFrame(attackSeconds<preparationSeconds?0:attackSeconds<preparationSeconds+cutSeconds?1:2);
         }
         void RefreshLines()
         {

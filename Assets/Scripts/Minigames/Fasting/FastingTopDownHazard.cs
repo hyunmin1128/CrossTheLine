@@ -115,8 +115,8 @@ namespace CrossTheLine.Minigames
             if(reaperSweep)reaperSweep.AdvanceVisual(phase);
             if(animationFrames!=null&&animationFrames.Length>0){body.sprite=animationFrames[Mathf.FloorToInt(phase*framesPerSecond)%animationFrames.Length];if(secondBody){secondBody.sprite=body.sprite;secondBody.flipX=body.flipX;}}
             if(lifetime<=0){spent=true;gameObject.SetActive(false);return false;}
-            bool visible=!((kind==Kind.Pillar||kind==Kind.Crack)&&phase%2>1.1f);
-            body.enabled=visible;if(secondBody)secondBody.enabled=visible;if(!visible)return false;
+            bool damageWindowClosed=(kind==Kind.Pillar||kind==Kind.Crack)&&phase%2>1.1f;
+            body.enabled=true;if(secondBody)secondBody.enabled=true;if(damageWindowClosed)return false;
             if(kind==Kind.Rock&&rotateRollingRock)body.transform.localRotation=Quaternion.Euler(0,0,(Mathf.FloorToInt(phase*10)%4)*90);
             // Speed surges stay on the authored path, preserving the reserved escape lane.
             float surge=!scrollOnly&&(kind==Kind.Rock||kind==Kind.Sand)?1+.18f*Mathf.Sin(phase*5+transform.position.x*.2f):1;

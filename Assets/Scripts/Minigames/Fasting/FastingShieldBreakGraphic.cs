@@ -14,7 +14,16 @@ namespace CrossTheLine.Minigames
         float elapsed=Duration;
         public bool Active=>sprite&&elapsed<Duration;
         public float Progress=>Mathf.Clamp01(elapsed/Duration);
-        Sprite IllustratedFrame=>effectSprites?FastingEffectSprites.Frame(effectSprites.shieldBreak,elapsed<.45f?0:elapsed<.60f?1:elapsed<.75f?2:elapsed<1.05f?3:elapsed<1.4f?4:5):null;
+        Sprite IllustratedFrame
+        {
+            get
+            {
+                var frames=effectSprites?effectSprites.shieldBreak:null;
+                if(frames==null||frames.Length==0)return null;
+                int index=elapsed<.45f?0:1+Mathf.FloorToInt(Mathf.InverseLerp(.45f,Duration,elapsed)*(frames.Length-1));
+                return FastingEffectSprites.Frame(frames,index);
+            }
+        }
         public override Texture mainTexture=>IllustratedFrame?IllustratedFrame.texture:sprite?sprite.texture:Texture2D.whiteTexture;
         public void Play(Sprite artwork,Vector2 screenPoint)
         {

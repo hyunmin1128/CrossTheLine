@@ -48,8 +48,11 @@ namespace CrossTheLine.Minigames
             {
                 if(!illustrated){illustrated=gameObject.AddComponent<FastingIllustratedAura>();illustrated.Initialize(this,game,artwork,material);}
                 illustrated.Draw(dt);
-                if(game.Shielded)Bubble(center,MembraneScale,.9f+.1f*Mathf.Sin(clock*2.5f));
-                if(PrayerGlowVisible)PrayerBubble(center);
+                if(!game.effectSprites.editableAuraSprites)
+                {
+                    if(game.Shielded)Bubble(center,MembraneScale,.9f+.1f*Mathf.Sin(clock*2.5f));
+                    if(PrayerGlowVisible)PrayerBubble(center);
+                }
                 mesh.Clear();mesh.SetVertices(vertices);mesh.SetColors(colors);mesh.SetTriangles(triangles,0);mesh.RecalculateBounds();auraRenderer.enabled=vertices.Count>0;return;
             }
             if(game.Shielded)

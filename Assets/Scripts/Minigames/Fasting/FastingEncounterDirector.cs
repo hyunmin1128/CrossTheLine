@@ -14,7 +14,7 @@ namespace CrossTheLine.Minigames
         public Vector2 randomIntervals=new Vector2(.85f,1.65f);
         [Range(.3f,1)] public float desertSpawnIntervalMultiplier=.75f;
         public bool matchDesertSpawnRate=true;
-        float StageIntervalMultiplier=>game&&(game.StageIndex==0||matchDesertSpawnRate)?desertSpawnIntervalMultiplier:1;
+        float StageIntervalMultiplier=>game&&game.CurrentStageConfiguration?Mathf.Max(.01f,game.CurrentStageConfiguration.spawnIntervalScale):game&&(game.StageIndex==0||matchDesertSpawnRate)?desertSpawnIntervalMultiplier:1;
         float nextRandom;
         public float Frequency=>game&&game.spawnSettings?game.spawnSettings.Frequency(game.StageIndex):1;
         float ScaleInterval(float seconds)=>seconds/Mathf.Max(.01f,Frequency);
@@ -34,7 +34,7 @@ namespace CrossTheLine.Minigames
                 remaining-=dt;if(remaining<=0){CurrentPhase=Phase.Clearing;return;}
                 if(Frequency<=0)return;
                 // Separate clocks: random obstacles are not tied to the selected pattern or its beat.
-                nextWave-=dt;if(nextWave<=0){SpawnAttempts++;PatternSpawnAttempts++;game.SpawnWave();nextWave=ScaleInterval(game.settings.NextSpawnInterval(matchDesertSpawnRate?0:game.StageIndex)*Mathf.Max(1,patternIntervalMultiplier)*StageIntervalMultiplier);}
+                nextWave-=dt;if(nextWave<=0){SpawnAttempts++;PatternSpawnAttempts++;game.SpawnWave();nextWave=ScaleInterval(game.settings.NextSpawnInterval(game.CurrentStageConfiguration?game.StageIndex:matchDesertSpawnRate?0:game.StageIndex)*Mathf.Max(1,patternIntervalMultiplier)*StageIntervalMultiplier);}
                 nextRandom-=dt;if(nextRandom<=0){SpawnAttempts++;RandomSpawnAttempts++;game.SpawnRandomObstacle();nextRandom=RandomInterval();}return;
             }
             if(CurrentPhase==Phase.Clearing)

@@ -20,6 +20,7 @@ namespace CrossTheLine.Minigames
                 bool ruins=StageIndex==2&&ruinsArt&&ruinsArt.background;
                 bool trial=StageIndex==3&&trialArt&&trialArt.background;
                 bg.sprite=cave?caveArt.background:ruins?ruinsArt.background:trial?trialArt.background:authoredBackgrounds[i];bg.color=cave||ruins||trial?Color.white:tint;
+                if(CurrentStageConfiguration&&CurrentStageConfiguration.background){bg.sprite=CurrentStageConfiguration.background;bg.color=Color.white;}
                 var size=authoredBackgrounds[i].bounds.size;var target=bg.sprite.bounds.size;
                 bg.transform.localScale=Vector3.Scale(authoredBackgroundScales[i],new Vector3(size.x/target.x,size.y/target.y,1));
             }

@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 3024121683208834639}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.071808614, y: -1.4122338, z: 0}
-  m_LocalScale: {x: 4.787234, y: 4.787234, z: 4.787234}
+  m_LocalPosition: {x: 0.06367925, y: 0.1273585, z: 0}
+  m_LocalScale: {x: 1.3584906, y: 1.3584906, z: 1.3584906}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7064482833400546946}
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 30
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2931778355749043525, guid: 3774c576cfe4c714d81ccb9ded623234, type: 3}
+  m_Sprite: {fileID: -3764157933875091663, guid: f3e50270ff4cf6c4cbda48a804162602, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.03125, y: 0.03125}
+  m_Size: {x: 1.65625, y: 0.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownHazard
   kind: 10
-  size: {x: 2.25, y: 1.9029254}
+  size: {x: 2.25, y: 0.9551887}
   velocity: {x: 0, y: 0}
   warning: 0
   lifetime: 30
@@ -147,19 +147,19 @@ MonoBehaviour:
   footprint: {fileID: 0}
   arrow: {fileID: 0}
   occupiedLanes: 1
-  artworkWidth: 0.47000003
-  artworkCenter: {x: 0.015000023, y: 0.29499996}
-  collisionHeight: 1.9029254
+  artworkWidth: 1.65625
+  artworkCenter: {x: -0.046875, y: -0.09375}
+  collisionOffset: {x: 0, y: 0}
+  minimumVisibleReactionSeconds: 0
+  collisionHeight: 0.9551887
   scrollOnly: 1
   rotateRollingRock: 0
   expandsOnApproach: 0
+  fixedApproachScale: 1
+  authoredWallOrientation: 0
+  verticalWall: 0
   formationId: 0
   formationCount: 1
-  animationFrames:
-  - {fileID: 2931778355749043525, guid: 3774c576cfe4c714d81ccb9ded623234, type: 3}
-  - {fileID: -6067204640494267761, guid: 3774c576cfe4c714d81ccb9ded623234, type: 3}
-  - {fileID: 1950379385592380093, guid: 3774c576cfe4c714d81ccb9ded623234, type: 3}
-  - {fileID: 4578432603646230361, guid: 3774c576cfe4c714d81ccb9ded623234, type: 3}
-  - {fileID: -711274197406719573, guid: 3774c576cfe4c714d81ccb9ded623234, type: 3}
+  animationFrames: []
   framesPerSecond: 8
   quicksandMaximumScale: 2

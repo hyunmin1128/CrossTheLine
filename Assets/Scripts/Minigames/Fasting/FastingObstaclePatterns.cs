@@ -30,6 +30,8 @@ namespace CrossTheLine.Minigames
             int length=game.SpawnLaneCount-1;int[] lanes=new int[length];for(int i=0,n=0;i<game.SpawnLaneCount;i++)if(i!=safe)lanes[n++]=i;
             int lane=lanes[wave%length],opposite=lanes[length-1-wave%length];
             if(!game.TryChooseObstacle(out var moving))return true;
+            // Lava is a single ground opening, including during paired pattern waves.
+            if(game.StageIndex==3&&moving==FastingTopDownHazard.Kind.Fire){game.SpawnPatternObstacle(moving,lane,1,0);return true;}
             var fixedKind=moving;
             switch(CurrentPattern)
             {

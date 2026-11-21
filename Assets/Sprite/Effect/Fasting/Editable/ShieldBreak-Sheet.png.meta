@@ -1,0 +1,964 @@
+fileFormatVersion: 2
+guid: 84f6838459b23a740a7902552aef71e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4307476040366840407
+    second: ShieldBreak-Sheet_0
+  - first:
+      213: -7136052369975219404
+    second: ShieldBreak-Sheet_1
+  - first:
+      213: -1107917812984397006
+    second: ShieldBreak-Sheet_2
+  - first:
+      213: -7073427018051649833
+    second: ShieldBreak-Sheet_3
+  - first:
+      213: -3273890437787470259
+    second: ShieldBreak-Sheet_4
+  - first:
+      213: -2090220408534856826
+    second: ShieldBreak-Sheet_5
+  - first:
+      213: 6228967884283694900
+    second: ShieldBreak-Sheet_6
+  - first:
+      213: 5190463672998649441
+    second: ShieldBreak-Sheet_7
+  - first:
+      213: 4041607860856376205
+    second: ShieldBreak-Sheet_8
+  - first:
+      213: 8905572830245032762
+    second: ShieldBreak-Sheet_9
+  - first:
+      213: 1359299962397981357
+    second: ShieldBreak-Sheet_10
+  - first:
+      213: 5606266211580123611
+    second: ShieldBreak-Sheet_11
+  - first:
+      213: -7395421321099994895
+    second: ShieldBreak-Sheet_12
+  - first:
+      213: -6848461232524898790
+    second: ShieldBreak-Sheet_13
+  - first:
+      213: 953374498101211056
+    second: ShieldBreak-Sheet_14
+  - first:
+      213: -3624993522473633969
+    second: ShieldBreak-Sheet_15
+  - first:
+      213: -4607857556291102806
+    second: ShieldBreak-Sheet_16
+  - first:
+      213: -3337461376035776477
+    second: ShieldBreak-Sheet_17
+  - first:
+      213: -3385013067390610608
+    second: ShieldBreak-Sheet_18
+  - first:
+      213: 6656629543856001152
+    second: ShieldBreak-Sheet_19
+  - first:
+      213: -2933330151749210933
+    second: ShieldBreak-Sheet_20
+  - first:
+      213: 7966355303700114301
+    second: ShieldBreak-Sheet_21
+  - first:
+      213: -4641536023597892083
+    second: ShieldBreak-Sheet_22
+  - first:
+      213: -4603568058668260718
+    second: ShieldBreak-Sheet_23
+  - first:
+      213: 2658659829556921183
+    second: ShieldBreak-Sheet_24
+  - first:
+      213: -3006643112146587577
+    second: ShieldBreak-Sheet_25
+  - first:
+      213: 8196767029043479298
+    second: ShieldBreak-Sheet_26
+  - first:
+      213: 5966132713342674425
+    second: ShieldBreak-Sheet_27
+  - first:
+      213: -163281010167873045
+    second: ShieldBreak-Sheet_28
+  - first:
+      213: -1660410582819200922
+    second: ShieldBreak-Sheet_29
+  - first:
+      213: 747863048890613010
+    second: ShieldBreak-Sheet_30
+  - first:
+      213: 829261407427569869
+    second: ShieldBreak-Sheet_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a529003aa37cb30800000000000000
+      internalID: 4307476040366840407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bea0d8d26a7fc90800000000000000
+      internalID: -7136052369975219404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233ccbc7e92ef90f0800000000000000
+      internalID: -1107917812984397006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de716c8a9326dd90800000000000000
+      internalID: -7073427018051649833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 31
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46312e1efdc092d0800000000000000
+      internalID: -3273890437787470259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 44
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b0207ec9b0ef2e0800000000000000
+      internalID: -2090220408534856826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 11
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43fcb0cc94db17650800000000000000
+      internalID: 6228967884283694900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 42
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e57a8d53b380840800000000000000
+      internalID: 5190463672998649441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 33
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b45c3afeca61830800000000000000
+      internalID: 4041607860856376205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 47
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33102c2e43f69b70800000000000000
+      internalID: 8905572830245032762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 45
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daafee92d143dd210800000000000000
+      internalID: 1359299962397981357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 19
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd912898a657dcd40800000000000000
+      internalID: 5606266211580123611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 52
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f81c77bd7f2e5990800000000000000
+      internalID: -7395421321099994895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 43
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ec1513bc065f0a0800000000000000
+      internalID: -6848461232524898790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 20
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf2d390e011b3d00800000000000000
+      internalID: 953374498101211056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 36
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47fddbe89f61bdc0800000000000000
+      internalID: -3624993522473633969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 34
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa75bad47f99d00c0800000000000000
+      internalID: -4607857556291102806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 42
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3281dc5af84fea1d0800000000000000
+      internalID: -3337461376035776477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 33
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053902ebc840601d0800000000000000
+      internalID: -3385013067390610608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 16
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08058e24d49116c50800000000000000
+      internalID: 6656629543856001152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 8
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccab08b4c7ba47d0800000000000000
+      internalID: -2933330151749210933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b289fe0fd2e8e60800000000000000
+      internalID: 7966355303700114301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 17
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0eb4451493f59fb0800000000000000
+      internalID: -4641536023597892083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 24
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2926ebbcd37dc10c0800000000000000
+      internalID: -4603568058668260718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 23
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53475f570575e420800000000000000
+      internalID: 2658659829556921183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740b026f4024646d0800000000000000
+      internalID: -3006643112146587577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20345c04f24c0c170800000000000000
+      internalID: 8196767029043479298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 12
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5a0a5c716fbc250800000000000000
+      internalID: 5966132713342674425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 18
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1806e49c8ebbdf0800000000000000
+      internalID: -163281010167873045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66023c54f5905f8e0800000000000000
+      internalID: -1660410582819200922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 17
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21df3c90b71f06a00800000000000000
+      internalID: 747863048890613010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBreak-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 7
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc829af3bd0228b00800000000000000
+      internalID: 829261407427569869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ShieldBreak-Sheet_0: 4307476040366840407
+      ShieldBreak-Sheet_1: -7136052369975219404
+      ShieldBreak-Sheet_10: 1359299962397981357
+      ShieldBreak-Sheet_11: 5606266211580123611
+      ShieldBreak-Sheet_12: -7395421321099994895
+      ShieldBreak-Sheet_13: -6848461232524898790
+      ShieldBreak-Sheet_14: 953374498101211056
+      ShieldBreak-Sheet_15: -3624993522473633969
+      ShieldBreak-Sheet_16: -4607857556291102806
+      ShieldBreak-Sheet_17: -3337461376035776477
+      ShieldBreak-Sheet_18: -3385013067390610608
+      ShieldBreak-Sheet_19: 6656629543856001152
+      ShieldBreak-Sheet_2: -1107917812984397006
+      ShieldBreak-Sheet_20: -2933330151749210933
+      ShieldBreak-Sheet_21: 7966355303700114301
+      ShieldBreak-Sheet_22: -4641536023597892083
+      ShieldBreak-Sheet_23: -4603568058668260718
+      ShieldBreak-Sheet_24: 2658659829556921183
+      ShieldBreak-Sheet_25: -3006643112146587577
+      ShieldBreak-Sheet_26: 8196767029043479298
+      ShieldBreak-Sheet_27: 5966132713342674425
+      ShieldBreak-Sheet_28: -163281010167873045
+      ShieldBreak-Sheet_29: -1660410582819200922
+      ShieldBreak-Sheet_3: -7073427018051649833
+      ShieldBreak-Sheet_30: 747863048890613010
+      ShieldBreak-Sheet_31: 829261407427569869
+      ShieldBreak-Sheet_4: -3273890437787470259
+      ShieldBreak-Sheet_5: -2090220408534856826
+      ShieldBreak-Sheet_6: 6228967884283694900
+      ShieldBreak-Sheet_7: 5190463672998649441
+      ShieldBreak-Sheet_8: 4041607860856376205
+      ShieldBreak-Sheet_9: 8905572830245032762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

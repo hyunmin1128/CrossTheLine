@@ -13,27 +13,28 @@ MonoBehaviour:
   m_Name: FastingEffectSprites
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingEffectSprites
   shieldBreak:
-  - {fileID: 21300000, guid: 0beeb7a44eb12584ea56a47db0dd9ce3, type: 3}
-  - {fileID: 21300000, guid: 0017ed07d709fb445a7203bbf512952c, type: 3}
-  - {fileID: 21300000, guid: 628a2af7381de324482a099cbc662026, type: 3}
-  - {fileID: 21300000, guid: 42680cbf7032c0e4fbf159396984dc99, type: 3}
-  - {fileID: 21300000, guid: a78976f6c3e32e14aa4362764389bfa7, type: 3}
-  - {fileID: 21300000, guid: bf7220892d52f0c40ab3ff7c3fdc5c35, type: 3}
+  - {fileID: 4083941527324420720, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
+  - {fileID: 8479754710722740860, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
+  - {fileID: 9145134433699841186, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
+  - {fileID: -6943759732054539788, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
+  - {fileID: -1334902796953967573, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
+  - {fileID: -8200679657692528854, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
+  - {fileID: -2675880166318413261, guid: c1c06f6574c680d4c93ba885aa373a58, type: 3}
   bubble:
-  - {fileID: 21300000, guid: 07aa12f7b19d0b04e94f8f3279ff86c0, type: 3}
-  - {fileID: 21300000, guid: 7cad75ba687f6d94186717f061aab321, type: 3}
-  - {fileID: 21300000, guid: 39003a28acf1bfd4896f86511f23111a, type: 3}
-  - {fileID: 21300000, guid: e004ac725fa280e4986e55d58791989f, type: 3}
+  - {fileID: 6704524501905399374, guid: bb00c625f1e6d734e849984cc1542e07, type: 3}
+  - {fileID: 2323863943102088339, guid: bb00c625f1e6d734e849984cc1542e07, type: 3}
+  - {fileID: -3059440816019516880, guid: bb00c625f1e6d734e849984cc1542e07, type: 3}
+  - {fileID: -7723515944721439425, guid: bb00c625f1e6d734e849984cc1542e07, type: 3}
   water:
   - {fileID: 21300000, guid: 6967d59b6aa854f4a8aadfdd71832ed3, type: 3}
   - {fileID: 21300000, guid: 4fcab293c24c1754bbcdee0a7d9744e4, type: 3}
   - {fileID: 21300000, guid: 3c9c7b2a51b7fd642b45e63635a88f84, type: 3}
   - {fileID: 21300000, guid: 80bd2df22c732be41ad85e6f24e36939, type: 3}
   prayer:
-  - {fileID: 21300000, guid: ac05c8139fb919b43aaa91a9c60b07bb, type: 3}
-  - {fileID: 21300000, guid: 8304f32769717f64cbf73d38626ffc07, type: 3}
-  - {fileID: 21300000, guid: 13a560c351a36f4488c39a6c3ef9f151, type: 3}
-  - {fileID: 21300000, guid: 66ac26636a6c6c2428f0c34c9aa16fa5, type: 3}
+  - {fileID: -5816115235737666350, guid: c73b844a60e37db4a8a81a06a7941a90, type: 3}
+  - {fileID: 5006965272761988212, guid: c73b844a60e37db4a8a81a06a7941a90, type: 3}
+  - {fileID: 5289352952905799455, guid: c73b844a60e37db4a8a81a06a7941a90, type: 3}
+  - {fileID: -3663266880965846661, guid: c73b844a60e37db4a8a81a06a7941a90, type: 3}
   rocks:
   - {fileID: 21300000, guid: 605b196a83420424c9b593688ddd37f0, type: 3}
   - {fileID: 21300000, guid: 4ea9f6811ed7ffb44bf0e7cff03cda5e, type: 3}
@@ -46,4 +47,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cabcd3ccc3804704687dc8c988585b88, type: 3}
   - {fileID: 21300000, guid: 52f772df48662d845a180a72c6cc5a9d, type: 3}
   - {fileID: 21300000, guid: fb2916713213ac845a299c0c6877cbdb, type: 3}
-  spark: {fileID: 21300000, guid: d82db1d294a3ad240b4178891331fb21, type: 3}
+  spark: {fileID: -6303467136606607321, guid: 464b2cf01fdb91246ac9bdd6e8df737f, type: 3}
+  editableAuraSprites: 1
+  prayerAura:
+  - {fileID: 7368610429639355742, guid: 0b226349595834f43bf1a34d29f00db4, type: 3}
+  - {fileID: -3994297917374757101, guid: 0b226349595834f43bf1a34d29f00db4, type: 3}
+  - {fileID: -5920076256423173164, guid: 0b226349595834f43bf1a34d29f00db4, type: 3}
+  - {fileID: 5837801805707726650, guid: 0b226349595834f43bf1a34d29f00db4, type: 3}
+  orbitShield: {fileID: 4707099457744288627, guid: a6d536d847787e542a7baf3557f037c7, type: 3}
+  shieldBubbleOpacity: 0.28
+  prayerAuraOpacity: 0.18

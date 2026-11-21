@@ -90,12 +90,28 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9fa49cb243a6af348bd4dbac0becb864, type: 3}
   - {fileID: 21300000, guid: 9061996ecee67fb4d82e0b5ce1f4c125, type: 3}
   - {fileID: 21300000, guid: 95c27e5a393bda84c8665c920dfb1ec6, type: 3}
+  - {fileID: 21300000, guid: fa0168e149be2cb42aa1bfd654c46a53, type: 3}
+  - {fileID: 21300000, guid: be99e239cf499ca4aaddcf1930450da8, type: 3}
+  - {fileID: 21300000, guid: 8a89121b4e6070448a4adad71354c406, type: 3}
+  - {fileID: 21300000, guid: f0c281b3b046b584098d544c8f97910a, type: 3}
+  - {fileID: 21300000, guid: 3fa109b78d8c02e49b0d4be516405794, type: 3}
+  - {fileID: 21300000, guid: c519c305e78e4eb41b207f91779bfe3c, type: 3}
+  - {fileID: 21300000, guid: cc772145b80bad04c8a74e853adff588, type: 3}
+  - {fileID: 21300000, guid: b088436645ffe3b498fef556f3cf1233, type: 3}
+  - {fileID: 21300000, guid: 7047ef18ae00562469987ca1a9c464a9, type: 3}
+  - {fileID: 21300000, guid: 6700db8031db9334fbdc8b75c0e8344d, type: 3}
+  - {fileID: 21300000, guid: 92febf1352c3d604fbb6c67bb8641c7f, type: 3}
+  - {fileID: 21300000, guid: bb24357a5ed53c54c9cd8291b258720c, type: 3}
+  - {fileID: 21300000, guid: 05f0963a30f008b41a5f1acd60134d46, type: 3}
+  firstSwingFrame: 6
+  attackAnimationSeconds: 0.4
   preparationSeconds: 0.1
   cutSeconds: 0.07
   followSeconds: 1.25
   lockSeconds: 0.85
   followSpeed: 10
   dashSpeed: 24
+  topInset: 0.05
 --- !u!1 &9126574187466923400
 GameObject:
   m_ObjectHideFlags: 0
