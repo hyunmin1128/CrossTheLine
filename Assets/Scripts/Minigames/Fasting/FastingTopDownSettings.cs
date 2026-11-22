@@ -37,6 +37,7 @@ namespace CrossTheLine.Minigames
         public float StageDropChance(FastingTopDownEntity.Kind kind,int stage)=>Mathf.Clamp01(kind==FastingTopDownEntity.Kind.Book?StageValue(bibleChances,stage,bibleSpawnChance):kind==FastingTopDownEntity.Kind.Page?StageValue(pageChances,stage,pageSpawnChance):kind==FastingTopDownEntity.Kind.Fragment?StageValue(pieceChances,stage,pieceSpawnChance):kind==FastingTopDownEntity.Kind.Water?StageValue(wellChances,stage,0):kind==FastingTopDownEntity.Kind.Flame?flameChance:kind==FastingTopDownEntity.Kind.Shield?shieldChance:pickupChance);
         public float[] stageMoveSpeeds={2.5f,2.75f,3f,3.25f};
         public float manualMoveSpeed=5.2f,feverSeconds=6;
+        [Min(0),Tooltip("피버 중 성령의 불꽃 하나로 회복되는 남은 피버 시간. 최대 Fever Seconds까지 충전합니다.")] public float feverRefillSeconds=2;
         public float prayerMoveMultiplier=.15f,scrollSpeedMultiplier=1.15f,hazardSpeedMultiplier=1.2f,sideSandSpeed=7.2f;
         [Min(0)] public float prayerPreparationSeconds=.3f;
         public int flamesForFever=3;

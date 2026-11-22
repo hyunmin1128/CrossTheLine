@@ -11,8 +11,8 @@ namespace CrossTheLine.Minigames
         public bool editableAuraSprites;
         public Sprite[] prayerAura;
         public Sprite orbitShield;
-        [Range(0,1),Tooltip("예수님을 가리지 않도록 보호막 전체 그림의 표시 투명도를 조절합니다. 원본 파일은 바꾸지 않습니다.")] public float shieldBubbleOpacity=.28f;
-        [Range(0,1)] public float prayerAuraOpacity=.18f;
+        [Range(0,1),Tooltip("예수님 뒤에서 표시되는 보호막의 선명도입니다. 원본 파일은 바꾸지 않습니다.")] public float shieldBubbleOpacity=.72f;
+        [Range(0,1)] public float prayerAuraOpacity=.52f;
         public static Sprite Frame(Sprite[] frames,int index)=>frames!=null&&frames.Length>0?frames[Mathf.Clamp(index,0,frames.Length-1)]:null;
         public Sprite Particle(FastingTopDownHazard.Kind kind,int index)
         {

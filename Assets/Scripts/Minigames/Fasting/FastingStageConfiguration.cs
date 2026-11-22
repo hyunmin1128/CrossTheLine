@@ -38,6 +38,8 @@ namespace CrossTheLine.Minigames
         [Range(0,1)] public float bibleChance=.01f,pageChance=.1f,fragmentChance=.18f;
         [Range(0,1)] public float flameChance=.3f,shieldChance=.16f,waterChance=.65f;
         [Min(.1f)] public float waterInterval=18;
+        [Header("피버 중 불꽃 추가 충전")]
+        [Min(0),Tooltip("불꽃 1개당 추가되는 피버 시간(초). 최대 피버 시간까지 충전합니다.")] public float feverRefillSeconds=2;
 
         [Header("이동과 장애물 속도")]
         [Min(0)] public float scrollSpeed=2.5f;
@@ -68,6 +70,7 @@ namespace CrossTheLine.Minigames
             settings.pageFractions[i]=Mathf.Clamp01(pageCharge);settings.fragmentFractions[i]=Mathf.Clamp01(fragmentCharge);
             settings.bibleChances[i]=Mathf.Clamp01(bibleChance);settings.pageChances[i]=Mathf.Clamp01(pageChance);settings.pieceChances[i]=Mathf.Clamp01(fragmentChance);
             settings.flameChance=Mathf.Clamp01(flameChance);settings.shieldChance=Mathf.Clamp01(shieldChance);
+            settings.feverRefillSeconds=Mathf.Max(0,feverRefillSeconds);
             settings.wellChances[i]=Mathf.Clamp01(waterChance);settings.wellIntervalSeconds[i]=Mathf.Max(.1f,waterInterval);
             settings.stageMoveSpeeds[i]=Mathf.Max(0,scrollSpeed);settings.manualMoveSpeed=Mathf.Max(0,playerMoveSpeed);
             settings.prayerMoveMultiplier=Mathf.Clamp01(prayerMoveMultiplier);settings.hazardSpeedMultiplier=Mathf.Max(0,hazardSpeedMultiplier);

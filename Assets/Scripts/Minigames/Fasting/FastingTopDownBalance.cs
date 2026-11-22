@@ -15,6 +15,20 @@ namespace CrossTheLine.Minigames
         {
             if(fever<=0)return;fever=Mathf.Max(0,fever-dt);if(fever<=0){flames=0;buff=0;}
         }
+        void CollectSpiritFlame()
+        {
+            buff=8;
+            if(fever>0)
+            {
+                float before=fever;
+                fever=Mathf.Min(Mathf.Max(.1f,settings.feverSeconds),fever+Mathf.Max(0,settings.feverRefillSeconds));
+                Message=$"성령의 불꽃 · 피버 +{fever-before:0.#}초";
+                return;
+            }
+            flames++;
+            if(flames>=Mathf.Max(1,settings.flamesForFever)){flames=Mathf.Max(1,settings.flamesForFever);fever=Mathf.Max(.1f,settings.feverSeconds);}
+            Message=fever>0?$"성령의 불꽃 · 기도 피버 {fever:0.#}초":"성령의 불꽃 · 기도 속도 증가";
+        }
         void PlaceEntity(FastingTopDownEntity e,bool first)
         {
             if(e.kind==FastingTopDownEntity.Kind.Cover){e.gameObject.SetActive(false);return;}

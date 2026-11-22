@@ -23,7 +23,30 @@ namespace CrossTheLine.Minigames
         {
             float hh=camera.orthographicSize,hw=hh*camera.aspect;var p=camera.transform.position;var b=body.bounds;
             if(b.max.x>=p.x-hw&&b.min.x<=p.x+hw&&b.max.y>=p.y-hh&&b.min.y<=p.y+hh)visibleSeconds+=Mathf.Max(0,dt);
-            var color=body.color;color.a=ReadyToHit?1:.4f;body.color=color;if(secondBody)secondBody.color=color;
+            var color=body.color;color.a=1;body.color=color;if(secondBody)secondBody.color=color;
+        }
+        public Vector2 RoadVisualRange
+        {
+            get
+            {
+                var bounds=body.sprite?body.sprite.bounds:new Bounds(Vector3.zero,Vector3.one);
+                if(animationFrames!=null)foreach(var sprite in animationFrames)if(sprite)bounds.Encapsulate(sprite.bounds);
+                if(reaperSweep&&reaperSweep.slashFrames!=null)foreach(var sprite in reaperSweep.slashFrames)if(sprite)bounds.Encapsulate(sprite.bounds);
+                if(kind==Kind.Rock&&rotateRollingRock)
+                {
+                    float radius=new Vector2(Mathf.Abs(bounds.center.x)+bounds.extents.x,Mathf.Abs(bounds.center.y)+bounds.extents.y).magnitude;
+                    bounds=new Bounds(Vector3.zero,new Vector3(radius*2,radius*2,0));
+                }
+                var range=WorldXRange(body.transform,bounds);
+                if(secondBody){var second=WorldXRange(secondBody.transform,bounds);range.x=Mathf.Min(range.x,second.x);range.y=Mathf.Max(range.y,second.y);}
+                return range;
+            }
+        }
+        static Vector2 WorldXRange(Transform at,Bounds bounds)
+        {
+            float center=at.TransformPoint(bounds.center).x;
+            float extent=Mathf.Abs(at.TransformVector(Vector3.right*bounds.extents.x).x)+Mathf.Abs(at.TransformVector(Vector3.up*bounds.extents.y).x);
+            return new Vector2(center-extent,center+extent);
         }
         public float collisionHeight;
         public bool scrollOnly,rotateRollingRock=true;
@@ -110,7 +133,7 @@ namespace CrossTheLine.Minigames
                 if(!reaperSweep.PrepareStep(dt,out dt))return false;
                 from=Vector2.Lerp(from,to,fullStep>0?Mathf.Clamp01(1-dt/fullStep):0);
             }
-            else if(warning>0){float before=warning;warning-=dt;body.enabled=false;if(secondBody)secondBody.enabled=false;if(warning>0)return false;from=Vector2.Lerp(from,to,Mathf.Clamp01(before/dt));dt=Mathf.Max(0,dt-before);}
+            else if(warning>0){float before=warning;warning-=dt;body.enabled=true;if(secondBody)secondBody.enabled=true;if(warning>0)return false;from=Vector2.Lerp(from,to,Mathf.Clamp01(before/dt));dt=Mathf.Max(0,dt-before);}
             phase+=dt;lifetime-=dt;
             if(reaperSweep)reaperSweep.AdvanceVisual(phase);
             if(animationFrames!=null&&animationFrames.Length>0){body.sprite=animationFrames[Mathf.FloorToInt(phase*framesPerSecond)%animationFrames.Length];if(secondBody){secondBody.sprite=body.sprite;secondBody.flipX=body.flipX;}}

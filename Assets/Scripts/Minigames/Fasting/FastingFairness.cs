@@ -7,7 +7,7 @@ namespace CrossTheLine.Minigames
         public int SpawnLaneCount=>Mathf.Max(5,Mathf.FloorToInt((SpawnRoadRange.y-SpawnRoadRange.x)/settings.laneSpacing));
         public float SpawnLaneCenter=>(SpawnLaneCount-1)*.5f;
         public float SpawnLaneX(float lane)=>(SpawnRoadRange.x+SpawnRoadRange.y)*.5f+(lane-SpawnLaneCenter)*settings.laneSpacing;
-        public bool FitsSpawnRoad(FastingTopDownHazard h){var range=SpawnRoadRange;return h.body.bounds.min.x>=range.x-.01f&&h.body.bounds.max.x<=range.y+.01f&&h.CollisionCenter.x-h.size.x*.5f>=range.x-.01f&&h.CollisionCenter.x+h.size.x*.5f<=range.y+.01f;}
+        public bool FitsSpawnRoad(FastingTopDownHazard h){var range=SpawnRoadRange;var visual=h.RoadVisualRange;return visual.x>=range.x-.01f&&visual.y<=range.y+.01f&&h.CollisionCenter.x-h.size.x*.5f>=range.x-.01f&&h.CollisionCenter.x+h.size.x*.5f<=range.y+.01f;}
         public float SlowStatusRemaining=>Mathf.Max(slow,thornSlow);
         public float RootStatusRemaining=>root;
         public float BurnStatusRemaining=>prayerLock;

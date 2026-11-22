@@ -55,5 +55,5 @@ MonoBehaviour:
   - {fileID: -5920076256423173164, guid: 0b226349595834f43bf1a34d29f00db4, type: 3}
   - {fileID: 5837801805707726650, guid: 0b226349595834f43bf1a34d29f00db4, type: 3}
   orbitShield: {fileID: 4707099457744288627, guid: a6d536d847787e542a7baf3557f037c7, type: 3}
-  shieldBubbleOpacity: 0.28
-  prayerAuraOpacity: 0.18
+  shieldBubbleOpacity: 0.72
+  prayerAuraOpacity: 0.52
