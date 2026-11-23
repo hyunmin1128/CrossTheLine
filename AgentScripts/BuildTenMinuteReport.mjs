@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 const dir='Docs/BalanceTests/2026-11-23/TenMinutes';
 const request=JSON.parse(fs.readFileSync(`${dir}/request.json`,'utf8').replace(/^\uFEFF/,''));
-const data=JSON.parse(fs.readFileSync(`${dir}/${request.label}.json`));
+let data=JSON.parse(fs.readFileSync(`${dir}/${request.label}.json`));
+const validation=request.label==='validation'?data:null;
+if(validation){const fitted=JSON.parse(fs.readFileSync(`${dir}/round3.json`));if(fitted.some(t=>JSON.stringify(t.targets)!==JSON.stringify(request.targets)))throw Error('Target mismatch');data=[...fitted,...validation];}
 const mean=a=>a.reduce((s,x)=>s+x,0)/a.length;
 const fmt=s=>{const n=Math.round(s);return `${Math.floor(n/60)}분 ${n%60}초`;};
 const clear=data.filter(x=>x.outcome==='clear'),planned=[120,120,180,180];
@@ -9,7 +11,7 @@ const stages=planned.map((goal,i)=>{
  const completed=data.flatMap(t=>t.stages).filter(s=>s.stage===i+1&&s.completed);
  return {stage:i+1,target:request.targets[i],plannedSeconds:goal,completed:completed.length,meanSeconds:mean(completed.map(s=>s.seconds)),minSeconds:Math.min(...completed.map(s=>s.seconds)),maxSeconds:Math.max(...completed.map(s=>s.seconds)),meanGateAt:mean(completed.map(s=>s.gateAt))};
 });
-const summary={label:request.label,targets:request.targets,trials:data.length,clears:clear.length,totalMeanSeconds:mean(clear.map(t=>t.seconds)),totalMinSeconds:Math.min(...clear.map(t=>t.seconds)),totalMaxSeconds:Math.max(...clear.map(t=>t.seconds)),stages};
+const summary={label:request.label,targets:request.targets,trials:data.length,clears:clear.length,totalMeanSeconds:mean(clear.map(t=>t.seconds)),totalMinSeconds:Math.min(...clear.map(t=>t.seconds)),totalMaxSeconds:Math.max(...clear.map(t=>t.seconds)),validation:validation?{trials:validation.length,clears:validation.filter(t=>t.outcome==='clear').length,totalMeanSeconds:mean(validation.filter(t=>t.outcome==='clear').map(t=>t.seconds)),stageMeans:planned.map((_,i)=>mean(validation.flatMap(t=>t.stages).filter(s=>s.stage===i+1&&s.completed).map(s=>s.seconds)))}:null,stages};
 fs.writeFileSync(`${dir}/summary.json`,JSON.stringify(summary,null,2));
 let rounds=fs.readdirSync(dir).filter(x=>/^round\d+\.json$/.test(x)).map(file=>{
  const a=JSON.parse(fs.readFileSync(`${dir}/${file}`));return `<li>${file}: ${a.length}회 · 목표 ${a[0].targets.join(' / ')} · 완주 ${a.filter(t=>t.outcome==='clear').length}회</li>`;

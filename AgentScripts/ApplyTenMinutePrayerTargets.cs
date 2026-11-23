@@ -7,6 +7,15 @@ using CrossTheLine.Minigames;
 using Newtonsoft.Json;
 public static class ApplyTenMinutePrayerTargets
 {
+    public static string VerifyRuntime()
+    {
+        if(!EditorApplication.isPlaying)throw new Exception("Play mode required");
+        var game=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();game.enabled=false;
+        var rows=new System.Collections.Generic.List<object>();
+        try{for(int i=0;i<4;i++){game.BeginStageForTesting(i);game.enabled=false;rows.Add(new{stage=i+1,target=game.PrayerTarget,charge=game.settings.prayerPerSecond,game.settings.prayerMoveMultiplier,game.settings.manualMoveSpeed});}}
+        finally{game.BeginStageForTesting(0);game.enabled=false;}
+        string json=JsonConvert.SerializeObject(rows,Formatting.Indented);File.WriteAllText("Docs/BalanceTests/2026-11-23/TenMinutes/runtime-verified.json",json);return json;
+    }
     public static string Run()
     {
         if(EditorApplication.isPlaying)throw new Exception("Edit mode required");

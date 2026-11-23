@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06735ddd08f22f7448072fd9915d360b, type: 3}
+  m_Name: Chapter08Fishing
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.Fishing.NetFishingSettings
+  goalFish: 150
+  minimumCatch: 1
+  maximumCatch: 15
+  boatSpeed: 1.8
+  boatBounds:
+    serializedVersion: 2
+    x: -4.1
+    y: -2
+    width: 8.2
+    height: 3
+  castRadius: 0.9
+  castSeconds: 1.1
+  biteDelay: {x: 2, y: 4}
+  biteNoticeSeconds: 0.8
+  maximumCatchSeconds: 30
+  catchZoneHeight: 0.34
+  tapLift: 0.2
+  zoneFallSpeed: 0.52
+  minimumTapInterval: 0.1
+  startingProgress: 0.28
+  progressPerGoodTap: 0.0155
+  progressLossPerSecond: 0.035
+  badTapProgressLoss: 0.003
+  fishSpeed: 0.27
+  fishRetargetSeconds: {x: 0.7, y: 1.5}
+  netDamagePerSecond: 0.035
+  badTapNetDamage: 0.012
+  replacementSeconds: 6
+  resultSeconds: 2
