@@ -77,7 +77,7 @@ MonoBehaviour:
   patternIntervalMultiplier: 1.8
   randomSpawnIntervals: {x: 0.85, y: 1.65}
   spawnIntervalScale: 0.75
-  prayerTarget: 234
+  prayerTarget: 196
   prayerPerSecond: 2.45
   bibleCharge: 0.25
   pageCharge: 0.1

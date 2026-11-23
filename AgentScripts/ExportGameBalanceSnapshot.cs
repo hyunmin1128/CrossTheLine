@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using CrossTheLine.Cana;
 public static class ExportGameBalanceSnapshot
 {
-    const string Folder="Docs/Balance/2026-11-22";
+    const string Folder="Docs/Balance/2026-11-23";
     [Serializable] public sealed class Row {public string scene,objectPath,component,property,value,type;}
     [Serializable] public sealed class Rows {public List<Row> rows=new List<Row>();}
     [Serializable] public sealed class Stage {public string source,profile,advancedSource,advanced;}
