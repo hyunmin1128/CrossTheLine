@@ -39,6 +39,7 @@ namespace CrossTheLine.Minigames
         public float manualMoveSpeed=5.2f,feverSeconds=6;
         [Min(0),Tooltip("피버 중 성령의 불꽃 하나로 회복되는 남은 피버 시간. 최대 Fever Seconds까지 충전합니다.")] public float feverRefillSeconds=2;
         public float prayerMoveMultiplier=.15f,scrollSpeedMultiplier=1.15f,hazardSpeedMultiplier=1.2f,sideSandSpeed=7.2f;
+        [Min(0)] public float topSandSpeed=3.4f;
         [Min(0)] public float prayerPreparationSeconds=.3f;
         public int flamesForFever=3;
         public float StageSpeed(int stage)=>stageMoveSpeeds!=null&&stage>=0&&stage<stageMoveSpeeds.Length?stageMoveSpeeds[stage]:moveSpeed;

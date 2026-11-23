@@ -56,7 +56,7 @@ MonoBehaviour:
   displayName: "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"
   background: {fileID: -7360753985401943361, guid: d1c1727a7eda4854ab7e84035e08eb72, type: 3}
   sharedSpawnSettings: {fileID: 11400000, guid: 7c83ac27232ff6d4ba1f52f473198f24, type: 2}
-  obstacleFrequency: 1
+  obstacleFrequency: 1.25
   roadEdges: {x: 0.18, y: 0.82}
   obstacles:
   - kind: 0
@@ -77,20 +77,20 @@ MonoBehaviour:
   patternIntervalMultiplier: 1.8
   randomSpawnIntervals: {x: 0.85, y: 1.65}
   spawnIntervalScale: 0.75
-  prayerTarget: 100
-  prayerPerSecond: 1
-  bibleCharge: 1
-  pageCharge: 0.3
-  fragmentCharge: 0.15
-  bibleChance: 0.01
-  pageChance: 0.12
-  fragmentChance: 0.2
+  prayerTarget: 160
+  prayerPerSecond: 2.3
+  bibleCharge: 0.25
+  pageCharge: 0.1
+  fragmentCharge: 0.04
+  bibleChance: 0.0025
+  pageChance: 0.049999997
+  fragmentChance: 0.089999996
   flameChance: 0.3
   shieldChance: 0.16
   waterChance: 0.6
   waterInterval: 20
   feverRefillSeconds: 2
-  scrollSpeed: 2.75
+  scrollSpeed: 3.63
   playerMoveSpeed: 6.6
   prayerMoveMultiplier: 0.15
   hazardSpeedMultiplier: 1.55

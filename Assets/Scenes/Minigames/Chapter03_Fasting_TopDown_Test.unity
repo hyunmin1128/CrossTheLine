@@ -1871,116 +1871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a571c374a70928a4a8071fd9f85e8180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownEntity
---- !u!1001 &1111382822
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1048331193}
-    m_Modifications:
-    - target: {fileID: 284175190542354535, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_Name
-      value: FastingStageTestPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 296367293458909731, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_Pivot.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 428
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 68
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6946067160482032756, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-      propertyPath: game
-      value: 
-      objectReference: {fileID: 1922565230}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
---- !u!224 &1111382823 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
-  m_PrefabInstance: {fileID: 1111382822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1199045771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,11 +3275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 126
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 21
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3943,9 +3833,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2629434899396034843, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       insertIndex: 3
       addedObject: {fileID: 629459904}
-    - targetCorrespondingSourceObject: {fileID: 2629434899396034843, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1111382823}
     - targetCorrespondingSourceObject: {fileID: 8019899417773857065, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       insertIndex: -1
       addedObject: {fileID: 821523038}

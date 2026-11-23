@@ -137,7 +137,8 @@ namespace CrossTheLine.Minigames
             h.warning=0;h.lifetime=30;
             h.transform.position=new Vector3(SpawnLaneX(firstLane+(lanes-1)*.5f),cameraY+gameCamera.orthographicSize+2.5f);
             bool moving=kind==FastingTopDownHazard.Kind.Rock||kind==FastingTopDownHazard.Kind.Sand||kind==FastingTopDownHazard.Kind.Bat||kind==FastingTopDownHazard.Kind.Collapse||kind==FastingTopDownHazard.Kind.Reaper;
-            h.velocity=moving&&!h.scrollOnly?new Vector2(0,-(kind==FastingTopDownHazard.Kind.Sand?2.2f:3.1f+StageIndex*.45f))*settings.hazardSpeedMultiplier:Vector2.zero;
+            float downwardSpeed=kind==FastingTopDownHazard.Kind.Sand?settings.topSandSpeed:3.1f+StageIndex*.45f;
+            h.velocity=moving&&!h.scrollOnly?Vector2.down*(downwardSpeed*settings.hazardSpeedMultiplier):Vector2.zero;
             h.body.color=StageIndex==3?new Color(1,.4f,.13f):StageIndex==1?new Color(.55f,.48f,.75f):new Color(.84f,.66f,.34f);
             if(StageIndex==0&&desertArt)desertArt.Apply(h);
             if(StageIndex==1&&caveArt)caveArt.Apply(h);

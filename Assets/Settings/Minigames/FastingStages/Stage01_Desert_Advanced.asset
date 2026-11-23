@@ -104,7 +104,8 @@ MonoBehaviour:
   prayerMoveMultiplier: 0.15
   scrollSpeedMultiplier: 1.15
   hazardSpeedMultiplier: 1.55
-  sideSandSpeed: 9
+  sideSandSpeed: 13
+  topSandSpeed: 3.4
   prayerPreparationSeconds: 0.3
   flamesForFever: 3
   waveIntervals:
