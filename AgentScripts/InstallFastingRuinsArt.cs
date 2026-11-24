@@ -22,11 +22,11 @@ public static class InstallFastingRuinsArt
         if(!AssetDatabase.IsValidFolder(Folder.TrimEnd('/')))AssetDatabase.CreateFolder("Assets/Prefabs/Minigames/FastingTopDown","RuinsObstacles");
         var art=AssetDatabase.LoadAssetAtPath<FastingRuinsArt>("Assets/Settings/Minigames/FastingRuinsArt.asset");if(!art){art=ScriptableObject.CreateInstance<FastingRuinsArt>();AssetDatabase.CreateAsset(art,"Assets/Settings/Minigames/FastingRuinsArt.asset");}
         art.background=Load("Assets/Sprite/Background/Chapter3-Minigame-Stage3.aseprite");
-        art.rubble=Make("RuinsCollapsedWall",FastingTopDownHazard.Kind.Rock,Load("Assets/Sprite/Objects/CollapsedWall.png"),g.desertArt.rockPrefab);
-        art.wall=Make("RuinsWallPanel",FastingTopDownHazard.Kind.Wall,Load("Assets/Sprite/Objects/WallPanel.aseprite"),g.desertArt.rockPrefab);
-        art.tomb=Make("RuinsSkullTomb",FastingTopDownHazard.Kind.Tomb,Load("Assets/Sprite/Objects/SkullPile.png"),g.desertArt.rockPrefab);
-        art.poisonWell=Make("RuinsPoisonWell",FastingTopDownHazard.Kind.Poison,Load("Assets/Sprite/Objects/PoisonWell.png"),g.desertArt.rockPrefab);
-        var oasis=Load("Assets/Sprite/Objects/Oasis.png");var well=Load("Assets/Sprite/Objects/Well.png");
+        art.rubble=Make("RuinsCollapsedWall",FastingTopDownHazard.Kind.Rock,Load("Assets/Sprite/Objects/Chapter3/Stage3/CollapsedWall.png"),g.desertArt.rockPrefab);
+        art.wall=Make("RuinsWallPanel",FastingTopDownHazard.Kind.Wall,Load("Assets/Sprite/Objects/Chapter3/Stage3/WallPanel.aseprite"),g.desertArt.rockPrefab);
+        art.tomb=Make("RuinsSkullTomb",FastingTopDownHazard.Kind.Tomb,Load("Assets/Sprite/Objects/Chapter3/Stage3/SkullPile.png"),g.desertArt.rockPrefab);
+        art.poisonWell=Make("RuinsPoisonWell",FastingTopDownHazard.Kind.Poison,Load("Assets/Sprite/Objects/Chapter3/Stage3/PoisonWell.png"),g.desertArt.rockPrefab);
+        var oasis=Load("Assets/Sprite/Objects/Chapter3/Stage1/Oasis.png");var well=Load("Assets/Sprite/Objects/Chapter3/Stage3/Well.png");
         foreach(var e in g.entities.Where(e=>e.kind==FastingTopDownEntity.Kind.Water&&(e.stage==0||e.stage==2))){Water(e,e.stage==0?oasis:well);}
         // Dedicated reusable recovery prefabs retain the existing per-instance use behavior.
         foreach(var stage in new[]{0,2}){

@@ -17,10 +17,10 @@ public static class InstallFastingTrialArt
         if(!AssetDatabase.IsValidFolder(Folder.TrimEnd('/')))AssetDatabase.CreateFolder("Assets/Prefabs/Minigames/FastingTopDown","TrialObstacles");
         const string path="Assets/Settings/Minigames/FastingTrialArt.asset";var art=AssetDatabase.LoadAssetAtPath<FastingTrialArt>(path);if(!art){art=ScriptableObject.CreateInstance<FastingTrialArt>();AssetDatabase.CreateAsset(art,path);}
         art.background=Load("Assets/Sprite/Background/Chapter3-Minigame-Stage4.png").Single();
-        art.fire=Make("TrialFire",FastingTopDownHazard.Kind.Fire,Load("Assets/Sprite/Objects/Flame.aseprite"),g.desertArt.rockPrefab);
-        art.thorns=Make("TrialThornbush",FastingTopDownHazard.Kind.Thorns,Load("Assets/Sprite/Objects/Thornbush.png"),g.desertArt.rockPrefab);
-        art.pillar=Make("TrialFlamePillar",FastingTopDownHazard.Kind.Pillar,Load("Assets/Sprite/Objects/PillarOfFlame.aseprite"),g.desertArt.rockPrefab);
-        art.reaper=Make("TrialReaper",FastingTopDownHazard.Kind.Reaper,Load("Assets/Sprite/Objects/Reaper.png"),g.desertArt.rockPrefab);
+        art.fire=Make("TrialFire",FastingTopDownHazard.Kind.Fire,Load("Assets/Sprite/Objects/Chapter3/Stage4/Lava.aseprite"),g.desertArt.rockPrefab);
+        art.thorns=Make("TrialThornbush",FastingTopDownHazard.Kind.Thorns,Load("Assets/Sprite/Objects/Chapter3/Stage4/Thornbush.png"),g.desertArt.rockPrefab);
+        art.pillar=Make("TrialFlamePillar",FastingTopDownHazard.Kind.Pillar,Load("Assets/Sprite/Objects/Chapter3/Stage4/PillarOfFlame.aseprite"),g.desertArt.rockPrefab);
+        art.reaper=Make("TrialReaper",FastingTopDownHazard.Kind.Reaper,Load("Assets/Sprite/Objects/Chapter3/Stage4/Reaper.png"),g.desertArt.rockPrefab);
         g.trialArt=art;EditorUtility.SetDirty(art);EditorUtility.SetDirty(g);EditorSceneManager.MarkSceneDirty(g.gameObject.scene);EditorSceneManager.SaveScene(g.gameObject.scene);AssetDatabase.SaveAssets();return "Final trial background + four editable prefabs; fire frames="+art.fire.animationFrames.Length+", pillar frames="+art.pillar.animationFrames.Length+". Existing four-stage progression unchanged.";
     }
 }

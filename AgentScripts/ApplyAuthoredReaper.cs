@@ -13,7 +13,7 @@ public static class ApplyAuthoredReaper
         var frames=new Sprite[16];
         for(int i=0;i<16;i++)
         {
-            string path="Assets/Sprite/Objects/RealReaper"+(i+1)+".png";
+            string path="Assets/Sprite/Objects/Chapter3/Stage4/RealReaper"+(i+1)+".png";
             var importer=(TextureImporter)AssetImporter.GetAtPath(path);
             importer.textureType=TextureImporterType.Sprite;importer.spriteImportMode=SpriteImportMode.Single;
             importer.spritePixelsPerUnit=32;importer.filterMode=FilterMode.Point;

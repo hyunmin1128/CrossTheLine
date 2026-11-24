@@ -33,10 +33,10 @@ public static class InstallFastingCaveArt
     {
         if(EditorApplication.isPlaying)throw new Exception("Edit mode required");var g=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();if(!g||g.gameObject.scene.path!="Assets/Scenes/Minigames/Chapter03_Fasting_TopDown_Test.unity")throw new Exception("Current scene required");
         const string bg="Assets/Sprite/Background/Chapter3-Minigame-Stage2.png";Import(bg,true);
-        foreach(var n in new[]{"Stalagmite.png","FallingRock.png","Crack.png","Bat-Sheet.png"})Import("Assets/Sprite/Objects/"+n);
+        foreach(var n in new[]{"Stalagmite.png","FallingRock.png","Crack.png","Bat-Sheet.png"})Import("Assets/Sprite/Objects/Chapter3/Stage2/"+n);
         string folder="Assets/Prefabs/Minigames/FastingTopDown/CaveObstacles";if(!AssetDatabase.IsValidFolder(folder))AssetDatabase.CreateFolder("Assets/Prefabs/Minigames/FastingTopDown","CaveObstacles");
         const string path="Assets/Settings/Minigames/FastingCaveObstacleArt.asset";var art=AssetDatabase.LoadAssetAtPath<FastingCaveObstacleArt>(path);if(!art){art=ScriptableObject.CreateInstance<FastingCaveObstacleArt>();AssetDatabase.CreateAsset(art,path);}
-        art.background=Sprites(bg).Single();art.stalagmite=Sprites("Assets/Sprite/Objects/Stalagmite.png").Single();art.fallingRock=Sprites("Assets/Sprite/Objects/FallingRock.png").Single();art.crack=Sprites("Assets/Sprite/Objects/Crack.png").Single();art.batFrames=Sprites("Assets/Sprite/Objects/Bat-Sheet.png");if(art.batFrames.Length!=10)throw new Exception("Expected ten authored bat frames");art.batFramesPerSecond=10;
+        art.background=Sprites(bg).Single();art.stalagmite=Sprites("Assets/Sprite/Objects/Chapter3/Stage2/Stalagmite.png").Single();art.fallingRock=Sprites("Assets/Sprite/Objects/Chapter3/Stage2/FallingRock.png").Single();art.crack=Sprites("Assets/Sprite/Objects/Chapter3/Stage2/Crack.png").Single();art.batFrames=Sprites("Assets/Sprite/Objects/Chapter3/Stage2/Bat-Sheet.png");if(art.batFrames.Length!=10)throw new Exception("Expected ten authored bat frames");art.batFramesPerSecond=10;
         var report=new List<string>();var template=g.desertArt.rockPrefab;
         art.stalagmitePrefab=Prefab("CaveStalagmite",FastingTopDownHazard.Kind.Rock,new[]{art.stalagmite},template,report);
         art.fallingRockPrefab=Prefab("CaveFallingRock",FastingTopDownHazard.Kind.Collapse,new[]{art.fallingRock},template,report);

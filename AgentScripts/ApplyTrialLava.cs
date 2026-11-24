@@ -10,7 +10,7 @@ public static class ApplyTrialLava
     public static string Run()
     {
         if(EditorApplication.isPlaying)throw new Exception("Edit mode required");
-        const string path="Assets/Sprite/Objects/Lava.aseprite";
+        const string path="Assets/Sprite/Objects/Chapter3/Stage4/Lava.aseprite";
         AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);
         var importer=(AsepriteImporter)AssetImporter.GetAtPath(path);
         importer.spritePixelsPerUnit=32;importer.filterMode=FilterMode.Point;importer.layerImportMode=LayerImportModes.MergeFrame;

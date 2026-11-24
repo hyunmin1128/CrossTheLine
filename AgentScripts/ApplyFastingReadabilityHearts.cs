@@ -9,7 +9,7 @@ public static class ApplyFastingReadabilityHearts
 {
     const string Folder="Assets/Prefabs/Minigames/FastingTopDown/";
     static void Save(Component c){EditorUtility.SetDirty(c);if(PrefabUtility.IsPartOfPrefabInstance(c))PrefabUtility.RecordPrefabInstancePropertyModifications(c);}
-    static Sprite Heart(string name)=>AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/"+name+".aseprite").OfType<Sprite>().Single();
+    static Sprite Heart(string name)=>AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/Chapter3/Shared/"+name+".aseprite").OfType<Sprite>().Single();
     static void TuneAura(FastingPlayerAura a){a.prayerRadius=new Vector2(1.15f,1.5f);a.prayerGlowColor=new Color(1,.85f,.38f,1);}
     public static string Run()
     {

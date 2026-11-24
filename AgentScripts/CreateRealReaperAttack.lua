@@ -1,4 +1,4 @@
-local source = app.open("D:/Unity/CrossTheLine/Assets/Sprite/Objects/RealReaper.aseprite")
+local source = app.open("D:/Unity/CrossTheLine/Assets/Sprite/Objects/Chapter3/Stage4/RealReaper.aseprite")
 assert(source and #source.frames == 20, "Expected the authored 20-frame source")
 local output = Sprite(source)
 local sequence = {2,5,6,3,4,7,8,9,10,11,12,13,18,19,18,13,7,2}
@@ -31,5 +31,5 @@ for i,index in ipairs(sequence) do
 end
 local tag = output:newTag(1, #sequence)
 tag.name = "Attack"
-output:saveAs("D:/Unity/CrossTheLine/Assets/Sprite/Objects/RealReaperAttack.aseprite")
+output:saveAs("D:/Unity/CrossTheLine/Assets/Sprite/Objects/Chapter3/Stage4/RealReaperAttack.aseprite")
 print("Saved 18 attack frames, 1480ms. Source pixels and layers preserved.")

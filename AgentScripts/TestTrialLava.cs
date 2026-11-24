@@ -19,7 +19,7 @@ public static class TestTrialLava
                 g.obstaclePatterns.Spawn(g);
                 if(g.Hazards.Count!=1)throw new Exception("Expected one lava pit for "+pattern+", got "+g.Hazards.Count);
                 var h=g.Hazards[0];
-                if(AssetDatabase.GetAssetPath(h.body.sprite)!="Assets/Sprite/Objects/Lava.aseprite")throw new Exception("Old flame artwork remains");
+                if(AssetDatabase.GetAssetPath(h.body.sprite)!="Assets/Sprite/Objects/Chapter3/Stage4/Lava.aseprite")throw new Exception("Old flame artwork remains");
                 if(h.occupiedLanes!=1||h.formationCount!=1||h.velocity!=Vector2.zero)throw new Exception("Lava should be one fixed ground opening");
                 h.UpdateApproach(g.player.position);var scale=h.body.transform.localScale;
                 h.UpdateApproach(g.player.position+Vector3.up*20);if(h.body.transform.localScale!=scale)throw new Exception("Lava grows on approach");

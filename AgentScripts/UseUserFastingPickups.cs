@@ -9,7 +9,7 @@ public static class UseUserFastingPickups
 {
     const string Dir="Assets/Prefabs/Minigames/FastingTopDown/";
     static string Name(FastingTopDownEntity.Kind k)=>k==FastingTopDownEntity.Kind.Book?"Bible":k==FastingTopDownEntity.Kind.Page?"Page":k==FastingTopDownEntity.Kind.Shield?"ShieldOfFaith":k==FastingTopDownEntity.Kind.Fragment?"Piece":null;
-    static Sprite SpriteFor(string name)=>AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/"+name+".aseprite").OfType<Sprite>().First();
+    static Sprite SpriteFor(string name)=>AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/Chapter3/Shared/"+name+".aseprite").OfType<Sprite>().First();
     static void SetArt(GameObject root,Sprite sprite){var r=root.transform.Find("Symbol").GetComponent<SpriteRenderer>();r.sprite=sprite;r.color=Color.white;float scale=sprite.pixelsPerUnit/32f;r.transform.localScale=Vector3.one*scale;r.transform.localPosition=-sprite.bounds.center*scale;root.transform.Find("SymbolOutline").gameObject.SetActive(false);}
     public static string Run()
     {

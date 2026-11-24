@@ -30,7 +30,7 @@ bubble:saveAs(dest.."ShieldBubble.aseprite")
 pack("PrayerLight","Prayer",4,200):saveAs(dest.."PrayerLight.aseprite")
 pack("ShieldAcquireSpark","Spark",1,200):saveAs(dest.."ShieldAcquireSpark.aseprite")
 pack("ShieldBreak","ShieldBreak",6,200):saveAs(dest.."ShieldBreak.aseprite")
-local shield=app.open("D:/Unity/CrossTheLine/Assets/Sprite/Objects/ShieldOfFaith.png")
+local shield=app.open("D:/Unity/CrossTheLine/Assets/Sprite/Objects/Chapter3/Shared/ShieldOfFaith.png")
 shield:saveAs(dest.."OrbitShield.aseprite")
 local prayer=Sprite(128,128,ColorMode.RGB);prayer.layers[1].name="Soft fill"
 local rim=prayer:newLayer();rim.name="Light rim"

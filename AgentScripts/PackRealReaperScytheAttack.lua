@@ -30,5 +30,5 @@ end
 for _,item in ipairs({{"Attack",1,16},{"Windup",1,4},{"Swing",5,8},{"FollowThrough",9,12},{"Recovery",13,16}}) do
   local tag=output:newTag(item[2],item[3]);tag.name=item[1]
 end
-output:saveAs("D:/Unity/CrossTheLine/Assets/Sprite/Objects/RealReaperScytheAttack-v3.aseprite")
+output:saveAs("D:/Unity/CrossTheLine/Assets/Sprite/Objects/Chapter3/Stage4/RealReaperScytheAttack-v3.aseprite")
 print("Saved16 redrawn frames with attack phase tags. Cell="..w.."x"..h)

@@ -9,7 +9,7 @@ public static class BuildRealReaperAttack
     public static string Run(){
         if(EditorApplication.isPlaying)throw new Exception("Edit mode required");
         const string folder="Assets/Animations/Minigames/FastingTopDown/RealReaper";Directory.CreateDirectory(folder);AssetDatabase.Refresh();
-        var source=AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/RealReaperAttack.aseprite").OfType<AnimationClip>().Single(c=>c.name=="Attack");
+        var source=AssetDatabase.LoadAllAssetsAtPath("Assets/Sprite/Objects/Chapter3/Stage4/RealReaperAttack.aseprite").OfType<AnimationClip>().Single(c=>c.name=="Attack");
         var binding=AnimationUtility.GetObjectReferenceCurveBindings(source).Single(b=>b.propertyName=="m_Sprite");var keys=AnimationUtility.GetObjectReferenceCurve(source,binding);
         string clipPath=AssetDatabase.GenerateUniqueAssetPath(folder+"/RealReaperAttack.anim");var clip=new AnimationClip{name="RealReaperAttack",frameRate=100};
         AnimationUtility.SetObjectReferenceCurve(clip,new EditorCurveBinding{path="Artwork",type=typeof(SpriteRenderer),propertyName="m_Sprite"},keys);

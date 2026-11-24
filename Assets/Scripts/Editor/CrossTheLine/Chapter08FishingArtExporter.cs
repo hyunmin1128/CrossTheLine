@@ -20,7 +20,7 @@ namespace CrossTheLine.EditorTools
                 string source=Path.Combine(project,"Assets/Sprite/Background/Chapter8-Minigame-Sea.aseprite");
                 string[] layers={"Sea","Throw Net","Peter&Andrew","boat"},names={"Sea","ThrowNet","PeterAndrew","Boat"};
                 for(int i=0;i<layers.Length;i++)Run(executable,"--batch --all-layers --layer "+Quote(layers[i])+" "+Quote(source)+" --save-as "+Quote(Path.Combine(output,names[i]+".png")),project);
-                Run(executable,"--batch --all-layers "+Quote(Path.Combine(project,"Assets/Sprite/Objects/Net.aseprite"))+" --save-as "+Quote(Path.Combine(output,"Net.png")),project);
+                Run(executable,"--batch --all-layers "+Quote(Path.Combine(project,"Assets/Sprite/Objects/Chapter8/Net.aseprite"))+" --save-as "+Quote(Path.Combine(output,"Net.png")),project);
             }
             finally{AssetDatabase.StopAssetEditing();AssetDatabase.Refresh();}
             UnityEngine.Debug.Log("Chapter08: 원본 레이어 PNG를 갱신했습니다. 기존 .meta와 스프라이트 참조는 유지됩니다.");
