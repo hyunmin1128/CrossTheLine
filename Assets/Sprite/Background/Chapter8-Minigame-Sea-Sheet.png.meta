@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: def0a6f1611cebe4abb78c192ccd064a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8155215410031815162
+    second: Chapter8-Minigame-Sea-Sheet_0
+  - first:
+      213: -1825302401378854018
+    second: Chapter8-Minigame-Sea-Sheet_1
+  - first:
+      213: 8943197762158169251
+    second: Chapter8-Minigame-Sea-Sheet_2
+  - first:
+      213: 7125570008742234026
+    second: Chapter8-Minigame-Sea-Sheet_3
+  - first:
+      213: -8075225751864212239
+    second: Chapter8-Minigame-Sea-Sheet_4
+  - first:
+      213: -4348564600589483455
+    second: Chapter8-Minigame-Sea-Sheet_5
+  - first:
+      213: 6203838960599143622
+    second: Chapter8-Minigame-Sea-Sheet_6
+  - first:
+      213: -8345152788351086547
+    second: Chapter8-Minigame-Sea-Sheet_7
+  - first:
+      213: -996762288043776137
+    second: Chapter8-Minigame-Sea-Sheet_8
+  - first:
+      213: -1669771141830924003
+    second: Chapter8-Minigame-Sea-Sheet_9
+  - first:
+      213: 1933389025567177568
+    second: Chapter8-Minigame-Sea-Sheet_10
+  - first:
+      213: -6841374507498762865
+    second: Chapter8-Minigame-Sea-Sheet_11
+  - first:
+      213: -694242215318799141
+    second: Chapter8-Minigame-Sea-Sheet_12
+  - first:
+      213: 1000053687449274470
+    second: Chapter8-Minigame-Sea-Sheet_13
+  - first:
+      213: 6289376478478507799
+    second: Chapter8-Minigame-Sea-Sheet_14
+  - first:
+      213: -7486549051123504079
+    second: Chapter8-Minigame-Sea-Sheet_15
+  - first:
+      213: -2855906407936239701
+    second: Chapter8-Minigame-Sea-Sheet_16
+  - first:
+      213: -8121018201110666644
+    second: Chapter8-Minigame-Sea-Sheet_17
+  - first:
+      213: 1849021182045398955
+    second: Chapter8-Minigame-Sea-Sheet_18
+  - first:
+      213: -1867986526431825831
+    second: Chapter8-Minigame-Sea-Sheet_19
+  - first:
+      213: 1713261270481431240
+    second: Chapter8-Minigame-Sea-Sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 62
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9ecbd05352d2170800000000000000
+      internalID: 8155215410031815162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 62
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b552603293ba6e0800000000000000
+      internalID: -1825302401378854018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac81894bfe9c1c70800000000000000
+      internalID: 8943197762158169251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 62
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa702498b2c13e260800000000000000
+      internalID: 7125570008742234026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 62
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f40c0b86f80fef80800000000000000
+      internalID: -8075225751864212239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1428603198bc6a3c0800000000000000
+      internalID: -4348564600589483455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 62
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c49d325aa6781650800000000000000
+      internalID: 6203838960599143622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 62
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2019f5e0cf003c80800000000000000
+      internalID: -8345152788351086547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77725a7eaf9ca22f0800000000000000
+      internalID: -996762288043776137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 62
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1928fa4ef7c3d8e0800000000000000
+      internalID: -1669771141830924003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 62
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bf1914317c4da10800000000000000
+      internalID: 1933389025567177568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d8f11f12e8e01a0800000000000000
+      internalID: -6841374507498762865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 62
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcb7d7226e8d56f0800000000000000
+      internalID: -694242215318799141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 62
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668cbbcb787e0ed00800000000000000
+      internalID: 1000053687449274470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f986aa59a584750800000000000000
+      internalID: 6289376478478507799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 62
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cee3ead4f6a1890800000000000000
+      internalID: -7486549051123504079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 62
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7d233d048cd58d0800000000000000
+      internalID: -2855906407936239701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62215c19f85c4f80800000000000000
+      internalID: -8121018201110666644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 62
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba72df1f7fa09a910800000000000000
+      internalID: 1849021182045398955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 62
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950b0d6b6249316e0800000000000000
+      internalID: -1867986526431825831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter8-Minigame-Sea-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 61
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8caea7a5c0ab6c710800000000000000
+      internalID: 1713261270481431240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Chapter8-Minigame-Sea-Sheet_0: 8155215410031815162
+      Chapter8-Minigame-Sea-Sheet_1: -1825302401378854018
+      Chapter8-Minigame-Sea-Sheet_10: 1933389025567177568
+      Chapter8-Minigame-Sea-Sheet_11: -6841374507498762865
+      Chapter8-Minigame-Sea-Sheet_12: -694242215318799141
+      Chapter8-Minigame-Sea-Sheet_13: 1000053687449274470
+      Chapter8-Minigame-Sea-Sheet_14: 6289376478478507799
+      Chapter8-Minigame-Sea-Sheet_15: -7486549051123504079
+      Chapter8-Minigame-Sea-Sheet_16: -2855906407936239701
+      Chapter8-Minigame-Sea-Sheet_17: -8121018201110666644
+      Chapter8-Minigame-Sea-Sheet_18: 1849021182045398955
+      Chapter8-Minigame-Sea-Sheet_19: -1867986526431825831
+      Chapter8-Minigame-Sea-Sheet_2: 8943197762158169251
+      Chapter8-Minigame-Sea-Sheet_20: 1713261270481431240
+      Chapter8-Minigame-Sea-Sheet_3: 7125570008742234026
+      Chapter8-Minigame-Sea-Sheet_4: -8075225751864212239
+      Chapter8-Minigame-Sea-Sheet_5: -4348564600589483455
+      Chapter8-Minigame-Sea-Sheet_6: 6203838960599143622
+      Chapter8-Minigame-Sea-Sheet_7: -8345152788351086547
+      Chapter8-Minigame-Sea-Sheet_8: -996762288043776137
+      Chapter8-Minigame-Sea-Sheet_9: -1669771141830924003
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -3274,9 +3274,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e17cd4fe19cf87944868270953b168ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 220ff474a5c876844a0d15006ceaecf6, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4860,6 +4860,15 @@ MonoBehaviour:
   fishRect: {fileID: 8955331334727504026}
   pullingCrew: {fileID: 1103919948555950867}
   pullingNet: {fileID: 2607302373023994842}
+  pullingFrames:
+  - {fileID: 21300000, guid: 220ff474a5c876844a0d15006ceaecf6, type: 3}
+  - {fileID: 21300000, guid: a68300826d0603c458cbee57ae11afc7, type: 3}
+  - {fileID: 21300000, guid: ed32b17da4013644ca70ec33f66b0dba, type: 3}
+  - {fileID: 21300000, guid: b8eb8ebc07beacd46ab8b3928fd2f688, type: 3}
+  - {fileID: 21300000, guid: 4e39f72fbbe43d243a337256392f93e5, type: 3}
+  - {fileID: 21300000, guid: 6abf704f0be0b4e448386cef20e517cf, type: 3}
+  - {fileID: 21300000, guid: bb4c9a8f2556b2a4eb769fa55109b5ed, type: 3}
+  pullingFramesPerSecond: 10
   pullingNetImage: {fileID: 4366177325698084206}
   tearLeft: {fileID: 5597984627849630463}
   tearRight: {fileID: 8348816508309672454}

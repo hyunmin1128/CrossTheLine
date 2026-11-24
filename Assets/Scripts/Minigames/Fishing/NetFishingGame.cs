@@ -22,6 +22,9 @@ namespace CrossTheLine.Minigames.Fishing
         public UnityEngine.UI.Image catchFill,netFill;
         public RectTransform zoneRect,fishRect;
         public RectTransform pullingCrew,pullingNet;
+        [Tooltip("Aseprite Pull Net frames in playback order.")]
+        public Sprite[] pullingFrames;
+        [Min(1)] public float pullingFramesPerSecond=10;
         public UnityEngine.UI.Image pullingNetImage;
         public UnityEngine.UI.Image tearLeft,tearRight;
         public UnityEngine.UI.Button startButton,retryButton;
@@ -30,10 +33,12 @@ namespace CrossTheLine.Minigames.Fishing
         public int ActiveSpot { get; private set; }
         public float LastTapTime { get; private set; }=-100;
         Vector3 boatRest,pullRest,netRest;
+        UnityEngine.UI.Image pullingCrewImage;
         NetFishingSession.Phase previous;
         void Start()
         {
             boatRest=boat.position;pullRest=pullingCrew.anchoredPosition;netRest=pullingNet.anchoredPosition;
+            pullingCrewImage=pullingCrew.GetComponent<UnityEngine.UI.Image>();
             startButton.onClick.AddListener(StartGame);retryButton.onClick.AddListener(Restart);
             Restart();
         }
@@ -140,11 +145,22 @@ namespace CrossTheLine.Minigames.Fishing
             for(int i=0;i<spotBubbles.Length;i++)if(spotBubbles[i]){bool active=i==ActiveSpot&&Session.State!=NetFishingSession.Phase.Complete;spotBubbles[i].gameObject.SetActive(active);if(active){float wave=Mathf.Sin(Time.time*3)*.12f;spotBubbles[i].transform.localScale=Vector3.one*(1+wave);spotBubbles[i].color=new Color(.75f,.96f,1,.7f+wave);}}
             if(Session.State==NetFishingSession.Phase.Fighting)
             {
-                float pull=Mathf.Exp(-Mathf.Max(0,Time.unscaledTime-LastTapTime)*10);
-                pullingCrew.anchoredPosition=(Vector2)pullRest+new Vector2(-pull*9,Mathf.Sin(Time.time*4)*2);
-                pullingCrew.localRotation=Quaternion.Euler(0,0,pull*2);
-                pullingNet.anchoredPosition=(Vector2)netRest+new Vector2(-pull*15,pull*5);
-                pullingNetImage.color=Color.Lerp(new Color(.78f,.94f,1),new Color(.95f,.38f,.28f),1-Session.Integrity);
+                if(pullingCrewImage&&pullingFrames!=null&&pullingFrames.Length>0)
+                {
+                    int frame=Mathf.FloorToInt(Session.PhaseTime*Mathf.Max(1,pullingFramesPerSecond))%pullingFrames.Length;
+                    pullingCrewImage.sprite=pullingFrames[frame];
+                    pullingCrew.anchoredPosition=(Vector2)pullRest;
+                    pullingCrew.localRotation=Quaternion.identity;
+                    pullingNet.gameObject.SetActive(false);
+                }
+                else
+                {
+                    float pull=Mathf.Exp(-Mathf.Max(0,Time.unscaledTime-LastTapTime)*10);
+                    pullingCrew.anchoredPosition=(Vector2)pullRest+new Vector2(-pull*9,Mathf.Sin(Time.time*4)*2);
+                    pullingCrew.localRotation=Quaternion.Euler(0,0,pull*2);
+                    pullingNet.anchoredPosition=(Vector2)netRest+new Vector2(-pull*15,pull*5);
+                    pullingNetImage.color=Color.Lerp(new Color(.78f,.94f,1),new Color(.95f,.38f,.28f),1-Session.Integrity);
+                }
             }
         }
     }

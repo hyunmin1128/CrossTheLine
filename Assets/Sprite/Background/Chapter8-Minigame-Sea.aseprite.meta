@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Chapter8-Minigame-Sea
     originalName: 
-    pivot: {x: 0.38842973, y: -1.4761904}
+    pivot: {x: 0.31481478, y: -1.4761904}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,7 +137,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 121
+      width: 108
       height: 42
     spriteID: cdfb42c6f73fd1145b13ec1604a9c3fd
     spriteBone: []
@@ -148,6 +148,132 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Frame_1
+    originalName: 
+    pivot: {x: 0.31775698, y: -1.4761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 4
+      width: 107
+      height: 42
+    spriteID: 3c44f5595222cd542b8a8fd1c053ac7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 4}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.32075468, y: -1.4761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 54
+      width: 106
+      height: 42
+    spriteID: 02ac713fb10cb3a4f971d0a7d438fd09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 54}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.3238095, y: -1.4761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 154
+      width: 105
+      height: 42
+    spriteID: 2a6222831c9556944be0d4ee449ba7bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 154}
+  - name: Frame_4
+    originalName: 
+    pivot: {x: 0.32075468, y: -1.4761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 106
+      height: 42
+    spriteID: ab57657353f061446927cc446a2b0f79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  - name: Frame_5
+    originalName: 
+    pivot: {x: 0.32075468, y: -1.4761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 104
+      width: 106
+      height: 42
+    spriteID: 4adfc3ed7108b9946a13fe91be249cf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 104}
+  - name: Frame_6
+    originalName: 
+    pivot: {x: 0.31775698, y: -1.4761904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 54
+      width: 107
+      height: 42
+    spriteID: b1ed7a190a49d724c9d0c71cfa6ba102
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 54}
   spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
@@ -163,15 +289,69 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Chapter8-Minigame-Sea
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 113
+        x: 126
         y: 62
-        width: 121
+        width: 108
         height: 42
       spriteId: cdfb42c6f73fd1145b13ec1604a9c3fd
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 126
+        y: 62
+        width: 107
+        height: 42
+      spriteId: 3c44f5595222cd542b8a8fd1c053ac7d
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 126
+        y: 62
+        width: 106
+        height: 42
+      spriteId: 02ac713fb10cb3a4f971d0a7d438fd09
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 126
+        y: 62
+        width: 105
+        height: 42
+      spriteId: 2a6222831c9556944be0d4ee449ba7bb
+    - name: Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 126
+        y: 62
+        width: 106
+        height: 42
+      spriteId: ab57657353f061446927cc446a2b0f79
+    - name: Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 126
+        y: 62
+        width: 106
+        height: 42
+      spriteId: 4adfc3ed7108b9946a13fe91be249cf4
+    - name: Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 126
+        y: 62
+        width: 107
+        height: 42
+      spriteId: b1ed7a190a49d724c9d0c71cfa6ba102
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -180,5 +360,5 @@ ScriptedImporter:
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
-  previousTextureSize: {x: 256, y: 64}
+  previousTextureSize: {x: 256, y: 256}
   canvasSize: {x: 320, y: 180}
