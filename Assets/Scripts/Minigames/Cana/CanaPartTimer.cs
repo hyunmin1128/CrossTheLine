@@ -13,6 +13,8 @@ namespace CrossTheLine.Cana
         public Sprite[] idle, move, serve, clean, change;
         public float moveSpeed = 2.5f;
         public float framesPerSecond = 10;
+        [Tooltip("Idle timing relative to the customer Idle Animation Speed; movement is unchanged.")]
+        [Min(0)] public float idleSpeedMultiplier = 1;
         public float pickupSeconds = .4f;
         public float servingSeconds = .25f;
         public float cleaningSeconds = 1.8f;
@@ -26,7 +28,22 @@ namespace CrossTheLine.Cana
         private int waypoint;
         private Vector3 position;
         private float elapsed, nextSearch;
+        private float animationElapsed;
         private int reverseFrom;
+        public float CurrentAnimationSpeed
+        {
+            get
+            {
+                if (kind == CanaStaffKind.Robot) return 1;
+                return State switch
+                {
+                    CanaStaffState.Idle => manager.spawner.idleAnimationSpeed * idleSpeedMultiplier,
+                    CanaStaffState.TakingWine => manager.spawner.idleAnimationSpeed,
+                    CanaStaffState.Returning or CanaStaffState.ToWine or CanaStaffState.ToServe or CanaStaffState.ToClean => manager.spawner.moveAnimationSpeed,
+                    _ => 1
+                };
+            }
+        }
 
         private void OnEnable()
         {
@@ -62,6 +79,7 @@ namespace CrossTheLine.Cana
         {
             if (manager.spawner.round.Finished || manager.spawner.dissatisfaction.IsGameOver || Time.deltaTime <= 0) return;
             elapsed += Time.deltaTime;
+            animationElapsed += Time.deltaTime * CurrentAnimationSpeed;
             if (State != CanaStaffState.Idle && State != CanaStaffState.Returning && State != CanaStaffState.ChangeBack && !JobValid())
                 CancelJob();
             if ((State == CanaStaffState.Idle || State == CanaStaffState.Returning) && Time.time >= nextSearch)
@@ -186,6 +204,7 @@ namespace CrossTheLine.Cana
         {
             State = state;
             elapsed = 0;
+            animationElapsed = 0;
             Draw();
         }
 
@@ -200,7 +219,7 @@ namespace CrossTheLine.Cana
                 _ => idle
             };
             if (frames == null || frames.Length == 0) return;
-            int index = Mathf.FloorToInt(elapsed * framesPerSecond) % frames.Length;
+            int index = Mathf.FloorToInt(animationElapsed * framesPerSecond) % frames.Length;
             if (State == CanaStaffState.ChangeToClean) index = Mathf.Clamp(Mathf.FloorToInt(elapsed / changeSeconds * frames.Length),0,frames.Length-1);
             if (State == CanaStaffState.ChangeBack) index = Mathf.Clamp(reverseFrom - Mathf.FloorToInt(elapsed / changeSeconds * frames.Length),0,frames.Length-1);
             image.sprite = frames[index];

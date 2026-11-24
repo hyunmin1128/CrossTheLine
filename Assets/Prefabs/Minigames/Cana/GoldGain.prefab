@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2987412140025483236}
   - component: {fileID: 6295850717681447448}
   - component: {fileID: 8133842468725129462}
+  - component: {fileID: 3212855896059832427}
+  - component: {fileID: 8673633857217917227}
   m_Layer: 0
   m_Name: Amount
   m_TagString: Untagged
@@ -62,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  - {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,8 +110,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
-  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e130c494f8d954501b64076035f65465, type: 2}
+  m_sharedMaterial: {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -156,7 +158,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656bu
+  m_ActiveFontFeatures: 
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -181,6 +183,32 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6295850717681447448}
   m_maskType: 0
+--- !u!114 &3212855896059832427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527631085507275455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1f76a709e6b4536a462db446aa717b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Cana.CanaPixelText
+--- !u!114 &8673633857217917227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527631085507275455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d8643717eda4d39b52da7fb38056e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Cana.CanaOverlayText
+  fitToBox: 1
+  minimumSizeRatio: 0.75
 --- !u!1 &6962753233447908289
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +364,8 @@ GameObject:
   - component: {fileID: 9153595034529783841}
   - component: {fileID: 4064397187863260831}
   - component: {fileID: 8055004348740830839}
+  - component: {fileID: 3248158352729251483}
+  - component: {fileID: 3737408970088725171}
   m_Layer: 0
   m_Name: Plus
   m_TagString: Untagged
@@ -387,7 +417,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  - {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -433,8 +463,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: +
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
-  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e130c494f8d954501b64076035f65465, type: 2}
+  m_sharedMaterial: {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -481,7 +511,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656bu
+  m_ActiveFontFeatures: 
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -506,3 +536,29 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 4064397187863260831}
   m_maskType: 0
+--- !u!114 &3248158352729251483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8875530050526566940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1f76a709e6b4536a462db446aa717b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Cana.CanaPixelText
+--- !u!114 &3737408970088725171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8875530050526566940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d8643717eda4d39b52da7fb38056e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Cana.CanaOverlayText
+  fitToBox: 1
+  minimumSizeRatio: 0.75

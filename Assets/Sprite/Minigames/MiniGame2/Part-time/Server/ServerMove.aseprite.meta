@@ -150,7 +150,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.47058824, y: -0.033333335}
+    pivot: {x: 0.47058824, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -159,7 +159,7 @@ ScriptedImporter:
       x: 29
       y: 4
       width: 17
-      height: 30
+      height: 29
     spriteID: af974522072fd40b2bb546d0a6665482
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
         x: 8
         y: 1
         width: 17
-        height: 30
+        height: 29
       spriteId: af974522072fd40b2bb546d0a6665482
     linkedCells: []
     tileCells: []

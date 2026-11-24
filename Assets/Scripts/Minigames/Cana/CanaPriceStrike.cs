@@ -13,6 +13,7 @@ namespace CrossTheLine.Cana
 
         private void Awake()
         {
+            if (GetComponent<CanaOverlayText>()) { enabled = false; return; }
             label = GetComponent<TMP_Text>();
             var child = new GameObject("Original Price Strike");
             child.transform.SetParent(transform, false);

@@ -17,8 +17,11 @@ namespace CrossTheLine.Cana
                 PlayerPrefs.DeleteKey("Cana.Item.Type." + i);
                 PlayerPrefs.DeleteKey("Cana.Item.Count." + i);
             }
+            PlayerPrefs.DeleteKey("Cana.Upgrade.Owned");
             PlayerPrefs.DeleteKey("Cana.Upgrade.Bottle");
             PlayerPrefs.DeleteKey("Cana.Upgrade.Equipment");
+            PlayerPrefs.DeleteKey("Cana.Upgrade.SelectedBottle");
+            PlayerPrefs.DeleteKey("Cana.Upgrade.SelectedEquipment");
             PlayerPrefs.SetInt("Cana.Gold", startingGold);
             PlayerPrefs.Save();
             Debug.Log("[Cana Shop Test] Reset training, inventory and equipment; gold: " + startingGold);

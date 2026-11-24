@@ -88,7 +88,8 @@ namespace CrossTheLine.Cana
                     bomb.enabled = false;
                     return;
                 }
-                BombFrame = flow < 0.5f ? 3 : 4;
+                int phase = Mathf.Min(2, Mathf.FloorToInt(flow * 3));
+                BombFrame = phase == 1 ? 4 : 3;
             }
             bomb.sprite = bombFrames[BombFrame];
             bomb.transform.position = Snap(anchor);

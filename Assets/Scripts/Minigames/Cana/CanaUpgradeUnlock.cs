@@ -11,6 +11,11 @@ namespace CrossTheLine.Cana
         public SpriteRenderer lockSprite;
         public SpriteRenderer[] backingSprites;
         public Sprite[] openingFrames;
+        public Sprite goldLock;
+        public SpriteRenderer chainSprite;
+        public Sprite goldChain;
+        private Sprite normalChain;
+        private bool Reinforced => shop && shop.PricesDoubled;
         public float openingFramesPerSecond = 10;
         public float shakeFrequency = 4;
         public float deniedDuration = 0.45f;
@@ -27,7 +32,7 @@ namespace CrossTheLine.Cana
         public bool IsFalling => motion == Motion.Falling;
         public bool IsRevealing => IsFalling || motion == Motion.Opening && elapsed >= OpeningDuration;
         private float OpeningDuration => openingFrames.Length / openingFramesPerSecond;
-        private bool Damaged => DeniedCount >= 10;
+        private bool Damaged => !Reinforced && DeniedCount >= 10;
 
         private void Initialize()
         {
@@ -38,6 +43,17 @@ namespace CrossTheLine.Cana
             rotation = lockSprite.transform.localRotation;
             color = lockSprite.color;
             closedSprite = lockSprite.sprite;
+            normalChain = chainSprite ? chainSprite.sprite : null;
+        }
+
+        public void Reinforce()
+        {
+            Initialize();
+            if (motion == Motion.Denied || motion == Motion.Falling) motion = Motion.None;
+            DeniedCount = 0;
+            Pose(0, Vector3.zero);
+            lockSprite.sprite = goldLock ? goldLock : closedSprite;
+            if (chainSprite && goldChain) chainSprite.sprite = goldChain;
         }
 
         public void Play() => Begin(Motion.Opening);
@@ -46,6 +62,11 @@ namespace CrossTheLine.Cana
         {
             if (IsPlaying) return false;
             Begin(Motion.Denied);
+            if (!Reinforced && DeniedCount == 9)
+            {
+                DeniedCount++;
+                Finish(true);
+            }
             return true;
         }
 
@@ -58,7 +79,8 @@ namespace CrossTheLine.Cana
             foreach (var sprite in backingSprites) sprite.enabled = next != Motion.Falling;
             lockSprite.enabled = true;
             lockSprite.color = color;
-            lockSprite.sprite = closedSprite;
+            lockSprite.sprite = Reinforced && goldLock ? goldLock : closedSprite;
+            if (chainSprite) chainSprite.sprite = Reinforced && goldChain ? goldChain : normalChain;
             Pose(Damaged ? 12 : 0, Damaged ? Vector3.down * (2f / 16) : Vector3.zero);
         }
 
@@ -70,8 +92,8 @@ namespace CrossTheLine.Cana
             {
                 if (elapsed >= deniedDuration)
                 {
-                    DeniedCount++;
-                    if (DeniedCount >= 20)
+                    if (!Reinforced) DeniedCount++;
+                    if (!Reinforced && DeniedCount >= 20)
                     {
                         Begin(Motion.Falling);
                         shop.OnLockBroken(upgradeIndex);
@@ -85,7 +107,7 @@ namespace CrossTheLine.Cana
             }
             else if (motion == Motion.Opening)
             {
-                lockSprite.sprite = openingFrames[Mathf.Min(Mathf.FloorToInt(elapsed * openingFramesPerSecond), openingFrames.Length - 1)];
+                lockSprite.sprite = Reinforced && goldLock ? goldLock : openingFrames[Mathf.Min(Mathf.FloorToInt(elapsed * openingFramesPerSecond), openingFrames.Length - 1)];
                 Pose(0, Vector3.zero);
                 if (elapsed >= OpeningDuration)
                 {
@@ -117,7 +139,7 @@ namespace CrossTheLine.Cana
         private void Finish(bool locked)
         {
             motion = Motion.None;
-            lockSprite.sprite = closedSprite;
+            lockSprite.sprite = Reinforced && goldLock ? goldLock : closedSprite;
             lockSprite.color = color;
             Pose(locked && Damaged ? 12 : 0, locked && Damaged ? Vector3.down * (2f / 16) : Vector3.zero);
             foreach (var sprite in backingSprites) sprite.enabled = true;

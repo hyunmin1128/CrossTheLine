@@ -19,6 +19,8 @@ namespace CrossTheLine.Cana
         public Animator judasAnimator;
         public CanaJudasReaction judas;
         public string surprisedDialogue = "What?! You stole from me?!";
+        public string lockedItemDialogue = "That item is locked, my friend.";
+        public string goldLockDialogue = "Not a chance this time!";
         public bool PricesDoubled { get; private set; }
         public int TrainingPrice(int index) => prices[index] * (PricesDoubled ? 2 : 1);
         public int ItemPrice(int index) => itemPrices[index] * (PricesDoubled ? 2 : 1);
@@ -34,6 +36,8 @@ namespace CrossTheLine.Cana
         public void OnUpgradeStolen(int index)
         {
             PricesDoubled = true;
+            foreach (var unlock in upgradeUnlocks)
+                if (unlock && upgrades.Status(unlock.upgradeIndex) == CanaUpgradeStatus.Locked) unlock.Reinforce();
             judas.PlaySurprise();
             statusMessage = null;
             Debug.Log("[Cana Shop] Upgrade stolen: " + index + "; other prices doubled.");
@@ -44,6 +48,7 @@ namespace CrossTheLine.Cana
         public GameObject staffContent;
         public SpriteRenderer staffSelect;
         public TextMeshPro[] staffPrices;
+        public SpriteRenderer[] staffCoins;
         public int PartTimeIndex { get; private set; }
         public string[] staffDescriptions = { "Serves wine. Earn 25% more gold.", "Cleans seats and calms guests.", "Serves or cleans the nearest job." };
         private bool pendingStaff;
@@ -72,6 +77,7 @@ namespace CrossTheLine.Cana
         public GameObject[] upgradeLocks;
         public CanaUpgradeUnlock[] upgradeUnlocks;
         public SpriteRenderer[] upgradeCoins;
+        public SpriteRenderer bagNowSelect, equipmentNowSelect;
         public TextMeshPro[] upgradePrices;
         public int UpgradeIndex { get; private set; }
         public string[] upgradeDescriptions = {
@@ -266,11 +272,20 @@ namespace CrossTheLine.Cana
             if (pendingUpgrade)
             {
                 var state = upgrades.Status(UpgradeIndex);
+                if (state == CanaUpgradeStatus.Owned)
+                {
+                    upgrades.SelectOwned(UpgradeIndex);
+                    statusMessage = null;
+                    return;
+                }
                 if (state != CanaUpgradeStatus.Available)
                 {
                     if (state == CanaUpgradeStatus.Locked && upgradeUnlocks[UpgradeIndex] &&
-                        upgradeUnlocks[UpgradeIndex].PlayDenied()) judas.PlayLook();
-                    statusMessage = state == CanaUpgradeStatus.Owned ? "Already yours, my friend." : upgrades.RequirementText(UpgradeIndex);
+                        upgradeUnlocks[UpgradeIndex].PlayDenied())
+                    {
+                        judas.PlayLook();
+                        statusMessage = PricesDoubled ? goldLockDialogue : lockedItemDialogue;
+                    }
                     return;
                 }
                 pendingTrain = UpgradeIndex;
@@ -357,7 +372,7 @@ namespace CrossTheLine.Cana
                 describedTrain = descriptionKey;
                 statusMessage = null;
             }
-            bool showSpeech = judas.IsSurprised || TabIndex == 0 || InTrainList;
+            bool showSpeech = InTrainList;
             if (TabIndex == 2 && previousUpgradeStates[UpgradeIndex] != upgrades.Status(UpgradeIndex))
                 statusMessage = null;
             speechBubble.SetActive(showSpeech);
@@ -365,12 +380,18 @@ namespace CrossTheLine.Cana
             speech.text = InTrainList ? statusMessage ?? (TabIndex == 0 ? TrainingDescription(TrainIndex) :
                 TabIndex == 1 ? itemDescriptions[ItemIndex] : TabIndex == 2 ? upgradeDescriptions[UpgradeIndex] : staffDescriptions[PartTimeIndex]) : "Hello.";
             if (TabIndex == 2 && InTrainList && upgrades.Status(UpgradeIndex) == CanaUpgradeStatus.Locked)
-                speech.text = upgrades.RequirementText(UpgradeIndex);
-            if (judas.IsSurprised) speech.text = surprisedDialogue;
+                speech.text = statusMessage ?? upgrades.RequirementText(UpgradeIndex);
+            bool lockReply = TabIndex == 2 && InTrainList && upgrades.Status(UpgradeIndex) == CanaUpgradeStatus.Locked && statusMessage != null;
+            if (judas.IsSurprised && !lockReply) speech.text = surprisedDialogue;
             staffContent.SetActive(TabIndex == 3);
             staffSelect.enabled = TabIndex == 3 && InTrainList;
             staffSelect.transform.localPosition = Vector3.down * (PartTimeIndex * 40f / 16);
-            for (int i = 0; i < 3; i++) staffPrices[i].text = staff.IsHired(i) ? "Hired" : PriceText(staff.prices[i], staff.Price(i));
+            for (int i = 0; i < 3; i++)
+            {
+                bool hired = staff.IsHired(i);
+                staffPrices[i].text = hired ? "Hired" : PriceText(staff.prices[i], staff.Price(i));
+                if (staffCoins != null && i < staffCoins.Length && staffCoins[i]) staffCoins[i].enabled = !hired;
+            }
             upgradeContent.SetActive(TabIndex == 2);
             upgradeSelect.enabled = TabIndex == 2 && InTrainList;
             upgradeSelect.transform.localPosition = new Vector3(UpgradeIndex % 3 * 53f / 16, -(UpgradeIndex / 3) * 52f / 16, 0);
@@ -384,9 +405,11 @@ namespace CrossTheLine.Cana
                 bool animating = unlock && unlock.IsPlaying;
                 upgradeIcons[i].enabled = state != CanaUpgradeStatus.Locked && (!animating || unlock.IsRevealing);
                 upgradeLocks[i].SetActive(state == CanaUpgradeStatus.Locked || animating);
-                upgradeCoins[i].enabled = state != CanaUpgradeStatus.Owned && !upgrades.CanSteal(i);
-                upgradePrices[i].text = state == CanaUpgradeStatus.Owned ? "Owned" : upgrades.CanSteal(i) ? "Free" : PriceText(upgrades.prices[i], UpgradePrice(i));
+                upgradeCoins[i].enabled = state == CanaUpgradeStatus.Available && !upgrades.CanSteal(i);
+                upgradePrices[i].text = state == CanaUpgradeStatus.Owned || state == CanaUpgradeStatus.Locked || upgrades.CanSteal(i) ? "" : PriceText(upgrades.prices[i], UpgradePrice(i));
             }
+            if (bagNowSelect) bagNowSelect.transform.localPosition = Vector3.right * (upgrades.SelectedBottleLevel * 53f / 16);
+            if (equipmentNowSelect) equipmentNowSelect.transform.localPosition = Vector3.right * (upgrades.SelectedEquipmentLevel * 53f / 16);
             itemContent.SetActive(TabIndex == 1);
             itemSelect.enabled = TabIndex == 1 && InTrainList;
             itemSelect.transform.localPosition = new Vector3(ItemIndex % 2 * 76f / 16, -(ItemIndex / 2) * 35f / 16, 0);
