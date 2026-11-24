@@ -63,6 +63,14 @@ namespace CrossTheLine.Minigames
         public Vector2 Clamp(Vector2 position){var area=RootArea;return new Vector2(Mathf.Clamp(position.x,area.xMin,area.xMax),Mathf.Clamp(position.y,area.yMin,area.yMax));}
         public bool Contains(Vector2 position){var area=RootArea;return position.x>=area.xMin-.0001f&&position.x<=area.xMax+.0001f&&position.y>=area.yMin-.0001f&&position.y<=area.yMax+.0001f;}
         void LateUpdate(){if(game&&game.Running&&game.player)game.player.position=Clamp(game.player.position);}
-        void OnDrawGizmosSelected(){if(!game||!game.gameCamera||!game.playerBody)return;var area=VisibleWorldArea;Gizmos.color=Color.cyan;Gizmos.DrawWireCube(area.center,area.size);}
+        void OnDrawGizmosSelected()
+        {
+#if UNITY_EDITOR
+            // Keep the editable movement bounds out of the Game view even when Gizmos is on.
+            if(UnityEditor.SceneView.currentDrawingSceneView==null)return;
+#endif
+            if(!game||!game.gameCamera||!game.playerBody)return;
+            var area=VisibleWorldArea;Gizmos.color=Color.cyan;Gizmos.DrawWireCube(area.center,area.size);
+        }
     }
 }

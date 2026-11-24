@@ -101,11 +101,12 @@ MonoBehaviour:
   - 3.25
   manualMoveSpeed: 6.6
   feverSeconds: 6
+  feverRefillSeconds: 2
   prayerMoveMultiplier: 0.15
   scrollSpeedMultiplier: 1.15
   hazardSpeedMultiplier: 1.55
-  sideSandSpeed: 13
-  topSandSpeed: 3.4
+  sideSandSpeed: 16
+  topSandSpeed: 4.4
   prayerPreparationSeconds: 0.3
   flamesForFever: 3
   waveIntervals:

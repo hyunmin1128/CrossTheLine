@@ -89,7 +89,7 @@ MonoBehaviour:
   waterChance: 0
   waterInterval: 24
   feverRefillSeconds: 2
-  scrollSpeed: 4.29
+  scrollSpeed: 4.93
   playerMoveSpeed: 6.6
   prayerMoveMultiplier: 0.15
   hazardSpeedMultiplier: 1.55

@@ -1,0 +1,46 @@
+[
+  {
+    "file": "Fish_Long_Gold.png",
+    "width": 1261,
+    "height": 1247,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "file": "Fish_Round_Silver.png",
+    "width": 1295,
+    "height": 1214,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "file": "Fish_Stocky_Copper.png",
+    "width": 1263,
+    "height": 1245,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "file": "Fish_Whisker_Teal.png",
+    "width": 1295,
+    "height": 1214,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]
