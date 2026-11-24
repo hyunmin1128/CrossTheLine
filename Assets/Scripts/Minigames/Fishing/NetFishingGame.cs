@@ -21,6 +21,12 @@ namespace CrossTheLine.Minigames.Fishing
         public TMP_Text countText,promptText,biteText,resultText,completeText,timerText;
         public UnityEngine.UI.Image catchFill,netFill;
         public RectTransform zoneRect,fishRect;
+        [Header("무작위 물고기")]
+        [Tooltip("한 번 던질 때마다 같은 확률로 하나를 선택합니다. 비어 있는 항목은 제외합니다.")]
+        public Sprite[] fishVariants;
+        public UnityEngine.UI.Image resultFishImage;
+        public Sprite CurrentFish { get; private set; }
+        public int CurrentFishIndex { get; private set; }=-1;
         public RectTransform pullingCrew,pullingNet;
         [Tooltip("Aseprite Pull Net frames in playback order.")]
         public Sprite[] pullingFrames;
@@ -34,6 +40,7 @@ namespace CrossTheLine.Minigames.Fishing
         public float LastTapTime { get; private set; }=-100;
         Vector3 boatRest,pullRest,netRest;
         UnityEngine.UI.Image pullingCrewImage;
+        System.Random fishRandom;
         NetFishingSession.Phase previous;
         void Start()
         {
@@ -45,7 +52,11 @@ namespace CrossTheLine.Minigames.Fishing
         void OnDestroy(){if(startButton)startButton.onClick.RemoveListener(StartGame);if(retryButton)retryButton.onClick.RemoveListener(Restart);}
         public void Restart()
         {
-            Session=new NetFishingSession(settings,randomSeed!=0?randomSeed:System.Environment.TickCount);
+            int seed=randomSeed!=0?randomSeed:System.Environment.TickCount;
+            Session=new NetFishingSession(settings,seed);
+            // Cosmetic draws must not change fish movement, rewards or the existing balance RNG.
+            fishRandom=new System.Random(seed^0x278FA);
+            CurrentFish=null;CurrentFishIndex=-1;
             Paused=false;ActiveSpot=0;boat.position=boatRest;previous=Session.State;Refresh();
         }
         public void StartGame(){Session.Start();Refresh();}
@@ -68,7 +79,17 @@ namespace CrossTheLine.Minigames.Fishing
         {
             if(Session==null||Session.State!=NetFishingSession.Phase.Exploring||fishingSpots.Length==0)return false;
             if(Vector2.Distance(boat.position,fishingSpots[ActiveSpot].position)>settings.castRadius)return false;
-            return Session.Cast();
+            if(!Session.Cast())return false;
+            SelectFish();return true;
+        }
+        void SelectFish()
+        {
+            if(fishVariants==null)return;
+            int count=0;foreach(var sprite in fishVariants)if(sprite)count++;
+            if(count==0)return;
+            int chosen=fishRandom.Next(count);
+            for(int i=0;i<fishVariants.Length;i++)if(fishVariants[i]&&chosen--==0){CurrentFish=fishVariants[i];CurrentFishIndex=i;break;}
+            if(CurrentFish){var icon=fishRect.GetComponent<UnityEngine.UI.Image>();icon.sprite=CurrentFish;icon.preserveAspect=true;if(resultFishImage){resultFishImage.sprite=CurrentFish;resultFishImage.preserveAspect=true;}}
         }
         public void Tick(float dt,Vector2 direction,bool cast,bool tap)
         {
@@ -94,6 +115,7 @@ namespace CrossTheLine.Minigames.Fishing
         {
             if(Session==null)return;
             var state=Session.State;bool fighting=state==NetFishingSession.Phase.Fighting;
+            if(resultFishImage)resultFishImage.gameObject.SetActive(state==NetFishingSession.Phase.Result&&Session.LastCatch>0&&CurrentFish);
             if(worldRoot)worldRoot.SetActive(!fighting&&state!=NetFishingSession.Phase.Result&&state!=NetFishingSession.Phase.Replacing&&state!=NetFishingSession.Phase.Complete);
             promptText.gameObject.SetActive(!fighting&&state!=NetFishingSession.Phase.Introduction&&state!=NetFishingSession.Phase.Complete&&!Paused);
             if(tearLeft)tearLeft.gameObject.SetActive(state==NetFishingSession.Phase.Replacing);
