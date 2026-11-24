@@ -25,18 +25,21 @@ namespace CrossTheLine.Cana
   public CanaDissatisfaction dissatisfaction;
   public CanaWallet wallet;
   public CanaRound round;
+  public CanaInventory inventory;
+  public CanaStaffManager staff;
   public CanaSeat[] seats;
   public bool spawnOnStart=true;
   public bool simulateEverySeat;
   [Min(0.1f)] public float spawnInterval=5;
   [Range(0,0.25f)] public float specialChance=0.15f;
-  [Min(0.1f)] public float groupSpawnGap=0.4f, troubleTrashInterval=5;
+  [Min(0.1f)] public float groupSpawnGap=0.4f, troubleTrashInterval=3;
   public SpriteRenderer[] placementPreviews;
   public CanaCustomer ActiveCustomer { get; private set; }
   public float DirtySeatRatio => seats.Length == 0 ? 0 : (float)seats.Count(seat=>seat.dirty)/seats.Length;
   private CanaCustomer[] occupants;
   private bool[] reserved;
   private CanaPlayer[] cleaners;
+  private Component[] staffCleaners;
   private float nextSpawnTime, nextGroupMember;
   private int introduced, reservedTable=-1;
   private readonly Queue<CanaCustomerKind> guaranteed=new Queue<CanaCustomerKind>();
@@ -48,14 +51,14 @@ namespace CrossTheLine.Cana
   {
    foreach(var preview in placementPreviews) if(preview) preview.enabled=false;
    navigation.Rebuild();
-   occupants=new CanaCustomer[seats.Length];reserved=new bool[seats.Length];cleaners=new CanaPlayer[seats.Length];
+   occupants=new CanaCustomer[seats.Length];reserved=new bool[seats.Length];cleaners=new CanaPlayer[seats.Length];staffCleaners=new Component[seats.Length];
    foreach(var seat in seats){seat.dirty=false;seat.dirtyMarker.gameObject.SetActive(false);}
    if(spawnOnStart) SpawnRandom(CanaCustomerKind.Normal);
    nextSpawnTime=Time.time+spawnInterval;
   }
   private void Update()
   {
-   if(round.Finished)return;
+   if(round.Finished || (inventory && inventory.ArrivalsPaused))return;
    if(round.Elapsed>=160 && introduced<3 && reservedTable<0)
     reservedTable=Enumerable.Range(0,6).OrderBy(t=>Enumerable.Range(0,seats.Length).Count(i=>seats[i].table==t && (occupants[i] || seats[i].dirty))).First();
    while(introduced<4 && round.Elapsed>=(introduced+1)*60)
@@ -107,7 +110,7 @@ namespace CrossTheLine.Cana
   public CanaCustomer SpawnCustomer()=>SpawnRandom(CanaCustomerKind.Normal);
   public CanaCustomer SpawnRandom(CanaCustomerKind kind)
   {
-   if(round.Finished)return null;
+   if(round.Finished || (inventory && inventory.ArrivalsPaused))return null;
    if(TryRejectAtDoor(kind,out var rejected))return rejected;
    var choices=Enumerable.Range(0,seats.Length).Where(i=>Available(i) && seats[i].table!=reservedTable).ToArray();
    return choices.Length==0?null:SpawnAt(choices[Random.Range(0,choices.Length)],kind,null,false);
@@ -127,7 +130,7 @@ namespace CrossTheLine.Cana
   public CanaCustomer SpawnCustomerAtSeat(int index)=>SpawnAt(index,CanaCustomerKind.Normal,null,false);
   public CanaCustomer SpawnAt(int index,CanaCustomerKind kind,CanaParty party,bool leader)
   {
-   if(round.Finished || index<0 || index>=seats.Length || occupants[index] || seats[index].dirty)return null;
+   if(round.Finished || (inventory && inventory.ArrivalsPaused) || index<0 || index>=seats.Length || occupants[index] || seats[index].dirty)return null;
    if(reserved[index] && !party)return null;
    if(!navigation.TryRoute(spawnPoint.position,seats[index].point.position,out var path))return null;
    var prefab=kind==CanaCustomerKind.Glutton?gluttonPrefab:kind==CanaCustomerKind.Impatient?impatientPrefab:
@@ -150,6 +153,7 @@ namespace CrossTheLine.Cana
 
   public bool TryStartGroup()
   {
+   if(round.Finished || (inventory && inventory.ArrivalsPaused))return false;
    int table=reservedTable;
    if(table<0)table=Enumerable.Range(0,6).Where(TableFree).DefaultIfEmpty(-1).First();
    if(table<0 || !TableFree(table))return false;
@@ -173,7 +177,7 @@ namespace CrossTheLine.Cana
   {
    if(round.Finished || player.IsCleaning)return false;
    Vector3 position=player.transform.position;
-   int index=Enumerable.Range(0,seats.Length).Where(i=>seats[i].dirty && !occupants[i] && !cleaners[i] && Vector2.Distance(position,seats[i].point.position)<=1.25f)
+   int index=Enumerable.Range(0,seats.Length).Where(i=>seats[i].dirty && !occupants[i] && !cleaners[i] && !staffCleaners[i] && Vector2.Distance(position,seats[i].point.position)<=1.25f)
     .OrderBy(i=>Vector2.Distance(position,seats[i].point.position)).DefaultIfEmpty(-1).First();
    if(index<0)return false;
    if(!player.BeginCleaning(this,index,seats[index].facesLeft))return false;
@@ -191,8 +195,26 @@ namespace CrossTheLine.Cana
   {
    if(cleaners!=null && cleaners[index]==player)cleaners[index]=null;
   }
+  public void ClearAllDirt()
+  {
+   foreach(var seat in seats){seat.dirty=false;seat.dirtyMarker.gameObject.SetActive(false);}
+  }
+  public bool CanStaffClean(int index,Component worker)=>index>=0 && index<seats.Length && seats[index].dirty && !occupants[index] && !cleaners[index] && (!staffCleaners[index] || staffCleaners[index]==worker);
+  public bool TryBeginStaffClean(int index,Component worker)
+  {
+   if(!CanStaffClean(index,worker))return false;
+   staffCleaners[index]=worker;return true;
+  }
+  public void CompleteStaffClean(int index,Component worker)
+  {
+   if(staffCleaners[index]!=worker)return;
+   staffCleaners[index]=null;seats[index].dirty=false;seats[index].dirtyMarker.gameObject.SetActive(false);
+  }
+  public void CancelStaffClean(int index,Component worker)
+  {if(staffCleaners!=null && staffCleaners[index]==worker)staffCleaners[index]=null;}
   public void ScatterTrash(int source)
   {
+   if(staff && staff.CleanerHired && Random.value>=.5f)return;
    var choices=Enumerable.Range(0,seats.Length).Where(i=>Available(i) && Vector2.Distance(seats[i].point.position,seats[source].point.position)<4).ToArray();
    if(choices.Length>0)MarkDirty(choices[Random.Range(0,choices.Length)]);
   }

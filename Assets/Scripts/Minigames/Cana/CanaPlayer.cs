@@ -34,7 +34,10 @@ namespace CrossTheLine.Cana
         [Min(0)] public float moveSpeed = 3;
         public Rect movementBounds = new Rect(-9.5f, -5.5625f, 19f, 10.0625f);
         [Header("Q movement skill")]
-        [Min(0)] public float skillCooldown = 3;
+        [Min(0)] public float skillCooldown = 1;
+        [Min(0)] public float teleportCooldown = 0.1f;
+        private float nextTeleportTime;
+        public CanaInventory inventory;
         [Min(0.01f)] public float dashDuration = 0.14f;
         [Min(0)] public float dashDistance = 2.25f;
         public Transform[] teleportPoints;
@@ -45,7 +48,7 @@ namespace CrossTheLine.Cana
         private float dashTravelled;
         private float nextAfterimageDistance;
         [Range(1, 8)] public int nearbyTeleportChoices = 4;
-        public float SkillCooldownRemaining => Mathf.Max(0, nextSkillTime - Time.time);
+        public float SkillCooldownRemaining => Mathf.Max(0, (movementEquipment == MovementEquipment.TeleportDevice ? nextTeleportTime : nextSkillTime) - Time.time);
         public bool IsDashing => dashRemaining > 0;
         private Vector2 lastMovementDirection = Vector2.left;
         private Vector2 dashDirection;
@@ -59,7 +62,9 @@ namespace CrossTheLine.Cana
         public CanaDissatisfaction dissatisfaction;
         public CanaRound round;
         public CanaCustomerSpawner customerSpawner;
-        [Min(0.05f)] public float fillInterval = 0.4f;
+        [Min(0.05f)] public float fillInterval = 0.6f;
+        [Header("Training")]
+        public CanaShop shop;
         [Header("Animation")]
         public Animator animator;
         public SpriteRenderer characterSprite;
@@ -93,9 +98,16 @@ namespace CrossTheLine.Cana
         [SerializeField] private float liquidAmount;
         public int Capacity => bottleTier == BottleTier.BigJar ? 10 : bottleTier == BottleTier.SpecialJar ? int.MaxValue : 5;
         public float LiquidAmount => liquidAmount;
-        public bool InfiniteWine => bottleTier == BottleTier.SpecialJar;
-        public float MovementSpeedMultiplier => InfiniteWine ? 1 : 1 - 0.5f * Mathf.Clamp01(liquidAmount / Capacity);
-        public float CurrentMoveSpeed => moveSpeed * MovementSpeedMultiplier;
+        public bool InfiniteWine => bottleTier == BottleTier.SpecialJar || (inventory && inventory.UnlimitedWine);
+        private int TrainLevel(int index) => shop ? Mathf.Clamp(shop.TrainingLevel(index), 0, shop.maxTrainingLevel) : 0;
+        private bool FinalTraining(int index) => shop && TrainLevel(index) >= shop.maxTrainingLevel;
+        public float TrainingMoveMultiplier => FinalTraining(0) ? 2 : 1 + 0.1f * TrainLevel(0);
+        public float CurrentCleaningDuration => FinalTraining(1) ? 0.1f : cleaningDuration / (1 + 0.1f * TrainLevel(1));
+        public float MaximumLoadSlowdown => FinalTraining(2) ? 0.01f : Mathf.Max(0.01f, 0.5f - 0.05f * TrainLevel(2));
+        public float CurrentFillInterval => FinalTraining(3) ? 0.1f / Capacity : fillInterval / (1 + 0.1f * TrainLevel(3));
+        public float FullFillDuration => InfiniteWine ? 0 : CurrentFillInterval * Capacity;
+        public float MovementSpeedMultiplier => bottleTier == BottleTier.SpecialJar ? 1 : 1 - MaximumLoadSlowdown * Mathf.Clamp01(liquidAmount / Capacity);
+        public float CurrentMoveSpeed => moveSpeed * TrainingMoveMultiplier * MovementSpeedMultiplier;
         public DrinkContents Contents => InfiniteWine ? DrinkContents.Wine : contents;
         public int Amount => InfiniteWine ? int.MaxValue : Mathf.FloorToInt(liquidAmount + 0.0001f);
         public bool IsPraying { get; private set; }
@@ -200,7 +212,8 @@ namespace CrossTheLine.Cana
             {
                 if (!TryTeleport(input)) return false;
             }
-            nextSkillTime = Time.time + skillCooldown;
+            if (movementEquipment == MovementEquipment.TeleportDevice) nextTeleportTime = Time.time + teleportCooldown;
+            else nextSkillTime = Time.time + skillCooldown;
             return true;
         }
 
@@ -356,7 +369,7 @@ namespace CrossTheLine.Cana
         public void FillWater(float seconds)
         {
             if (IsCleaning || IsPraying || InfiniteWine || seconds <= 0 || liquidAmount >= Capacity) return;
-            liquidAmount = Mathf.Min(Capacity, liquidAmount + seconds / fillInterval);
+            liquidAmount = Mathf.Min(Capacity, liquidAmount + seconds / CurrentFillInterval);
             contents = DrinkContents.Water;
             RefreshAnimation();
         }
@@ -394,7 +407,7 @@ namespace CrossTheLine.Cana
             if (IsCleaning || IsPraying || (round && round.Finished)) return false;
             cleaningOwner = owner;
             cleaningSeat = seat;
-            cleaningRemaining = cleaningDuration;
+            cleaningRemaining = CurrentCleaningDuration;
             dashRemaining = 0;
             isMoving = false;
             characterSprite.flipX = !facesLeft;

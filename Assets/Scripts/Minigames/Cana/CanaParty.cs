@@ -43,6 +43,18 @@ namespace CrossTheLine.Cana
             if (!Ordering || Resolved) return false;
             if (Time.time - started >= members[0].WaitDuration) { Fail(); return false; }
             if (!player.TryServeWine()) return false;
+            return AcceptServing();
+        }
+
+        public bool ServeFromWorker()
+        {
+            if (!Ordering || Resolved) return false;
+            if (Time.time - started >= members[0].WaitDuration) { Fail(); return false; }
+            return AcceptServing();
+        }
+
+        private bool AcceptServing()
+        {
             Served++;
             foreach (var member in members) member.SetRequest(4 - Served);
             if (Served == 4)

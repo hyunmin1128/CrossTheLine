@@ -12,6 +12,10 @@ namespace CrossTheLine.Cana
         public Animator idleAnimator;
         public SpriteRenderer characterSprite;
         public Sprite prayingSprite;
+        public CanaInventory inventory;
+        public RuntimeAnimatorController monkeyIdleAnimation;
+        public Sprite monkeyPrayingSprite;
+        private RuntimeAnimatorController normalIdleAnimation;
         public GameObject prayerEffect;
         public Vector3 effectOffset = new Vector3(0, -0.0625f, 0);
         private CanaPlayer prayingPlayer;
@@ -21,12 +25,32 @@ namespace CrossTheLine.Cana
         private void Awake()
         {
             idleSprite = characterSprite.sprite;
+            normalIdleAnimation = idleAnimator.runtimeAnimatorController;
             prayerEffect.SetActive(false);
         }
 
         private void Update()
         {
+            RefreshAppearance();
             idleAnimator.speed = idleAnimationSpeed;
+        }
+
+        private void RefreshAppearance()
+        {
+            bool monkey = inventory && inventory.ComplaintsBlocked;
+            if (prayingPlayer)
+            {
+                idleAnimator.enabled = false;
+                characterSprite.sprite = monkey ? monkeyPrayingSprite : prayingSprite;
+                return;
+            }
+            var controller = monkey ? monkeyIdleAnimation : normalIdleAnimation;
+            if (idleAnimator.runtimeAnimatorController != controller)
+            {
+                idleAnimator.runtimeAnimatorController = controller;
+                idleAnimator.Play(0, 0, 0);
+            }
+            idleAnimator.enabled = true;
         }
 
         public bool IsInRange(CanaPlayer player)
@@ -45,7 +69,7 @@ namespace CrossTheLine.Cana
         private IEnumerator Pray()
         {
             idleAnimator.enabled = false;
-            characterSprite.sprite = prayingSprite;
+            characterSprite.sprite = inventory && inventory.ComplaintsBlocked ? monkeyPrayingSprite : prayingSprite;
             prayerEffect.transform.SetParent(prayingPlayer.transform, false);
             prayerEffect.transform.localPosition = effectOffset;
             prayerEffect.GetComponent<CanaOneShotEffect>().animationSpeed = effectAnimationSpeed;
@@ -70,6 +94,7 @@ namespace CrossTheLine.Cana
             if (prayingPlayer) prayingPlayer.FinishPrayer(completed);
             prayingPlayer = null;
             prayer = null;
+            RefreshAppearance();
         }
 
         private void OnDisable()

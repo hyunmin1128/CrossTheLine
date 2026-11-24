@@ -5,6 +5,8 @@ namespace CrossTheLine.Cana
     public sealed class CanaDissatisfaction : MonoBehaviour
     {
         public SpriteRenderer gauge;
+        public CanaInventory inventory;
+        public CanaStaffManager staff;
         public Sprite[] frames;
         [SerializeField] private int complaints;
         [SerializeField] private bool gameOver;
@@ -20,6 +22,8 @@ namespace CrossTheLine.Cana
 
         public void AddComplaint(int amount = 1)
         {
+            if (inventory && inventory.ComplaintsBlocked) return;
+            if (staff && staff.CleanerHired && Random.value < .25f) return;
             for (int i = 0; i < amount; i++) AddOne();
         }
 

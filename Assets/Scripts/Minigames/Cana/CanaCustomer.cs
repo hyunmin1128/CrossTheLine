@@ -19,6 +19,7 @@ namespace CrossTheLine.Cana
         [Min(0.01f)] public float drinkAnimationSpeed = 1;
         [Min(0)] public float idleAnimationSpeed = 1;
         private CanaReaction servedReaction;
+        private bool successRecorded;
         public bool sourceFacesLeft = true;
         public CanaCustomerKind Kind { get; private set; }
         public CanaParty Party { get; private set; }
@@ -28,7 +29,10 @@ namespace CrossTheLine.Cana
         private bool drinkingReported;
         private float nextTrash;
         public bool RoundFinished => owner && owner.round && owner.round.Finished;
-        public float WaitDuration => gaugeFrames.Length * secondsPerGauge;
+        public float EffectiveSecondsPerGauge => Kind == CanaCustomerKind.Impatient && owner && owner.staff && owner.staff.CleanerHired ? secondsPerGauge * 2 : secondsPerGauge;
+        public float WaitDuration => gaugeFrames.Length * EffectiveSecondsPerGauge;
+        public bool IsAwaitingService => !RoundFinished && state == CanaCustomerState.WaitingForOrder && (!Party || Party.Ordering && !Party.Resolved);
+        public int RequiredPortions => Kind == CanaCustomerKind.Glutton ? 2 : 1;
         public SpriteRenderer requestRenderer, gaugeRenderer, reactionRenderer;
         public Sprite[] gaugeFrames;
         public Sprite heart, smile, angry;
@@ -45,7 +49,7 @@ namespace CrossTheLine.Cana
         public CanaReaction Reaction { get; private set; }
         public bool VisitedMoneyBin { get; private set; }
         public bool RejectedAtDoor { get; private set; }
-        public int GaugeIndex => Mathf.Clamp(Mathf.FloorToInt(waitTime / secondsPerGauge), 0, gaugeFrames.Length - 1);
+        public int GaugeIndex => Mathf.Clamp(Mathf.FloorToInt(waitTime / EffectiveSecondsPerGauge), 0, gaugeFrames.Length - 1);
         private Vector3[] route;
         private int waypointIndex;
         private Vector3 position;
@@ -119,7 +123,7 @@ namespace CrossTheLine.Cana
                 if (Party) return;
                 waitTime = Time.time - waitStarted;
                 gaugeRenderer.sprite = gaugeFrames[GaugeIndex];
-                if (waitTime >= gaugeFrames.Length * secondsPerGauge) React(CanaReaction.Angry);
+                if (waitTime >= WaitDuration) React(CanaReaction.Angry);
                 return;
             }
             if (state == CanaCustomerState.Reacting)
@@ -177,8 +181,19 @@ namespace CrossTheLine.Cana
             if (state != CanaCustomerState.WaitingForOrder || Vector2.Distance(player.transform.position, transform.position) > 1.25f) return false;
             if (Party) return Party.Serve(player);
             waitTime = Time.time - waitStarted;
-            if (waitTime >= gaugeFrames.Length * secondsPerGauge) { React(CanaReaction.Angry); return false; }
+            if (waitTime >= WaitDuration) { React(CanaReaction.Angry); return false; }
             if (!player.TryServeWine(Kind == CanaCustomerKind.Glutton ? 2 : 1)) return false;
+            StartDrinking(Kind == CanaCustomerKind.Glutton ? CanaReaction.Heart :
+                GaugeIndex <= lastGreenFrame ? CanaReaction.Heart : CanaReaction.Smile);
+            return true;
+        }
+
+        public bool TryServeFromWorker(Vector3 workerPosition, int portions)
+        {
+            if (!IsAwaitingService || Vector2.Distance(workerPosition, transform.position) > 1.25f || portions < RequiredPortions) return false;
+            if (Party) return Party.ServeFromWorker();
+            waitTime = Time.time - waitStarted;
+            if (waitTime >= WaitDuration) { React(CanaReaction.Angry); return false; }
             StartDrinking(Kind == CanaCustomerKind.Glutton ? CanaReaction.Heart :
                 GaugeIndex <= lastGreenFrame ? CanaReaction.Heart : CanaReaction.Smile);
             return true;
@@ -186,6 +201,12 @@ namespace CrossTheLine.Cana
 
         public void React(CanaReaction reaction)
         {
+            if (!successRecorded && !RejectedAtDoor && owner &&
+                (reaction == CanaReaction.Heart || reaction == CanaReaction.Smile))
+            {
+                successRecorded = true;
+                owner.wallet.RecordSuccessfulCustomer();
+            }
             animator.runtimeAnimatorController = idleAnimation;
             Reaction = reaction;
             state = CanaCustomerState.Reacting;
