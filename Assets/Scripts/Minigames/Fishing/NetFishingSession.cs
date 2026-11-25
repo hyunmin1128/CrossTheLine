@@ -24,6 +24,10 @@ namespace CrossTheLine.Minigames.Fishing
         public float Zone { get; private set; }=.5f;
         public float Fish { get; private set; }=.5f;
         public bool IsLegend { get; private set; }
+        public int FishType { get; private set; }
+        public bool LegendWarning { get; private set; }
+        public int JourneyLeg => Mathf.Min(3, FishCaught / 50 + 1);
+        public bool ReachedMilestone { get; private set; }
         public float ZoneHeight=>IsLegend?settings.legendZoneHeight:settings.catchZoneHeight;
         public float ProgressRequired=>IsLegend?settings.legendProgressRequired:settings.normalProgressRequired;
         public bool Inside=>Mathf.Abs(Fish-Zone)<=ZoneHeight*.5f;
@@ -33,10 +37,13 @@ namespace CrossTheLine.Minigames.Fishing
         float Range(float low,float high)=>low+(high-low)*(float)random.NextDouble();
         void Change(Phase phase){State=phase;PhaseTime=0;}
         public void Start(){if(State==Phase.Introduction)Change(Phase.Exploring);}
-        public bool Cast(bool isLegend=false)
+        public bool Cast(bool isLegend=false, int fishType=0)
         {
             if(State!=Phase.Exploring)return false;
             IsLegend=isLegend;
+            FishType=fishType;
+            LegendWarning=false;
+            ReachedMilestone=false;
             Casts++;LastCatch=0;CastElapsed=0;Change(Phase.Casting);return true;
         }
         public void Step(float dt,bool tap)
@@ -68,11 +75,9 @@ namespace CrossTheLine.Minigames.Fishing
         }
         void Fight(float dt,bool tap)
         {
-            FightTime+=dt;retarget-=dt;
-            if(retarget<=0){fishTarget=Range(.12f,.88f);retarget=Range(settings.fishRetargetSeconds.x,settings.fishRetargetSeconds.y);}
+            FightTime+=dt;
+            UpdateFish(dt);
             float halfZone=ZoneHeight*.5f;
-            float fishSpeed=settings.fishSpeed*(IsLegend?settings.legendFishSpeedMultiplier:1);
-            Fish=Mathf.MoveTowards(Fish,fishTarget,fishSpeed*dt);
             Zone=Mathf.Clamp(Zone-settings.zoneFallSpeed*dt,halfZone,1-halfZone);
             if(tap&&tapClock>=settings.minimumTapInterval)
             {
@@ -87,7 +92,9 @@ namespace CrossTheLine.Minigames.Fishing
             {
                 int low=Mathf.Max(1,settings.minimumCatch),high=Mathf.Max(low,settings.maximumCatch);
                 LastCatch=IsLegend?settings.legendCatch:Mathf.Min(random.Next(low,high+1),settings.goalFish-FishCaught);
+                int previousLeg=JourneyLeg;
                 FishCaught+=LastCatch;
+                ReachedMilestone=JourneyLeg>previousLeg&&FishCaught<settings.goalFish;
                 ResultMessage=IsLegend?$"Legend 포획! · {LastCatch}마리":$"{LastCatch}마리 포획!";
                 Change(Phase.Result);
             }
@@ -95,6 +102,45 @@ namespace CrossTheLine.Minigames.Fishing
             {
                 Escapes++;ResultMessage="물고기를 놓쳤습니다";Change(Phase.Result);
             }
+        }
+
+        void UpdateFish(float dt)
+        {
+            float speed=settings.fishSpeed;
+            if(IsLegend)
+            {
+                float phase=Mathf.Repeat(FightTime,2.8f);
+                LegendWarning=phase>=1.4f&&phase<1.95f;
+                if(LegendWarning)return;
+                bool up=Mathf.FloorToInt(FightTime/2.8f)%2==0;
+                float target=phase<1.4f?(up?.22f:.78f):(up?.88f:.12f);
+                speed*=settings.legendFishSpeedMultiplier*(phase>=1.95f?1.75f:1f);
+                Fish=Mathf.MoveTowards(Fish,target,speed*dt);
+                return;
+            }
+
+            if(FishType==1)
+            {
+                float phase=Mathf.Repeat(FightTime,3.6f);
+                if(phase<.85f)return;
+                Fish=Mathf.MoveTowards(Fish,phase<1.65f?.84f:.24f,speed*(phase<1.65f?1.65f:.8f)*dt);
+                return;
+            }
+
+            retarget-=dt;
+            if(retarget<=0)
+            {
+                retarget=Range(settings.fishRetargetSeconds.x,settings.fishRetargetSeconds.y);
+                if(FishType==2)fishTarget=Range(.13f,.40f);
+                else if(FishType==3)
+                {
+                    fishTarget=Fish>=.5f?Range(.22f,.44f):Range(.56f,.78f);
+                    retarget*=.6f;
+                }
+                else fishTarget=Range(.24f,.76f);
+            }
+            if(FishType==0)speed*=.8f;
+            Fish=Mathf.MoveTowards(Fish,fishTarget,speed*dt);
         }
     }
 }

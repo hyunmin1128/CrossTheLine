@@ -18,6 +18,7 @@ namespace CrossTheLine.Minigames.Fishing
         public Sprite crewIdle,crewThrow;
         public Sprite[] throwingFrames,bubbleFrames;
         public Sprite submergedNet,legendFish;
+        public TMP_Text fishWarningText;
         public bool FacingLeft { get; private set; }
         Vector3 castLanding;
         [Header("Canvas 화면")]
@@ -84,15 +85,22 @@ namespace CrossTheLine.Minigames.Fishing
             if(Session==null||Session.State!=NetFishingSession.Phase.Exploring||fishingSpots.Length==0)return false;
             if(Vector2.Distance(boat.position,fishingSpots[ActiveSpot].position)>settings.castRadius)return false;
             bool legend=legendFish&&fishRandom.NextDouble()<settings.legendChance;
-            if(!Session.Cast(legend))return false;
+            SelectFish(legend);
+            if(!Session.Cast(legend,CurrentFishIndex))return false;
+            castLanding=GetCastLanding();
+            return true;
+        }
+        Vector3 GetCastLanding()
+        {
             Vector3 spot=fishingSpots[ActiveSpot].position;
             float side=FacingLeft?-1f:1f;
-            castLanding=new Vector3(boat.position.x+side*Mathf.Max(1.35f,Mathf.Abs(spot.x-boat.position.x)),spot.y,0);
-            SelectFish();return true;
+            float edge=Mathf.Max(.1f,sceneCamera.orthographicSize*sceneCamera.aspect-.65f);
+            float x=boat.position.x+side*Mathf.Max(1.35f,Mathf.Abs(spot.x-boat.position.x));
+            return new Vector3(Mathf.Clamp(x,-edge,edge),spot.y-.8f,0);
         }
-        void SelectFish()
+        void SelectFish(bool legend)
         {
-            if(Session.IsLegend)
+            if(legend)
             {
                 CurrentFish=legendFish;
                 CurrentFishIndex=fishVariants?.Length??0;
@@ -129,10 +137,24 @@ namespace CrossTheLine.Minigames.Fishing
             if(previous!=Session.State)
             {
                 if(Session.State==NetFishingSession.Phase.Exploring&&previous!=NetFishingSession.Phase.Introduction&&fishingSpots.Length>1)
-                    ActiveSpot=(ActiveSpot+Random.Range(1,fishingSpots.Length))%fishingSpots.Length;
+                    ChooseNextSpot();
                 previous=Session.State;
             }
             Refresh();
+        }
+        void ChooseNextSpot()
+        {
+            // Move the school across the map at 50 and 100 fish.
+            float targetX=Session.JourneyLeg==1?-2.5f:Session.JourneyLeg==2?0:2.5f;
+            float best=float.PositiveInfinity;
+            int next=ActiveSpot;
+            for(int i=0;i<fishingSpots.Length;i++)
+            {
+                if(i==ActiveSpot)continue;
+                float score=Mathf.Abs(fishingSpots[i].position.x-targetX)+Random.Range(0f,1.5f);
+                if(score<best){best=score;next=i;}
+            }
+            ActiveSpot=next;
         }
         public void Refresh()
         {
@@ -167,8 +189,18 @@ namespace CrossTheLine.Minigames.Fishing
             zoneRect.anchorMin=new Vector2(.08f,Session.Zone-Session.ZoneHeight*.5f);zoneRect.anchorMax=new Vector2(.92f,Session.Zone+Session.ZoneHeight*.5f);zoneRect.offsetMin=zoneRect.offsetMax=Vector2.zero;
             zoneRect.GetComponent<UnityEngine.UI.Image>().color=Session.Inside?new Color(.35f,.77f,.58f,.9f):new Color(.45f,.68f,.61f,.65f);
             fishRect.anchorMin=fishRect.anchorMax=new Vector2(.5f,Session.Fish);fishRect.anchoredPosition=Vector2.zero;
+            bool danger=fighting&&Session.Integrity<=.33f;
+            if(fishWarningText)
+            {
+                fishWarningText.gameObject.SetActive(fighting&&(danger||Session.LegendWarning));
+                fishWarningText.text=Session.LegendWarning?"돌진!":"그물 위험";
+            }
+            if(fighting&&Session.LegendWarning)
+                fishRect.anchoredPosition=new Vector2(Mathf.Sin(Session.FightTime*72)*4,0);
             timerText.text=$"남은 시간  {Mathf.CeilToInt(Mathf.Max(0,settings.maximumCatchSeconds-Session.CastElapsed))}초";
             resultText.text=state==NetFishingSession.Phase.Replacing?$"{Session.ResultMessage}\n{Mathf.CeilToInt(Mathf.Max(0,settings.replacementSeconds-Session.PhaseTime))}초 후 다시 던질 수 있습니다\n잡은 물고기는 유지됩니다":$"{Session.ResultMessage}\n누적 {Session.FishCaught} / {settings.goalFish}마리";
+            if(state==NetFishingSession.Phase.Result&&Session.ReachedMilestone)
+                resultText.text+=Session.JourneyLeg==2?"\n50마리 돌파 · 물고기 떼가 수역 가운데로 이동합니다":"\n100마리 돌파 · 물고기 떼가 오른쪽으로 이동합니다";
             completeText.text=$"150마리의 물고기를 모았습니다\n총 {Mathf.FloorToInt(Session.Elapsed/60)}분 {Mathf.FloorToInt(Session.Elapsed%60)}초\n그물 {Session.Casts}회 · 놓침 {Session.Escapes}회 · 교체 {Session.BrokenNets}회\nR · 다시 시작";
             if(state==NetFishingSession.Phase.Exploring)
             {
@@ -176,17 +208,19 @@ namespace CrossTheLine.Minigames.Fishing
                 promptText.text=near?"E / Space · 보글거리는 곳에 그물 던지기":"WASD / 방향키 · 보글거리는 지점으로 이동";
             }
             else promptText.text=fighting?"Space / 마우스 클릭 연타 · 초록 구간에 물고기를 유지하세요":state==NetFishingSession.Phase.Waiting?"그물이 물속으로 가라앉았습니다…":state==NetFishingSession.Phase.Casting?"그물 던지는 중":state==NetFishingSession.Phase.Bite?"물고기가 걸렸습니다!":"Esc · 일시정지";
-            biteText.text=state==NetFishingSession.Phase.Waiting?new string('.',1+Mathf.FloorToInt(Session.PhaseTime*2)%3):state==NetFishingSession.Phase.Bite?"!":"";
+            bool preview=state==NetFishingSession.Phase.Exploring&&fishingSpots.Length>0&&Vector2.Distance(boat.position,fishingSpots[ActiveSpot].position)<=settings.castRadius;
+            biteText.text=preview?"◎":state==NetFishingSession.Phase.Waiting?new string('.',1+Mathf.FloorToInt(Session.PhaseTime*2)%3):state==NetFishingSession.Phase.Bite?"!":"";
             if(fishingSpots.Length>0)
             {
-                var view=sceneCamera.WorldToViewportPoint(state==NetFishingSession.Phase.Waiting||state==NetFishingSession.Phase.Bite?castLanding:fishingSpots[ActiveSpot].position);
-                var r=(RectTransform)biteText.transform;r.anchorMin=r.anchorMax=new Vector2(view.x,view.y);r.anchoredPosition=new Vector2(0,38);
+                var target=preview?GetCastLanding():state==NetFishingSession.Phase.Waiting||state==NetFishingSession.Phase.Bite?castLanding:fishingSpots[ActiveSpot].position;
+                var view=sceneCamera.WorldToViewportPoint(target);
+                var r=(RectTransform)biteText.transform;r.anchorMin=r.anchorMax=new Vector2(view.x,view.y);r.anchoredPosition=new Vector2(0,preview?0:38);
             }
             castNet.gameObject.SetActive(state==NetFishingSession.Phase.Waiting||state==NetFishingSession.Phase.Bite);
             if(castNet.gameObject.activeSelf&&fishingSpots.Length>0)
             {
                 float sink=state==NetFishingSession.Phase.Bite?1:Mathf.Clamp01(Session.PhaseTime/.65f);
-                castNet.position=castLanding+Vector3.down*(.25f+.55f*sink);
+                castNet.position=castLanding+Vector3.up*(.55f*(1-sink));
                 var renderer=castNet.GetComponent<SpriteRenderer>();
                 if(submergedNet)renderer.sprite=submergedNet;
                 if(crewBody)renderer.sortingOrder=crewBody.sortingOrder-2;
@@ -225,6 +259,8 @@ namespace CrossTheLine.Minigames.Fishing
                     pullingNet.anchoredPosition=(Vector2)netRest+new Vector2(-pull*15,pull*5);
                     pullingNetImage.color=Color.Lerp(new Color(.78f,.94f,1),new Color(.95f,.38f,.28f),1-Session.Integrity);
                 }
+                if(Session.Integrity<=.33f&&!Paused)
+                    pullingCrew.anchoredPosition+=new Vector2(Mathf.Sin(Session.FightTime*65)*3,0);
             }
         }
     }
