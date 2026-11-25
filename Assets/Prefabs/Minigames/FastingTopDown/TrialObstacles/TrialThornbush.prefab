@@ -55,13 +55,17 @@ MonoBehaviour:
   footprint: {fileID: 0}
   arrow: {fileID: 0}
   occupiedLanes: 1
-  artworkWidth: 0.64
-  artworkCenter: {x: 0, y: 0}
+  artworkWidth: 0.54
+  artworkCenter: {x: 0.02000001, y: 0.26999998}
+  collisionOffset: {x: 0, y: 0}
+  minimumVisibleReactionSeconds: 0
   collisionHeight: 1.6875
   scrollOnly: 1
   rotateRollingRock: 0
   expandsOnApproach: 0
   fixedApproachScale: 1
+  authoredWallOrientation: 0
+  verticalWall: 0
   formationId: 0
   formationCount: 1
   animationFrames: []
@@ -148,7 +152,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 30
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: e7834b8c095539c4a9a3fc66c44a3143, type: 3}
+  m_Sprite: {fileID: -4087979572700359362, guid: 10baaf33d2e28ab4ca7995296ce88848, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

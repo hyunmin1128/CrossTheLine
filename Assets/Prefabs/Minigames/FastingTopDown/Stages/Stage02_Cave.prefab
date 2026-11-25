@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingStageConfiguration
   stageIndex: 1
   displayName: "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"
-  background: {fileID: -7360753985401943361, guid: d1c1727a7eda4854ab7e84035e08eb72, type: 3}
+  background: {fileID: -1947325734655801210, guid: f4e5756d23a392e40a5e59680eb05ef3, type: 3}
   sharedSpawnSettings: {fileID: 11400000, guid: 7c83ac27232ff6d4ba1f52f473198f24, type: 2}
   obstacleFrequency: 1.25
   roadEdges: {x: 0.18, y: 0.82}

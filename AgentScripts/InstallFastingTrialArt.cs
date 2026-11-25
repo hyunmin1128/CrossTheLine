@@ -16,7 +16,7 @@ public static class InstallFastingTrialArt
         if(EditorApplication.isPlaying)throw new Exception("Edit required");var g=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();if(!g)throw new Exception("Minigame required");
         if(!AssetDatabase.IsValidFolder(Folder.TrimEnd('/')))AssetDatabase.CreateFolder("Assets/Prefabs/Minigames/FastingTopDown","TrialObstacles");
         const string path="Assets/Settings/Minigames/FastingTrialArt.asset";var art=AssetDatabase.LoadAssetAtPath<FastingTrialArt>(path);if(!art){art=ScriptableObject.CreateInstance<FastingTrialArt>();AssetDatabase.CreateAsset(art,path);}
-        art.background=Load("Assets/Sprite/Background/Chapter3-Minigame-Stage4.png").Single();
+        art.background=Load("Assets/Sprite/Background/Minigames/Chapter3/Stage4/Chapter3-Minigame-Stage4.png").Single();
         art.fire=Make("TrialFire",FastingTopDownHazard.Kind.Fire,Load("Assets/Sprite/Objects/Chapter3/Stage4/Lava.aseprite"),g.desertArt.rockPrefab);
         art.thorns=Make("TrialThornbush",FastingTopDownHazard.Kind.Thorns,Load("Assets/Sprite/Objects/Chapter3/Stage4/Thornbush.png"),g.desertArt.rockPrefab);
         art.pillar=Make("TrialFlamePillar",FastingTopDownHazard.Kind.Pillar,Load("Assets/Sprite/Objects/Chapter3/Stage4/PillarOfFlame.aseprite"),g.desertArt.rockPrefab);

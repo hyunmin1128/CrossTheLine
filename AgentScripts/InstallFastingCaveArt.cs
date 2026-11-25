@@ -32,7 +32,7 @@ public static class InstallFastingCaveArt
     public static string Run()
     {
         if(EditorApplication.isPlaying)throw new Exception("Edit mode required");var g=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();if(!g||g.gameObject.scene.path!="Assets/Scenes/Minigames/Chapter03_Fasting_TopDown_Test.unity")throw new Exception("Current scene required");
-        const string bg="Assets/Sprite/Background/Chapter3-Minigame-Stage2.png";Import(bg,true);
+        const string bg="Assets/Sprite/Background/Minigames/Chapter3/Stage2/Chapter3-Minigame-Stage2.png";Import(bg,true);
         foreach(var n in new[]{"Stalagmite.png","FallingRock.png","Crack.png","Bat-Sheet.png"})Import("Assets/Sprite/Objects/Chapter3/Stage2/"+n);
         string folder="Assets/Prefabs/Minigames/FastingTopDown/CaveObstacles";if(!AssetDatabase.IsValidFolder(folder))AssetDatabase.CreateFolder("Assets/Prefabs/Minigames/FastingTopDown","CaveObstacles");
         const string path="Assets/Settings/Minigames/FastingCaveObstacleArt.asset";var art=AssetDatabase.LoadAssetAtPath<FastingCaveObstacleArt>(path);if(!art){art=ScriptableObject.CreateInstance<FastingCaveObstacleArt>();AssetDatabase.CreateAsset(art,path);}

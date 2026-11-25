@@ -17,7 +17,7 @@ namespace CrossTheLine.EditorTools
             AssetDatabase.StartAssetEditing();
             try
             {
-                string source=Path.Combine(project,"Assets/Sprite/Background/Chapter8-Minigame-Sea.aseprite");
+                string source=Path.Combine(project,"Assets/Sprite/Background/Minigames/Chapter8/Chapter8-Minigame-Sea.aseprite");
                 string[] layers={"Sea","Throw Net","Peter&Andrew","boat"},names={"Sea","ThrowNet","PeterAndrew","Boat"};
                 for(int i=0;i<layers.Length;i++)Run(executable,"--batch --all-layers --layer "+Quote(layers[i])+" "+Quote(source)+" --save-as "+Quote(Path.Combine(output,names[i]+".png")),project);
                 Run(executable,"--batch --all-layers "+Quote(Path.Combine(project,"Assets/Sprite/Objects/Chapter8/Net.aseprite"))+" --save-as "+Quote(Path.Combine(output,"Net.png")),project);

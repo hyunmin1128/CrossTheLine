@@ -13,7 +13,7 @@ public static class TestUpdatedTopDownBackgroundNov14
         try
         {
             g.Begin();typeof(FastingTopDownGame).GetField("wave",BindingFlags.NonPublic|BindingFlags.Instance).SetValue(g,float.MaxValue);
-            ok(g.backgrounds.All(b=>AssetDatabase.GetAssetPath(b.sprite)=="Assets/Sprite/Background/Chapter3-Minigame-Stage1.png"),"Updated art on all four tiles");
+            ok(g.backgrounds.All(b=>AssetDatabase.GetAssetPath(b.sprite)=="Assets/Sprite/Background/Minigames/Chapter3/Stage1/Chapter3-Minigame-Stage1.png"),"Updated art on all four tiles");
             ok(g.backgrounds[0].sprite.texture.width==320&&g.backgrounds[0].sprite.texture.height==180,"320x180 source");
             ok(Mathf.Abs(g.backgrounds[0].bounds.size.y-g.gameCamera.orthographicSize*2)<.001f,"Background fits camera height");
             float height=g.backgrounds[0].bounds.size.y;

@@ -57,11 +57,15 @@ MonoBehaviour:
   occupiedLanes: 1
   artworkWidth: 0.37
   artworkCenter: {x: 0.004999995, y: 0.325}
+  collisionOffset: {x: 0, y: 0}
+  minimumVisibleReactionSeconds: 0
   collisionHeight: 1.4
   scrollOnly: 1
   rotateRollingRock: 0
   expandsOnApproach: 0
   fixedApproachScale: 1
+  authoredWallOrientation: 0
+  verticalWall: 0
   formationId: 0
   formationCount: 1
   animationFrames:

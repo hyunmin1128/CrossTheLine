@@ -147,7 +147,7 @@ MonoBehaviour:
   footprint: {fileID: 0}
   arrow: {fileID: 0}
   occupiedLanes: 1
-  artworkWidth: 0.34
+  artworkWidth: 0.04
   artworkCenter: {x: 0, y: 0.32}
   collisionOffset: {x: 0, y: 0}
   minimumVisibleReactionSeconds: 0

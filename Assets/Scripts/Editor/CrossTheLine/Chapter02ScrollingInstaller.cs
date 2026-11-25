@@ -12,7 +12,7 @@ public static class Chapter02ScrollingInstaller
  public static string Run()
  {
   if(EditorApplication.isPlaying)throw new Exception("Stop Play first");
-  string path="Assets/Sprite/Background/Chapter2.png";
+  string path="Assets/Sprite/Background/MainStory/Chapter2/Chapter2.png";
   AssetDatabase.ImportAsset(path);var importer=(TextureImporter)AssetImporter.GetAtPath(path);
   importer.textureType=TextureImporterType.Sprite;importer.spritePixelsPerUnit=32;importer.filterMode=FilterMode.Point;importer.mipmapEnabled=false;importer.textureCompression=TextureImporterCompression.Uncompressed;importer.maxTextureSize=2048;importer.SaveAndReimport();
   var active=EditorSceneManager.GetActiveScene();if(active.isDirty){if(active.path=="Assets/Scenes/Chapter02_Baptism.unity")EditorSceneManager.SaveScene(active);else throw new Exception("Save the current scene before installing chapter 2");}

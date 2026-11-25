@@ -21,7 +21,7 @@ public static class InstallFastingRuinsArt
         var g=UnityEngine.Object.FindAnyObjectByType<FastingTopDownGame>();if(EditorApplication.isPlaying||!g)throw new Exception("Edit minigame required");
         if(!AssetDatabase.IsValidFolder(Folder.TrimEnd('/')))AssetDatabase.CreateFolder("Assets/Prefabs/Minigames/FastingTopDown","RuinsObstacles");
         var art=AssetDatabase.LoadAssetAtPath<FastingRuinsArt>("Assets/Settings/Minigames/FastingRuinsArt.asset");if(!art){art=ScriptableObject.CreateInstance<FastingRuinsArt>();AssetDatabase.CreateAsset(art,"Assets/Settings/Minigames/FastingRuinsArt.asset");}
-        art.background=Load("Assets/Sprite/Background/Chapter3-Minigame-Stage3.aseprite");
+        art.background=Load("Assets/Sprite/Background/Minigames/Chapter3/Stage3/Chapter3-Minigame-Stage3.aseprite");
         art.rubble=Make("RuinsCollapsedWall",FastingTopDownHazard.Kind.Rock,Load("Assets/Sprite/Objects/Chapter3/Stage3/CollapsedWall.png"),g.desertArt.rockPrefab);
         art.wall=Make("RuinsWallPanel",FastingTopDownHazard.Kind.Wall,Load("Assets/Sprite/Objects/Chapter3/Stage3/WallPanel.aseprite"),g.desertArt.rockPrefab);
         art.tomb=Make("RuinsSkullTomb",FastingTopDownHazard.Kind.Tomb,Load("Assets/Sprite/Objects/Chapter3/Stage3/SkullPile.png"),g.desertArt.rockPrefab);

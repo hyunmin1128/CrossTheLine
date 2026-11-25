@@ -17,7 +17,7 @@ public static class Chapter03ScrollingInstaller
         var sprites=new Sprite[4];
         for(int i=0;i<4;i++)
         {
-            string path="Assets/Sprite/Background/Chapter3"+(i==0?"":"_"+i)+".png";
+            string path="Assets/Sprite/Background/MainStory/Chapter3/Chapter3"+(i==0?"":"_"+i)+".png";
             AssetDatabase.ImportAsset(path);var importer=(TextureImporter)AssetImporter.GetAtPath(path);
             importer.textureType=TextureImporterType.Sprite;importer.spritePixelsPerUnit=32;importer.filterMode=FilterMode.Point;
             importer.mipmapEnabled=false;importer.textureCompression=TextureImporterCompression.Uncompressed;

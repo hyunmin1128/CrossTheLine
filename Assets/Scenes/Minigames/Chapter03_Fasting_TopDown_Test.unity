@@ -2109,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FastingStageTestPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 296367293458909731, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 4116238864192598762, guid: 4e752b827441c8842b789b57e8368fef, type: 3}
       propertyPath: m_Pivot.x
       value: 1
