@@ -26,7 +26,7 @@ MonoBehaviour:
   castSeconds: 1.1
   biteDelay: {x: 2, y: 4}
   biteNoticeSeconds: 0.8
-  maximumCatchSeconds: 30
+  maximumCatchSeconds: 38
   catchZoneHeight: 0.34
   tapLift: 0.2
   zoneFallSpeed: 0.52
@@ -37,7 +37,13 @@ MonoBehaviour:
   badTapProgressLoss: 0.003
   fishSpeed: 0.27
   fishRetargetSeconds: {x: 0.7, y: 1.5}
-  netDamagePerSecond: 0.035
-  badTapNetDamage: 0.012
+  legendChance: 0.0025
+  legendCatch: 25
+  legendZoneHeight: 0.24
+  legendFishSpeedMultiplier: 1.55
+  legendProgressRequired: 1
+  normalProgressRequired: 0.9
+  netDamagePerSecond: 0.024
+  badTapNetDamage: 0.008
   replacementSeconds: 6
   resultSeconds: 2

@@ -27,6 +27,13 @@ namespace CrossTheLine.Minigames.Fishing
         [Min(0)] public float badTapProgressLoss=.003f;
         [Min(.05f)] public float fishSpeed=.27f;
         public Vector2 fishRetargetSeconds=new Vector2(.7f,1.5f);
+        [Header("Legend 물고기")]
+        [Range(0,1)] public float legendChance=.0025f;
+        [Min(1)] public int legendCatch=25;
+        [Range(.05f,.8f)] public float legendZoneHeight=.24f;
+        [Min(1)] public float legendFishSpeedMultiplier=1.55f;
+        [Min(.1f)] public float legendProgressRequired=1f;
+        [Min(.1f)] public float normalProgressRequired=.90f;
         [Header("그물 손상과 교체")]
         [Min(0)] public float netDamagePerSecond=.035f;
         [Min(0)] public float badTapNetDamage=.012f;
