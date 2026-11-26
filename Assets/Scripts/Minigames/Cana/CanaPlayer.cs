@@ -213,6 +213,8 @@ namespace CrossTheLine.Cana
             {
                 if (!TryTeleport(input)) return false;
             }
+            if (movementEquipment == MovementEquipment.TeleportDevice) CanaAudio.Play(CanaSound.Teleport);
+            else CanaAudio.PlayDash();
             if (movementEquipment == MovementEquipment.TeleportDevice) nextTeleportTime = Time.time + teleportCooldown;
             else nextSkillTime = Time.time + skillCooldown;
             return true;
@@ -370,7 +372,9 @@ namespace CrossTheLine.Cana
         public void FillWater(float seconds)
         {
             if (IsCleaning || IsPraying || InfiniteWine || seconds <= 0 || liquidAmount >= Capacity) return;
+            int before = Amount;
             liquidAmount = Mathf.Min(Capacity, liquidAmount + seconds / CurrentFillInterval);
+            for (int portion = before + 1; portion <= Amount; portion++) CanaAudio.WaterFilled(portion, Capacity);
             contents = DrinkContents.Water;
             RefreshAnimation();
         }

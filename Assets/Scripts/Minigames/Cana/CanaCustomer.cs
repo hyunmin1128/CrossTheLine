@@ -216,6 +216,12 @@ namespace CrossTheLine.Cana
             requestRenderer.enabled = gaugeRenderer.enabled = false;
             reactionRenderer.sprite = reaction == CanaReaction.Heart ? heart : reaction == CanaReaction.Smile ? smile : angry;
             reactionRenderer.enabled = true;
+            if (!Party || PartyLeader)
+            {
+                if (reaction == CanaReaction.Heart) CanaAudio.Play(CanaSound.Love);
+                else if (reaction == CanaReaction.Smile) CanaAudio.Play(CanaSound.Good);
+                else if (reaction == CanaReaction.Angry) CanaAudio.Play(CanaSound.Fail);
+            }
         }
 
         private void Depart()

@@ -37,6 +37,7 @@ namespace CrossTheLine.Cana
 
         public void PlaySurprise()
         {
+            if (!IsSurprised) CanaAudio.Play(CanaSound.Wow);
             Angered = true;
             SetMood(CanaJudasMood.Surprise);
         }

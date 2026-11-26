@@ -15,6 +15,8 @@ namespace CrossTheLine.Cana
         public float framesPerSecond = 10;
         [Tooltip("Idle timing relative to the customer Idle Animation Speed; movement is unchanged.")]
         [Min(0)] public float idleSpeedMultiplier = 1;
+        public bool overrideIdleFacing;
+        public bool idleFlipX;
         public float pickupSeconds = .4f;
         public float servingSeconds = .25f;
         public float cleaningSeconds = 1.8f;
@@ -203,7 +205,11 @@ namespace CrossTheLine.Cana
         private void SetState(CanaStaffState state)
         {
             if (State == CanaStaffState.Cleaning && state != CanaStaffState.Cleaning) CanaAudio.EndMop(this);
+            if (State == CanaStaffState.ChangeToClean || State == CanaStaffState.ChangeBack) CanaAudio.StopRobotTransform(this);
             State = state;
+            if (kind == CanaStaffKind.Robot && state == CanaStaffState.ChangeToClean) CanaAudio.RobotTransform(this, changeSeconds);
+            if (kind == CanaStaffKind.Robot && state == CanaStaffState.ChangeBack)
+                CanaAudio.RobotTransform(this, changeSeconds * (reverseFrom + 1) / Mathf.Max(1, change.Length));
             if (state == CanaStaffState.Cleaning) CanaAudio.BeginMop(this);
             elapsed = 0;
             animationElapsed = 0;
@@ -212,6 +218,7 @@ namespace CrossTheLine.Cana
 
         private void Draw()
         {
+            if (State == CanaStaffState.Idle && overrideIdleFacing) image.flipX = idleFlipX;
             Sprite[] frames = State switch
             {
                 CanaStaffState.Cleaning => clean,
@@ -230,6 +237,7 @@ namespace CrossTheLine.Cana
         private void OnDisable()
         {
             CanaAudio.EndMop(this);
+            CanaAudio.StopRobotTransform(this);
             if (manager) ReleaseJob();
         }
     }

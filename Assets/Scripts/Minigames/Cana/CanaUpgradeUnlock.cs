@@ -56,7 +56,11 @@ namespace CrossTheLine.Cana
             if (chainSprite && goldChain) chainSprite.sprite = goldChain;
         }
 
-        public void Play() => Begin(Motion.Opening);
+        public void Play()
+        {
+            Begin(Motion.Opening);
+            CanaAudio.Play(CanaSound.LockOn);
+        }
 
         public bool PlayDenied()
         {

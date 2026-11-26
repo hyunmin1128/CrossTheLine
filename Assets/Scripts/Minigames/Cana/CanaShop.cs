@@ -29,7 +29,9 @@ namespace CrossTheLine.Cana
         public void OnLockBroken(int index)
         {
             upgrades.ForceUnlock(index);
+            CanaAudio.Play(CanaSound.LockOn);
             previousUpgradeStates[index] = CanaUpgradeStatus.Available;
+            pendingNormalUnlocks[index] = false;
             statusMessage = null;
         }
 
@@ -49,6 +51,7 @@ namespace CrossTheLine.Cana
         public SpriteRenderer staffSelect;
         public TextMeshPro[] staffPrices;
         public SpriteRenderer[] staffCoins;
+        public GameObject[] staffHiredStamps;
         public int PartTimeIndex { get; private set; }
         public string[] staffDescriptions = { "Serves wine. Earn 25% more gold.", "Cleans seats and calms guests.", "Serves or cleans the nearest job." };
         private bool pendingStaff;
@@ -90,6 +93,7 @@ namespace CrossTheLine.Cana
         };
         private bool pendingUpgrade;
         private readonly CanaUpgradeStatus[] previousUpgradeStates = new CanaUpgradeStatus[6];
+        private readonly bool[] pendingNormalUnlocks = new bool[6];
         private int lastSelectionKey = -1;
         private float selectionStarted;
 
@@ -140,7 +144,11 @@ namespace CrossTheLine.Cana
         {
             for (int i = 0; i < 4; i++)
                 trainingLevels[i] = Mathf.Clamp(PlayerPrefs.GetInt("Cana.Shop.Train." + i, 0), 0, maxTrainingLevel);
-            for (int i = 0; i < 6; i++) previousUpgradeStates[i] = upgrades.Status(i);
+            for (int i = 0; i < 6; i++)
+            {
+                previousUpgradeStates[i] = upgrades.Status(i);
+                pendingNormalUnlocks[i] = previousUpgradeStates[i] == CanaUpgradeStatus.Available;
+            }
             if (openAtStart) OpenShop();
             else visuals.SetActive(false);
         }
@@ -258,7 +266,8 @@ namespace CrossTheLine.Cana
 
         private void BeginPurchase()
         {
-            CanaAudio.Play(CanaSound.Bubble);
+            if (TabIndex != 2 || upgrades.Status(UpgradeIndex) != CanaUpgradeStatus.Locked)
+                CanaAudio.Play(CanaSound.Bubble);
             pendingItem = TabIndex == 1;
             pendingUpgrade = TabIndex == 2;
             pendingStaff = TabIndex == 3;
@@ -285,6 +294,7 @@ namespace CrossTheLine.Cana
                         upgradeUnlocks[UpgradeIndex].PlayDenied())
                     {
                         judas.PlayLook();
+                        CanaAudio.Play(CanaSound.Error);
                         statusMessage = PricesDoubled ? goldLockDialogue : lockedItemDialogue;
                     }
                     return;
@@ -391,7 +401,8 @@ namespace CrossTheLine.Cana
             for (int i = 0; i < 3; i++)
             {
                 bool hired = staff.IsHired(i);
-                staffPrices[i].text = hired ? "Hired" : PriceText(staff.prices[i], staff.Price(i));
+                staffPrices[i].text = hired ? "" : PriceText(staff.prices[i], staff.Price(i));
+                if (staffHiredStamps != null && i < staffHiredStamps.Length && staffHiredStamps[i]) staffHiredStamps[i].SetActive(hired);
                 if (staffCoins != null && i < staffCoins.Length && staffCoins[i]) staffCoins[i].enabled = !hired;
             }
             upgradeContent.SetActive(TabIndex == 2);
@@ -401,8 +412,14 @@ namespace CrossTheLine.Cana
             {
                 var state = upgrades.Status(i);
                 var unlock = upgradeUnlocks[i];
-                if (state == CanaUpgradeStatus.Available && previousUpgradeStates[i] == CanaUpgradeStatus.Locked && unlock)
+                if (state == CanaUpgradeStatus.Available && previousUpgradeStates[i] == CanaUpgradeStatus.Locked)
+                    pendingNormalUnlocks[i] = true;
+                if (state != CanaUpgradeStatus.Available) pendingNormalUnlocks[i] = false;
+                if (TabIndex == 2 && pendingNormalUnlocks[i] && unlock && !upgrades.CanSteal(i))
+                {
+                    pendingNormalUnlocks[i] = false;
                     unlock.Play();
+                }
                 previousUpgradeStates[i] = state;
                 bool animating = unlock && unlock.IsPlaying;
                 upgradeIcons[i].enabled = state != CanaUpgradeStatus.Locked && (!animating || unlock.IsRevealing);
