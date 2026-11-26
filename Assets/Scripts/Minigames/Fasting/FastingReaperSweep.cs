@@ -81,7 +81,7 @@ namespace CrossTheLine.Minigames
                 hazard.warning=Mathf.Max(.001f,duration-clock+(CurrentPhase==AttackPhase.Following?Mathf.Max(.1f,lockSeconds):0));
                 if(clock+0.00001f<duration){RefreshLines();return false;}
                 clock=0;
-                if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;ShowFrame(0);}
+                if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;game.PlayReaperLaugh();ShowFrame(0);}
                 else{CurrentPhase=AttackPhase.Dashing;game.PlayReaperSwing();ShowFrame(firstSwingFrame);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
                 if(remaining<=0)break;
             }

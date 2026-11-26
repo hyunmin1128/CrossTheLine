@@ -9,10 +9,20 @@ namespace CrossTheLine.Minigames
     {
         [Header("Audio")]
         [SerializeField] AudioClip desertMusic, caveMusic, rockRoll, quicksandHit, waterDrink, shieldBreak, reaperSwing;
+        [SerializeField] AudioClip ruinsMusic, finalMusic, alternateFinalMusic, reaperLaugh, alternateReaperLaugh;
+        [SerializeField] AudioClip rollingRockHit, sandstormHit, cactusHit, stalagmiteHit, caveRockHit;
+        [SerializeField] AudioClip ruinsRubbleHit, skullPileHit, poisonWellHit, lavaHit, thornBushHit;
+        bool useAlternateFinalMusic, useAlternateLaugh;
         MinigameAudio audioPlayback;
         MinigameAudio AudioPlayback => audioPlayback ??= new MinigameAudio(gameObject);
 
         void OnDisable() => audioPlayback?.Stop();
+        internal void PlayReaperLaugh()
+        {
+            AudioPlayback.PlayEffect(useAlternateLaugh && alternateReaperLaugh ? alternateReaperLaugh : reaperLaugh);
+            useAlternateLaugh = !useAlternateLaugh;
+        }
+
         internal void PlayReaperSwing() => AudioPlayback.PlayEffect(reaperSwing);
 
         public FastingTopDownSettings settings;
@@ -111,7 +121,7 @@ namespace CrossTheLine.Minigames
             Follow();Refresh();
         }
         public bool TryDamage(string cause){if(!Running||Invulnerable||DarknessProtecting||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=DamageFor(cause);Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
-        void ApplyEffect(FastingTopDownHazard.Kind k){if(StageIndex==0){if(k==FastingTopDownHazard.Kind.Quicksand)AudioPlayback.PlayEffect(quicksandHit);}if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat)slow=1.2f;if(k==FastingTopDownHazard.Kind.Thorns)thornSlow=settings.thornSlowSeconds;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack){root=hitFeedback?hitFeedback.crackFallSeconds:.9f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.crackFallSeconds+hitFeedback.crackBlinkSeconds:1.7f);}if(k==FastingTopDownHazard.Kind.Bat){slow=settings.batSlowSeconds;vision=settings.batVisionSeconds;if(hitFeedback)grace=Mathf.Max(grace,hitFeedback.batAirSeconds);}if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar)prayerLock=settings.burnPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Pillar){root=hitFeedback?hitFeedback.pillarAirSeconds:1.5f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.pillarProtectionSeconds:3);}if(k==FastingTopDownHazard.Kind.Tomb)prayerLock=settings.tombPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=settings.poisonReverseSeconds;Message="오염된 물 · 방향 반전 / E 수통으로 정화";}grace=Mathf.Max(grace,root+.45f);}
+        void ApplyEffect(FastingTopDownHazard.Kind k){PlayHazardHit(k);if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat)slow=1.2f;if(k==FastingTopDownHazard.Kind.Thorns)thornSlow=settings.thornSlowSeconds;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack){root=hitFeedback?hitFeedback.crackFallSeconds:.9f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.crackFallSeconds+hitFeedback.crackBlinkSeconds:1.7f);}if(k==FastingTopDownHazard.Kind.Bat){slow=settings.batSlowSeconds;vision=settings.batVisionSeconds;if(hitFeedback)grace=Mathf.Max(grace,hitFeedback.batAirSeconds);}if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar)prayerLock=settings.burnPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Pillar){root=hitFeedback?hitFeedback.pillarAirSeconds:1.5f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.pillarProtectionSeconds:3);}if(k==FastingTopDownHazard.Kind.Tomb)prayerLock=settings.tombPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=settings.poisonReverseSeconds;Message="오염된 물 · 방향 반전 / E 수통으로 정화";}grace=Mathf.Max(grace,root+.45f);}
         public void UseWater(){if(!HasWater||!Running||failed)return;AudioPlayback.PlayEffect(waterDrink);HasWater=false;thornSlow=0;slow=root=prayerLock=vision=reverse=0;waterBoost=3;Health=Mathf.Min(settings.maximumHealth,Health+1);grace=Mathf.Max(grace,.5f);Message="수통 사용 · 정화 / 지침 +1 / 이동 가속 3초";}
         public void Collect(FastingTopDownEntity e){float beforeItemPrayer=Prayer;CurrentBalance.pickups[(int)e.kind]++;switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:CollectSpiritFlame();break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?(CurrentStageConfiguration?Mathf.Clamp01(CurrentStageConfiguration.bibleCharge):1f):settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}CurrentBalance.itemPrayer+=Prayer-beforeItemPrayer;e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
         public void SpawnWave()
@@ -197,9 +207,37 @@ namespace CrossTheLine.Minigames
 
             var list=kinds[Mathf.Clamp(StageIndex,0,kinds.Length-1)];return list[UnityEngine.Random.Range(0,list.Length)];
         }
+        void PlayHazardHit(FastingTopDownHazard.Kind kind)
+        {
+            AudioClip clip = (StageIndex, kind) switch
+            {
+                (0, FastingTopDownHazard.Kind.Rock) => rollingRockHit,
+                (0, FastingTopDownHazard.Kind.Sand) => sandstormHit,
+                (0, FastingTopDownHazard.Kind.Cactus) => cactusHit,
+                (0, FastingTopDownHazard.Kind.Quicksand) => quicksandHit,
+                (1, FastingTopDownHazard.Kind.Rock) => stalagmiteHit,
+                (1, FastingTopDownHazard.Kind.Collapse) => caveRockHit,
+                (2, FastingTopDownHazard.Kind.Rock) => ruinsRubbleHit,
+                (2, FastingTopDownHazard.Kind.Tomb) => skullPileHit,
+                (2, FastingTopDownHazard.Kind.Poison) => poisonWellHit,
+                (3, FastingTopDownHazard.Kind.Fire) => lavaHit,
+                (3, FastingTopDownHazard.Kind.Thorns) => thornBushHit,
+                _ => null
+            };
+            AudioPlayback.PlayEffect(clip);
+        }
+
         void UpdateStageMusic()
         {
-            AudioPlayback.SetMusic(StageIndex == 0 ? desertMusic : StageIndex == 1 ? caveMusic : null);
+            AudioClip clip = StageIndex switch
+            {
+                0 => desertMusic,
+                1 => caveMusic,
+                2 => ruinsMusic,
+                _ => useAlternateFinalMusic && alternateFinalMusic ? alternateFinalMusic : finalMusic
+            };
+            if (StageIndex == 3) useAlternateFinalMusic = !useAlternateFinalMusic;
+            AudioPlayback.SetMusic(clip);
         }
 
         void ApplyStage(bool first){ApplyStageConfiguration();if(!first)UpdateStageMusic();if(caveVisionMask)caveVisionMask.Clear();thornSlow=0;prayerHeldFor=0;Praying=false;CacheMapStarts();gateArmed=false;gate.gameObject.SetActive(false);for(int n=0;n<entities.Length;n++)if(entities[n])entities[n].transform.position=entityStarts[n];for(int n=0;n<backgrounds.Length;n++)if(backgrounds[n])backgrounds[n].transform.position=backgroundStarts[n];ClearHazards();cameraY=2.5f;wave=1.5f;waveNumber=lastVisionWave=0;slow=root=prayerLock=vision=0;transition.color=Color.clear;gate.position=new Vector3(0,settings.stageLength);foreach(var e in entities){if(!e)continue;e.SetUsed(false);e.gameObject.SetActive(false);if(e.stage==StageIndex)PlaceEntity(e,true);}if(encounterDirector)encounterDirector.ResetEncounter();Color[] colors={Color.white,new Color(.4f,.45f,.62f),new Color(.65f,.59f,.55f),new Color(.75f,.37f,.28f)};ApplyStageBackgrounds(colors[StageIndex]);Message=first?"WASD 이동 · Space 기도 · E 수통":$"{settings.places[StageIndex]} · 지침 1칸 회복";Follow();}

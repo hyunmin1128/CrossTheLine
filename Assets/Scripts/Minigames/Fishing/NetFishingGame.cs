@@ -50,6 +50,9 @@ namespace CrossTheLine.Minigames.Fishing
         [Header("Audio")]
         [SerializeField] AudioClip fishingMusic, bubbleSound, splashSound, fishCaughtSound;
         [SerializeField] AudioClip[] castSounds;
+        [SerializeField] AudioClip normalBiteSound, legendBiteSound, fishLostSound, haulSound, ropeSound, effortSound;
+        float nextRopeSoundTime;
+        bool playedEffortSound;
         MinigameAudio audioPlayback;
         MinigameAudio AudioPlayback => audioPlayback ??= new MinigameAudio(gameObject);
         int nextCastSound;
@@ -109,8 +112,10 @@ namespace CrossTheLine.Minigames.Fishing
             Vector3 spot=fishingSpots[ActiveSpot].position;
             float side=FacingLeft?-1f:1f;
             float edge=Mathf.Max(.1f,sceneCamera.orthographicSize*sceneCamera.aspect-.65f);
-            float x=boat.position.x+side*Mathf.Max(1.35f,Mathf.Abs(spot.x-boat.position.x));
-            return new Vector3(Mathf.Clamp(x,-edge,edge),spot.y-.8f,0);
+            float x=boat.position.x+side*Mathf.Clamp(Mathf.Abs(spot.x-boat.position.x),.65f,1.05f);
+            float bottom=sceneCamera.transform.position.y-sceneCamera.orthographicSize+.45f;
+            float y=Mathf.Max(bottom,boat.position.y-1.3f);
+            return new Vector3(Mathf.Clamp(x,-edge,edge),y,0);
         }
         void SelectFish(bool legend)
         {
@@ -146,7 +151,20 @@ namespace CrossTheLine.Minigames.Fishing
                 p.x=Mathf.Clamp(p.x,settings.boatBounds.xMin,settings.boatBounds.xMax);p.y=Mathf.Clamp(p.y,settings.boatBounds.yMin,settings.boatBounds.yMax);boat.position=p;
                 if(cast)TryCast();
             }
-            if(tap&&Session.State==NetFishingSession.Phase.Fighting)LastTapTime=Time.unscaledTime;
+            if (tap && Session.State == NetFishingSession.Phase.Fighting)
+            {
+                LastTapTime = Time.unscaledTime;
+                if (!playedEffortSound)
+                {
+                    playedEffortSound = true;
+                    AudioPlayback.PlayCue(effortSound, .8f);
+                }
+                if (Session.FightTime >= nextRopeSoundTime)
+                {
+                    AudioPlayback.PlayEffect(ropeSound);
+                    nextRopeSoundTime = Session.FightTime + 1f;
+                }
+            }
             Session.Step(dt,tap);
             if(previous!=Session.State)
             {
@@ -156,12 +174,22 @@ namespace CrossTheLine.Minigames.Fishing
                 {
                     case NetFishingSession.Phase.Waiting:
                         AudioPlayback.PlayEffect(splashSound);
-                        break;
-                    case NetFishingSession.Phase.Bite:
                         AudioPlayback.PlayCue(bubbleSound, 1f);
                         break;
+                    case NetFishingSession.Phase.Bite:
+                        AudioPlayback.PlayCue(Session.IsLegend ? legendBiteSound : normalBiteSound, 1.2f);
+                        break;
+                    case NetFishingSession.Phase.Fighting:
+                        nextRopeSoundTime = 0;
+                        playedEffortSound = false;
+                        break;
                     case NetFishingSession.Phase.Result when Session.LastCatch > 0:
+                        AudioPlayback.PlayCue(haulSound, 1.2f);
                         AudioPlayback.PlayEffect(fishCaughtSound);
+                        break;
+                    case NetFishingSession.Phase.Result:
+                    case NetFishingSession.Phase.Replacing:
+                        AudioPlayback.PlayCue(fishLostSound, 1.3f);
                         break;
                     case NetFishingSession.Phase.Complete:
                         AudioPlayback.SetMusic(null);
@@ -215,9 +243,15 @@ namespace CrossTheLine.Minigames.Fishing
             countText.text=$"Fish Caught: {Session.FishCaught} / {settings.goalFish}";
             netFill.fillAmount=Session.Integrity;catchFill.fillAmount=Session.Progress/Session.ProgressRequired;
             netFill.color=Session.Integrity<.3f?new Color(.88f,.35f,.25f):new Color(.8f,.64f,.35f);
-            zoneRect.anchorMin=new Vector2(.08f,Session.Zone-Session.ZoneHeight*.5f);zoneRect.anchorMax=new Vector2(.92f,Session.Zone+Session.ZoneHeight*.5f);zoneRect.offsetMin=zoneRect.offsetMax=Vector2.zero;
+            var track = (RectTransform)fishRect.parent;
+            float inset = Mathf.Clamp((fishRect.rect.height * .5f + 2) / Mathf.Max(1, track.rect.height), 0, .45f);
+            float zoneBottom = Mathf.Lerp(inset, 1-inset, Session.Zone-Session.ZoneHeight*.5f);
+            float zoneTop = Mathf.Lerp(inset, 1-inset, Session.Zone+Session.ZoneHeight*.5f);
+            zoneRect.anchorMin = new Vector2(.08f, zoneBottom);
+            zoneRect.anchorMax = new Vector2(.92f, zoneTop);
+            zoneRect.offsetMin = zoneRect.offsetMax = Vector2.zero;
             zoneRect.GetComponent<UnityEngine.UI.Image>().color=Session.Inside?new Color(.35f,.77f,.58f,.9f):new Color(.45f,.68f,.61f,.65f);
-            fishRect.anchorMin=fishRect.anchorMax=new Vector2(.5f,Session.Fish);fishRect.anchoredPosition=Vector2.zero;
+            fishRect.anchorMin=fishRect.anchorMax=new Vector2(.5f,Mathf.Lerp(inset,1-inset,Session.Fish));fishRect.anchoredPosition=Vector2.zero;
             bool danger=fighting&&Session.Integrity<=.33f;
             if(fishWarningText)
             {
@@ -238,7 +272,7 @@ namespace CrossTheLine.Minigames.Fishing
             }
             else promptText.text=fighting?"Space / Click repeatedly · Keep the fish in the green zone":state==NetFishingSession.Phase.Waiting?"The net is underwater…":state==NetFishingSession.Phase.Casting?"Casting the net…":state==NetFishingSession.Phase.Bite?"Fish on!":"Esc · Pause";
             bool preview=state==NetFishingSession.Phase.Exploring&&fishingSpots.Length>0&&Vector2.Distance(boat.position,fishingSpots[ActiveSpot].position)<=settings.castRadius;
-            biteText.text=preview?"◎":state==NetFishingSession.Phase.Waiting?new string('.',1+Mathf.FloorToInt(Session.PhaseTime*2)%3):state==NetFishingSession.Phase.Bite?"!":"";
+            biteText.text=preview?"◎":state==NetFishingSession.Phase.Waiting?new string('.',1+Mathf.FloorToInt(Session.PhaseTime*2)%3):state==NetFishingSession.Phase.Bite?(Session.IsLegend?"!!":"!"):"";
             if(fishingSpots.Length>0)
             {
                 var target=preview?GetCastLanding():state==NetFishingSession.Phase.Waiting||state==NetFishingSession.Phase.Bite?castLanding:fishingSpots[ActiveSpot].position;
@@ -249,7 +283,8 @@ namespace CrossTheLine.Minigames.Fishing
             if(castNet.gameObject.activeSelf&&fishingSpots.Length>0)
             {
                 float sink=state==NetFishingSession.Phase.Bite?1:Mathf.Clamp01(Session.PhaseTime/.65f);
-                castNet.position=castLanding+Vector3.up*(.55f*(1-sink));
+                Vector3 waterEntry=castLanding+Vector3.up*.45f;
+                castNet.position=Vector3.Lerp(waterEntry,castLanding,sink);
                 var renderer=castNet.GetComponent<SpriteRenderer>();
                 if(submergedNet)renderer.sprite=submergedNet;
                 if(crewBody)renderer.sortingOrder=crewBody.sortingOrder-2;

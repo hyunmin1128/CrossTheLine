@@ -37,7 +37,7 @@ MonoBehaviour:
   badTapProgressLoss: 0.003
   fishSpeed: 0.27
   fishRetargetSeconds: {x: 0.7, y: 1.5}
-  legendChance: 0.0025
+  legendChance: 0.01
   legendCatch: 25
   legendZoneHeight: 0.24
   legendFishSpeedMultiplier: 1.55

@@ -1647,7 +1647,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 64, y: 48}
+  m_SizeDelta: {x: 44, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6107214714551176304
 CanvasRenderer:
@@ -5040,6 +5040,12 @@ MonoBehaviour:
   bubbleSound: {fileID: 8300000, guid: f2bb5023d4167e54eadc4b0ad7b2e9d8, type: 3}
   splashSound: {fileID: 8300000, guid: d117b28fe168c6249a859e0219c50826, type: 3}
   fishCaughtSound: {fileID: 8300000, guid: c5463d92655b95642b9909e94f0184fd, type: 3}
+  normalBiteSound: {fileID: 8300000, guid: afebc926c05af5042881b5e79b4f6db0, type: 3}
+  legendBiteSound: {fileID: 8300000, guid: c3047e1d3c0af9c46ae4a6c1a75131b4, type: 3}
+  fishLostSound: {fileID: 8300000, guid: 4a89aa2489b9ee541ac172f7258f8503, type: 3}
+  haulSound: {fileID: 8300000, guid: ab27a565ed573864bb527efb2071592c, type: 3}
+  ropeSound: {fileID: 8300000, guid: 39b0fec70fee43b49b27dcc66cfcee20, type: 3}
+  effortSound: {fileID: 8300000, guid: d4a39e004c5fcb74cb9050924cf6224f, type: 3}
   castSounds:
   - {fileID: 8300000, guid: 5c0c2484cc512994c903b98ff8d9474b, type: 3}
   - {fileID: 8300000, guid: 6d6c7563ca60dbc4890c40008096d3d7, type: 3}
