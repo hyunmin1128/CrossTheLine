@@ -13,7 +13,7 @@ public class HomeInteractable : MonoBehaviour
     public HomeDialogueLine[] afterDialogue = { new HomeDialogueLine { content = "See you later." } };
     public Vector3 bubbleOffset = new Vector3(0, 0.5f, 0);
     public bool DialogueCompleted { get; private set; }
-    public bool CanInteract => isActiveAndEnabled && !loading && !DialogueCompleted;
+    public bool CanInteract => isActiveAndEnabled && !loading && (!DialogueCompleted || (monologue && monologue.CanAdvance));
     HomeDialogueUI activeDialogue;
     HomeDialogueUI monologue;
     public Transform floatingIcon;
@@ -36,6 +36,7 @@ public class HomeInteractable : MonoBehaviour
     public void Interact(HomeDialogueUI ui)
     {
         if (!CanInteract || (ui && ui.IsOpen)) return;
+        if (DialogueCompleted && monologue) { monologue.Advance(); return; }
         if (action == ActionType.Dialogue)
         {
             if (ui && lines != null && lines.Length > 0)

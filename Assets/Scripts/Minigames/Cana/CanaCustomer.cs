@@ -183,6 +183,7 @@ namespace CrossTheLine.Cana
             waitTime = Time.time - waitStarted;
             if (waitTime >= WaitDuration) { React(CanaReaction.Angry); return false; }
             if (!player.TryServeWine(Kind == CanaCustomerKind.Glutton ? 2 : 1)) return false;
+            CanaAudio.Play(CanaSound.Serve);
             StartDrinking(Kind == CanaCustomerKind.Glutton ? CanaReaction.Heart :
                 GaugeIndex <= lastGreenFrame ? CanaReaction.Heart : CanaReaction.Smile);
             return true;
@@ -194,6 +195,7 @@ namespace CrossTheLine.Cana
             if (Party) return Party.ServeFromWorker();
             waitTime = Time.time - waitStarted;
             if (waitTime >= WaitDuration) { React(CanaReaction.Angry); return false; }
+            CanaAudio.Play(CanaSound.Serve);
             StartDrinking(Kind == CanaCustomerKind.Glutton ? CanaReaction.Heart :
                 GaugeIndex <= lastGreenFrame ? CanaReaction.Heart : CanaReaction.Smile);
             return true;

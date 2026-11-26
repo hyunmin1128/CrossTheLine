@@ -11,6 +11,10 @@ public class BitmapTextPixelScale : MonoBehaviour
     void LateUpdate()
     {
         if (!label.font || !label.canvas) return;
+        // SDF text supports fractional sizes; only bitmap atlases need texel-size rounding.
+        var mode = label.font.atlasRenderMode;
+        if (mode != UnityEngine.TextCore.LowLevel.GlyphRenderMode.RASTER &&
+            mode != UnityEngine.TextCore.LowLevel.GlyphRenderMode.RASTER_HINTED) return;
         var canvas = label.canvas.rootCanvas;
         float pixelsPerUnit;
         if (canvas.renderMode == RenderMode.ScreenSpaceOverlay)

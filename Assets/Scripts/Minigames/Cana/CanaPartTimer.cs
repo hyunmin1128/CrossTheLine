@@ -202,7 +202,9 @@ namespace CrossTheLine.Cana
 
         private void SetState(CanaStaffState state)
         {
+            if (State == CanaStaffState.Cleaning && state != CanaStaffState.Cleaning) CanaAudio.EndMop(this);
             State = state;
+            if (state == CanaStaffState.Cleaning) CanaAudio.BeginMop(this);
             elapsed = 0;
             animationElapsed = 0;
             Draw();
@@ -227,6 +229,7 @@ namespace CrossTheLine.Cana
 
         private void OnDisable()
         {
+            CanaAudio.EndMop(this);
             if (manager) ReleaseJob();
         }
     }

@@ -69,6 +69,7 @@ namespace CrossTheLine.Cana
             {
                 bombDetonated = true;
                 inventory.spawner.ClearAllDirt();
+                CanaAudio.Play(CanaSound.WaterBomb);
             }
             float flowStart = balloonFlightSeconds + burstFrameSeconds * 2;
             Vector3 anchor = new Vector3(gameCamera.transform.position.x, gameCamera.transform.position.y - 90f / 16, 0);

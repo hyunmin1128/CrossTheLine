@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
+  - {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,8 +110,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e130c494f8d954501b64076035f65465, type: 2}
-  m_sharedMaterial: {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
+  m_sharedMaterial: {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -209,6 +209,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Cana.CanaOverlayText
   fitToBox: 1
   minimumSizeRatio: 0.75
+  rotationDegrees: 0
+  alignVisibleLeft: 0
+  centerVisibleVertically: 0
+  centeredPriceCoin: {fileID: 0}
+  coinGapPixels: 2
 --- !u!1 &6962753233447908289
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
+  - {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -463,8 +468,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: +
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e130c494f8d954501b64076035f65465, type: 2}
-  m_sharedMaterial: {fileID: 676943577159853298, guid: e130c494f8d954501b64076035f65465, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
+  m_sharedMaterial: {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -562,3 +567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Cana.CanaOverlayText
   fitToBox: 1
   minimumSizeRatio: 0.75
+  rotationDegrees: 0
+  alignVisibleLeft: 0
+  centerVisibleVertically: 0
+  centeredPriceCoin: {fileID: 0}
+  coinGapPixels: 2

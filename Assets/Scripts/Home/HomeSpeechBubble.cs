@@ -47,7 +47,7 @@ public class HomeSpeechBubble : UnityEngine.UI.MaskableGraphic
         const float maxTextWidth = 120;
         Vector2 preferred = text.GetPreferredValues(text.text, maxTextWidth, Mathf.Infinity);
         float width = Mathf.Ceil(Mathf.Min(preferred.x, maxTextWidth));
-        rectTransform.sizeDelta = new Vector2(Mathf.Max(16, width + 12), Mathf.Max(12, Mathf.Ceil(preferred.y) + 8));
+        rectTransform.sizeDelta = new Vector2(Mathf.Max(16, width + 12), Mathf.Clamp(Mathf.Ceil(preferred.y) + 8, 12, 60));
         text.rectTransform.anchorMin = Vector2.zero;
         text.rectTransform.anchorMax = Vector2.one;
         text.rectTransform.offsetMin = new Vector2(6, 4);
@@ -76,7 +76,7 @@ public class HomeSpeechBubble : UnityEngine.UI.MaskableGraphic
         var text = label.GetComponent<TextMeshProUGUI>();
         text.font = template.dialogueText.font;
         text.fontSharedMaterial = template.dialogueText.fontSharedMaterial;
-        text.fontSize = 8;
+        text.fontSize = template.monologueFontSize;
         text.color = Color.black;
         text.alignment = TextAlignmentOptions.Center;
         text.raycastTarget = false;

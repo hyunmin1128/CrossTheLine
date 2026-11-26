@@ -55,6 +55,7 @@ namespace CrossTheLine.Cana
 
         private bool AcceptServing()
         {
+            CanaAudio.Play(CanaSound.Serve);
             Served++;
             foreach (var member in members) member.SetRequest(4 - Served);
             if (Served == 4)

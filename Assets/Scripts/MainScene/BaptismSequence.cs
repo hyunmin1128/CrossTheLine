@@ -9,6 +9,7 @@ public class BaptismSequence : MonoBehaviour
     public Transform baptismSpot;
     public Sprite baptismSprite;
     public ParticleSystem holyLight;
+    public BaptismDove dove;
     [Min(0.5f)] public float duration = 3f;
     public bool IsPlaying { get; private set; }
     Sprite originalSprite;
@@ -45,7 +46,10 @@ public class BaptismSequence : MonoBehaviour
         player.characterSprite.transform.localPosition = pos;
         yohanAnimator.Play("YohanBaptism", 0, 0);
         if (holyLight) holyLight.Play();
-        yield return new WaitForSeconds(duration);
+        float began = Time.time;
+        if (dove) yield return dove.FlyAbove(player.characterSprite, Camera.main);
+        float remaining = duration - (Time.time - began);
+        if (remaining > 0) yield return new WaitForSeconds(remaining);
         Restore();
         dialogue.ResumeAfterEvent();
     }
@@ -59,6 +63,7 @@ public class BaptismSequence : MonoBehaviour
         player.animator.enabled = originalAnimatorEnabled;
         player.SetMovementLocked(false);
         if (yohanAnimator) yohanAnimator.Play("YohanIdle", 0, 0);
+        if (dove) dove.Hide();
         if (holyLight) holyLight.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         IsPlaying = false;
     }

@@ -291,11 +291,11 @@ RectTransform:
   - {fileID: 407512572}
   m_Father: {fileID: 1927217961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.91858, y: 487.6192}
-  m_SizeDelta: {x: 2973, y: 1061.4225}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -54}
+  m_SizeDelta: {x: 3417.5999, y: 1219.496}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &72214406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,8 +368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62, y: 0.79}
   m_AnchorMax: {x: 0.62, y: 0.79}
-  m_AnchoredPosition: {x: 3.4500122, y: -64.7}
-  m_SizeDelta: {x: 2050.56, y: 170.72943}
+  m_AnchoredPosition: {x: -320, y: 0}
+  m_SizeDelta: {x: 2690.56, y: 170.72943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &98785781
 CanvasRenderer:
@@ -399,10 +399,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Maria
+  m_text: Mary
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
-  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
+  m_sharedMaterial: {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -426,13 +426,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 216.25847
+  m_fontSizeBase: 216.25847
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontSizeMin: 38.000206
+  m_fontSizeMax: 152.00082
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
@@ -506,8 +506,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62, y: 0.43}
   m_AnchorMax: {x: 0.62, y: 0.43}
-  m_AnchoredPosition: {x: 3.450012, y: -42.1}
-  m_SizeDelta: {x: 2050.56, y: 585.35803}
+  m_AnchoredPosition: {x: -320, y: 0}
+  m_SizeDelta: {x: 2690.56, y: 585.35803}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &407512573
 CanvasRenderer:
@@ -537,10 +537,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello, Jesus.
+  m_text: My son, where are you going?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
-  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
+  m_sharedMaterial: {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -564,12 +564,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 193.08792
+  m_fontSizeBase: 193.08792
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 38.000206
+  m_fontSizeMax: 152.00082
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 492081546}
   - component: {fileID: 492081550}
   m_Layer: 0
-  m_Name: Maria
+  m_Name: Mary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,16 +870,34 @@ MonoBehaviour:
   - onFinished:
       m_PersistentCalls:
         m_Calls: []
-    portrait: {fileID: -1826521572983043662, guid: 7b169aad34d684650b37c4667f97beff, type: 3}
-    speakerName: Maria
-    content: Hello, Jesus.
+    portrait: {fileID: 0}
+    speakerName: Mary
+    content: My son, where are you going?
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: -2037470831614555417, guid: 9164a18d3bb75cc46a9b087ba97e704c, type: 3}
+    speakerName: Jesus
+    content: The time has come for me to cross the line.
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: 0}
+    speakerName: Mary
+    content: So, the day has finally come...
+  - onFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    portrait: {fileID: -2037470831614555417, guid: 9164a18d3bb75cc46a9b087ba97e704c, type: 3}
+    speakerName: Jesus
+    content: Peace be with you, Mother.
   afterDialogue:
   - onFinished:
       m_PersistentCalls:
         m_Calls: []
     portrait: {fileID: 0}
-    speakerName: 
-    content: See you later.
+    speakerName: Mary
+    content: Farewell, my son...
   bubbleOffset: {x: 0, y: 0.5, z: 0}
   floatingIcon: {fileID: 740100935}
   promptText: {fileID: 1706135543}
@@ -1048,7 +1066,7 @@ MonoBehaviour:
   - onFinished:
       m_PersistentCalls:
         m_Calls: []
-    portrait: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    portrait: {fileID: 0}
     speakerName: Maria
     content: Hello, Jesus.
   afterDialogue:
@@ -1674,8 +1692,8 @@ MonoBehaviour:
 
     Enter'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
-  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
+  m_sharedMaterial: {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1699,12 +1717,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 63.33368
+  m_fontSizeBase: 63.33368
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 38.000206
+  m_fontSizeMax: 152.00082
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1772,7 +1790,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  - {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1849,7 +1867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.54}
   m_AnchorMax: {x: 0.15, y: 0.54}
-  m_AnchoredPosition: {x: 4.579956, y: -13.08}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 634.1379, y: 634.1379}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1228215584
@@ -1867,7 +1885,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228215582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1880,7 +1898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2037470831614555417, guid: 9164a18d3bb75cc46a9b087ba97e704c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2181,8 +2199,8 @@ MonoBehaviour:
 
     Talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
-  m_sharedMaterial: {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
+  m_sharedMaterial: {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2206,12 +2224,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 63.33368
+  m_fontSizeBase: 63.33368
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 38.000206
+  m_fontSizeMax: 152.00082
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2279,7 +2297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1438214578363641810, guid: 9dffd554a9e95485ebfd0876306b1760, type: 2}
+  - {fileID: 7217155759149098191, guid: b6111c28c66934b97aee73d8a058aae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2447,14 +2465,20 @@ MonoBehaviour:
     onFinished:
       m_PersistentCalls:
         m_Calls: []
-    portrait: {fileID: -2037470831614555417, guid: 9164a18d3bb75cc46a9b087ba97e704c, type: 3}
-    speakerName: Maria
-    content: Hello, Jesus.
+    portrait: {fileID: 0}
+    speakerName: Mary
+    content: My son, where are you going?
+  noPortraitTextShift: 640
+  portraitLayoutConfigured: 1
+  speakerPortraitPosition: {x: 0, y: 0}
+  dialoguePortraitPosition: {x: 0, y: 0}
+  speakerPortraitSize: {x: 2050.56, y: 170.72943}
+  dialoguePortraitSize: {x: 2050.56, y: 585.35803}
   charactersPerSecond: 35
   arrowBlinkPeriod: 1
   arrowTextGap: 24
   bubbleTexture: {fileID: 2800000, guid: 256ae1c9964af4c88b744f0b99c83a62, type: 3}
-  monologueLineHold: 2
+  monologueFontSize: 16.88898
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

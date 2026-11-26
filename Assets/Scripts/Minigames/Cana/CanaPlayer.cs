@@ -136,6 +136,7 @@ namespace CrossTheLine.Cana
                 cleaningRemaining -= Time.deltaTime;
                 if (cleaningRemaining <= 0)
                 {
+                    CanaAudio.EndMop(this);
                     cleaningOwner.CompleteClean(cleaningSeat, this);
                     cleaningSeat = -1;
                     cleaningOwner = null;
@@ -378,6 +379,7 @@ namespace CrossTheLine.Cana
         {
             if (IsCleaning || IsPraying || InfiniteWine || contents != DrinkContents.Water || liquidAmount <= 0) return false;
             contents = DrinkContents.Wine;
+            CanaAudio.Play(CanaSound.Pray);
             IsPraying = true;
             RefreshAnimation();
             return true;
@@ -408,6 +410,7 @@ namespace CrossTheLine.Cana
             cleaningOwner = owner;
             cleaningSeat = seat;
             cleaningRemaining = CurrentCleaningDuration;
+            CanaAudio.BeginMop(this);
             dashRemaining = 0;
             isMoving = false;
             characterSprite.flipX = !facesLeft;
@@ -457,6 +460,7 @@ namespace CrossTheLine.Cana
 
         private void OnDestroy()
         {
+            CanaAudio.EndMop(this);
             if (cleaningOwner && IsCleaning) cleaningOwner.AbandonCleaning(cleaningSeat, this);
         }
 

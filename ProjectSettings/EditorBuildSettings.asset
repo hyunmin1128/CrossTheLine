@@ -63,7 +63,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 8e287babc1933464da10b792eaf29682
   - enabled: 1
-    path: Assets/Scenes/MainScene2.unity
+    path: Assets/Scenes/MainScene1.unity
     guid: e94742b242b5d4b66b4bdb3c763d478d
   - enabled: 1
     path: Assets/Scenes/Minigames/Chapter08_Fishing_Test.unity

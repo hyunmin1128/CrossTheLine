@@ -88,6 +88,7 @@ namespace CrossTheLine.Cana
                 case CanaItemType.SoldOut: soldOutUntil = Time.time + soldOutDuration; break;
                 default: return false;
             }
+            CanaAudio.Play(CanaSound.Item);
             effects.Play(slots[index].item);
             if (slots[index].item != CanaItemType.CleanBomb)
             {

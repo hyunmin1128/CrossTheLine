@@ -124,6 +124,7 @@ namespace CrossTheLine.Cana
    rejected=Instantiate(prefab,spawnPoint.position,Quaternion.identity);
    rejected.name=kind+" - Dirty Restaurant Rejection";
    rejected.RejectAtDoor(this,kind);
+   CanaAudio.Play(CanaSound.Doorbell);
    ActiveCustomer=rejected;
    return true;
   }
@@ -146,6 +147,7 @@ namespace CrossTheLine.Cana
    }
    npc.name=kind+" - "+seats[index].point.name;occupants[index]=npc;reserved[index]=false;ActiveCustomer=npc;
    npc.Initialize(this,index,path,seats[index].facesLeft);npc.Configure(kind,party,leader);
+   CanaAudio.Play(CanaSound.Doorbell);
    return npc;
   }
   private CanaCustomer ChooseTroublemaker() => troublemakerPrefabs != null && troublemakerPrefabs.Length > 0

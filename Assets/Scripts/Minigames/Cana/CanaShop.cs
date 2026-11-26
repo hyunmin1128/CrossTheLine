@@ -195,7 +195,7 @@ namespace CrossTheLine.Cana
                 bool right = keyboard.dKey.wasPressedThisFrame || keyboard.rightArrowKey.wasPressedThisFrame;
                 if (Confirming)
                 {
-                    if (left || right) ConfirmYes = !ConfirmYes;
+                    if (left || right) { ConfirmYes = !ConfirmYes; CanaAudio.Play(CanaSound.Pop); }
                     if (keyboard.spaceKey.wasPressedThisFrame) ResolvePurchase();
                     Refresh();
                     return;
@@ -217,7 +217,7 @@ namespace CrossTheLine.Cana
                 }
                 if (keyboard.spaceKey.wasPressedThisFrame)
                 {
-                    if (!InTrainList) InTrainList = true;
+                    if (!InTrainList) { CanaAudio.Play(CanaSound.Bubble); InTrainList = true; }
                     else if (InTrainList)
                     {
                         BeginPurchase();
@@ -258,6 +258,7 @@ namespace CrossTheLine.Cana
 
         private void BeginPurchase()
         {
+            CanaAudio.Play(CanaSound.Bubble);
             pendingItem = TabIndex == 1;
             pendingUpgrade = TabIndex == 2;
             pendingStaff = TabIndex == 3;
@@ -318,6 +319,7 @@ namespace CrossTheLine.Cana
 
         private void ResolvePurchase()
         {
+            CanaAudio.Play(CanaSound.Bubble);
             if (ConfirmYes)
             {
                 int index = pendingTrain;
@@ -427,6 +429,7 @@ namespace CrossTheLine.Cana
             int selectionKey = descriptionKey + (InTrainList ? 0 : 1000);
             if (selectionKey != lastSelectionKey)
             {
+                if (lastSelectionKey >= 0) CanaAudio.Play(CanaSound.Pop);
                 lastSelectionKey = selectionKey;
                 selectionStarted = Time.unscaledTime;
             }

@@ -44,6 +44,7 @@ namespace CrossTheLine.Cana
             amount = Mathf.RoundToInt(amount * multiplier);
             gold += amount;
             Save();
+            CanaAudio.Play(CanaSound.Coin);
             var position = new Vector3(moneyBin.bounds.center.x + Random.Range(-popupRandomRange.x, popupRandomRange.x),
                 moneyBin.bounds.max.y + 0.375f + Random.Range(0, popupRandomRange.y), 0);
             position.x = Mathf.Round(position.x * 16) / 16;
@@ -56,6 +57,7 @@ namespace CrossTheLine.Cana
             if (amount < 0 || amount > gold) return false;
             gold -= amount;
             Save();
+            if (amount > 0) CanaAudio.Play(CanaSound.Money);
             return true;
         }
 
