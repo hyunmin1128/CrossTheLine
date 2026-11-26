@@ -47,6 +47,15 @@ namespace CrossTheLine.Minigames.Fishing
         UnityEngine.UI.Image pullingCrewImage;
         System.Random fishRandom;
         NetFishingSession.Phase previous;
+        [Header("Audio")]
+        [SerializeField] AudioClip fishingMusic, bubbleSound, splashSound, fishCaughtSound;
+        [SerializeField] AudioClip[] castSounds;
+        MinigameAudio audioPlayback;
+        MinigameAudio AudioPlayback => audioPlayback ??= new MinigameAudio(gameObject);
+        int nextCastSound;
+
+        void OnDisable() => audioPlayback?.Stop();
+
         void Start()
         {
             boatRest=boat.position;pullRest=pullingCrew.anchoredPosition;netRest=pullingNet.anchoredPosition;
@@ -62,9 +71,9 @@ namespace CrossTheLine.Minigames.Fishing
             // Cosmetic draws must not change fish movement, rewards or the existing balance RNG.
             fishRandom=new System.Random(seed^0x278FA);
             CurrentFish=null;CurrentFishIndex=-1;FacingLeft=false;
-            Paused=false;ActiveSpot=0;boat.position=boatRest;previous=Session.State;Refresh();
+            audioPlayback?.Stop();nextCastSound=0;Paused=false;ActiveSpot=0;boat.position=boatRest;previous=Session.State;Refresh();
         }
-        public void StartGame(){Session.Start();Refresh();}
+        public void StartGame(){Session.Start();AudioPlayback.SetMusic(fishingMusic);Refresh();}
         public void TogglePause(){if(Session==null||Session.State==NetFishingSession.Phase.Introduction||Session.State==NetFishingSession.Phase.Complete)return;Paused=!Paused;Refresh();}
         void Update()
         {
@@ -88,6 +97,11 @@ namespace CrossTheLine.Minigames.Fishing
             SelectFish(legend);
             if(!Session.Cast(legend,CurrentFishIndex))return false;
             castLanding=GetCastLanding();
+            if (castSounds != null && castSounds.Length > 0)
+            {
+                AudioPlayback.PlayEffect(castSounds[nextCastSound]);
+                nextCastSound = (nextCastSound + 1) % castSounds.Length;
+            }
             return true;
         }
         Vector3 GetCastLanding()
@@ -138,6 +152,21 @@ namespace CrossTheLine.Minigames.Fishing
             {
                 if(Session.State==NetFishingSession.Phase.Exploring&&previous!=NetFishingSession.Phase.Introduction&&fishingSpots.Length>1)
                     ChooseNextSpot();
+                switch (Session.State)
+                {
+                    case NetFishingSession.Phase.Waiting:
+                        AudioPlayback.PlayEffect(splashSound);
+                        break;
+                    case NetFishingSession.Phase.Bite:
+                        AudioPlayback.PlayCue(bubbleSound, 1f);
+                        break;
+                    case NetFishingSession.Phase.Result when Session.LastCatch > 0:
+                        AudioPlayback.PlayEffect(fishCaughtSound);
+                        break;
+                    case NetFishingSession.Phase.Complete:
+                        AudioPlayback.SetMusic(null);
+                        break;
+                }
                 previous=Session.State;
             }
             Refresh();

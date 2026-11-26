@@ -2739,6 +2739,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0933e81f8c5a82a479ba6c3e2264f5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownGame
+  desertMusic: {fileID: 8300000, guid: a3744101629b0f74fb7181f7f2ddf945, type: 3}
+  caveMusic: {fileID: 8300000, guid: 60d22adf66039ee44a1beeda997e3a0e, type: 3}
+  rockRoll: {fileID: 8300000, guid: b21e183fcdb342546b2859feeb201997, type: 3}
+  quicksandHit: {fileID: 8300000, guid: 70db5917b6a742f41945588848da110c, type: 3}
+  waterDrink: {fileID: 8300000, guid: 1795c532a6881f84ca9d69244b98a2b7, type: 3}
+  shieldBreak: {fileID: 8300000, guid: d9957fea7a35c3048a90d06f826422cc, type: 3}
+  reaperSwing: {fileID: 8300000, guid: 8a681157a8558ba4ea9567915e5a9970, type: 3}
   caveArt: {fileID: 11400000, guid: b172e82b8d1d3c2479adab94a6691ab1, type: 2}
   ruinsArt: {fileID: 11400000, guid: 20a72319e858cfb47ac14ec90b853366, type: 2}
   trialArt: {fileID: 11400000, guid: 16f8d8d9e7b04a74dafc46ee1e11a770, type: 2}

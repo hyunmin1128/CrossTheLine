@@ -19,11 +19,17 @@ namespace CrossTheLine.Minigames
         float visibleSeconds;
         public bool ReadyToHit=>visibleSeconds>=minimumVisibleReactionSeconds;
         public void HideOutsideRoad(){body.enabled=false;if(secondBody)secondBody.enabled=false;}
-        public void TrackVisibility(Camera camera,float dt)
+        public bool TrackVisibility(Camera camera,float dt)
         {
             float hh=camera.orthographicSize,hw=hh*camera.aspect;var p=camera.transform.position;var b=body.bounds;
-            if(b.max.x>=p.x-hw&&b.min.x<=p.x+hw&&b.max.y>=p.y-hh&&b.min.y<=p.y+hh)visibleSeconds+=Mathf.Max(0,dt);
+            bool firstVisibleFrame = false;
+            if (dt > 0 && b.max.x >= p.x-hw && b.min.x <= p.x+hw && b.max.y >= p.y-hh && b.min.y <= p.y+hh)
+            {
+                firstVisibleFrame = visibleSeconds == 0;
+                visibleSeconds += dt;
+            }
             var color=body.color;color.a=1;body.color=color;if(secondBody)secondBody.color=color;
+            return firstVisibleFrame;
         }
         public Vector2 RoadVisualRange
         {

@@ -82,7 +82,7 @@ namespace CrossTheLine.Minigames
                 if(clock+0.00001f<duration){RefreshLines();return false;}
                 clock=0;
                 if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;ShowFrame(0);}
-                else{CurrentPhase=AttackPhase.Dashing;ShowFrame(firstSwingFrame);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
+                else{CurrentPhase=AttackPhase.Dashing;game.PlayReaperSwing();ShowFrame(firstSwingFrame);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
                 if(remaining<=0)break;
             }
             RefreshLines();travelSeconds=CurrentPhase==AttackPhase.Dashing?remaining:0;return travelSeconds>0;

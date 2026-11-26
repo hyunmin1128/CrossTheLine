@@ -5036,6 +5036,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436283cf310848c4990c182ec044332b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.Fishing.NetFishingGame
+  fishingMusic: {fileID: 8300000, guid: d0f560a647f808d4baa57ae44fbba6be, type: 3}
+  bubbleSound: {fileID: 8300000, guid: f2bb5023d4167e54eadc4b0ad7b2e9d8, type: 3}
+  splashSound: {fileID: 8300000, guid: d117b28fe168c6249a859e0219c50826, type: 3}
+  fishCaughtSound: {fileID: 8300000, guid: c5463d92655b95642b9909e94f0184fd, type: 3}
+  castSounds:
+  - {fileID: 8300000, guid: 5c0c2484cc512994c903b98ff8d9474b, type: 3}
+  - {fileID: 8300000, guid: 6d6c7563ca60dbc4890c40008096d3d7, type: 3}
+  - {fileID: 8300000, guid: 49f4ffa706cd75d44989fc2bec5e58a7, type: 3}
   settings: {fileID: 11400000, guid: 8d024b45f5667764bae5c37d3ecce44c, type: 2}
   randomSeed: 0
   boat: {fileID: 2219752390092435459}
