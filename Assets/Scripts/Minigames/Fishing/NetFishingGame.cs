@@ -183,7 +183,7 @@ namespace CrossTheLine.Minigames.Fishing
             introduction.SetActive(state==NetFishingSession.Phase.Introduction);
             fightPanel.SetActive(fighting);resultPanel.SetActive(state==NetFishingSession.Phase.Result||state==NetFishingSession.Phase.Replacing);
             completePanel.SetActive(state==NetFishingSession.Phase.Complete);pausePanel.SetActive(Paused);
-            countText.text=$"잡은 물고기  {Session.FishCaught} / {settings.goalFish}";
+            countText.text=$"Fish Caught: {Session.FishCaught} / {settings.goalFish}";
             netFill.fillAmount=Session.Integrity;catchFill.fillAmount=Session.Progress/Session.ProgressRequired;
             netFill.color=Session.Integrity<.3f?new Color(.88f,.35f,.25f):new Color(.8f,.64f,.35f);
             zoneRect.anchorMin=new Vector2(.08f,Session.Zone-Session.ZoneHeight*.5f);zoneRect.anchorMax=new Vector2(.92f,Session.Zone+Session.ZoneHeight*.5f);zoneRect.offsetMin=zoneRect.offsetMax=Vector2.zero;
@@ -193,21 +193,21 @@ namespace CrossTheLine.Minigames.Fishing
             if(fishWarningText)
             {
                 fishWarningText.gameObject.SetActive(fighting&&(danger||Session.LegendWarning));
-                fishWarningText.text=Session.LegendWarning?"돌진!":"그물 위험";
+                fishWarningText.text=Session.LegendWarning?"Dash!":"Net at Risk";
             }
             if(fighting&&Session.LegendWarning)
                 fishRect.anchoredPosition=new Vector2(Mathf.Sin(Session.FightTime*72)*4,0);
-            timerText.text=$"남은 시간  {Mathf.CeilToInt(Mathf.Max(0,settings.maximumCatchSeconds-Session.CastElapsed))}초";
-            resultText.text=state==NetFishingSession.Phase.Replacing?$"{Session.ResultMessage}\n{Mathf.CeilToInt(Mathf.Max(0,settings.replacementSeconds-Session.PhaseTime))}초 후 다시 던질 수 있습니다\n잡은 물고기는 유지됩니다":$"{Session.ResultMessage}\n누적 {Session.FishCaught} / {settings.goalFish}마리";
+            timerText.text=$"Time Left: {Mathf.CeilToInt(Mathf.Max(0,settings.maximumCatchSeconds-Session.CastElapsed))}s";
+            resultText.text=state==NetFishingSession.Phase.Replacing?$"{Session.ResultMessage}\n{Mathf.CeilToInt(Mathf.Max(0,settings.replacementSeconds-Session.PhaseTime))}s until you can cast again\nYour catch is saved":$"{Session.ResultMessage}\nFish Caught: {Session.FishCaught} / {settings.goalFish}";
             if(state==NetFishingSession.Phase.Result&&Session.ReachedMilestone)
-                resultText.text+=Session.JourneyLeg==2?"\n50마리 돌파 · 물고기 떼가 수역 가운데로 이동합니다":"\n100마리 돌파 · 물고기 떼가 오른쪽으로 이동합니다";
-            completeText.text=$"150마리의 물고기를 모았습니다\n총 {Mathf.FloorToInt(Session.Elapsed/60)}분 {Mathf.FloorToInt(Session.Elapsed%60)}초\n그물 {Session.Casts}회 · 놓침 {Session.Escapes}회 · 교체 {Session.BrokenNets}회\nR · 다시 시작";
+                resultText.text+=Session.JourneyLeg==2?"\n50 fish caught! The school moves to the center.":"\n100 fish caught! The school moves to the right.";
+            completeText.text=$"Fish Caught: {Session.FishCaught} / {settings.goalFish}\nTotal Time: {Mathf.FloorToInt(Session.Elapsed/60)}m {Mathf.FloorToInt(Session.Elapsed%60)}s\nCasts: {Session.Casts} · Escapes: {Session.Escapes} · Nets Replaced: {Session.BrokenNets}\nR · Restart";
             if(state==NetFishingSession.Phase.Exploring)
             {
                 bool near=fishingSpots.Length>0&&Vector2.Distance(boat.position,fishingSpots[ActiveSpot].position)<=settings.castRadius;
-                promptText.text=near?"E / Space · 보글거리는 곳에 그물 던지기":"WASD / 방향키 · 보글거리는 지점으로 이동";
+                promptText.text=near?"E / Space · Cast your net at the bubbles":"WASD / Arrow Keys · Move toward the bubbles";
             }
-            else promptText.text=fighting?"Space / 마우스 클릭 연타 · 초록 구간에 물고기를 유지하세요":state==NetFishingSession.Phase.Waiting?"그물이 물속으로 가라앉았습니다…":state==NetFishingSession.Phase.Casting?"그물 던지는 중":state==NetFishingSession.Phase.Bite?"물고기가 걸렸습니다!":"Esc · 일시정지";
+            else promptText.text=fighting?"Space / Click repeatedly · Keep the fish in the green zone":state==NetFishingSession.Phase.Waiting?"The net is underwater…":state==NetFishingSession.Phase.Casting?"Casting the net…":state==NetFishingSession.Phase.Bite?"Fish on!":"Esc · Pause";
             bool preview=state==NetFishingSession.Phase.Exploring&&fishingSpots.Length>0&&Vector2.Distance(boat.position,fishingSpots[ActiveSpot].position)<=settings.castRadius;
             biteText.text=preview?"◎":state==NetFishingSession.Phase.Waiting?new string('.',1+Mathf.FloorToInt(Session.PhaseTime*2)%3):state==NetFishingSession.Phase.Bite?"!":"";
             if(fishingSpots.Length>0)

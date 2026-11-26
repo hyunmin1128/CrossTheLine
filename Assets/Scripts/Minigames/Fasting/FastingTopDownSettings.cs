@@ -54,6 +54,6 @@ namespace CrossTheLine.Minigames
             float max=Mathf.Max(min,mean*Mathf.Max(spawnIntervalMultiplier.x,spawnIntervalMultiplier.y));
             return Random.Range(min,max);
         }
-        public string[] places={"광야 사막","어두운 동굴","지하 폐유적","마지막 시련"};
+        public string[] places={"Desert","Dark Cave","Underground Ruins","Final Trial"};
     }
 }

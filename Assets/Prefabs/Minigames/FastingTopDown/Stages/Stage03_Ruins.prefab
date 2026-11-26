@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingStageConfiguration
   stageIndex: 2
-  displayName: "\uC9C0\uD558 \uD3D0\uC720\uC801"
+  displayName: Underground Ruins
   background: {fileID: -2122560057111828611, guid: 73ba97625015e1e4e9c5086d7c12c2d4, type: 3}
   sharedSpawnSettings: {fileID: 11400000, guid: 7c83ac27232ff6d4ba1f52f473198f24, type: 2}
   obstacleFrequency: 1.3

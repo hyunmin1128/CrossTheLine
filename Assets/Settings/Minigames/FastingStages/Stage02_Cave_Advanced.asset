@@ -115,7 +115,7 @@ MonoBehaviour:
   minimumSpawnInterval: 0.55
   spawnIntervalMultiplier: {x: 0.75, y: 1.35}
   places:
-  - "\uAD11\uC57C \uC0AC\uB9C9"
-  - "\uC5B4\uB450\uC6B4 \uB3D9\uAD74"
-  - "\uC9C0\uD558 \uD3D0\uC720\uC801"
-  - "\uB9C8\uC9C0\uB9C9 \uC2DC\uB828"
+  - Desert
+  - Dark Cave
+  - Underground Ruins
+  - Final Trial

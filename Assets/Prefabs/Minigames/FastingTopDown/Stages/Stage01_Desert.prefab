@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingStageConfiguration
   stageIndex: 0
-  displayName: "\uAD11\uC57C \uC0AC\uB9C9"
+  displayName: Desert
   background: {fileID: 21300000, guid: 0d9effd3ee66b704d8eda3143cb0592a, type: 3}
   sharedSpawnSettings: {fileID: 11400000, guid: 7c83ac27232ff6d4ba1f52f473198f24, type: 2}
   obstacleFrequency: 1.2

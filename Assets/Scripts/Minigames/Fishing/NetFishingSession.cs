@@ -53,7 +53,7 @@ namespace CrossTheLine.Minigames.Fishing
             if(State==Phase.Casting||State==Phase.Waiting||State==Phase.Bite||State==Phase.Fighting)
             {
                 CastElapsed+=dt;
-                if(CastElapsed>=settings.maximumCatchSeconds){Escapes++;ResultMessage="물고기가 멀어졌습니다 · 다시 스팟을 찾아보세요";Change(Phase.Result);return;}
+                if(CastElapsed>=settings.maximumCatchSeconds){Escapes++;ResultMessage="The fish swam away. Look for another spot.";Change(Phase.Result);return;}
             }
             switch(State)
             {
@@ -87,7 +87,7 @@ namespace CrossTheLine.Minigames.Fishing
             }
             if(!Inside){Progress-=settings.progressLossPerSecond*dt;Integrity-=settings.netDamagePerSecond*dt;}
             Progress=Mathf.Clamp(Progress,0,ProgressRequired);Integrity=Mathf.Clamp01(Integrity);
-            if(Integrity<=0){BrokenNets++;ResultMessage="그물이 찢어졌습니다 · 새 그물로 교체 중";Change(Phase.Replacing);}
+            if(Integrity<=0){BrokenNets++;ResultMessage="Your net tore. Replacing it…";Change(Phase.Replacing);}
             else if(Progress>=ProgressRequired)
             {
                 int low=Mathf.Max(1,settings.minimumCatch),high=Mathf.Max(low,settings.maximumCatch);
@@ -95,12 +95,12 @@ namespace CrossTheLine.Minigames.Fishing
                 int previousLeg=JourneyLeg;
                 FishCaught+=LastCatch;
                 ReachedMilestone=JourneyLeg>previousLeg&&FishCaught<settings.goalFish;
-                ResultMessage=IsLegend?$"Legend 포획! · {LastCatch}마리":$"{LastCatch}마리 포획!";
+                ResultMessage=IsLegend?$"Legendary catch! +{LastCatch} fish":$"Catch: +{LastCatch} fish";
                 Change(Phase.Result);
             }
             else if(Progress<=0)
             {
-                Escapes++;ResultMessage="물고기를 놓쳤습니다";Change(Phase.Result);
+                Escapes++;ResultMessage="The fish got away.";Change(Phase.Result);
             }
         }
 
