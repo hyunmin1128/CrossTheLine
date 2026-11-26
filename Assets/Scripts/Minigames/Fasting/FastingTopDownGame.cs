@@ -12,6 +12,7 @@ namespace CrossTheLine.Minigames
         [SerializeField] AudioClip ruinsMusic, finalMusic, alternateFinalMusic, reaperLaugh, alternateReaperLaugh;
         [SerializeField] AudioClip rollingRockHit, sandstormHit, cactusHit, stalagmiteHit, caveRockHit;
         [SerializeField] AudioClip ruinsRubbleHit, skullPileHit, poisonWellHit, lavaHit, thornBushHit;
+        [SerializeField, Range(0,1)] float shieldBreakVolume = .4f;
         bool useAlternateFinalMusic, useAlternateLaugh;
         MinigameAudio audioPlayback;
         MinigameAudio AudioPlayback => audioPlayback ??= new MinigameAudio(gameObject);
@@ -113,15 +114,17 @@ namespace CrossTheLine.Minigames
                 if(e.kind==FastingTopDownEntity.Kind.Water){if(StageIndex<3&&!HasWater){HasWater=true;waterGrace=.15f;e.SetUsed(true);CurrentBalance.pickups[(int)e.kind]++;Message="수통 충전 · 이 우물은 사용 완료";}}
                 else Collect(e);
             }
-            for(int i=hazards.Count-1;i>=0;i--){var h=hazards[i];if(!h){hazards.RemoveAt(i);continue;}h.UpdateApproach(to);if(FitsSpawnRoad(h)&&h.TrackVisibility(gameCamera,dt)&&StageIndex==0&&h.kind==FastingTopDownHazard.Kind.Rock&&h.rotateRollingRock)AudioPlayback.PlayEffect(rockRoll);bool contact=h.Advance(dt,from,to,out var entry);bool insideRoad=FitsSpawnRoad(h);if(!insideRoad)h.HideOutsideRoad();if(contact&&insideRoad&&h.ReadyToHit){int shieldsBefore=ShieldCount;bool damaged=TryDamage(h.kind.ToString());if(damaged||ShieldCount<shieldsBefore){if(h.kind!=FastingTopDownHazard.Kind.Reaper&&(StageIndex!=2||h.kind!=FastingTopDownHazard.Kind.Wall)){h.spent=true;h.gameObject.SetActive(false);}if(damaged)ApplyEffect(h.kind);}}if(h.transform.position.y<cameraY-gameCamera.orthographicSize-3||SideHazardExited(h)){if(!h.spent)AvoidedHazards++;h.spent=true;h.gameObject.SetActive(false);}if(h.spent){Destroy(h.gameObject);hazards.RemoveAt(i);}}
+            for(int i=hazards.Count-1;i>=0;i--){var h=hazards[i];if(!h){hazards.RemoveAt(i);continue;}h.UpdateApproach(to);if(FitsSpawnRoad(h)&&h.TrackVisibility(gameCamera,dt)&&StageIndex==0&&h.kind==FastingTopDownHazard.Kind.Rock&&h.rotateRollingRock)AudioPlayback.PlayEffect(rockRoll,.35f);bool contact=h.Advance(dt,from,to,out var entry);bool insideRoad=FitsSpawnRoad(h);if(!insideRoad)h.HideOutsideRoad();if(contact&&insideRoad&&h.ReadyToHit){int shieldsBefore=ShieldCount;bool damaged=TryDamage(h.kind.ToString(),h);if(damaged||ShieldCount<shieldsBefore){if(h.kind!=FastingTopDownHazard.Kind.Reaper&&(StageIndex!=2||h.kind!=FastingTopDownHazard.Kind.Wall)){h.spent=true;h.gameObject.SetActive(false);}if(damaged)ApplyEffect(h.kind);}}if(h.transform.position.y<cameraY-gameCamera.orthographicSize-3||SideHazardExited(h)){if(!h.spent)AvoidedHazards++;h.spent=true;h.gameObject.SetActive(false);}if(h.spent){Destroy(h.gameObject);hazards.RemoveAt(i);}}
             if(encounterDirector)encounterDirector.Tick(dt);else{wave-=dt;if(wave<=0){SpawnWave();wave=settings.NextSpawnInterval(StageIndex);}}
             if(StageIndex>0&&waveNumber>0&&waveNumber%4==0&&lastVisionWave!=waveNumber){vision=settings.visionSeconds;lastVisionWave=waveNumber;}
             ArmGateIfReady();RecycleMap();
             if(gateArmed&&player.position.y>=gate.position.y-.05f){if(Prayer>=PrayerTarget){if(StageIndex==3){Complete=true;Running=false;AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(true);}else{swap=.6f;ClearHazards();Message="기도 완료 · 다음 장소로 이동";}}}
             Follow();Refresh();
         }
-        public bool TryDamage(string cause){if(!Running||Invulnerable||DarknessProtecting||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=DamageFor(cause);Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
-        void ApplyEffect(FastingTopDownHazard.Kind k){PlayHazardHit(k);if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat)slow=1.2f;if(k==FastingTopDownHazard.Kind.Thorns)thornSlow=settings.thornSlowSeconds;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack){root=hitFeedback?hitFeedback.crackFallSeconds:.9f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.crackFallSeconds+hitFeedback.crackBlinkSeconds:1.7f);}if(k==FastingTopDownHazard.Kind.Bat){slow=settings.batSlowSeconds;vision=settings.batVisionSeconds;if(hitFeedback)grace=Mathf.Max(grace,hitFeedback.batAirSeconds);}if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar)prayerLock=settings.burnPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Pillar){root=hitFeedback?hitFeedback.pillarAirSeconds:1.5f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.pillarProtectionSeconds:3);}if(k==FastingTopDownHazard.Kind.Tomb)prayerLock=settings.tombPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=settings.poisonReverseSeconds;Message="오염된 물 · 방향 반전 / E 수통으로 정화";}grace=Mathf.Max(grace,root+.45f);}
+        public bool TryDamage(string cause) => TryDamage(cause, null);
+
+        bool TryDamage(string cause, FastingTopDownHazard hazard){if(!Running||Invulnerable||DarknessProtecting||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=DamageFor(cause);Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);if(hazard&&hazard.hitSound)AudioPlayback.PlayEffect(hazard.hitSound,hazard.hitSoundVolume);else if(Enum.TryParse(cause,out FastingTopDownHazard.Kind kind))PlayHazardHit(kind);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
+        void ApplyEffect(FastingTopDownHazard.Kind k){if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat)slow=1.2f;if(k==FastingTopDownHazard.Kind.Thorns)thornSlow=settings.thornSlowSeconds;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack){root=hitFeedback?hitFeedback.crackFallSeconds:.9f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.crackFallSeconds+hitFeedback.crackBlinkSeconds:1.7f);}if(k==FastingTopDownHazard.Kind.Bat){slow=settings.batSlowSeconds;vision=settings.batVisionSeconds;if(hitFeedback)grace=Mathf.Max(grace,hitFeedback.batAirSeconds);}if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar)prayerLock=settings.burnPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Pillar){root=hitFeedback?hitFeedback.pillarAirSeconds:1.5f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.pillarProtectionSeconds:3);}if(k==FastingTopDownHazard.Kind.Tomb)prayerLock=settings.tombPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=settings.poisonReverseSeconds;Message="오염된 물 · 방향 반전 / E 수통으로 정화";}grace=Mathf.Max(grace,root+.45f);}
         public void UseWater(){if(!HasWater||!Running||failed)return;AudioPlayback.PlayEffect(waterDrink);HasWater=false;thornSlow=0;slow=root=prayerLock=vision=reverse=0;waterBoost=3;Health=Mathf.Min(settings.maximumHealth,Health+1);grace=Mathf.Max(grace,.5f);Message="수통 사용 · 정화 / 지침 +1 / 이동 가속 3초";}
         public void Collect(FastingTopDownEntity e){float beforeItemPrayer=Prayer;CurrentBalance.pickups[(int)e.kind]++;switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:CollectSpiritFlame();break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?(CurrentStageConfiguration?Mathf.Clamp01(CurrentStageConfiguration.bibleCharge):1f):settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}CurrentBalance.itemPrayer+=Prayer-beforeItemPrayer;e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
         public void SpawnWave()
@@ -151,26 +154,33 @@ namespace CrossTheLine.Minigames
             if(StageIndex==1&&caveArt)prefab=caveArt.PrefabFor(kind,prefab);
             if(StageIndex==2&&ruinsArt)prefab=ruinsArt.PrefabFor(kind,prefab);
             if(StageIndex==3&&trialArt)prefab=trialArt.PrefabFor(kind,prefab);
-            var h=Instantiate(prefab,hazardRoot);h.kind=kind;h.formationId=formationId;h.formationCount=formationCount;h.name=$"Stage{StageIndex+1}_{kind}_Lanes{lanes}";
+            var configuredPrefab=ConfiguredObstacle(kind,null);
+            var h=Instantiate(configuredPrefab?configuredPrefab:prefab,hazardRoot);h.kind=kind;h.formationId=formationId;h.formationCount=formationCount;h.name=$"Stage{StageIndex+1}_{kind}_Lanes{lanes}";
             h.warning=0;h.lifetime=30;
             h.transform.position=new Vector3(SpawnLaneX(firstLane+(lanes-1)*.5f),cameraY+gameCamera.orthographicSize+2.5f);
             bool moving=kind==FastingTopDownHazard.Kind.Rock||kind==FastingTopDownHazard.Kind.Sand||kind==FastingTopDownHazard.Kind.Bat||kind==FastingTopDownHazard.Kind.Collapse||kind==FastingTopDownHazard.Kind.Reaper;
             float downwardSpeed=kind==FastingTopDownHazard.Kind.Sand?settings.topSandSpeed:3.1f+StageIndex*.45f;
             h.velocity=moving&&!h.scrollOnly?Vector2.down*(downwardSpeed*settings.hazardSpeedMultiplier):Vector2.zero;
-            h.body.color=StageIndex==3?new Color(1,.4f,.13f):StageIndex==1?new Color(.55f,.48f,.75f):new Color(.84f,.66f,.34f);
-            if(StageIndex==0&&desertArt)desertArt.Apply(h);
-            if(StageIndex==1&&caveArt)caveArt.Apply(h);
-            if(StageIndex==2&&ruinsArt)h.body.color=Color.white;
-            if(StageIndex==3&&trialArt)h.body.color=Color.white;
+            if(!configuredPrefab)h.body.color=StageIndex==3?new Color(1,.4f,.13f):StageIndex==1?new Color(.55f,.48f,.75f):new Color(.84f,.66f,.34f);
+            if(!configuredPrefab&&StageIndex==0&&desertArt)desertArt.Apply(h);
+            if(!configuredPrefab&&StageIndex==1&&caveArt)caveArt.Apply(h);
+            if(!configuredPrefab&&StageIndex==2&&ruinsArt)h.body.color=Color.white;
+            if(!configuredPrefab&&StageIndex==3&&trialArt)h.body.color=Color.white;
             if(StageIndex==2&&ruinsArt)h.collisionHeight*=ruinsArt.obstacleScale;
             h.ConfigureLanes(lanes,StageIndex==2&&ruinsArt?settings.laneSpacing*ruinsArt.obstacleScale:StageIndex==3&&(kind==FastingTopDownHazard.Kind.Thorns||kind==FastingTopDownHazard.Kind.Pillar)?settings.laneSpacing/.75f:settings.laneSpacing);if(StageIndex>0)h.Enlarge(settings.laterStageObstacleScale);h.transform.position=new Vector3(h.transform.position.x,cameraY+gameCamera.orthographicSize+Mathf.Max(2.5f,h.body.bounds.extents.y+1)+Mathf.Max(0,heightOffset),0);if(!AcceptHazard(h,keepLane)){Destroy(h.gameObject);return;}RegisterHazard(h);
         }
+        FastingTopDownHazard ConfiguredObstacle(FastingTopDownHazard.Kind kind, FastingTopDownHazard fallback, bool vertical = false)
+        {
+            return CurrentStageConfiguration ? CurrentStageConfiguration.PrefabFor(kind, fallback, vertical) : fallback;
+        }
+
         void SpawnSideSand(bool fromLeft)
         {
             var prefab=desertArt?desertArt.PrefabFor(FastingTopDownHazard.Kind.Sand,hazardPrefab):hazardPrefab;
-            var h=Instantiate(prefab,hazardRoot);h.kind=FastingTopDownHazard.Kind.Sand;
+            var configuredPrefab=ConfiguredObstacle(FastingTopDownHazard.Kind.Sand,null);
+            var h=Instantiate(configuredPrefab?configuredPrefab:prefab,hazardRoot);h.kind=FastingTopDownHazard.Kind.Sand;
             h.name=fromLeft?"Sand_LeftToRight":"Sand_RightToLeft";h.warning=0;h.lifetime=30;
-            if(desertArt)desertArt.Apply(h);
+            if(!configuredPrefab&&desertArt)desertArt.Apply(h);
             h.ConfigureLanes(1,settings.laneSpacing);
             float halfWidth=gameCamera.orthographicSize*gameCamera.aspect;
             float margin=Mathf.Max(h.body.bounds.extents.x*1.25f,.5f)+.5f;

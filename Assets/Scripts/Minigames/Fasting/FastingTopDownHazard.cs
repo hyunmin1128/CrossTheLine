@@ -5,6 +5,9 @@ namespace CrossTheLine.Minigames
     {
         public enum Kind { Rock, Sand, Cactus, Quicksand, Bat, Collapse, Crack, Tomb, Wall, Poison, Fire, Thorns, Pillar, Reaper }
         public Kind kind;
+        [Header("Hit Audio")]
+        public AudioClip hitSound;
+        [Range(0,1)] public float hitSoundVolume = .65f;
         public Vector2 size=new Vector2(1.7f,1),velocity;
         public float warning,lifetime=30;
         public bool spent;

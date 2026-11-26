@@ -60,15 +60,19 @@ MonoBehaviour:
   roadEdges: {x: 0.18, y: 0.82}
   obstacles:
   - kind: 0
+    prefab: {fileID: 4800531505179010345, guid: 74e55484c1cec804bb2324308898dda9, type: 3}
     spawnWeight: 25
     damage: 1
   - kind: 1
+    prefab: {fileID: 4549930111265714938, guid: 6a33e49557a5b9044b44b3a484ee15cc, type: 3}
     spawnWeight: 25
     damage: 1
   - kind: 2
+    prefab: {fileID: 6026945071443181718, guid: e90ce5c5befa99243954ec415533348d, type: 3}
     spawnWeight: 45
     damage: 2
   - kind: 3
+    prefab: {fileID: 3590187386754745887, guid: 320bcc5c1bbef4d40b342e37a8052f4c, type: 3}
     spawnWeight: 25
     damage: 1
   waveInterval: 0.84

@@ -65,7 +65,7 @@ namespace CrossTheLine.Minigames
             float length=settings.laneSpacing;
             // Configure artwork and collision before spacing/escape checks, with no grid gaps.
             for(int i=0;i<count;i++){
-                var h=Instantiate(vertical&&ruinsArt.verticalWall?ruinsArt.verticalWall:ruinsArt.wall,hazardRoot);h.name=vertical?"RuinsWall_Vertical":"RuinsWall_Horizontal";
+                var h=Instantiate(ConfiguredObstacle(FastingTopDownHazard.Kind.Wall,vertical&&ruinsArt.verticalWall?ruinsArt.verticalWall:ruinsArt.wall,vertical),hazardRoot);h.name=vertical?"RuinsWall_Vertical":"RuinsWall_Horizontal";
                 h.formationId=id;h.formationCount=count;h.ConfigureWallSegment(vertical,length,ruinsArt.wallThicknessScale*settings.laterStageObstacleScale,WallFloorThickness);h.warning=0;h.velocity=Vector2.zero;h.scrollOnly=true;h.lifetime=30;
                 float y=cameraY+gameCamera.orthographicSize+2+length*.5f+offset;
                 h.transform.position=new Vector3(SpawnLaneX(vertical?first:first+i),y+(vertical?i*length:0),0);

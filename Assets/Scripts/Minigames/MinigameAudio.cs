@@ -8,6 +8,7 @@ namespace CrossTheLine.Minigames
         AudioSource music;
         AudioSource effects;
         AudioSource cue;
+        AudioSource phaseAudio;
 
         public MinigameAudio(GameObject owner)
         {
@@ -34,11 +35,11 @@ namespace CrossTheLine.Minigames
             music.Play();
         }
 
-        public void PlayEffect(AudioClip clip)
+        public void PlayEffect(AudioClip clip, float volume = .65f)
         {
             if (!clip) return;
             if (!effects) effects = CreateSource();
-            effects.PlayOneShot(clip, .65f);
+            effects.PlayOneShot(clip, volume);
         }
 
         public void PlayCue(AudioClip clip, float maximumSeconds)
@@ -53,8 +54,45 @@ namespace CrossTheLine.Minigames
             if (clip.length > maximumSeconds) cue.SetScheduledEndTime(start + maximumSeconds);
         }
 
+        public void SetPhaseAudio(AudioClip clip)
+        {
+            if (phaseAudio)
+            {
+                phaseAudio.Stop();
+                phaseAudio.clip = null;
+            }
+            if (!clip)
+            {
+                if (music) music.UnPause();
+                return;
+            }
+
+            if (music) music.Pause();
+            if (!phaseAudio) phaseAudio = CreateSource();
+            phaseAudio.clip = clip;
+            phaseAudio.volume = .4f;
+            phaseAudio.Play();
+        }
+
+        public void SetPaused(bool paused)
+        {
+            if (phaseAudio && phaseAudio.clip)
+            {
+                if (paused) phaseAudio.Pause();
+                else if (phaseAudio.clip) phaseAudio.UnPause();
+            }
+            if (music)
+            {
+                if (paused) music.Pause();
+                else if (!phaseAudio || !phaseAudio.clip) music.UnPause();
+            }
+            if (effects) effects.Stop();
+            if (cue) cue.Stop();
+        }
+
         public void Stop()
         {
+            if (phaseAudio) { phaseAudio.Stop(); phaseAudio.clip = null; }
             if (music) music.Stop();
             if (effects) effects.Stop();
             if (cue) cue.Stop();

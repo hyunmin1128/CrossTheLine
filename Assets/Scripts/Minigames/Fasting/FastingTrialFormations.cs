@@ -26,7 +26,7 @@ namespace CrossTheLine.Minigames
             foreach(var other in hazards)if(other&&!other.spent&&other.transform.position.y>player.position.y-2&&Mathf.Abs(other.transform.position.x-escapeX)<other.size.x*other.MaximumApproachScale*.5f+.5f){CurrentBalance.suppressedGroups++;return;}
             int original=encounterDirector?encounterDirector.OpenLane:escape;
             if(encounterDirector)encounterDirector.ReserveSweepEscape(escape);
-            var h=Instantiate(trialArt.reaper,hazardRoot);h.name="Reaper_FourLaneScytheSweep";
+            var h=Instantiate(ConfiguredObstacle(FastingTopDownHazard.Kind.Reaper,trialArt.reaper),hazardRoot);h.name="Reaper_FourLaneScytheSweep";
             h.ConfigureSweep(settings.laneSpacing);h.Enlarge(settings.laterStageObstacleScale,true);h.warning=trialArt.reaperWarningSeconds;h.velocity=Vector2.down*trialArt.reaperSpeed;h.lifetime=12;
             // Display the authored pixels at their imported PPU rather than fitting one lane.
             h.body.transform.localScale=Vector3.one;

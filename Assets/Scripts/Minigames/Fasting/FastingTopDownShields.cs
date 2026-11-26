@@ -27,7 +27,7 @@ namespace CrossTheLine.Minigames
         void ResetShields(){ShieldCount=0;if(shieldOrbit)shieldOrbit.Clear();if(playerAura)playerAura.Clear();}
         void BreakShield()
         {
-            AudioPlayback.PlayEffect(shieldBreak);EnsureShieldVisuals();shieldOrbit.Break(ShieldCount-1);ShieldCount--;
+            AudioPlayback.PlayEffect(shieldBreak,shieldBreakVolume);EnsureShieldVisuals();shieldOrbit.Break(ShieldCount-1);ShieldCount--;
             if(playerAura)playerAura.BreakShield();if(hitVignette)hitVignette.Play(true);
             // One shared timer controls both white flashing and rejection of every hit.
             grace=Mathf.Max(settings.hitGrace,FastingShieldBreakGraphic.MinimumProtectionSeconds);

@@ -77,7 +77,7 @@ namespace CrossTheLine.Minigames.Fishing
             audioPlayback?.Stop();nextCastSound=0;Paused=false;ActiveSpot=0;boat.position=boatRest;previous=Session.State;Refresh();
         }
         public void StartGame(){Session.Start();AudioPlayback.SetMusic(fishingMusic);Refresh();}
-        public void TogglePause(){if(Session==null||Session.State==NetFishingSession.Phase.Introduction||Session.State==NetFishingSession.Phase.Complete)return;Paused=!Paused;Refresh();}
+        public void TogglePause(){if(Session==null||Session.State==NetFishingSession.Phase.Introduction||Session.State==NetFishingSession.Phase.Complete)return;Paused=!Paused;audioPlayback?.SetPaused(Paused);Refresh();}
         void Update()
         {
             if(Session==null)return;
@@ -162,7 +162,7 @@ namespace CrossTheLine.Minigames.Fishing
                 if (Session.FightTime >= nextRopeSoundTime)
                 {
                     AudioPlayback.PlayEffect(ropeSound);
-                    nextRopeSoundTime = Session.FightTime + 1f;
+                    nextRopeSoundTime = Session.FightTime + (ropeSound ? ropeSound.length : 1f);
                 }
             }
             Session.Step(dt,tap);
@@ -174,24 +174,30 @@ namespace CrossTheLine.Minigames.Fishing
                 {
                     case NetFishingSession.Phase.Waiting:
                         AudioPlayback.PlayEffect(splashSound);
-                        AudioPlayback.PlayCue(bubbleSound, 1f);
+                        AudioPlayback.SetPhaseAudio(bubbleSound);
                         break;
                     case NetFishingSession.Phase.Bite:
-                        AudioPlayback.PlayCue(Session.IsLegend ? legendBiteSound : normalBiteSound, 1.2f);
+                        AudioPlayback.SetPhaseAudio(Session.IsLegend ? legendBiteSound : normalBiteSound);
                         break;
                     case NetFishingSession.Phase.Fighting:
                         nextRopeSoundTime = 0;
                         playedEffortSound = false;
                         break;
                     case NetFishingSession.Phase.Result when Session.LastCatch > 0:
-                        AudioPlayback.PlayCue(haulSound, 1.2f);
-                        AudioPlayback.PlayEffect(fishCaughtSound);
+                        AudioPlayback.SetPhaseAudio(haulSound);
                         break;
                     case NetFishingSession.Phase.Result:
                     case NetFishingSession.Phase.Replacing:
-                        AudioPlayback.PlayCue(fishLostSound, 1.3f);
+                        AudioPlayback.SetPhaseAudio(fishLostSound);
+                        break;
+                    case NetFishingSession.Phase.Exploring:
+                        AudioPlayback.SetPhaseAudio(null);
+                        if (previous == NetFishingSession.Phase.Result && Session.LastCatch > 0)
+                            AudioPlayback.PlayEffect(fishCaughtSound);
                         break;
                     case NetFishingSession.Phase.Complete:
+                        AudioPlayback.SetPhaseAudio(null);
+                        if (Session.LastCatch > 0) AudioPlayback.PlayEffect(fishCaughtSound);
                         AudioPlayback.SetMusic(null);
                         break;
                 }

@@ -10,6 +10,8 @@ namespace CrossTheLine.Minigames
         [Serializable] public sealed class Obstacle
         {
             public FastingTopDownHazard.Kind kind;
+            public FastingTopDownHazard prefab;
+            [Tooltip("세로 벽 전용 프리팹입니다.")] public FastingTopDownHazard verticalPrefab;
             [Min(0), Tooltip("상대 가중치입니다. 0이면 무작위 선택에서 제외됩니다. 20/30/50이면 각각 20/30/50%입니다.")] public float spawnWeight=25;
             [Min(0), Tooltip("체력 칸 단위. 0.5 같은 소수도 사용할 수 있습니다.")] public float damage=1;
         }
@@ -54,6 +56,18 @@ namespace CrossTheLine.Minigames
         public FastingCaveObstacleArt caveArt;
         public FastingRuinsArt ruinsArt;
         public FastingTrialArt trialArt;
+
+        public FastingTopDownHazard PrefabFor(FastingTopDownHazard.Kind kind, FastingTopDownHazard fallback, bool vertical = false)
+        {
+            if (obstacles != null)
+                foreach (var entry in obstacles)
+                    if (entry != null && entry.kind == kind)
+                    {
+                        var prefab = vertical ? entry.verticalPrefab : entry.prefab;
+                        return prefab ? prefab : fallback;
+                    }
+            return fallback;
+        }
 
         public float DamageFor(FastingTopDownHazard.Kind kind,float fallback)
         {

@@ -5,7 +5,7 @@ namespace CrossTheLine.Minigames
     public sealed partial class FastingTopDownGame
     {
         bool mazeMirror;
-        float WallFloorThickness {get{var sprite=ruinsArt.verticalWall.body.sprite;return Mathf.Clamp(sprite.bounds.size.x/sprite.bounds.size.y*(settings.laneSpacing+.16f)*ruinsArt.wallThicknessScale*settings.laterStageObstacleScale,.3f,.8f);}}
+        float WallFloorThickness {get{var sprite=ConfiguredObstacle(FastingTopDownHazard.Kind.Wall,ruinsArt.verticalWall,true).body.sprite;return Mathf.Clamp(sprite.bounds.size.x/sprite.bounds.size.y*(settings.laneSpacing+.16f)*ruinsArt.wallThicknessScale*settings.laterStageObstacleScale,.3f,.8f);}}
         void SpawnLargeRuinsMaze(float offset)
         {
             foreach(var h in hazards)if(h&&!h.spent&&h.kind==FastingTopDownHazard.Kind.Wall&&h.transform.position.y>player.position.y-2){CurrentBalance.suppressedGroups++;return;}
@@ -28,7 +28,7 @@ namespace CrossTheLine.Minigames
         }
         FastingTopDownHazard CreateMazeWall(bool vertical,float x,float y,int id)
         {
-            var h=Instantiate(vertical&&ruinsArt.verticalWall?ruinsArt.verticalWall:ruinsArt.wall,hazardRoot);
+            var h=Instantiate(ConfiguredObstacle(FastingTopDownHazard.Kind.Wall,vertical&&ruinsArt.verticalWall?ruinsArt.verticalWall:ruinsArt.wall,vertical),hazardRoot);
             h.name=vertical?"MazeWall_Vertical":"MazeWall_Horizontal";h.formationId=id;
             h.ConfigureWallSegment(vertical,settings.laneSpacing,ruinsArt.wallThicknessScale*settings.laterStageObstacleScale,WallFloorThickness);
             h.transform.position=new Vector3(x,y);h.warning=0;h.velocity=Vector2.zero;h.scrollOnly=true;h.lifetime=40;return h;
