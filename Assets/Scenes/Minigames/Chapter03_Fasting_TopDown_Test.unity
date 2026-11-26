@@ -1471,6 +1471,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5b55c643e8a547545bc32cd329b09388, type: 3}
     - target: {fileID: 4730262774404054689, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730262774404054689, guid: 8e71402280fb25242a71f09e3e18c9dd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b9c3c054d6139ee4095032d97969f120, type: 2}
@@ -3100,7 +3104,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.9988731
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -3389,7 +3393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 98956908452492635, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3465,7 +3469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1688687331641656589, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 44
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1755278990792171399, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -3645,19 +3649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4278487356288592734, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_text
-      value: 'Move: WASD / Arrow Keys    Pray: Hold Space (slows movement)
-
-        Waterskin: E    Restart: R
-
-        Full Bible: Complete this zone''s prayer
-
-        Page / Scrap: Charge the prayer gauge
-
-        Holy Fire: Boost prayer (3 = Fever)
-
-        Shield: Block 1 hit (carry up to 3)
-
-        Well: Refill an empty waterskin'
+      value: "Move: WASD / Arrow Keys    \nPray: Hold Space (slows movement)\nWaterskin: E    Restart: R\nFull Bible / Page / Scrap: Charge the prayer gauge\nHoly Fire: Boost prayer (3 = Fever)\nShield: Block 1 hit (carry up to 3)\nWell : Refill an empty waterskin"
       objectReference: {fileID: 0}
     - target: {fileID: 4278487356288592734, guid: 171a63b0fc82f9d4db354e81291ee278, type: 3}
       propertyPath: m_fontSize
