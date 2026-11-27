@@ -7,24 +7,30 @@ namespace CrossTheLine.Minigames
 {
     public sealed partial class FastingTopDownGame : MonoBehaviour
     {
-        [Header("Audio")]
-        [SerializeField] AudioClip desertMusic, caveMusic, rockRoll, quicksandHit, waterDrink, shieldBreak, reaperSwing;
-        [SerializeField] AudioClip ruinsMusic, finalMusic, alternateFinalMusic, reaperLaugh, alternateReaperLaugh;
-        [SerializeField] AudioClip rollingRockHit, sandstormHit, cactusHit, stalagmiteHit, caveRockHit;
-        [SerializeField] AudioClip ruinsRubbleHit, skullPileHit, poisonWellHit, lavaHit, thornBushHit;
+        [Header("배경음 · 공통 효과음")]
+        [SerializeField] AudioClip desertMusic, caveMusic, ruinsMusic, finalMusic, alternateFinalMusic;
+        [SerializeField] AudioClip waterDrink, shieldBreak;
+        [Header("미니게임 진행 효과음")]
+        [SerializeField] AudioClip successStage, changeStage, completeMinigame, getItem, feverLoop;
+        [SerializeField, Range(0,1)] float feverLoopVolume = .3f;
         [SerializeField, Range(0,1)] float shieldBreakVolume = .4f;
         bool useAlternateFinalMusic, useAlternateLaugh;
         MinigameAudio audioPlayback;
         MinigameAudio AudioPlayback => audioPlayback ??= new MinigameAudio(gameObject);
 
         void OnDisable() => audioPlayback?.Stop();
-        internal void PlayReaperLaugh()
+        internal void PlayReaperLaugh(FastingReaperSweep reaper)
         {
-            AudioPlayback.PlayEffect(useAlternateLaugh && alternateReaperLaugh ? alternateReaperLaugh : reaperLaugh);
+            var clip = useAlternateLaugh && reaper.alternatePreparationSound
+                ? reaper.alternatePreparationSound : reaper.preparationSound;
+            PlayObstacleSound(clip, reaper.preparationSoundVolume);
             useAlternateLaugh = !useAlternateLaugh;
         }
 
-        internal void PlayReaperSwing() => AudioPlayback.PlayEffect(reaperSwing);
+        internal void PlayObstacleSound(AudioClip clip, float volume)
+        {
+            if (clip) AudioPlayback.PlayEffect(clip, volume);
+        }
 
         public FastingTopDownSettings settings;
         public FastingSpawnSettings spawnSettings;
@@ -72,7 +78,7 @@ namespace CrossTheLine.Minigames
         public void BeginStageForTesting(int stage){testStartStage=Mathf.Clamp(stage,0,3);Begin();}
         public void Begin(){ResetState();if(testStartStage>0){StageIndex=testStartStage;ApplyStage(true);}introduction.SetActive(false);Running=true;UpdateStageMusic();Refresh();}
         void ClearHazards(){foreach(var h in hazards)if(h)Destroy(h.gameObject);hazards.Clear();}
-        void ResetState(){ResetBalance();if(caveVisionMask)caveVisionMask.Clear();thornSlow=0;ResetRunStatistics();if(hitVignette)hitVignette.Clear();prayerHeldFor=0;grace=0;RefreshInvulnerability();if(screenHitFeedback)screenHitFeedback.Clear();if(hitFeedback)hitFeedback.Clear();ClearHazards();StageIndex=0;ApplyStageConfiguration();Health=settings.maximumHealth;Prayer=0;Elapsed=0;ResetShields();HasWater=true;Complete=false;failed=false;Praying=false;restart=0;flames=0;waveNumber=0;buff=fever=grace=slow=root=prayerLock=vision=swap=waterGrace=0;waterBoost=reverse=0;wave=2;Message="WASD 이동 · Space 기도 · E 수통";resultPanel.SetActive(false);player.position=Vector3.zero;ApplyStage(true);}
+        void ResetState(){audioPlayback?.SetEffectLoop(null);ResetBalance();if(caveVisionMask)caveVisionMask.Clear();thornSlow=0;ResetRunStatistics();if(hitVignette)hitVignette.Clear();prayerHeldFor=0;grace=0;RefreshInvulnerability();if(screenHitFeedback)screenHitFeedback.Clear();if(hitFeedback)hitFeedback.Clear();ClearHazards();StageIndex=0;ApplyStageConfiguration();Health=settings.maximumHealth;Prayer=0;Elapsed=0;ResetShields();HasWater=true;Complete=false;failed=false;Praying=false;restart=0;flames=0;waveNumber=0;buff=fever=grace=slow=root=prayerLock=vision=swap=waterGrace=0;waterBoost=reverse=0;wave=2;Message="WASD 이동 · Space 기도 · E 수통";resultPanel.SetActive(false);player.position=Vector3.zero;ApplyStage(true);}
         void Update(){var k=Keyboard.current;if(k!=null&&k.rKey.wasPressedThisFrame){Begin();return;}if(!Running){if(introduction.activeSelf&&k!=null&&k.enterKey.wasPressedThisFrame)Begin();return;}
             Vector2 direction=Vector2.zero;if(k!=null){direction.x=(k.dKey.isPressed||k.rightArrowKey.isPressed?1:0)-(k.aKey.isPressed||k.leftArrowKey.isPressed?1:0);direction.y=(k.wKey.isPressed||k.upArrowKey.isPressed?1:0)-(k.sKey.isPressed||k.downArrowKey.isPressed?1:0);if(k.eKey.wasPressedThisFrame)UseWater();}Tick(Time.deltaTime,direction,k!=null&&k.spaceKey.isPressed);}
         public bool CanMove(Vector2 p)=>playArea?playArea.Contains(p):Mathf.Abs(p.x)<=6.7f&&p.y>=0;
@@ -111,22 +117,22 @@ namespace CrossTheLine.Minigames
             RefreshInvulnerability();
             Vector2 to=player.position;
             foreach(var e in entities){if(!e||!e.gameObject.activeSelf)continue;if(e.kind==FastingTopDownEntity.Kind.Cover)continue;if(e.consumed||!e.Contains(to))continue;
-                if(e.kind==FastingTopDownEntity.Kind.Water){if(StageIndex<3&&!HasWater){HasWater=true;waterGrace=.15f;e.SetUsed(true);CurrentBalance.pickups[(int)e.kind]++;Message="수통 충전 · 이 우물은 사용 완료";}}
+                if(e.kind==FastingTopDownEntity.Kind.Water){if(StageIndex<3&&!HasWater){HasWater=true;waterGrace=.15f;e.SetUsed(true);AudioPlayback.PlayEffect(getItem);CurrentBalance.pickups[(int)e.kind]++;Message="수통 충전 · 이 우물은 사용 완료";}}
                 else Collect(e);
             }
-            for(int i=hazards.Count-1;i>=0;i--){var h=hazards[i];if(!h){hazards.RemoveAt(i);continue;}h.UpdateApproach(to);if(FitsSpawnRoad(h)&&h.TrackVisibility(gameCamera,dt)&&StageIndex==0&&h.kind==FastingTopDownHazard.Kind.Rock&&h.rotateRollingRock)AudioPlayback.PlayEffect(rockRoll,.35f);bool contact=h.Advance(dt,from,to,out var entry);bool insideRoad=FitsSpawnRoad(h);if(!insideRoad)h.HideOutsideRoad();if(contact&&insideRoad&&h.ReadyToHit){int shieldsBefore=ShieldCount;bool damaged=TryDamage(h.kind.ToString(),h);if(damaged||ShieldCount<shieldsBefore){if(h.kind!=FastingTopDownHazard.Kind.Reaper&&(StageIndex!=2||h.kind!=FastingTopDownHazard.Kind.Wall)){h.spent=true;h.gameObject.SetActive(false);}if(damaged)ApplyEffect(h.kind);}}if(h.transform.position.y<cameraY-gameCamera.orthographicSize-3||SideHazardExited(h)){if(!h.spent)AvoidedHazards++;h.spent=true;h.gameObject.SetActive(false);}if(h.spent){Destroy(h.gameObject);hazards.RemoveAt(i);}}
+            for(int i=hazards.Count-1;i>=0;i--){var h=hazards[i];if(!h){hazards.RemoveAt(i);continue;}h.UpdateApproach(to);if(FitsSpawnRoad(h)&&h.TrackVisibility(gameCamera,dt))PlayObstacleSound(h.appearanceSound,h.appearanceSoundVolume);bool contact=h.Advance(dt,from,to,out var entry);bool insideRoad=FitsSpawnRoad(h);if(!insideRoad)h.HideOutsideRoad();if(contact&&insideRoad&&h.ReadyToHit){int shieldsBefore=ShieldCount;bool damaged=TryDamage(h.kind.ToString(),h);if(damaged||ShieldCount<shieldsBefore){if(h.kind!=FastingTopDownHazard.Kind.Reaper&&(StageIndex!=2||h.kind!=FastingTopDownHazard.Kind.Wall)){h.spent=true;h.gameObject.SetActive(false);}if(damaged)ApplyEffect(h.kind);}}if(h.transform.position.y<cameraY-gameCamera.orthographicSize-3||SideHazardExited(h)){if(!h.spent)AvoidedHazards++;h.spent=true;h.gameObject.SetActive(false);}if(h.spent){Destroy(h.gameObject);hazards.RemoveAt(i);}}
             if(encounterDirector)encounterDirector.Tick(dt);else{wave-=dt;if(wave<=0){SpawnWave();wave=settings.NextSpawnInterval(StageIndex);}}
             if(StageIndex>0&&waveNumber>0&&waveNumber%4==0&&lastVisionWave!=waveNumber){vision=settings.visionSeconds;lastVisionWave=waveNumber;}
             ArmGateIfReady();RecycleMap();
-            if(gateArmed&&player.position.y>=gate.position.y-.05f){if(Prayer>=PrayerTarget){if(StageIndex==3){Complete=true;Running=false;AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(true);}else{swap=.6f;ClearHazards();Message="기도 완료 · 다음 장소로 이동";}}}
+            if(gateArmed&&player.position.y>=gate.position.y-.05f){if(Prayer>=PrayerTarget){if(StageIndex==3){Complete=true;Running=false;AudioPlayback.SetEffectLoop(null);AudioPlayback.SetMusic(null);AudioPlayback.PlayEffect(completeMinigame);resultPanel.SetActive(true);result.text=BuildRunResult(true);}else{AudioPlayback.PlayEffect(changeStage);swap=.6f;ClearHazards();Message="기도 완료 · 다음 장소로 이동";}}}
             Follow();Refresh();
         }
         public bool TryDamage(string cause) => TryDamage(cause, null);
 
-        bool TryDamage(string cause, FastingTopDownHazard hazard){if(!Running||Invulnerable||DarknessProtecting||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=DamageFor(cause);Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);if(hazard&&hazard.hitSound)AudioPlayback.PlayEffect(hazard.hitSound,hazard.hitSoundVolume);else if(Enum.TryParse(cause,out FastingTopDownHazard.Kind kind))PlayHazardHit(kind);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
+        bool TryDamage(string cause, FastingTopDownHazard hazard){if(!Running||Invulnerable||DarknessProtecting||failed)return false;if(Shielded){BreakShield();return false;}prayerHeldFor=0;Praying=false;float previousHealth=Health;float amount=DamageFor(cause);Health=Mathf.Max(0,Health-amount);if(Health<previousHealth){RecordDamage(cause);PlayObstacleHit(cause,hazard);if(hitVignette)hitVignette.PlayDamage(cause);}grace=settings.hitGrace;RefreshInvulnerability();Message=$"피해 -{amount:0.#}칸 · {cause}";if(Health<=0){failed=true;Running=false;AudioPlayback.SetEffectLoop(null);AudioPlayback.SetMusic(null);resultPanel.SetActive(true);result.text=BuildRunResult(false);Message="지침 소진";}return true;}
         void ApplyEffect(FastingTopDownHazard.Kind k){if(screenHitFeedback)screenHitFeedback.Play(k);if(hitFeedback)hitFeedback.Play(k);if(k==FastingTopDownHazard.Kind.Sand&&hitFeedback)grace=Mathf.Max(grace,hitFeedback.sandAirSeconds);if(k==FastingTopDownHazard.Kind.Sand||k==FastingTopDownHazard.Kind.Bat)slow=1.2f;if(k==FastingTopDownHazard.Kind.Thorns)thornSlow=settings.thornSlowSeconds;if(k==FastingTopDownHazard.Kind.Quicksand)root=settings.quicksandStunSeconds;if(k==FastingTopDownHazard.Kind.Reaper)root=.4f;if(k==FastingTopDownHazard.Kind.Crack){root=hitFeedback?hitFeedback.crackFallSeconds:.9f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.crackFallSeconds+hitFeedback.crackBlinkSeconds:1.7f);}if(k==FastingTopDownHazard.Kind.Bat){slow=settings.batSlowSeconds;vision=settings.batVisionSeconds;if(hitFeedback)grace=Mathf.Max(grace,hitFeedback.batAirSeconds);}if(k==FastingTopDownHazard.Kind.Fire||k==FastingTopDownHazard.Kind.Pillar)prayerLock=settings.burnPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Pillar){root=hitFeedback?hitFeedback.pillarAirSeconds:1.5f;grace=Mathf.Max(grace,hitFeedback?hitFeedback.pillarProtectionSeconds:3);}if(k==FastingTopDownHazard.Kind.Tomb)prayerLock=settings.tombPrayerBlockSeconds;if(k==FastingTopDownHazard.Kind.Reaper)vision=settings.visionSeconds;if(k==FastingTopDownHazard.Kind.Poison){reverse=settings.poisonReverseSeconds;Message="오염된 물 · 방향 반전 / E 수통으로 정화";}grace=Mathf.Max(grace,root+.45f);}
         public void UseWater(){if(!HasWater||!Running||failed)return;AudioPlayback.PlayEffect(waterDrink);HasWater=false;thornSlow=0;slow=root=prayerLock=vision=reverse=0;waterBoost=3;Health=Mathf.Min(settings.maximumHealth,Health+1);grace=Mathf.Max(grace,.5f);Message="수통 사용 · 정화 / 지침 +1 / 이동 가속 3초";}
-        public void Collect(FastingTopDownEntity e){float beforeItemPrayer=Prayer;CurrentBalance.pickups[(int)e.kind]++;switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:CollectSpiritFlame();break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?(CurrentStageConfiguration?Mathf.Clamp01(CurrentStageConfiguration.bibleCharge):1f):settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}CurrentBalance.itemPrayer+=Prayer-beforeItemPrayer;e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
+        public void Collect(FastingTopDownEntity e){AudioPlayback.PlayEffect(getItem);float beforeItemPrayer=Prayer;CurrentBalance.pickups[(int)e.kind]++;switch(e.kind){case FastingTopDownEntity.Kind.Shield:CollectShield(e);break;case FastingTopDownEntity.Kind.Flame:CollectSpiritFlame();break;default:float amount=PrayerTarget*(e.kind==FastingTopDownEntity.Kind.Book?(CurrentStageConfiguration?Mathf.Clamp01(CurrentStageConfiguration.bibleCharge):1f):settings.ScriptureFraction(StageIndex,e.kind==FastingTopDownEntity.Kind.Page));Prayer=Mathf.Min(PrayerTarget,Prayer+amount);Message=$"말씀 수집 · 기도 +{amount}";break;}CurrentBalance.itemPrayer+=Prayer-beforeItemPrayer;e.consumed=true;e.gameObject.SetActive(false);ArmGateIfReady();}
         public void SpawnWave()
         {
             waveNumber++;if(obstaclePatterns&&obstaclePatterns.Spawn(this))return;if(!TryChooseObstacle(out var kind))return;
@@ -217,24 +223,11 @@ namespace CrossTheLine.Minigames
 
             var list=kinds[Mathf.Clamp(StageIndex,0,kinds.Length-1)];return list[UnityEngine.Random.Range(0,list.Length)];
         }
-        void PlayHazardHit(FastingTopDownHazard.Kind kind)
+        void PlayObstacleHit(string cause, FastingTopDownHazard hazard)
         {
-            AudioClip clip = (StageIndex, kind) switch
-            {
-                (0, FastingTopDownHazard.Kind.Rock) => rollingRockHit,
-                (0, FastingTopDownHazard.Kind.Sand) => sandstormHit,
-                (0, FastingTopDownHazard.Kind.Cactus) => cactusHit,
-                (0, FastingTopDownHazard.Kind.Quicksand) => quicksandHit,
-                (1, FastingTopDownHazard.Kind.Rock) => stalagmiteHit,
-                (1, FastingTopDownHazard.Kind.Collapse) => caveRockHit,
-                (2, FastingTopDownHazard.Kind.Rock) => ruinsRubbleHit,
-                (2, FastingTopDownHazard.Kind.Tomb) => skullPileHit,
-                (2, FastingTopDownHazard.Kind.Poison) => poisonWellHit,
-                (3, FastingTopDownHazard.Kind.Fire) => lavaHit,
-                (3, FastingTopDownHazard.Kind.Thorns) => thornBushHit,
-                _ => null
-            };
-            AudioPlayback.PlayEffect(clip);
+            if (!hazard && Enum.TryParse(cause, out FastingTopDownHazard.Kind kind))
+                hazard = ConfiguredObstacle(kind, null);
+            if (hazard) PlayObstacleSound(hazard.hitSound, hazard.hitSoundVolume);
         }
 
         void UpdateStageMusic()
@@ -260,6 +253,7 @@ namespace CrossTheLine.Minigames
         {
             if(gateArmed||Prayer<PrayerTarget)return;
             gateArmed=true;gate.position=new Vector3(0,player.position.y+Mathf.Max(2,settings.finishLineDistance),0);gate.gameObject.SetActive(true);Message="기도 목표 완료 · 앞에 나타난 금색 전환선까지 전진하세요";
+            AudioPlayback.PlayEffect(successStage);
         }
         void RecycleMap()
         {

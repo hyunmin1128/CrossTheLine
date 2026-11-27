@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownHazard
   kind: 4
+  appearanceSound: {fileID: 8300000, guid: 48e23c85ef0a3f844b576c6183ab3c2a, type: 3}
+  appearanceSoundVolume: 0.3
+  hitSound: {fileID: 8300000, guid: b52f40b17c9da2541b6c155990fa1f02, type: 3}
+  hitSoundVolume: 0.65
   size: {x: 2.25, y: 1.1865234}
   velocity: {x: 0, y: 0}
   warning: 0
@@ -57,10 +61,15 @@ MonoBehaviour:
   occupiedLanes: 1
   artworkWidth: 0.64
   artworkCenter: {x: -0.005, y: 0}
+  collisionOffset: {x: 0, y: 0}
+  minimumVisibleReactionSeconds: 0
   collisionHeight: 1.1865234
   scrollOnly: 0
   rotateRollingRock: 0
   expandsOnApproach: 0
+  fixedApproachScale: 0
+  authoredWallOrientation: 0
+  verticalWall: 0
   formationId: 0
   formationCount: 1
   animationFrames:

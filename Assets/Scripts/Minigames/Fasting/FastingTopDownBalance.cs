@@ -13,7 +13,7 @@ namespace CrossTheLine.Minigames
         public bool InPrayerWindow=>encounterDirector&&encounterDirector.CurrentPhase==FastingEncounterDirector.Phase.PrayerWindow;
         void ConsumeFever(float dt)
         {
-            if(fever<=0)return;fever=Mathf.Max(0,fever-dt);if(fever<=0){flames=0;buff=0;}
+            if(fever<=0)return;fever=Mathf.Max(0,fever-dt);if(fever<=0){flames=0;buff=0;audioPlayback?.SetEffectLoop(null);}
         }
         void CollectSpiritFlame()
         {
@@ -26,7 +26,11 @@ namespace CrossTheLine.Minigames
                 return;
             }
             flames++;
-            if(flames>=Mathf.Max(1,settings.flamesForFever)){flames=Mathf.Max(1,settings.flamesForFever);fever=Mathf.Max(.1f,settings.feverSeconds);}
+            if(flames>=Mathf.Max(1,settings.flamesForFever)){
+                flames=Mathf.Max(1,settings.flamesForFever);
+                fever=Mathf.Max(.1f,settings.feverSeconds);
+                AudioPlayback.SetEffectLoop(feverLoop,feverLoopVolume);
+            }
             Message=fever>0?$"성령의 불꽃 · 기도 피버 {fever:0.#}초":"성령의 불꽃 · 기도 속도 증가";
         }
         void PlaceEntity(FastingTopDownEntity e,bool first)

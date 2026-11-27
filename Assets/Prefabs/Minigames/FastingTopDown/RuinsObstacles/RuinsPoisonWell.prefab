@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac10e0d0a8b42e4496867475bafc576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownHazard
+  hitSound: {fileID: 8300000, guid: 5173641f00fe9044aa6c92ff7c7c2300, type: 3}
+  hitSoundVolume: 0.65
   kind: 9
   size: {x: 2.25, y: 1.8000001}
   velocity: {x: 0, y: 0}

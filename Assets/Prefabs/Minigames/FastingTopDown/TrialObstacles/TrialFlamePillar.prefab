@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossTheLine.Minigames.FastingTopDownHazard
   kind: 12
+  appearanceSound: {fileID: 0}
+  appearanceSoundVolume: 0.35
+  hitSound: {fileID: 8300000, guid: 927891d2d95f7e24b8a98bccdda0dc85, type: 3}
+  hitSoundVolume: 0.65
   size: {x: 2.25, y: 1.4}
   velocity: {x: 0, y: 0}
   warning: 0

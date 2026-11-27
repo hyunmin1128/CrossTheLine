@@ -73,7 +73,7 @@ MonoBehaviour:
   - kind: 13
     prefab: {fileID: 4420324107226570237, guid: d1831d347b22a4246beaeca5d2156c76, type: 3}
     spawnWeight: 35
-    damage: 1
+    damage: 3
   waveInterval: 0.84
   attackSeconds: 6.5
   restSeconds: 2.4

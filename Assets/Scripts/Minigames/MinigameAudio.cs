@@ -9,6 +9,22 @@ namespace CrossTheLine.Minigames
         AudioSource effects;
         AudioSource cue;
         AudioSource phaseAudio;
+        AudioSource effectLoop;
+
+        public void SetEffectLoop(AudioClip clip, float volume = .3f)
+        {
+            if (!clip)
+            {
+                if (effectLoop) effectLoop.Stop();
+                return;
+            }
+            if (!effectLoop) effectLoop = CreateSource();
+            effectLoop.loop = true;
+            effectLoop.volume = volume;
+            if (effectLoop.clip == clip && effectLoop.isPlaying) return;
+            effectLoop.clip = clip;
+            effectLoop.Play();
+        }
 
         public MinigameAudio(GameObject owner)
         {
@@ -92,6 +108,7 @@ namespace CrossTheLine.Minigames
 
         public void Stop()
         {
+            if (effectLoop) effectLoop.Stop();
             if (phaseAudio) { phaseAudio.Stop(); phaseAudio.clip = null; }
             if (music) music.Stop();
             if (effects) effects.Stop();

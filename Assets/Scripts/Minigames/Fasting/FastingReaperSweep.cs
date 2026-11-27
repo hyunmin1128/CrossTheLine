@@ -14,6 +14,9 @@ namespace CrossTheLine.Minigames
         [Min(.1f)] public float followSeconds=1.25f,lockSeconds=.85f;
         [Min(1)] public float followSpeed=10,dashSpeed=24;
         [Min(0)] public float topInset=.05f;
+        [Header("사신 공격 사운드")]
+        public AudioClip preparationSound, alternatePreparationSound, swingSound;
+        [Range(0,1)] public float preparationSoundVolume = .65f, swingSoundVolume = .65f;
         public AttackPhase CurrentPhase{get;private set;}
         public bool Choreographed{get;private set;}
         public bool RangeVisible=>range&&range.enabled;
@@ -81,8 +84,8 @@ namespace CrossTheLine.Minigames
                 hazard.warning=Mathf.Max(.001f,duration-clock+(CurrentPhase==AttackPhase.Following?Mathf.Max(.1f,lockSeconds):0));
                 if(clock+0.00001f<duration){RefreshLines();return false;}
                 clock=0;
-                if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;game.PlayReaperLaugh();ShowFrame(0);}
-                else{CurrentPhase=AttackPhase.Dashing;game.PlayReaperSwing();ShowFrame(firstSwingFrame);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
+                if(CurrentPhase==AttackPhase.Following){CurrentPhase=AttackPhase.Preparing;game.PlayReaperLaugh(this);ShowFrame(0);}
+                else{CurrentPhase=AttackPhase.Dashing;game.PlayObstacleSound(swingSound,swingSoundVolume);ShowFrame(firstSwingFrame);hazard.warning=0;hazard.velocity=Vector2.down*Mathf.Max(1,dashSpeed);}
                 if(remaining<=0)break;
             }
             RefreshLines();travelSeconds=CurrentPhase==AttackPhase.Dashing?remaining:0;return travelSeconds>0;

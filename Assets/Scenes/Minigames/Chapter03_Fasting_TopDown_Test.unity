@@ -2753,27 +2753,18 @@ MonoBehaviour:
   hitVignette: {fileID: 629459903}
   desertMusic: {fileID: 8300000, guid: a3744101629b0f74fb7181f7f2ddf945, type: 3}
   caveMusic: {fileID: 8300000, guid: 60d22adf66039ee44a1beeda997e3a0e, type: 3}
-  rockRoll: {fileID: 8300000, guid: 48a686306a7effa40b7dcbf06d068f7e, type: 3}
-  quicksandHit: {fileID: 8300000, guid: 7c586318cde9a8b40b1db27221fe5726, type: 3}
-  waterDrink: {fileID: 8300000, guid: 1795c532a6881f84ca9d69244b98a2b7, type: 3}
-  shieldBreak: {fileID: 8300000, guid: d9957fea7a35c3048a90d06f826422cc, type: 3}
-  reaperSwing: {fileID: 8300000, guid: 8a681157a8558ba4ea9567915e5a9970, type: 3}
   ruinsMusic: {fileID: 8300000, guid: 09c6fdbe9574c814ebd818727eb4cfa7, type: 3}
   finalMusic: {fileID: 8300000, guid: 912fdf855e80ce7409ae7fb5c0340efb, type: 3}
   alternateFinalMusic: {fileID: 8300000, guid: 54b4bffa72bf5c74b9f05336b04c93b2, type: 3}
-  reaperLaugh: {fileID: 8300000, guid: 26d14aa617e4599448f2bd09fb429ad2, type: 3}
-  alternateReaperLaugh: {fileID: 8300000, guid: 9c32b87e3b1845b4c86b7f111ca74247, type: 3}
-  rollingRockHit: {fileID: 8300000, guid: da3b4327a65d0884f8525659c8996177, type: 3}
-  sandstormHit: {fileID: 8300000, guid: 3516a3804f9a6144498f368589b7371a, type: 3}
-  cactusHit: {fileID: 8300000, guid: 353a56e68a4b0374ea1336e61759d755, type: 3}
-  stalagmiteHit: {fileID: 8300000, guid: 0cde16829146bb64894df176ada0564b, type: 3}
-  caveRockHit: {fileID: 8300000, guid: bd0bcf464b1b0a14ca4cf31b4828ea01, type: 3}
-  ruinsRubbleHit: {fileID: 8300000, guid: f43036fd704f811499bce6766a0da90d, type: 3}
-  skullPileHit: {fileID: 8300000, guid: 5e157502b8f9f0445a7dda9f044cebc9, type: 3}
-  poisonWellHit: {fileID: 8300000, guid: 5173641f00fe9044aa6c92ff7c7c2300, type: 3}
-  lavaHit: {fileID: 8300000, guid: 7bbbba6247b411c43a2f2a4dfe4d11f4, type: 3}
-  thornBushHit: {fileID: 8300000, guid: 5866e0ba64b166747a35f1351d06ece1, type: 3}
-  shieldBreakVolume: 0.1
+  waterDrink: {fileID: 8300000, guid: 3b7b546bc04b38d4d83216047a17ca4a, type: 3}
+  shieldBreak: {fileID: 8300000, guid: d9957fea7a35c3048a90d06f826422cc, type: 3}
+  successStage: {fileID: 8300000, guid: 3fe489746f0d1514ba87c2ba1ff1c571, type: 3}
+  changeStage: {fileID: 8300000, guid: dfc51d5c43956074d9a75542a1f6b8ef, type: 3}
+  completeMinigame: {fileID: 8300000, guid: d1a870de01225a84b9a3a96c40bce432, type: 3}
+  getItem: {fileID: 8300000, guid: 3d6f644069e20124cbfdb0388616e26c, type: 3}
+  feverLoop: {fileID: 8300000, guid: 3a2c5a3ba52fd0243ac7126a275b5b69, type: 3}
+  feverLoopVolume: 0.3
+  shieldBreakVolume: 0.25
   settings: {fileID: 11400000, guid: a588ee22222e9664bb91511001a12d6f, type: 2}
   spawnSettings: {fileID: 11400000, guid: 7c83ac27232ff6d4ba1f52f473198f24, type: 2}
   player: {fileID: 747589369}
@@ -3127,7 +3118,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.9988731
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
